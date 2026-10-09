@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2 · Úvod do metabolizmu a princípy jeho regulácie</title>
+<script>/* PATOLA: stránka v náhľade (assets/js/peek.js) — skryť hlavičku skôr, než sa vykreslí */if(/[?&]embed=/.test(location.search))document.documentElement.classList.add("pk-embed")</script>
+<script>/* PATOLA: pri F5/Späť ukázať stránku až na obnovenej pozícii (peek.js odkryje; poistka 2 s) */(function(){try{var h=document.documentElement,n=performance.getEntriesByType("navigation")[0],t=n&&n.type,s=location.search;if(/[?&]y=[1-9]/.test(s)||(!/[?&]embed=/.test(s)&&(t==="reload"||t==="back_forward")&&parseInt(sessionStorage.getItem("pk-y:"+location.pathname),10)>0)){h.classList.add("pk-restoring");setTimeout(function(){h.classList.remove("pk-restoring")},2000)}}catch(e){}})()</script>
+<script>/* BIOCHEM: skrytý bočný obsah (assets/js/toc-collapse.js) — zapnúť pred vykreslením, nech stránka neblikne */try{if(localStorage.getItem("bc-toc-collapsed")==="1")document.documentElement.classList.add("toc-collapsed")}catch(e){}</script>
+<script src="../assets/js/view-early.js"></script>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/styles/site.css">
+<link rel="stylesheet" href="../assets/styles/glossary.css">
+<link rel="stylesheet" href="../assets/styles/view-toggle.css">
+<style>
+/* ══ Broadsheet — design-system tokens ══════════════════════════════════ */
+:root{
+  --color-bg:#f3f2f2;
+  --color-surface:#eae9e9;
+  --color-text:#201e1d;
+  --color-accent:#0088b0;
+  --color-accent-2:#d6006c;
+  --color-divider:color-mix(in srgb,#201e1d 16%,transparent);
+
+  --color-neutral-100:#f8f4f4; --color-neutral-200:#eae7e7; --color-neutral-300:#d7d3d3;
+  --color-neutral-400:#bab6b6; --color-neutral-500:#9b9797; --color-neutral-600:#7d7979;
+  --color-neutral-700:#605d5d; --color-neutral-800:#444141; --color-neutral-900:#2d2b2b;
+
+  --color-accent-100:#e9f8ff; --color-accent-200:#cbeeff; --color-accent-300:#99e0ff;
+  --color-accent-400:#62c5ee; --color-accent-500:#38a6cf; --color-accent-600:#1186ac;
+  --color-accent-700:#006786; --color-accent-800:#004961; --color-accent-900:#0a303e;
+
+  --color-accent-2-100:#fff1f4; --color-accent-2-200:#ffdee6; --color-accent-2-300:#ffc0d0;
+  --color-accent-2-400:#ff90b1; --color-accent-2-500:#ff458e; --color-accent-2-600:#d82071;
+  --color-accent-2-700:#aa0b56; --color-accent-2-800:#790e3d; --color-accent-2-900:#4b1528;
+
+  --color-process-yellow:#edbb00;
+
+  --font-heading:"Source Serif 4",system-ui,serif;
+  --font-heading-weight:600;
+  --font-body:"Source Serif 4",system-ui,serif;
+  --font-mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+
+  --space-1:5px; --space-2:10px; --space-3:15px; --space-4:20px; --space-6:30px; --space-8:40px;
+  --radius-sm:1px; --radius-md:2px; --radius-lg:4px;
+
+  --shadow-sm:0 1px 2px color-mix(in srgb,#2d2b2b 14%,transparent);
+  --shadow-md:0 3px 10px color-mix(in srgb,#2d2b2b 16%,transparent);
+  --shadow-lg:0 12px 32px color-mix(in srgb,#2d2b2b 22%,transparent);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--color-text);font-family:var(--font-body);
+  font-size:calc(15px*var(--z,1));line-height:1.55;font-weight:400;padding:0}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:var(--font-heading-weight);
+  line-height:1.12;letter-spacing:-0.015em;margin:0 0 var(--space-2)}
+p{margin:0 0 var(--space-3)}
+a{color:var(--color-accent);text-underline-offset:3px}
+img{display:block;max-width:100%}
+figure{margin:0}
+figcaption{font-size:calc(11px*var(--z,1));margin-top:var(--space-1);
+  color:color-mix(in srgb,var(--color-text) 55%,transparent)}
+.text-muted{color:color-mix(in srgb,var(--color-text) 55%,transparent)}
+:focus{outline:none}
+:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+::selection{background:color-mix(in srgb,var(--color-accent) 30%,transparent)}
+.hr{height:1px;border:0;margin:var(--space-4) 0;background:var(--color-divider)}
+
+/* — tables — */
+.table{width:100%;border-collapse:collapse;font-size:calc(14px*var(--z,1))}
+.table th{text-align:left;font-size:calc(11px*var(--z,1));letter-spacing:0.08em;text-transform:uppercase;
+  color:color-mix(in srgb,var(--color-text) 60%,transparent);
+  padding:var(--space-2);border-bottom:1px solid var(--color-divider)}
+.table td{padding:var(--space-2);
+  border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent)}
+.table tbody tr:hover{background:color-mix(in srgb,var(--color-text) 4%,transparent)}
+
+/* — tags — */
+.tag{display:inline-flex;align-items:center;font-size:calc(11px*var(--z,1));letter-spacing:0.02em;
+  padding:3px 10px;border-radius:calc(var(--radius-md)*0.75)}
+.tag-accent{background:var(--color-accent-100);color:var(--color-accent-800)}
+.tag-accent-2{background:var(--color-accent-2-100);color:var(--color-accent-2-800)}
+.tag-neutral{background:var(--color-neutral-100);color:var(--color-neutral-800)}
+
+/* — the plate numeral: three process inks, no black plate — */
+.cmyk-num{--cmyk-num-ground:var(--color-bg);position:relative;width:fit-content;
+  line-height:0.9;font-feature-settings:"pnum" 1;
+  padding:0.12em;margin:-0.12em}
+.cmyk-num .paper{color:var(--color-bg);
+  text-shadow:0.036em 0.025em 0 var(--color-bg),-0.031em -0.023em 0 var(--color-bg)}
+.cmyk-num .plate{position:absolute;inset:0.12em;mix-blend-mode:multiply}
+.cmyk-num .plate-c{color:var(--color-accent)}
+.cmyk-num .plate-m{color:var(--color-accent-2);translate:0.036em 0.025em}
+.cmyk-num .plate-y{color:var(--color-process-yellow);translate:-0.031em -0.023em}
+
+/* ══ doc-page — the printed sheet ═══════════════════════════════════════ */
+.page{--color-bg:#fff;margin:0 auto;background:#fff;
+  padding:50px;box-shadow:none;border:0;
+  font-size:calc(13.5px*var(--z,1));line-height:1.42;text-wrap:pretty}
+.page p{margin:0 0 6px;orphans:3;widows:3}
+.page ul,.page ol{margin:0 0 6px;padding-left:15px}
+.page li{margin:0 0 2px;orphans:3;widows:3}
+.page table.table{font-size:calc(12px*var(--z,1));line-height:1.3}
+.page table.table th,.page table.table td{padding:3px 8px 3px 0;vertical-align:top}
+.keep{break-inside:avoid}
+.page sup{font-size:calc(9px*var(--z,1));line-height:0}
+
+.running-head{display:flex;justify-content:space-between;align-items:baseline;
+  font-size:calc(10px*var(--z,1));letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-600);
+  padding-bottom:4px;border-bottom:1px solid var(--color-neutral-300);margin-bottom:14px}
+.running-foot{display:flex;justify-content:space-between;align-items:baseline;
+  font-size:calc(10px*var(--z,1));color:var(--color-neutral-600);
+  padding-top:4px;border-top:1px solid var(--color-neutral-300);margin-top:22px}
+
+/* — chapter opener — */
+.opener{display:flex;align-items:flex-start;gap:18px;margin-bottom:10px}
+.opener .num{font-family:var(--font-heading);font-size:calc(64px*var(--z,1));font-weight:600;
+  letter-spacing:-0.03em;--cmyk-num-ground:#fff}
+.eyebrow{font-size:calc(10px*var(--z,1));letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--color-accent-2);margin-bottom:4px}
+.opener h1{font-size:calc(29px*var(--z,1));line-height:1.05;font-weight:600;letter-spacing:-0.015em}
+.standfirst{margin:6px 0 0;font-size:calc(13px*var(--z,1));font-style:italic;
+  color:var(--color-neutral-700);max-width:46em}
+
+/* — contents block — */
+.contents{column-count:3;column-gap:22px;font-size:calc(11.5px*var(--z,1));line-height:1.35;padding:8px 0;
+  border-top:2px solid var(--color-text);border-bottom:1px solid var(--color-neutral-300);
+  margin-bottom:16px}
+.contents .label{column-span:all;font-size:calc(10px*var(--z,1));letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--color-neutral-600);margin-bottom:5px}
+.contents .row{display:flex;gap:6px;break-inside:avoid}
+.contents .row span:first-child{color:var(--color-accent);font-variant-numeric:tabular-nums}
+
+/* — numbered sections — */
+.sec-h{display:flex;gap:10px;font-size:calc(16px*var(--z,1));font-weight:600;margin:0 0 5px}
+.sec-h .n{color:var(--color-accent);font-variant-numeric:tabular-nums}
+.sec-body{padding-left:calc(2.6em + 10px);margin-bottom:14px}
+.sub-h{font-size:calc(13.5px*var(--z,1));font-weight:600;margin:12px 0 4px}
+.sub-h .n{color:var(--color-accent-700);font-variant-numeric:tabular-nums;margin-right:6px}
+.micro{font-size:calc(11px*var(--z,1));letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--color-neutral-600);margin-bottom:4px}
+
+/* — callouts — */
+.flag{margin:10px 0;padding:8px 10px;background:var(--color-accent-2-100);
+  border-left:3px solid var(--color-accent-2)}
+.flag .label{font-size:calc(10px*var(--z,1));letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--color-accent-2-800);margin-bottom:3px}
+.flag .body{font-size:calc(12px*var(--z,1));line-height:1.38;color:var(--color-accent-2-900)}
+.flag .body p{margin:0 0 5px}.flag .body p:last-child{margin:0}
+
+.note{margin:10px 0;padding:8px 10px;background:var(--color-accent-100);
+  border-left:3px solid var(--color-accent)}
+.note .label{font-size:calc(10px*var(--z,1));letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--color-accent-800);margin-bottom:3px}
+.note .body{font-size:calc(12px*var(--z,1));line-height:1.38;color:var(--color-accent-900)}
+.note .body p{margin:0 0 5px}.note .body p:last-child{margin:0}
+
+.plain{margin:10px 0;padding:8px 10px;background:var(--color-neutral-100);
+  border-left:3px solid var(--color-neutral-400)}
+.plain .label{font-size:calc(10px*var(--z,1));letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--color-neutral-700);margin-bottom:3px}
+.plain .body{font-size:calc(12px*var(--z,1));line-height:1.38;color:var(--color-neutral-900)}
+.plain .body p{margin:0 0 5px}.plain .body p:last-child{margin:0}
+
+/* — REVÍZIA block (CLAUDE.md §1.3, značka [R]) ————————————————————————
+   Zámerne NIE .note/.flag/.plain: site.js tie tri triedy vyplaví do
+   bočného stĺpca ako poznámky na okraji, a revízia patrí do hlavného
+   toku textu — je to obsah, nie komentár. Preto vlastná trieda.        */
+.rev{margin:11px 0;padding:9px 12px;break-inside:avoid;
+  background:linear-gradient(180deg,#fffaf0,#fff);
+  border:1px solid color-mix(in srgb,var(--color-process-yellow) 55%,transparent);
+  border-left:4px solid var(--color-process-yellow)}
+.rev .label{display:inline-flex;align-items:center;gap:6px;
+  font-size:calc(9.5px*var(--z,1));letter-spacing:0.12em;text-transform:uppercase;
+  color:#7a5c00;margin-bottom:4px;font-weight:600}
+.rev .label .r{display:inline-flex;align-items:center;justify-content:center;
+  width:15px;height:15px;border-radius:50%;background:var(--color-process-yellow);
+  color:#3d2e00;font-size:calc(9px*var(--z,1));font-weight:700;letter-spacing:0}
+.rev .body{font-size:calc(12px*var(--z,1));line-height:1.4}
+.rev .body p{margin:0 0 5px}.rev .body p:last-child{margin:0}
+.rev table.table{margin:6px 0 5px}
+
+/* — mechanism diagram in the press's own monospace — */
+.diagram{font-family:var(--font-mono);font-size:calc(10px*var(--z,1));line-height:1.35;
+  background:var(--color-surface);border-left:2px solid var(--color-neutral-400);
+  padding:9px 11px;margin:9px 0;overflow-x:auto;white-space:pre;
+  color:var(--color-neutral-900);border-radius:var(--radius-sm)}
+
+/* — kaskáda v riadku a rozvetvenie (CLAUDE.md §2.5) — */
+.chain{font-size:calc(12.5px*var(--z,1));line-height:1.5;margin:8px 0;padding:7px 10px;
+  background:var(--color-accent-100);border-left:3px solid var(--color-accent-400)}
+.chain b{color:var(--color-accent-800)}
+.fork{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;
+  margin:9px 0;font-size:calc(12px*var(--z,1));line-height:1.38}
+.fork>div{padding:7px 9px;background:var(--color-neutral-100);
+  border-top:2px solid var(--color-neutral-400)}
+.fork>div b{display:block;margin-bottom:2px;color:var(--color-neutral-900)}
+
+/* — charts — */
+.chart{margin:12px 0;break-inside:avoid;max-width:700px}
+.chart svg{width:100%;height:auto;display:block;font-family:var(--font-body)}
+.chart figcaption{font-size:calc(10.5px*var(--z,1));line-height:1.35;margin-top:4px;color:var(--color-neutral-700)}
+.chart figcaption b{color:var(--color-text)}
+.chart .ax{stroke:var(--color-neutral-400);stroke-width:1}
+.chart .grid{stroke:var(--color-neutral-300);stroke-width:1;stroke-dasharray:2 3}
+.chart .ser{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.chart .s-c{stroke:var(--color-accent)}
+.chart .s-m{stroke:var(--color-accent-2)}
+.chart .s-k{stroke:var(--color-neutral-700)}
+.chart .f-c{fill:var(--color-accent);opacity:.13}
+.chart .f-m{fill:var(--color-accent-2);opacity:.13}
+.chart .band-c{fill:var(--color-accent-100)}
+.chart .band-m{fill:var(--color-accent-2-100)}
+.chart .tick{font-size:9.5px;fill:var(--color-neutral-600);font-variant-numeric:tabular-nums}
+.chart .lbl{font-size:10.5px;fill:var(--color-neutral-800)}
+.chart .lbl-c{font-size:10.5px;fill:var(--color-accent-700)}
+.chart .lbl-m{font-size:10.5px;fill:var(--color-accent-2-700)}
+.chart .cap{font-size:9.5px;fill:var(--color-neutral-600);letter-spacing:.08em;text-transform:uppercase}
+.chart .mark{stroke:var(--color-neutral-800);stroke-width:1;stroke-dasharray:3 3}
+.chart .bar-c{fill:var(--color-accent-500)}
+.chart .bar-m{fill:var(--color-accent-2-500)}
+
+/* — krížové odkazy (CLAUDE.md §3.1) ————————————————————————————————————
+   a.xref  = odkaz na kapitolu, ktorá už existuje. Ostáva skutočným
+             <a href>, takže funguje aj bez JS a bez shellu; keď pribudne
+             split.js, otvorí sa vedľa v druhom paneli.
+   .xref-soon = tá istá informácia pre kapitolu, ktorá ešte nie je
+             napísaná. Zámerne NIE <a>: mŕtvy odkaz je horší než žiadny.
+             Text nesie číslo aj názov, takže dáva zmysel aj v tlači.   */
+.xref{color:var(--color-accent-700);text-decoration:none;
+  border-bottom:1px solid color-mix(in srgb,var(--color-accent) 45%,transparent);
+  white-space:nowrap}
+.xref:hover{background:var(--color-accent-100);border-bottom-color:var(--color-accent)}
+.xref-soon{color:var(--color-neutral-600);
+  border-bottom:1px dotted var(--color-neutral-400);white-space:nowrap;cursor:help}
+
+.deps,.next{font-size:calc(11.5px*var(--z,1));line-height:1.5;margin:0 0 10px;padding:7px 10px;
+  background:var(--color-neutral-100);border-top:2px solid var(--color-neutral-400)}
+.deps b,.next b{font-size:calc(10px*var(--z,1));letter-spacing:.1em;text-transform:uppercase;
+  color:var(--color-neutral-700);margin-right:6px}
+.next{border-top-color:var(--color-accent);background:var(--color-accent-100);margin:16px 0 0}
+.next b{color:var(--color-accent-800)}
+
+/* — two/three column content blocks — */
+.cols-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;
+  font-size:calc(12.5px*var(--z,1));line-height:1.35}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+  font-size:calc(12.5px*var(--z,1));line-height:1.35}
+.flow-2{column-count:2;column-gap:22px;font-size:calc(12.5px*var(--z,1));line-height:1.38}
+
+.lede{font-size:calc(12.5px*var(--z,1));color:var(--color-neutral-700)}
+b,strong{font-weight:600}
+.tnum{font-variant-numeric:tabular-nums}
+
+@media screen and (min-width:981px){
+  .sec-h,.sub-h,.micro,.hr,.diagram,.chart,.table,.running-foot,
+  .cols-2,.cols-3,.flow-2,.note,.flag,.plain,.rev,.fork,.chain{clear:both}
+  .sec-body::after{content:"";display:block;clear:both}
+}
+
+@media (max-width:820px){
+  body{padding:0}
+  .page{padding:20px 16px}
+  .contents{column-count:2}
+  .cols-3,.cols-2,.flow-2{grid-template-columns:1fr;column-count:1;display:block}
+  .cols-3>div,.cols-2>div{margin-bottom:12px}
+  .sec-body{padding-left:0}
+  .opener{gap:12px}
+  .opener .num{font-size:calc(46px*var(--z,1))}
+  .table{display:block;overflow-x:auto}
+  .chart{overflow-x:auto}
+  .chart svg{max-width:none;min-width:100%}
+  .xref,.xref-soon{white-space:normal}
+}
+@media print{
+  body{background:#fff;padding:0}
+  .page{max-width:none;padding:0.7in}
+  .diagram{overflow:visible}
+  .cols-2,.cols-3{display:block}
+  .cols-2>div,.cols-3>div{margin-bottom:8px}
+  .flow-2{column-count:1}
+  .contents{column-count:1}
+  .xref{color:#000;border-bottom:0}
+  .xref-soon{color:#444;border-bottom:0}
+  .rev{background:#fff;border:1px solid #999;border-left:4px solid #999}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* — doplnky pre generované kapitoly (tools/build.js) — */
+.src p,.src li{font-size:calc(11.5px*var(--z,1));line-height:1.4}
+.src ul{padding-left:16px}
+.src .micro{font-size:calc(10px*var(--z,1))}
+figure.keep>.diagram{margin:9px 0 3px}
+figure.keep>figcaption{font-size:calc(10.5px*var(--z,1));line-height:1.35;color:var(--color-neutral-700);margin:0 0 9px}
+figure.keep>figcaption b{color:var(--color-text)}
+.page code{font-family:var(--font-mono);font-size:.92em}
+.chart .bx{fill:var(--color-neutral-200)}
+.chart .bx-c{fill:var(--color-accent-200)}
+.chart .bx-m{fill:var(--color-accent-2-200)}
+.chart .bx-k{fill:var(--color-neutral-100);stroke:var(--color-neutral-400)}
+
+/* ══ BIOCHEM: farebné boxy = vrstvy z CLAUDE.md §1.1 (v PATOLE k-morf, k-detek, k-fyz) ══
+   Vlastné triedy (.box), NIE .note/.flag/.plain — tie site.js vyplavuje do
+   okraja ako poznámky, kým boxy sú jadro textu.  --c = farba pásika,
+   --cl = tmavší odtieň pre štítok (kontrast na tónovanom pozadí).        */
+.box{--c:var(--color-neutral-500);--cl:var(--color-neutral-800);
+  margin:10px 0;padding:8px 10px;break-inside:avoid;
+  background:color-mix(in srgb,var(--c) 8%,#fff);border-left:3px solid var(--c)}
+.box .label{font-size:calc(10px*var(--z,1));letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+  color:var(--cl);margin-bottom:3px}
+.box .body{font-size:calc(12px*var(--z,1));line-height:1.38}
+.box .body>*:last-child{margin-bottom:0}
+.box .body p{margin:0 0 5px}
+.box .body ul,.box .body ol{margin:0 0 5px}
+.box .body table.table{margin:5px 0}
+.k-mech{--c:var(--color-accent);--cl:var(--color-accent-800)}
+.k-reg{--c:var(--color-accent-2);--cl:var(--color-accent-2-800)}
+.k-lab{--c:var(--color-neutral-500);--cl:var(--color-neutral-800)}
+.k-klin{--c:var(--color-accent-800);--cl:var(--color-accent-900)}
+.k-pozor{--c:#d9601a;--cl:#8a3b08}
+.k-zap{--c:#1f8a8a;--cl:#0f5555}
+.k-chem{--c:#3f8a55;--cl:#24582f}
+
+/* ══ PATOLA: okraj stránky (CLAUDE.md §5.3) ═══════════════════════════════
+   Jadro (hlavná myšlienka sekcie) a Skratky nie sú vrstva výkladu → bez farebnej
+   plochy a bez ľavého pásika. Šírka pásika 0 zároveň znamená, že site.js k nim
+   nekreslí čiaru cez text (čiara má hrúbku ľavého okraja poznámky).           */
+.k-jadro{--cl:var(--color-neutral-900);background:none;border-left:0;
+  border-top:2px solid var(--color-neutral-900);padding:5px 0 1px}
+.k-jadro .body{line-height:1.42}
+.k-skr{background:var(--color-neutral-100);border-left:0;padding:4px 8px;margin:3px 0 9px}
+.box.k-skr .body{font-size:calc(10.5px*var(--z,1));line-height:1.4;color:var(--color-neutral-700)}
+.k-skr .sk b{font-weight:600;color:var(--color-text)}
+.k-skr .sk+.sk::before{content:"· "}
+@media screen and (min-width:981px){
+  /* na okraji jedna skratka na riadok; v texte (mobil, tlač) idú za sebou */
+  .k-skr.side-note .sk{display:block;margin:0 0 2px}
+  .k-skr.side-note .sk+.sk::before{content:none}
+}
+/* mobil: skratky rastú s ostatným písmom (blok na konci súboru ich pre vyššiu špecifickosť nezachytí) */
+@media screen and (max-width:820px){.box.k-skr .body{font-size:calc(11.5px*var(--z,1))}}
+
+/* ══ obrázky (rovnaké pravidlá ako v ručne písaných kapitolách patofyzie) ═
+   --fw = najväčšia rozumná šírka zobrazenia; malý obrázok sa nerozmaže.   */
+.fig{margin:11px auto;break-inside:avoid;max-width:min(100%,var(--fw,100%))}
+.fig img{display:block;width:100%;height:auto;background:transparent;border:0;cursor:zoom-in}
+.fig figcaption{font-size:calc(10.5px*var(--z,1));line-height:1.35;margin-top:4px;color:var(--color-neutral-700)}
+.fig figcaption b{color:var(--color-text)}
+.fig figcaption .src-link{display:inline-flex;align-items:center;gap:3px;
+  color:var(--color-neutral-500);text-decoration:none}
+.fig figcaption .src-link:hover{color:var(--color-accent);text-decoration:underline}
+.fig figcaption .src-link svg{width:10px;height:10px;flex:none;
+  fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.fig-row{display:flex;flex-wrap:wrap;align-items:flex-start;gap:14px;margin:11px 0}
+.fig-row .fig{flex:var(--ar,1) 1 0;min-width:0;margin:0;max-width:none}
+@media screen and (min-width:981px){
+  .box,.fig,.fig-row{clear:both}
+  .fig-row .fig{clear:none}
+}
+@media (max-width:820px){
+  .fig-row{display:block}
+  .fig-row .fig{margin-bottom:12px;max-width:min(100%,var(--fw,100%))}
+}
+@media print{
+  .box{background:#fff;border:1px solid #999;border-left:4px solid var(--c)}
+  .box.k-jadro{border:0;border-top:1.5px solid #000}
+  .box.k-skr{border:0}
+  .fig figcaption .src-link{display:inline;color:#555}
+  .fig figcaption .src-link svg{display:none}
+  .fig figcaption .src-link[href]::after{content:" (" attr(href) ")";font-size:calc(8px*var(--z,1));word-break:break-all}
+  .fig-row{display:block;overflow:hidden}
+  .fig-row .fig{float:left;width:calc(50% - 8px);margin:0 0 10px}
+  .fig-row .fig+.fig{float:right}
+}
+
+/* ══ PATOLA: náhľad inej kapitoly (assets/js/peek.js) ═════════════════════
+   Panel prekryje stred a pravý stĺpec; hlavička a ľavý obsah ostávajú.
+   --pk-left / --pk-top dopočíta skript z polohy bočného panela a hlavičky.
+   Maximalizácia = --pk-m → 0 (prechod na left/top/right/bottom, 0,5 s).   */
+.pk-backdrop{position:fixed;z-index:44;left:var(--pk-left,0px);top:var(--pk-top,52px);right:0;bottom:0;
+  background:rgba(32,28,40,.30);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);
+  opacity:0;transition:opacity .22s ease}
+.pk-backdrop.pk-in{opacity:1}
+.pk-backdrop.pk-max-on{opacity:0;transition:opacity .5s ease}
+.pk{--pk-m:16px;--pk-ease:cubic-bezier(.4,0,.2,1);
+  position:fixed;z-index:45;
+  left:calc(var(--pk-left,0px) + var(--pk-m));top:calc(var(--pk-top,52px) + var(--pk-m));
+  right:var(--pk-m);bottom:var(--pk-m);
+  display:flex;flex-direction:column;overflow:hidden;
+  background:#fff;border:1px solid var(--color-neutral-300);border-radius:12px;
+  box-shadow:0 22px 56px rgba(20,16,32,.30),0 2px 8px rgba(20,16,32,.12);
+  opacity:0;transform:translateY(12px) scale(.985);
+  transition:opacity .22s ease,transform .28s cubic-bezier(.2,.7,.2,1)}
+.pk.pk-in{opacity:1;transform:none}
+.pk.pk-max-on{--pk-m:0px;border-radius:0;border-color:transparent;box-shadow:0 0 0 rgba(0,0,0,0);
+  transition:left .5s var(--pk-ease),top .5s var(--pk-ease),right .5s var(--pk-ease),bottom .5s var(--pk-ease),
+    border-radius .5s var(--pk-ease),box-shadow .5s ease,border-color .5s ease}
+.pk-bar{flex:none;display:flex;align-items:center;gap:4px;height:44px;padding:0 8px 0 14px;overflow:hidden;
+  border-bottom:1px solid var(--color-neutral-200);background:var(--color-neutral-50,#faf9fb);
+  font-family:var(--site-font,system-ui,sans-serif);font-size:calc(12.5px*var(--z,1));color:var(--color-text);
+  transition:height .5s var(--pk-ease),opacity .3s ease,border-color .5s ease}
+.pk.pk-max-on .pk-bar{height:0;opacity:0;border-color:transparent}
+.pk-kind{flex:none;font-size:calc(10px*var(--z,1));letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+  color:var(--color-accent-700);padding:3px 7px;border-radius:4px;
+  background:color-mix(in srgb,var(--color-accent) 10%,transparent);margin-right:6px}
+.pk-title{flex:1;min-width:0;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pk-btn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;
+  border:0;border-radius:7px;background:transparent;color:var(--color-neutral-600);cursor:pointer;
+  transition:background .15s ease,color .15s ease}
+.pk-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.pk-btn-max:hover{background:color-mix(in srgb,var(--color-accent) 12%,transparent);color:var(--color-accent-700)}
+.pk-btn-close:hover{background:color-mix(in srgb,var(--color-accent-2) 14%,transparent);color:var(--color-accent-2-700)}
+.pk-btn:focus-visible{outline:2px solid var(--color-accent);outline-offset:1px}
+.pk-btn:active{transform:scale(.94)}
+.pk-frame{flex:1;display:block;width:100%;min-height:0;border:0;background:#fff}
+.pk-load{position:relative;flex:none;height:0;overflow:visible;pointer-events:none}
+.pk-load i{position:absolute;left:0;top:0;height:3px;width:40%;opacity:0;
+  background:linear-gradient(90deg,var(--color-accent),var(--color-accent-2))}
+.pk-load.on i{opacity:1;animation:pk-slide 1.1s ease-in-out infinite}
+@keyframes pk-slide{0%{left:-40%}100%{left:100%}}
+@media (max-width:980px){.pk{--pk-m:8px}}
+
+/* kým je náhľad otvorený: stránka pod ním stojí, posuvník nahradí odsadenie */
+html.pk-lock{overflow:hidden}
+html.pk-lock body{padding-right:var(--pk-sbw,0px)}
+
+/* bočný obsah pri maximalizácii (skript presunie body a animuje posun) */
+.pk-nav-gap{height:18px;margin:6px 8px 0;border-bottom:1px dashed var(--color-neutral-300)}
+.site-header .crumb{transition:opacity .25s ease}
+.site-header .crumb.pk-fade{opacity:0}
+
+/* stránka vnútri náhľadu: len obsah, bez hlavičky a bočného panela */
+html.pk-restoring body{visibility:hidden}
+/* fork: na samostatnom riadku je len nadpis stĺpca; tučné slová v texte ostávajú vo vete */
+.fork>div>b:not(:first-child){display:inline;margin:0}
+.pk-embed .site-header,.pk-embed .site-sidebar,.pk-embed .reading-progress,
+.pk-embed .reading-pct,.pk-embed .skip-link{display:none!important}
+
+/* návrat tlačidlom Späť */
+.pk-back-in .site-main{animation:pk-back .35s cubic-bezier(.2,.7,.2,1)}
+.pk-back-in .site-sidebar nav{animation:pk-fadein .35s ease}
+@keyframes pk-back{from{opacity:0;transform:translateX(-32px)}to{opacity:1;transform:none}}
+@keyframes pk-fadein{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .pk,.pk.pk-max-on,.pk-bar,.pk-backdrop{transition:none}
+  .pk-back-in .site-main,.pk-back-in .site-sidebar nav{animation:none}
+}
+@media print{.pk,.pk-backdrop{display:none!important}}
+
+/* ══ PATOLA: tlač ═════════════════════════════════════════════════════════
+   Strana A4 má ~700 px, takže sa v tlači zapínajú mobilné pravidlá
+   z chapter.css (@media max-width:820px): graf s posuvníkom, tabuľka ako blok.
+   Tu ich vraciame a riešime zlom strán.                                    */
+@page{size:A4;margin:14mm 15mm 16mm}
+@media print{
+  .page{padding:0!important}
+  .chart{overflow:visible!important;max-width:100%}
+  .chart svg{min-width:0!important;max-width:100%!important}
+  .table{display:table!important;overflow:visible!important;width:100%}
+  .diagram{white-space:pre-wrap}
+  /* fotografia nezaberie celú stranu – inak ostávajú polovičné prázdne strany */
+  .fig{max-width:100%!important}
+  .fig img{width:auto;max-width:100%;max-height:6.5cm;margin:0 auto}
+  .fig-row .fig img{max-height:5.2cm}
+  .chart svg{max-height:9.5cm}
+  /* úspornejšia tlač (4. 10. 2026): obsah kapitoly v dvoch stĺpcoch, zdroje drobnejším písmom v dvoch stĺpcoch */
+  .contents{column-count:2;column-gap:24px}
+  .sec-body.src{font-size:calc(9.5px*var(--z,1));line-height:1.35}
+  .sec-body.src ul{column-count:2;column-gap:22px;margin-top:3px}
+  .sec-body.src li{break-inside:avoid;margin-bottom:2px}
+  /* nadpis nikdy sám na spodku strany */
+  .sec-h,.sub-h,h2,h3,.box .label{break-after:avoid;page-break-after:avoid}
+  /* dlhé boxy sa smú zlomiť (inak nechajú prázdnu pol stranu); tabuľky a riadky nie */
+  .box.keep{break-inside:auto}
+  tr,.fig,.chart,figure.keep{break-inside:avoid}
+  p,li{orphans:3;widows:3}
+  .reader-ctl,#pt-zoom{display:none!important}
+}
+
+/* lupa (assets/js/zoom.js) */
+#pt-zoom{position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;
+  padding:24px;background:rgba(20,18,26,.82);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);cursor:zoom-out}
+#pt-zoom.on{display:flex}
+#pt-zoom img{max-width:100%;max-height:100%;background:#fff;box-shadow:var(--shadow-lg)}
+
+/* okrajové poznámky (site.js): na pôvodnom mieste v texte ostane čiara vo farbe a hrúbke
+   ľavého okraja poznámky, ktorá vedie až k nej; poznámka na čiare sedí spodkom.
+   Dlhé odkazy sa musia zalamovať, inak presiahnu úzky stĺpec (204–254 px, --side-w v site.css) a stránka dostane vodorovný posuv */
+.side-anchor{display:block;height:0;margin:10px 0;padding:0;position:relative;z-index:4;pointer-events:none}
+/* zalomenie čiary k poznámke, ktorú iná odtlačila nižšie (zvislý + vodorovný úsek, site.js) */
+.side-anchor i{display:none;position:absolute;background-color:inherit}
+@media (max-width:980px){.side-anchor{display:none}}
+@media (min-width:981px){.box.side-note{margin:0}}
+@media print{.side-anchor{display:none}}
+@media screen and (min-width:981px){.side-note{transform:none!important;overflow-wrap:anywhere}}
+.xref,.xref-soon{white-space:normal}
+
+/* ══ PATOLA: vlastné schémy (chapters/fig/*.svg) ═════════════════════════ */
+.chart .mk{fill:var(--color-neutral-700)}
+.chart .arw{fill:none;stroke:var(--color-neutral-700);stroke-width:1.5}
+.chart .arwd{fill:none;stroke:var(--color-neutral-600);stroke-width:1.3;stroke-dasharray:5 4}
+.chart .cell{fill:var(--color-accent-100);stroke:var(--color-accent-600);stroke-width:1.5}
+.chart .nuc{fill:var(--color-accent-400);stroke:var(--color-accent-800);stroke-width:1}
+.chart .cellm{fill:var(--color-accent-2-100);stroke:var(--color-accent-2-600);stroke-width:1.5}
+.chart .nucm{fill:var(--color-accent-2-500);stroke:var(--color-accent-2-800);stroke-width:1}
+.chart .dot{fill:var(--color-neutral-700)}
+.chart .dotm{fill:var(--color-accent-2-600)}
+.chart .lblb{font-size:11px;font-weight:600;fill:var(--color-neutral-900)}
+.chart .sub{font-size:9.5px;fill:var(--color-neutral-700)}
+.chart .zone-r{fill:var(--color-accent-2-100)}
+.chart .zone-i{fill:var(--color-accent-100)}
+.chart .s-d{stroke:var(--color-neutral-700);stroke-dasharray:6 4}
+.chart .s-t{stroke:var(--color-neutral-700);stroke-dasharray:2 4}
+.chart .fill-acc{fill:var(--color-accent-500)}
+.chart .fill-acc2{fill:var(--color-accent-2-500)}
+.chart .stk-acc{fill:none;stroke:var(--color-accent-600);stroke-width:2}
+.chart .stk-acc2{fill:none;stroke:var(--color-accent-2-600);stroke-width:2}
+.chart .stk-n{fill:none;stroke:var(--color-neutral-600);stroke-width:1.3}
+
+/* ══ BIOCHEM: štruktúrne vzorce a schémy dráh (CLAUDE.md §5.2) ═════════════
+   Vzorce kreslí tools/vzorce.js z opisov v chapters/fig/mol/, schémy skladá
+   tools/schema.js. Farebný kód je v celej knihe rovnaký:
+     žltá     = koenzým, kosubstrát          modrá (akcent) = enzým a skupina, o ktorú v reakcii ide
+     zelená ↑ = aktivuje                     červená ↓      = inhibuje (čiara končí priečkou)
+     plná čiara = premena látky              prerušovaná    = vplyv (regulácia, signál)
+     hrubá šípka = nevratný (riadiaci) krok
+   Veľkosti písma .at/.ix/.nm musia sedieť s konštantami FS/IX/NUM v tools/vzorce.js. */
+.chart{--sch-koe:#fae28c;--sch-koe-s:#c2940a;--sch-akt:#1f7d38;--sch-inh:#cd2b26}
+/* vzorec */
+.chart .bd{fill:none;stroke:var(--color-neutral-900);stroke-width:1.25;stroke-linecap:round}
+.chart .bd.bb{stroke-width:3.6;stroke-linecap:butt}
+.chart .wg{fill:var(--color-neutral-900);stroke:var(--color-neutral-900);stroke-width:.5;stroke-linejoin:round}
+.chart .at{font-size:10.5px;fill:var(--color-neutral-900)}
+.chart .at .ix{font-size:7.4px}
+.chart .pc{fill:#fff;stroke:var(--color-neutral-900);stroke-width:1.1}
+.chart .at.pt{font-size:9px;font-weight:600}
+.chart .nm{font-size:7px;fill:var(--color-neutral-600)}
+.chart .bd.hl{stroke:var(--color-accent-600);stroke-width:1.7}
+.chart .bd.bb.hl{stroke-width:3.6}
+.chart .wg.hl{fill:var(--color-accent-600);stroke:var(--color-accent-600)}
+.chart .at.hl{fill:var(--color-accent-700);font-weight:600}
+.chart .pc.hl{fill:var(--color-accent-100);stroke:var(--color-accent-600);stroke-width:1.5}
+.chart .mn{font-size:10.5px;font-weight:600;fill:var(--color-neutral-900)}
+.chart .ms{font-size:9px;fill:var(--color-neutral-700)}
+/* reakcia: šípka, enzým, koenzýmy */
+.chart .rx{fill:none;stroke:var(--color-neutral-800);stroke-width:1.5}
+.chart .rx.nv{stroke:var(--color-neutral-900);stroke-width:2.8}
+.chart .enz{font-size:10px;font-style:italic;fill:var(--color-accent-700)}
+.chart .enz .kr{font-style:normal;font-weight:600;fill:var(--color-neutral-900)}
+.chart .koe{fill:var(--sch-koe);stroke:var(--sch-koe-s);stroke-width:.8}
+.chart .koet{font-size:9.5px;font-weight:600;fill:#3a2d00}
+.chart .koa{fill:none;stroke:var(--sch-koe-s);stroke-width:1.3}
+/* regulácia a iné vzťahy */
+.chart .akt{fill:none;stroke:var(--sch-akt);stroke-width:1.4;stroke-dasharray:5 3.5}
+.chart .inh{fill:none;stroke:var(--sch-inh);stroke-width:1.4;stroke-dasharray:5 3.5}
+.chart .vz{fill:none;stroke:var(--color-neutral-600);stroke-width:1.3;stroke-dasharray:5 3.5}
+.chart .akt.plna,.chart .inh.plna,.chart .vz.plna{stroke-dasharray:none}
+.chart .t-akt{font-size:10px;font-weight:600;fill:var(--sch-akt)}
+.chart .t-inh{font-size:10px;font-weight:600;fill:var(--sch-inh)}
+/* hroty */
+.chart .mk-nv{fill:var(--color-neutral-900)}
+.chart .mk-n{fill:var(--color-neutral-600)}
+.chart .mk-akt{fill:var(--sch-akt)}
+.chart .mk-koe{fill:var(--sch-koe-s)}
+.chart .mk-inh{fill:none;stroke:var(--sch-inh);stroke-width:2.2}
+/* kompartment (cytosol, mitochondria…) a jeho popis */
+.chart .komp{fill:var(--color-neutral-100);stroke:var(--color-neutral-400);stroke-width:1;stroke-dasharray:2 3}
+.chart .komp-m{fill:var(--color-accent-100);stroke:var(--color-accent-400);stroke-width:1.2}
+@media print{.chart .koe,.chart .pc,.chart .komp,.chart .komp-m{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+/* rozkliknutie (CLAUDE.md §5.2, bod 7): krúžok ⊕ rozbalí výrez pod schémou, krúžok → skočí na podrobnú
+   schému. Správanie: assets/js/schema.js; značky rk=, href=, <vyrez>: tools/schema.js. */
+.chart .rk,.chart .rk-a{cursor:pointer;outline:none}
+.chart .rk-hit{fill:transparent;stroke:transparent;stroke-width:14;pointer-events:all}
+.chart .rk-b circle{fill:var(--color-accent-600);stroke:#fff;stroke-width:1.3}
+.chart .rk-b path{fill:none;stroke:#fff;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.chart .rk-b.rk-l circle{fill:var(--color-neutral-700)}
+.chart .rk.is-open>.rk-b .rk-v{display:none}
+.chart .rk.is-open>.rk-b circle{fill:var(--color-accent-800)}
+.chart .rk:hover>.rk-b circle,.chart .rk:focus-visible>.rk-b circle{fill:var(--color-accent-800)}
+.chart .rk-a:hover>.rk-b circle,.chart .rk-a:focus-visible>.rk-b circle{fill:var(--color-neutral-900)}
+.chart .rk:hover>rect:not(.rk-hit),.chart .rk-a:hover>rect:not(.rk-hit),
+.chart .rk:focus-visible>rect:not(.rk-hit),.chart .rk-a:focus-visible>rect:not(.rk-hit),
+.chart .rk.is-open>rect:not(.rk-hit){stroke:var(--color-accent-600);stroke-width:1.4}
+.chart .rk:hover>.rk-hit,.chart .rk-a:hover>.rk-hit,.chart .rk:focus-visible>.rk-hit,.chart .rk-a:focus-visible>.rk-hit{fill:var(--color-accent-100)}
+.chart .rk-panel{display:none}
+.chart .rk-panel.is-open{display:inline}
+.chart .rk-bg{fill:var(--color-neutral-100)}
+.chart .rk-line{fill:none;stroke:var(--color-accent-600);stroke-width:1.5}
+.chart .rk-t{font-size:10.5px;font-weight:600;letter-spacing:.02em;fill:var(--color-accent-800)}
+.chart .rk-x circle{fill:#fff;stroke:var(--color-neutral-400);stroke-width:1}
+.chart .rk-x path{fill:none;stroke:var(--color-neutral-700);stroke-width:1.5;stroke-linecap:round}
+.chart .rk-x:hover circle,.chart .rk-x:focus-visible circle{stroke:var(--color-accent-600);fill:var(--color-accent-100)}
+.chart .rk-n{font-size:9.5px;fill:var(--color-neutral-800)}
+.chart .rk-n b,.chart .rk-n .b{font-weight:600}
+.rk-bar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin:3px 0 2px;font-size:10.5px;line-height:1.3;color:var(--color-neutral-600)}
+.rk-bar button{font:inherit;font-weight:600;color:var(--color-accent-800);background:var(--color-accent-100);border:1px solid var(--color-accent-400);border-radius:2px;padding:2px 8px;cursor:pointer}
+.rk-bar button:hover,.rk-bar button:focus-visible{background:var(--color-accent-200);border-color:var(--color-accent-600)}
+.rk-bar i{font-style:normal;display:inline-block;width:12px;height:12px;line-height:12px;text-align:center;border-radius:50%;background:var(--color-accent-600);color:#fff;font-weight:600;font-size:10px;vertical-align:1px}
+.rk-bar i.l{background:var(--color-neutral-700)}
+@media print{
+  .rk-bar,.chart .rk-b,.chart .rk-x{display:none}
+  .chart .rk-bg{fill:none;stroke:var(--color-neutral-400);stroke-width:1}
+  figure.chart.has-rk-open svg{max-height:none}
+}
+/* ══ Odborná kontrola a otázky na zopakovanie (CLAUDE.md §1.3, §2.2) ═══════
+   Rovnaké v PATOLE aj v patofyzii (tools/chapter-extra.css oboch projektov). */
+.reviewed{font-size:calc(10.5px*var(--z,1));line-height:1.4;margin:-4px 0 12px;padding:0 10px;color:var(--color-neutral-700)}
+.reviewed b{font-size:calc(9.5px*var(--z,1));letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.reviewed a{color:var(--color-accent-800)}
+ol.quiz{margin:8px 0 4px;padding-left:26px}
+ol.quiz li{margin:0 0 6px}
+ol.quiz li::marker{color:var(--color-accent-800);font-weight:600}
+/* vlastná šípka za číslom — natívny trojuholník <summary> by sa prekrýval s číslom otázky */
+ol.quiz summary{display:block;list-style:none;cursor:pointer;font-weight:600;line-height:1.45;padding-left:14px;position:relative}
+ol.quiz summary::-webkit-details-marker{display:none}
+ol.quiz summary::before{content:"▸";position:absolute;left:0;top:0;color:var(--color-accent);transition:transform .15s ease}
+ol.quiz details[open]>summary::before{transform:rotate(90deg)}
+ol.quiz summary:hover{color:var(--color-accent-800)}
+ol.quiz .ans{margin:4px 0 2px 14px;padding:6px 10px;font-size:calc(12.5px*var(--z,1));line-height:1.45;
+  background:var(--color-accent-100);border-left:3px solid var(--color-accent)}
+@media print{
+  ol.quiz summary::before{content:none}
+  ol.quiz summary{padding-left:0}
+  ol.quiz .ans{margin-left:0}
+  ol.quiz .ans{background:none;border-left:1px solid var(--color-neutral-400);font-size:calc(10px*var(--z,1))}
+}
+
+/* stĺpce vedľa seba (blok ```cols) – vodorovné členenie rovnocenných vetiev */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px 14px;margin:9px 0 11px}
+.cols.n4{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.cols>div{padding:7px 11px 5px;background:var(--color-neutral-100);border-top:2px solid var(--color-accent-400);break-inside:avoid}
+.cols>div>p{margin:0 0 4px}
+.cols>div>ul,.cols>div>ol{margin:0 0 3px}
+@media print{.cols>div{background:none;border:1px solid var(--color-neutral-400);border-top-width:2px}}
+
+/* otázky na zopakovanie: reflektor pojmov okolo kurzora by napovedal a klik na pojem by namiesto
+   odpovede otvoril vysvetlivku → pojmy tu svietia a dajú sa otvoriť len pri zapnutom prepínači „Pojmy“ */
+html:not(.pf-terms-always) ol.quiz .pf-term{pointer-events:none;cursor:inherit}
+html:not(.pf-terms-always) ol.quiz .pf-term.is-lit{background-color:transparent;box-shadow:0 0 0 1.5px transparent}
+/* text otázky sa pri rýchlom otváraní a zatváraní (dvojklik) nemá označovať */
+ol.quiz summary{-webkit-user-select:none;user-select:none}
+
+/* ══ PATOLA: mobil — o stupeň väčšie písmo (≈ +7 %) ══════════════════════
+   Veľkosti v chapter.css sú v px (sadzba na tlačenú stranu), takže sa na
+   úzkej obrazovke zväčšujú po jednej, každá o rovnaký krok. `screen`, lebo
+   strana A4 je užšia než 820 px a tlač by pravidlo chytila tiež.
+   Musí ostať na konci súboru — prebíja pravidlá vyššie.
+   Od 8. 10. 2026 sa každá veľkosť ešte násobí mierkou --z (site.css): nová veľkosť = calc(Npx*var(--z,1)).                    */
+@media screen and (max-width:820px){
+  .page{font-size:calc(14.5px*var(--z,1))}
+  .sec-h{font-size:calc(17px*var(--z,1))}
+  .sub-h{font-size:calc(14.5px*var(--z,1))}
+  .standfirst{font-size:calc(14px*var(--z,1))}
+  .chain,.cols-2,.cols-3,.flow-2,.lede,ol.quiz .ans{font-size:calc(13.5px*var(--z,1))}
+  .page table.table,.box .body,.rev .body,.note .body,.flag .body,.plain .body,.fork{font-size:calc(13px*var(--z,1))}
+  .contents,.deps,.next,.src p,.src li{font-size:calc(12.5px*var(--z,1))}
+  .micro{font-size:calc(12px*var(--z,1))}
+  .fig figcaption,.chart figcaption,figure.keep>figcaption,.reviewed{font-size:calc(11.5px*var(--z,1))}
+  .box .label,.rev .label,.note .label,.flag .label,.plain .label,
+  .contents .label,.deps b,.next b,.eyebrow,.src .micro{font-size:calc(10.5px*var(--z,1))}
+  /* vysvetlivky a popis v lupe (glossary.css je zdieľaný s patofyziou, preto tu) */
+  .pf-tip{font-size:calc(14px*var(--z,1))}
+  .pf-tip h4{font-size:calc(15.5px*var(--z,1))}
+  .pf-tip .kicker,.pf-tip-body .fork > div{font-size:calc(13px*var(--z,1))}
+  .pf-tip-body .chain,.pf-tip-body .why,.pf-lb-cap{font-size:calc(13.5px*var(--z,1))}
+  .pf-tip figcaption{font-size:calc(12px*var(--z,1))}
+}
+
+/* „V tejto kapitole“: riadky sú odkazy na sekcie; vzhľad sa nemení, podčiarknutie až pri prejdení myšou */
+.contents a.row,.contents a.row:visited{color:inherit;text-decoration:none;border:0;background:none}
+.contents a.row:hover span:last-child,.contents a.row:focus-visible span:last-child{text-decoration:underline}
+
+/* okraj stránky (.page) sa odvíja od šírky okna: na užšom okne menej prázdneho miesta, na širokom viac
+   (chapter.css má pevných 50 px; mobil ≤ 820 px a tlač majú vlastné pravidlá) */
+@media screen and (min-width:821px){
+  .page{--pg-x:clamp(20px,3.6vw,84px);padding:clamp(22px,3.4vw,72px) var(--pg-x)}
+  /* hlavička kapitoly presahuje text do strán o 40 px (site.css) – najviac však o okraj stránky, inak na
+     tablete (821–980 px, kde vedľa stránky nie je stĺpec na poznámky) vytŕča z okna a stránka sa posúva do strán */
+  .chapter-hero{margin-left:calc(-1*min(40px,var(--pg-x)));margin-right:calc(-1*min(40px,var(--pg-x)))}
+}
+
+/* farebné stĺpce tabuľky (hlavička v .md končí {zel} | {fial} | {ruz} | {tyrk}) – keď sú stĺpce
+   rovnocenné kategórie, ktoré si má čitateľ zapamätať ako trojicu.
+   Značky sú rovnaké ako v PATOLE; {fial} = akcent knihy (tu modrá), {ruz} = akcent-2 (tu karmínová) */
+.c-zel{--tc:#3f8a55}.c-fial{--tc:var(--color-accent)}.c-ruz{--tc:var(--color-accent-2)}.c-tyrk{--tc:#1f8a8a}
+.page table.table th[class^="c-"]{color:var(--tc);font-weight:700;border-top:3px solid var(--tc);
+  background:color-mix(in srgb,var(--tc) 13%,#fff);padding:4px 8px}
+.page table.table td[class^="c-"]{background:color-mix(in srgb,var(--tc) 5%,#fff);padding-left:8px}
+@media print{.page table.table th[class^="c-"],.page table.table td[class^="c-"]{background:none}}
+
+/* vlastné schémy (SVG) idú na celú šírku textu, ale nikdy nie väčšie, než aby hlavné písmo schémy
+   (10,5 jednotky z viewBoxu 700) prerástlo písmo odseku: 700 / 10,5 = 66,67 em, kde em je písmo
+   odseku (.page). Písmo v schéme sa nemení – mení sa len šírka schémy; užšia schéma je vycentrovaná. */
+figure.chart{max-width:min(100%,66.667em);margin-left:auto;margin-right:auto}
+
+/* ══ BIOCHEM: skrytie bočného obsahu (assets/js/toc-collapse.js) ═════════════
+   ← v paneli obsah skryje, → pod hornou lištou ho vráti; len počítač (≥ 981 px), tablet a mobile majú šuplík. */
+.site-sidebar .toc-title{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.toc-collapse,.toc-expand{
+  display:none;align-items:center;justify-content:center;flex:none;
+  width:calc(30px*var(--z,1));height:calc(30px*var(--z,1));padding:0;
+  border:1px solid var(--site-border);border-radius:6px;
+  background:var(--site-bg);color:var(--site-text);
+  font:inherit;font-size:calc(15px*var(--z,1));line-height:1;text-transform:none;letter-spacing:0;cursor:pointer;
+}
+.toc-collapse:hover,.toc-expand:hover{background:color-mix(in srgb,var(--site-text) 10%,var(--site-bg))}
+.toc-expand{position:fixed;top:calc(var(--site-header-h) + 12px);left:12px;z-index:37}
+@media (min-width:981px){
+  .toc-collapse{display:inline-flex}
+  html.toc-collapsed .site-sidebar{display:none}
+  html.toc-collapsed .toc-expand{display:inline-flex}
+}
+@media print{.toc-collapse,.toc-expand{display:none!important}}
+.pk-embed .toc-expand{display:none!important}
+
+/* ══ BIOCHEM: odhad času na kapitolu (tools/build.js, timeHtml) ═════════════
+   „Prejsť“ = prvé prečítanie, „Naučiť sa“ = naučiť sa na skúšku; rozklikne sa na predpoklady výpočtu.
+   Nová veľkosť písma = aj riadok v bloku @media max-width:820 nižšie.                                */
+.cas{margin:12px 0 0;font-family:var(--site-font,system-ui,sans-serif);font-size:calc(12px*var(--z,1));
+  color:color-mix(in srgb,var(--color-text) 78%,transparent)}
+.cas summary{display:inline-flex;flex-wrap:wrap;align-items:center;gap:4px 8px;cursor:pointer;list-style:none;
+  padding:5px 10px;border:1px solid var(--color-divider);border-radius:var(--radius-lg);background:#fff}
+.cas summary::-webkit-details-marker{display:none}
+.cas summary:hover,.cas[open] summary{border-color:var(--color-accent)}
+.cas summary svg{width:14px;height:14px;flex:none;fill:none;stroke:var(--color-accent);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.cas summary b{font-weight:600;color:var(--color-text)}
+.cas summary i{font-style:normal;opacity:.45}
+.cas summary em{font-style:normal;font-size:calc(10px*var(--z,1));letter-spacing:.08em;text-transform:uppercase;opacity:.6}
+.cas p{margin:6px 0 0;max-width:46em;line-height:1.45;font-size:calc(11.5px*var(--z,1))}
+@media screen and (max-width:820px){.cas{font-size:calc(12.5px*var(--z,1))}.cas p{font-size:calc(12px*var(--z,1))}.cas summary em{font-size:calc(10.5px*var(--z,1))}}
+@media print{.cas summary{border:0;padding:0}}
+</style>
+<link rel="stylesheet" href="../assets/styles/palette.css">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#2a66ab">
+<link rel="icon" href="../assets/img/icon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BIOCHEM">
+<script src="../assets/js/pwa.js" defer></script>
+</head>
+<body>
+<!-- Súbor je GENEROVANÝ z 02_uvod_regulacia_metabolizmu.md nástrojom tools/build.js — uprav .md, nie tento súbor. -->
+<a class="skip-link" href="#sec-2-1">Preskočiť na obsah</a>
+<header class="site-header">
+  <a class="brand" href="../index.html"><span class="mark" aria-hidden="true"></span>BIOCHEM</a>
+  <span class="crumb">Lekárska biochémia — <b>Mapa metabolizmu a jeho regulácia</b></span>
+  <span class="spacer"></span>
+  <button class="site-toc-toggle" type="button" aria-label="Obsah kapitoly" aria-expanded="false">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+  </button>
+</header>
+
+<div class="reading-progress" role="progressbar" aria-label="Priebeh čítania kapitoly" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="bar"></div></div>
+<div class="reading-pct" aria-hidden="true">0 %</div>
+
+<button class="toc-expand" type="button" aria-label="Zobraziť obsah kapitoly" title="Zobraziť obsah">→</button>
+<div class="site-shell">
+  <aside class="site-sidebar">
+    <div class="toc-title"><span>Obsah kapitoly</span><button class="toc-collapse" type="button" aria-label="Skryť obsah kapitoly" title="Skryť obsah">←</button></div>
+    <nav></nav>
+  </aside>
+
+  <div class="site-main">
+<main class="page">
+
+<div class="chapter-hero">
+<div class="running-head">
+  <span>2 · Úvod do metabolizmu a princípy jeho regulácie</span>
+  <span style="color:var(--color-accent-700)">Lekárska biochémia</span>
+</div>
+
+<div class="opener">
+  <div class="cmyk-num num">
+    <span class="paper">2</span>
+    <span class="plate plate-c" aria-hidden="true">2</span>
+    <span class="plate plate-m" aria-hidden="true">2</span>
+    <span class="plate plate-y" aria-hidden="true">2</span>
+  </div>
+  <div style="padding-top:2px">
+    <div class="eyebrow">Základy · mapa a riadenie</div>
+    <h1>Úvod do metabolizmu a princípy jeho regulácie</h1>
+    <p class="standfirst">Mapa, do ktorej zapadnú všetky ďalšie kapitoly. Prvá polovica ukazuje, čo telo robí s palivom – tri stupne rozkladu, tri križovatky, zásoby a ich striedanie po jedle a nalačno. Druhá polovica vysvetľuje, čo tento tok riadi – od vlastností jedného enzýmu po hormonálny signál pre celé telo.</p>
+    <details class="cas"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Prejsť</b> ≈ 50 min</span><i aria-hidden="true">·</i><span><b>Naučiť sa</b> ≈ 2 h 50 min</span><em>odhad</em></summary><p>Orientačný odhad z rozsahu kapitoly (4 414 slov, 4 schém, 9 otázok), nie meranie. <b>Prejsť</b> = prvé prečítanie s porozumením (≈ 100 slov za minútu, schéma ≈ 1,5 min). <b>Naučiť sa</b> = prvé čítanie ×2,5 (druhé čítanie s poznámkami, kreslenie dráh z pamäti) plus 5 min na každú otázku na zopakovanie. Platí pre študenta, ktorý látku ešte nepozná; rozlož to na viac dní, Anki karty sú navyše.</p></details>
+  </div>
+</div>
+</div>
+
+<p class="deps"><b>Predpoklady:</b>
+  <a class="xref" href="01_zaklady_biomolekuly.html#sec-1-4">→ 1.4 Reakcie a triedy enzýmov</a> ·
+  <a class="xref" href="01_zaklady_biomolekuly.html#sec-1-5">→ 1.5 Energia reakcie</a>
+</p>
+<p class="reviewed"><b>Odborná kontrola:</b> zatiaľ neprebehla — fakty sú overené len podľa zdrojov uvedených na konci kapitoly · <a href="https://github.com/ephafy/biochemia/issues/new?title=Kap.%202%3A%20" target="_blank" rel="noopener noreferrer">Nahlásiť chybu</a></p>
+
+<div class="contents keep">
+  <div class="label">V tejto kapitole</div>
+  <a class="row" href="#sec-2-1"><span>2.1</span><span>Východisko a mapa: hospodárenie s palivom</span></a>
+  <a class="row" href="#sec-2-2"><span>2.2</span><span>Mapa metabolizmu: tri stupne, tri križovatky</span></a>
+  <a class="row" href="#sec-2-3"><span>2.3</span><span>Palivá, zásoby a stavy organizmu</span></a>
+  <a class="row" href="#sec-2-4"><span>2.4</span><span>Enzým: rýchlosť reakcie a čo ju mení</span></a>
+  <a class="row" href="#sec-2-5"><span>2.5</span><span>Úrovne regulácie: štyri spôsoby, ako zmeniť tok</span></a>
+  <a class="row" href="#sec-2-6"><span>2.6</span><span>Hormonálny signál a recipročná regulácia</span></a>
+  <a class="row" href="#sec-2-7"><span>2.7</span><span>Riadiaci krok: ako ho v dráhe nájsť</span></a>
+  <a class="row" href="#sec-2-8"><span>2.8</span><span>Laboratórium a klinika</span></a>
+  <a class="row" href="#sec-2-9"><span>2.9</span><span>Súhrn a rýchle rozlíšenie</span></a>
+  <a class="row" href="#sec-2-10"><span>2.10</span><span>Otázky na zopakovanie</span></a>
+  <a class="row" href="#sec-2-11"><span>2.11</span><span>Zdroje</span></a>
+</div>
+
+<!-- ══ 2.1 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-2-1"><span class="n">2.1</span><span>Východisko a mapa: hospodárenie s palivom</span></h2>
+<div class="sec-body">
+  <p>Človek je medzi dvoma jedlami hodiny, v noci pol dňa, a pritom jeho bunky potrebujú energiu bez prestávky. Metabolizmus je spôsob, akým telo tento rozpor rieši: palivo z potravy sčasti hneď spáli, sčasti uloží a zo zásob ho zasa uvoľní presne vtedy a tam, kde treba. Kapitola má preto dve časti. Prvá (<a class="xref" href="#sec-2-2">→ 2.2</a>, <a class="xref" href="#sec-2-3">→ 2.3</a>) opisuje <b>cesty</b> – kade palivo prúdi a kde sa ukladá. Druhá (<a class="xref" href="#sec-2-4">→ 2.4</a> až <a class="xref" href="#sec-2-7">→ 2.7</a>) opisuje <b>riadenie</b> – čo rozhoduje, ktorou cestou a ako rýchlo prúdi. Jazyk, ktorým sú zapísané (triedy enzýmov, ΔG, nevratný krok), zaviedla kapitola 1 (<a class="xref" href="01_zaklady_biomolekuly.html#sec-1-4">→ 1.4 Reakcie a triedy enzýmov</a>, <a class="xref" href="01_zaklady_biomolekuly.html#sec-1-5">→ 1.5 Energia reakcie: kam pôjde a ako ďaleko</a>).</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p>Metabolizmus = <b>cesty</b> (rozklad → acetyl-CoA → ATP; stavba a zásoby) + <b>riadenie</b> (enzým → signál v bunke → hormón). Tok sa prepína podľa stavu: po jedle ukladať, nalačno uvoľňovať.</p>
+    </div>
+  </div>
+
+  <p>Každá ďalšia kapitola knihy rozoberá jeden úsek tejto mapy a pýta sa na ňom to isté: načo dráha je, kde a kedy beží, akými krokmi, čo ju riadi, ako sa to zmeria a čo sa stane, keď krok vypadne.</p>
+
+  <p class="chain">potrava alebo zásoby → stavebné jednotky (glukóza, mastné kyseliny, aminokyseliny) → acetyl-CoA<br>
+    → citrátový cyklus: uhlíky odchádzajú ako CO₂, elektróny na NAD⁺ a FAD → dýchací reťazec + O₂ → <b>ATP</b> → práca bunky (pohyb, transport, syntézy)</p>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>CoA</b> koenzým A – nosič acylov</span> <span class="sk"><b>NAD⁺</b> nikotínamid-adenín-dinukleotid, oxidovaná forma – prijíma elektróny</span> <span class="sk"><b>FAD</b> flavín-adenín-dinukleotid – prijíma dva vodíky (→ FADH₂)</span> <span class="sk"><b>ATP</b> adenozíntrifosfát – univerzálny nosič energie</span></div>
+  </div>
+
+  <p>Kyslík, ktorý táto cesta spotrebúva, nesie z pľúc k tkanivám hemoglobín v erytrocytoch (<a class="xref" href="04_metabolizmus_glukozy.html#sub-4-2-3">→ 4.2.3 Odbočka erytrocytu: 2,3-bisfosfoglycerát</a>). Popri ATP pri tom vzniká aj to, s čím sa telo musí vyrovnať: teplo, CO₂, ktorý vydýchnu pľúca, a kyslé splodiny, ktoré zaťažujú pH krvi (<a class="xref" href="01_zaklady_biomolekuly.html#sub-1-6-4">→ 1.6.4 pH a tlmivé roztoky</a>). Metabolizmus tak nie je len otázka energie, ale aj stálosti vnútorného prostredia.</p>
+</div>
+
+<!-- ══ 2.2 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-2-2"><span class="n">2.2</span><span>Mapa metabolizmu: tri stupne, tri križovatky</span></h2>
+<div class="sec-body">
+  <p>Stovky reakcií sa dajú usporiadať do jednej schémy, ak sa na ne pozrieme podľa toho, čo robia s uhlíkom a s energiou. Sekcia najprv rozlíši dva smery (rozklad a stavbu), potom prejde rozklad po stupňoch a nakoniec povie, kde v bunke ktorá dráha leží.</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p><b>Katabolizmus</b> oxiduje a zbieha sa: veľa živín → málo medziproduktov → acetyl-CoA → CO₂ + ATP. <b>Anabolizmus</b> redukuje a rozbieha sa, platí ATP a NADPH. Križovatky: <b>glukóza-6-fosfát, pyruvát, acetyl-CoA</b>.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h" id="sub-2-2-1"><span class="n">2.2.1</span>Katabolizmus a anabolizmus</h3>
+  <p>Podľa smeru sa dráhy delia na rozkladné a stavebné; líšia sa vo všetkom, čo je pre reguláciu dôležité.</p>
+
+  <table class="table keep" id="tab-2-1" style="margin:6px 0">
+    <thead><tr><th></th><th>Katabolizmus</th><th>Anabolizmus</th></tr></thead>
+    <tbody>
+      <tr><td><b>Čo robí</b></td><td>veľké molekuly → malé</td><td>malé molekuly → veľké</td></tr>
+      <tr><td><b>Chemicky</b></td><td>oxidácia</td><td>redukcia</td></tr>
+      <tr><td><b>Energia</b></td><td>uvoľňuje – vzniká ATP</td><td>spotrebúva ATP</td></tr>
+      <tr><td><b>Koenzým elektrónov</b></td><td>NAD⁺, FAD (prijímajú)</td><td>NADPH (odovzdáva)</td></tr>
+      <tr><td><b>Tvar mapy</b></td><td>zbieha sa – rôzne živiny končia v tých istých medziproduktoch</td><td>rozbieha sa – z mála východísk veľa produktov</td></tr>
+      <tr><td><b>Kedy prevažuje</b></td><td>nalačno, pri záťaži</td><td>po jedle</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>NADPH</b> redukovaný NADP⁺ (NAD⁺ s fosfátom navyše) – elektróny pre syntézy</span></div>
+  </div>
+
+  <p>Oba smery sú spojené cez ATP a redukované koenzýmy: katabolizmus ich vyrába, anabolizmus míňa. Nikdy však nie sú zrkadlovým obrazom – aspoň jeden krok má každý smer vlastný, a práve tam sa dajú riadiť nezávisle (<a class="xref" href="01_zaklady_biomolekuly.html#sec-1-5">→ 1.5 Energia reakcie</a>).</p>
+
+  <h3 class="sub-h" id="sub-2-2-2"><span class="n">2.2.2</span>Tri stupne a tri križovatky</h3>
+  <p>Rozklad živín prebieha v troch stupňoch; delia sa podľa toho, aká veľká je molekula, s ktorou sa pracuje, a koľko energie sa pritom získa (Obr. 2.1).</p>
+
+  <div class="box k-mech keep">
+    <div class="label">Tri stupne získavania energie</div>
+    <div class="body">
+      <ol>
+    <li><b>Trávenie</b> – hydrolázy rozoberú veľké molekuly potravy na jednotky, ktoré sa dajú vstrebať (cukry, MK, aminokyseliny). ATP nevzniká; cieľom je dostať živiny do krvi.</li>
+    <li><b>Cesta k acetyl-CoA</b> – bunky jednotky oxidujú na hŕstku spoločných medziproduktov; väčšina uhlíka skončí ako dvojuhlíkový acetyl zavesený na CoA. Vzniká trochu ATP a redukované koenzýmy.</li>
+    <li><b>Spoločná oxidácia</b> – citrátový cyklus spáli acetyl na CO₂ a elektróny odovzdá NAD⁺ a FAD; dýchací reťazec ich prenesie na kyslík a z uvoľnenej energie vznikne väčšina ATP.</li>
+  </ol>
+    </div>
+  </div>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>MK</b> mastná kyselina</span></div>
+  </div>
+
+  <figure class="chart keep" id="fig-mapa-metabolizmu">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 606" role="img" aria-labelledby="t-mapa-metabolizmu">
+<title id="t-mapa-metabolizmu">Mapa metabolizmu v troch stupňoch. V prvom stupni sa škrob a glykogén, triacylglyceroly a bielkoviny hydrolyzujú na glukózu, mastné kyseliny s glycerolom a aminokyseliny. V druhom stupni sa tieto jednotky menia na spoločné medziprodukty: glukóza na glukóza-6-fosfát a pyruvát, pyruvát, mastné kyseliny aj väčšina aminokyselín na acetyl-CoA. V treťom stupni sa acetyl-CoA oxiduje v citrátovom cykle na oxid uhličitý; elektróny nesú NADH a FADH₂ do dýchacieho reťazca, kde vzniká ATP. Z glukóza-6-fosfátu odbočuje glykogén a pentózy s NADPH, z pyruvátu laktát, z acetyl-CoA syntézy mastných kyselín, cholesterolu a ketolátok.</title>
+<defs><marker id="fig-mapa-metabolizmu-sip" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk" d="M0,0L8,3.5L0,7z"/></marker><marker id="fig-mapa-metabolizmu-sip-nv" viewBox="0 0 11 10" refX="4" refY="5" markerWidth="11" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-nv" d="M0,0L11,5L0,10z"/></marker></defs>
+<text class="cap" x="12" y="14">1 · trávenie: veľké molekuly → stavebné jednotky (hydrolýza, bez zisku ATP)</text>
+<rect class="bx-k" x="108.8" y="28.8" width="102.4" height="22.5" rx="3"/><text class="lblb" x="160" y="43.8" text-anchor="middle">škrob, glykogén</text>
+<rect class="bx-k" x="359.1" y="28.8" width="101.8" height="22.5" rx="3"/><text class="lblb" x="410" y="43.8" text-anchor="middle">triacylglyceroly</text>
+<rect class="bx-k" x="562.8" y="28.8" width="74.5" height="22.5" rx="3"/><text class="lblb" x="600" y="43.8" text-anchor="middle">bielkoviny</text>
+<rect class="bx-c" x="130.7" y="86.8" width="58.5" height="22.5" rx="3"/><text class="lblb" x="160" y="101.8" text-anchor="middle">glukóza</text>
+<rect class="bx-c" x="330.1" y="86.8" width="159.8" height="22.5" rx="3"/><text class="lblb" x="410" y="101.8" text-anchor="middle">mastné kyseliny + glycerol</text>
+<rect class="bx-c" x="551.4" y="86.8" width="97.2" height="22.5" rx="3"/><text class="lblb" x="600" y="101.8" text-anchor="middle">aminokyseliny</text>
+<path class="rx" d="M160,55.3L160,82.8" marker-end="url(#fig-mapa-metabolizmu-sip)"/>
+<path class="rx" d="M410,55.3L410,82.8" marker-end="url(#fig-mapa-metabolizmu-sip)"/>
+<path class="rx" d="M600,55.3L600,82.8" marker-end="url(#fig-mapa-metabolizmu-sip)"/>
+
+<text class="cap" x="6" y="138">2 · cesta k acetyl-CoA</text>
+<g class="mol" transform="translate(160,196) scale(0.85)"><g transform="translate(7.8,0.6)"><path class="bd" d="M-35.2,0.4L-18.5,-15.4M-18.5,-15.4L13.1,-15.4M23.9,-10.3L35.2,0.4M35.2,0.4L35.2,9.6M18.5,16.3L18.5,25.4M-18.5,16.3L-18.5,7.1M-35.2,0.4L-35.2,9.6M-18.5,-15.4L-18.5,-24.6M-31.1,-30.4L-50.2,-30.4"/><path class="bd bb" d="M18.5,16.3L-18.5,16.3"/><path class="wg" d="M35.2,0.4L19.8,17.7L17.2,14.9z"/><path class="wg" d="M-35.2,0.4L-17.2,14.9L-19.8,17.7z"/><text class="at" x="14.8" y="-11.8">O</text><text class="at" x="31.5" y="19">OH</text><text class="at" x="14.8" y="34.8">OH</text><text class="at" x="-22.2" y="4.9">OH</text><text class="at" x="-31.5" y="19" text-anchor="end">HO</text><text class="at" x="-29.4" y="-26.8">OCH<tspan class="ix" dy="2.6">2</tspan></text><circle class="pc" cx="-57" cy="-30.4" r="6.2"/><text class="at pt" x="-57" y="-27.1" text-anchor="middle">P</text><text class="nm" x="45.5" y="-0.9" text-anchor="middle">1</text></g></g><text class="mn" x="160" y="238.3" text-anchor="middle">glukóza-6-fosfát</text><text class="ms" x="160" y="249.1" text-anchor="middle">(Glc-6-P)</text>
+<path class="rx nv" d="M160,113.3L160,153.2" marker-end="url(#fig-mapa-metabolizmu-sip-nv)"/>
+<rect class="bx-k" x="285.1" y="166.8" width="65.7" height="22.5" rx="3"/><text class="lblb" x="318" y="181.8" text-anchor="middle">glykogén</text>
+<path class="rx" d="M218.8,178L281.1,178" marker-end="url(#fig-mapa-metabolizmu-sip)" marker-start="url(#fig-mapa-metabolizmu-sip)"/>
+<rect class="bx-k" x="272.7" y="206.8" width="106.5" height="22.5" rx="3"/><text class="lblb" x="326" y="221.8" text-anchor="middle">pentózy, NADPH</text>
+<path class="rx" d="M218.8,218L268.7,218" marker-end="url(#fig-mapa-metabolizmu-sip)"/>
+<text class="sub" x="62" y="196" text-anchor="middle">križovatka 1</text>
+
+<g class="mol" transform="translate(160,334)"><g transform="translate(-5.3,-5.5)"><path class="bd" d="M0,0L-13.9,8M-1.5,0L-1.5,-16.2M1.6,0L1.6,-16.2M0,0L19.1,11M20.6,11L20.6,27.2M17.5,11L17.5,27.2M19.1,11L32.7,3.1"/><text class="at" x="-15.6" y="14.6" text-anchor="end">H<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">C</tspan></text><text class="at" x="-3.7" y="-18.4">O</text><text class="at" x="15.3" y="36.6">O</text><text class="at" x="34.4" y="3.6">O<tspan class="ix" dy="-3.9">−</tspan></text></g></g><text class="mn" x="209.6" y="331.7" text-anchor="start">pyruvát</text><text class="ms" x="209.6" y="342.5" text-anchor="start">(Pyr)</text>
+<path class="rx" d="M160,255.9L160,296.4" marker-end="url(#fig-mapa-metabolizmu-sip)"/>
+<text class="sub" x="168" y="284">glykolýza</text>
+<rect class="bx-k" x="22.5" y="322.8" width="47.1" height="22.5" rx="3"/><text class="lblb" x="46" y="337.8" text-anchor="middle">laktát</text>
+<path class="rx" d="M111.4,334L73.5,334" marker-end="url(#fig-mapa-metabolizmu-sip)" marker-start="url(#fig-mapa-metabolizmu-sip)"/>
+<text class="sub" x="62" y="372" text-anchor="middle">križovatka 2</text>
+
+<g class="mol" transform="translate(410,442)"><g transform="translate(-9.9,4.4)"><path class="bd" d="M0,0L-13.9,8M-1.5,0L-1.5,-16.2M1.6,0L1.6,-16.2M0,0L14.4,8.3M23.7,8.3L32.8,3.1"/><text class="at" x="-15.6" y="14.6" text-anchor="end">H<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">C</tspan></text><text class="at" x="-3.7" y="-18.4">O</text><text class="at" x="16.1" y="14.6">S</text><text class="at" x="34.5" y="2">CoA</text></g></g><text class="mn" x="410" y="475.7" text-anchor="middle">acetyl-CoA</text><text class="ms" x="410" y="486.5" text-anchor="middle">(Ac-CoA)</text>
+<path class="rx nv" d="M160,371.6Q160,442 346.3,442" marker-end="url(#fig-mapa-metabolizmu-sip-nv)"/>
+<text class="sub" x="262" y="466" text-anchor="middle">oxidačná dekarboxylácia</text>
+<path class="rx" d="M410,113.3L410,414.3" marker-end="url(#fig-mapa-metabolizmu-sip)"/>
+<text class="sub" x="418" y="300">β-oxidácia</text>
+<path class="rx" d="M580,113.3Q580,442 467.2,442" marker-end="url(#fig-mapa-metabolizmu-sip)"/>
+<rect class="bx-k" x="617.2" y="160.5" width="69.6" height="35" rx="3"/><text class="lblb" x="652" y="175.6" text-anchor="middle">NH₃ →</text><text class="lblb" x="652" y="188.1" text-anchor="middle">močovina</text>
+<path class="rx" d="M636,113.3L636,156.5" marker-end="url(#fig-mapa-metabolizmu-sip)"/>
+<text class="sub" x="500" y="476" text-anchor="middle">križovatka 3</text>
+<rect class="bx-k" x="127.4" y="506.5" width="155.1" height="35" rx="3"/><text class="lblb" x="205" y="521.6" text-anchor="middle">syntézy: mastné kyseliny,</text><text class="lblb" x="205" y="534.1" text-anchor="middle">cholesterol, ketolátky</text>
+<path class="rx" d="M352.8,458L280.6,502.5" marker-end="url(#fig-mapa-metabolizmu-sip)"/>
+
+<text class="cap" x="460" y="508">3 · spoločná oxidácia</text>
+<rect class="bx-c" x="358.7" y="528.8" width="102.5" height="22.5" rx="3"/><text class="lblb" x="410" y="543.8" text-anchor="middle">citrátový cyklus</text>
+<path class="rx" d="M410,493.3L410,524.8" marker-end="url(#fig-mapa-metabolizmu-sip)"/>
+<rect class="bx-k" x="392.1" y="578.8" width="35.7" height="22.5" rx="3"/><text class="lblb" x="410" y="593.8" text-anchor="middle">CO₂</text>
+<path class="rx" d="M410,555.3L410,574.8" marker-end="url(#fig-mapa-metabolizmu-sip)"/>
+<rect class="bx-c" x="556.1" y="522.5" width="99.8" height="35" rx="3"/><text class="lblb" x="606" y="537.6" text-anchor="middle">dýchací reťazec</text><text class="lblb" x="606" y="550.1" text-anchor="middle">O₂ → H₂O</text>
+<path class="rx" d="M465.3,540L552.1,540" marker-end="url(#fig-mapa-metabolizmu-sip)"/>
+<text class="sub" x="504" y="532" text-anchor="middle">NADH, FADH₂</text>
+<rect class="bx-m" x="586.7" y="578.8" width="38.7" height="22.5" rx="3"/><text class="lblb" x="606" y="593.8" text-anchor="middle">ATP</text>
+<path class="rx" d="M606,561.5L606,574.8" marker-end="url(#fig-mapa-metabolizmu-sip)"/>
+</svg>
+    <figcaption><b>Obr. 2.1 — Mapa metabolizmu v troch stupňoch.</b> Vzorcom sú nakreslené tri križovatky, na ktorých sa rozhoduje o osude uhlíka; hrubé šípky sú nevratné kroky. Všimni si, že cesta od pyruvátu k acetyl-CoA je jednosmerná – z acetyl-CoA sa glukóza späť vyrobiť nedá.</figcaption>
+  </figure>
+
+  <p>Na mape sú tri miesta, z ktorých vedie viac ciest; o tom, ktorou sa molekula vydá, rozhoduje regulácia.</p>
+
+  <table class="table keep" id="tab-2-2" style="margin:6px 0">
+    <thead><tr><th>Križovatka</th><th>Odkiaľ prichádza</th><th>Kam môže ísť</th><th>Domov</th></tr></thead>
+    <tbody>
+      <tr><td><b><b>glukóza-6-fosfát</b></b></td><td>z krvi (po fosforylácii glukózy) alebo zo zásoby</td><td>spálenie v glykolýze · uloženie do glykogénu · pentózy a NADPH · v pečeni výdaj do krvi</td><td>kap. 3, 4, 5</td></tr>
+      <tr><td><b><b>pyruvát</b></b></td><td>glykolýza, laktát, časť aminokyselín</td><td>ďalej na acetyl-CoA · na laktát · späť ku glukóze</td><td>kap. 4, 6</td></tr>
+      <tr><td><b><b>acetyl-CoA</b></b></td><td>pyruvát, MK, aminokyseliny</td><td>spálenie v citrátovom cykle · stavba MK a cholesterolu · ketolátky</td><td>kap. 6, 8, 10, 11</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box k-pozor aside keep">
+    <div class="label">Pozor</div>
+    <div class="body">
+      <p><b>Z tuku cukor nebude.</b> Krok od pyruvátu k acetyl-CoA je nevratný a obchádzka neexistuje. MK (okrem malej výnimky z kap. 8) preto glykémiu nezdvihnú – pri hladovaní musí glukózu dodať glukoneogenéza z laktátu, glycerolu a aminokyselín.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h" id="sub-2-2-3"><span class="n">2.2.3</span>Kompartmenty bunky</h3>
+  <p>Dráhy nie sú v bunke premiešané; každá má svoj priestor a membrána medzi nimi je sama nástrojom regulácie – čo cez ňu neprejde bez prenášača, to sa dá zadržať alebo pustiť.</p>
+
+  <table class="table keep" id="tab-2-3" style="margin:6px 0">
+    <thead><tr><th>Kompartment</th><th>Dráhy</th></tr></thead>
+    <tbody>
+      <tr><td><b><b>cytosol</b></b></td><td>glykolýza · pentózofosfátová dráha · glykogén (stavba aj rozklad) · stavba MK</td></tr>
+      <tr><td><b><b>mitochondria</b></b></td><td>β-oxidácia · citrátový cyklus · dýchací reťazec, v ktorom vzniká ATP · ketolátky</td></tr>
+      <tr><td><b><b>oba priestory</b> (časť krokov v každom)</b></td><td>glukoneogenéza · tvorba močoviny</td></tr>
+      <tr><td><b><b>endoplazmatické retikulum</b></b></td><td>odštiepenie fosfátu z glukóza-6-fosfátu (pečeň) · stavba zložených lipidov</td></tr>
+      <tr><td><b><b>jadro</b></b></td><td>prepis génov – určuje, koľko ktorého enzýmu bunka má</td></tr>
+    </tbody>
+  </table>
+
+  <p>Rozklad a stavbu MK tak delí membrána: rozklad beží v mitochondrii, stavba v cytosole. Bunka bez mitochondrií – erytrocyt – má z celej mapy len cytosolovú časť, a preto žije výlučne z glukózy.</p>
+</div>
+
+<!-- ══ 2.3 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-2-3"><span class="n">2.3</span><span>Palivá, zásoby a stavy organizmu</span></h2>
+<div class="sec-body">
+  <p>Mapa z predošlej sekcie platí pre jednu bunku; telo ako celok rieši navyše otázku, <b>kde</b> palivo uložiť a <b>kto</b> ho dostane, keď ho je málo. Sekcia ide od zásob cez požiadavky jednotlivých tkanív k trom stavom, medzi ktorými sa organizmus denne prepína.</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p>Zásoba = <b>tuk</b> (≈ 85 % energie, bez vody); <b>glykogén</b> je malý, rýchly a pečeňový patrí všetkým. Mozog a erytrocyt potrebujú glukózu stále → po jedle ukladať (inzulín), nalačno uvoľňovať (glukagón).</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h" id="sub-2-3-1"><span class="n">2.3.1</span>Palivá a zásoby</h3>
+  <p>Tri živiny a etanol sa líšia tým, koľko energie nesú na gram; rozhoduje o tom, ako veľmi je ich uhlík redukovaný (<a class="xref" href="01_zaklady_biomolekuly.html#sub-1-4-2">→ 1.4.2 Oxidácia a redukcia</a>).</p>
+
+  <table class="table keep" id="tab-2-4" style="margin:6px 0">
+    <thead><tr><th>Palivo</th><th>Energia (kJ/g)</th><th>(kcal/g)</th><th>Zásobná forma</th></tr></thead>
+    <tbody>
+      <tr><td><b>sacharidy</b></td><td>17</td><td>4</td><td>glykogén</td></tr>
+      <tr><td><b>bielkoviny</b></td><td>17</td><td>4</td><td>žiadna – každá bielkovina má funkciu</td></tr>
+      <tr><td><b>tuky</b></td><td>38</td><td>9</td><td>triacylglyceroly v tukovom tkanive</td></tr>
+      <tr><td><b>etanol</b></td><td>29</td><td>7</td><td>žiadna</td></tr>
+    </tbody>
+  </table>
+
+  <p>Bilancia zásob 70-kg muža ukazuje, prečo je hlavnou zásobou tuk:</p>
+
+  <table class="table keep" id="tab-2-5" style="margin:6px 0">
+    <thead><tr><th>Zásoba</th><th>Množstvo</th><th>Energia</th><th>Podiel</th></tr></thead>
+    <tbody>
+      <tr><td><b>triacylglyceroly (tukové tkanivo)</b></td><td>≈ 15 kg</td><td>≈ 570 MJ</td><td>≈ 85 % uloženej energie</td></tr>
+      <tr><td><b>glykogén svalov</b></td><td>≈ 400 g</td><td>≈ 6,8 MJ</td><td>spolu s pečeňovým necelé 2 %</td></tr>
+      <tr><td><b>glykogén pečene (po jedle)</b></td><td>≈ 100 g</td><td>≈ 1,7 MJ</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <p>Predpoklad výpočtu: energia = hmotnosť × energetická hodnota z predošlej tabuľky (tuky 38 kJ/g, glykogén 17 kJ/g); ide o orientačné hodnoty pre priemerného muža.</p>
+
+  <p>Dôvod je dvojaký. Tuk nesie na gram vyše dvojnásobok energie a ukladá sa takmer bez vody – tukové tkanivo jej má len asi 15 %, kým sval okolo 80 %. Rovnaká energia uložená v glykogéne by vážila mnohonásobne viac. Glykogén má však to, čo tuk nie: dá sa mobilizovať v priebehu minút a dá z neho vzniknúť glukóza.</p>
+
+  <div class="box k-klin aside keep">
+    <div class="label">Klinika</div>
+    <div class="body">
+      <p><b>Bielkoviny nie sú zásoba.</b> Telo nemá bielkovinu určenú len na uskladnenie aminokyselín. Keď pri dlhom hladovaní alebo ťažkej chorobe potrebuje aminokyseliny na tvorbu glukózy, berie ich zo svalov – stráca sa funkčné tkanivo. Úbytok svalovej hmoty (sarkopénia) preto nie je kozmetický problém, ale znak, že organizmus siahol na poslednú rezervu.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h" id="sub-2-3-2"><span class="n">2.3.2</span>Čo ktoré tkanivo potrebuje</h3>
+  <p>Tkanivá sa líšia výbavou enzýmov a organel, a tým aj palivom, ktoré vedia použiť. Zoradené sú od najprísnejších odberateľov po zásobárne.</p>
+
+  <table class="table keep" id="tab-2-6" style="margin:6px 0">
+    <thead><tr><th>Tkanivo</th><th>Palivo</th><th>Prečo</th><th>Čo z toho plynie</th></tr></thead>
+    <tbody>
+      <tr><td><b><b>erytrocyt</b></b></td><td>len glukóza</td><td>nemá mitochondrie</td><td>glykémia nesmie klesnúť nikdy</td></tr>
+      <tr><td><b><b>mozog</b></b></td><td>glukóza, ≈ 150 g denne; pri hladovaní aj ketolátky</td><td>MK mu ako palivo neslúžia</td><td>hlavný dôvod, prečo telo stráži glykémiu</td></tr>
+      <tr><td><b><b>sval</b></b></td><td>glukóza aj MK; k tomu svoj glykogén</td><td>chýba mu enzým, ktorý z glukóza-6-fosfátu uvoľní glukózu</td><td>jeho glykogén glykémiu nezdvihne</td></tr>
+      <tr><td><b><b>pečeň</b></b></td><td>MK a aminokyseliny</td><td>tento enzým má a vie glukózu aj vyrobiť</td><td>vydáva glukózu a ketolátky pre ostatných</td></tr>
+      <tr><td><b><b>tukové tkanivo</b></b></td><td>— (zásobáreň)</td><td>ukladá a uvoľňuje triacylglyceroly</td><td>nalačno z neho idú MK</td></tr>
+    </tbody>
+  </table>
+
+  <p>Živiny z čreva pritom nejdú do tela priamo: krv z čreva tečie portálnou žilou najprv do pečene, a až potom do systémového obehu. Pečeň tak vidí zloženie potravy ako prvá a rozhoduje, čo pustí ďalej.</p>
+
+  <h3 class="sub-h" id="sub-2-3-3"><span class="n">2.3.3</span>Tri stavy organizmu</h3>
+  <p>Podľa toho, ako dávno človek jedol, je telo v jednom z troch stavov; líšia sa hormonálnym signálom a smerom toku na mape.</p>
+
+  <table class="table keep" id="tab-2-7" style="margin:6px 0">
+    <thead><tr><th>Stav</th><th>Kedy</th><th>Signál</th><th>Čo robí pečeň</th><th>Čo robí tukové tkanivo</th><th>Palivo mozgu</th></tr></thead>
+    <tbody>
+      <tr><td><b><b>po jedle</b></b></td><td>hodiny po jedle</td><td>↑ inzulín, ↓ glukagón</td><td>ukladá glykogén, tvorí tuk</td><td>ukladá triacylglyceroly</td><td>glukóza z potravy</td></tr>
+      <tr><td><b><b>nalačno</b></b></td><td>medzi jedlami, v noci</td><td>↓ inzulín, ↑ glukagón</td><td>štiepi glykogén, spúšťa glukoneogenézu</td><td>uvoľňuje MK</td><td>glukóza z pečene</td></tr>
+      <tr><td><b><b>hladovanie</b></b></td><td>dni</td><td>inzulín veľmi nízky, glukagón vysoký</td><td>glykogén je vyčerpaný; glukoneogenéza a tvorba ketolátok</td><td>uvoľňuje MK naplno</td><td>glukóza + ketolátky (od ≈ 3. dňa)</td></tr>
+    </tbody>
+  </table>
+
+  <p>O smere nerozhoduje jeden hormón, ale <b>pomer inzulínu a glukagónu</b>. Tento stav „po jedle × nalačno × hladovanie“ bude sprevádzať každú dráhu v knihe – pri každej sa dá opýtať, v ktorom z troch stĺpcov beží a prečo. Pri telesnej záťaži a strese sa pridáva adrenalín, ktorý pôsobí rovnakým smerom ako glukagón: mobilizuje zásoby.</p>
+</div>
+
+<!-- ══ 2.4 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-2-4"><span class="n">2.4</span><span>Enzým: rýchlosť reakcie a čo ju mení</span></h2>
+<div class="sec-body">
+  <p>Všetka regulácia nakoniec znamená jedno: zmeniť rýchlosť, akou určitý enzým premieňa substrát. Rýchlosť závisí od troch vecí – koľko je substrátu, či je prítomný inhibítor a v akom prostredí enzým pracuje – a podľa nich je sekcia rozdelená. Enzým pritom nemení ΔG reakcie ani jej rovnováhu, len znižuje aktivačnú energiu (<a class="xref" href="01_zaklady_biomolekuly.html#sec-1-5">→ 1.5 Energia reakcie</a>).</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p>v = Vmax·[S] / (Km + [S]). <b>Km</b> = substrát pri polovičnej rýchlosti: pod ním enzým sleduje koncentráciu, nad ním je nasýtený. Kompetitívny inhibítor zvyšuje Km, nekompetitívny znižuje Vmax. pH a teplota menia tvar enzýmu.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h" id="sub-2-4-1"><span class="n">2.4.1</span>Substrát: Km a Vmax</h3>
+  <p>Ako rýchlosť rastie so substrátom, vystihuje rovnica, ktorú odvodili Michaelis a Mentenová; jej dve konštanty povedia o enzýme všetko podstatné.</p>
+
+  <p class="chain">v = Vmax · [S] / (Km + [S])<br>
+    [S] hlboko pod Km → rýchlosť rastie úmerne substrátu · [S] = Km → v = ½ Vmax · [S] vysoko nad Km → enzým je nasýtený, v = Vmax</p>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>Vmax</b> maximálna rýchlosť reakcie pri nasýtení enzýmu substrátom</span> <span class="sk"><b>Km</b> Michaelisova konštanta – koncentrácia substrátu pri polovičnej Vmax</span></div>
+  </div>
+
+  <ul>
+    <li><b>Vmax</b> je rýchlosť pri nasýtení; závisí od toho, koľko molekúl enzýmu bunka má.</li>
+    <li><b>Km</b> je koncentrácia substrátu, pri ktorej enzým pracuje polovičnou rýchlosťou; nízke Km znamená vysokú afinitu.</li>
+  </ul>
+
+  <p>Praktický význam Km je v porovnaní s koncentráciou substrátu v tele. Enzým s Km hlboko pod bežnou koncentráciou je stále nasýtený a zmenu koncentrácie „nevidí“; enzým s Km blízko nej alebo nad ňou pracuje tým rýchlejšie, čím viac substrátu má – správa sa ako senzor. Presne tak sa líšia dva enzýmy, ktoré fosforylujú glukózu (Obr. 2.2).</p>
+
+  <figure class="chart keep" id="fig-kinetika">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 306" role="img" aria-labelledby="t-kinetika">
+<title id="t-kinetika">Rýchlosť enzýmovej reakcie v závislosti od koncentrácie substrátu (schematicky) na dvoch enzýmoch, ktoré fosforylujú glukózu. Hexokináza má nízke Km: nasýti sa už pri nepatrnej koncentrácii glukózy a jej rýchlosť sa s glykémiou nemení. Glukokináza má Km okolo 10 mmol/l a veľkú maximálnu rýchlosť: v rozsahu glykémie od stavu nalačno po stav po jedle jej rýchlosť rastie spolu s koncentráciou glukózy.</title>
+<defs><marker id="fig-kinetika-sip" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk" d="M0,0L8,3.5L0,7z"/></marker></defs>
+<path class="arw" d="M90,250L660,250" marker-end="url(#fig-kinetika-sip)"/>
+<path class="arw" d="M90,250L90,24" marker-end="url(#fig-kinetika-sip)"/>
+<text class="lblb" x="375" y="296" text-anchor="middle">koncentrácia glukózy (mmol/l)</text>
+<text class="lblb" x="34" y="140" text-anchor="middle" transform="rotate(-90 34 140)">rýchlosť reakcie v</text>
+<rect class="zone-i" x="162" y="40" width="36" height="210"/>
+<text class="sub" x="180" y="34" text-anchor="middle">glykémia nalačno</text>
+<path class="stk-n" d="M180,250v5M270,250v5M450,250v5M630,250v5"/>
+<text class="sub" x="90" y="268" text-anchor="middle">0</text>
+<text class="sub" x="180" y="268" text-anchor="middle">5</text>
+<text class="sub" x="270" y="268" text-anchor="middle">10</text>
+<text class="sub" x="450" y="268" text-anchor="middle">20</text>
+<text class="sub" x="630" y="268" text-anchor="middle">30</text>
+<path class="stk-n s-d" d="M90,50L650,50"/>
+<text class="sub" x="652" y="46" text-anchor="end">Vmax glukokinázy</text>
+<path class="stk-acc" d="M90.0,250.0L94.5,245.1L99.0,240.5L103.5,236.0L108.0,231.8L112.5,227.8L117.0,223.9L121.5,220.2L126.0,216.7L130.5,213.3L135.0,210.0L139.5,206.9L144.0,203.8L148.5,200.9L153.0,198.1L157.5,195.5L162.0,192.9L166.5,190.4L171.0,187.9L175.5,185.6L180.0,183.3L184.5,181.1L189.0,179.0L193.5,177.0L198.0,175.0L202.5,173.1L207.0,171.2L211.5,169.4L216.0,167.6L220.5,165.9L225.0,164.3L229.5,162.7L234.0,161.1L238.5,159.6L243.0,158.1L247.5,156.7L252.0,155.3L256.5,153.9L261.0,152.6L265.5,151.3L270.0,150.0L274.5,148.8L279.0,147.6L283.5,146.4L288.0,145.2L292.5,144.1L297.0,143.0L301.5,142.0L306.0,140.9L310.5,139.9L315.0,138.9L319.5,137.9L324.0,137.0L328.5,136.0L333.0,135.1L337.5,134.2L342.0,133.3L346.5,132.5L351.0,131.6L355.5,130.8L360.0,130.0L364.5,129.2L369.0,128.4L373.5,127.7L378.0,126.9L382.5,126.2L387.0,125.5L391.5,124.8L396.0,124.1L400.5,123.4L405.0,122.7L409.5,122.1L414.0,121.4L418.5,120.8L423.0,120.2L427.5,119.6L432.0,119.0L436.5,118.4L441.0,117.8L445.5,117.2L450.0,116.7L454.5,116.1L459.0,115.6L463.5,115.0L468.0,114.5L472.5,114.0L477.0,113.5L481.5,113.0L486.0,112.5L490.5,112.0L495.0,111.5L499.5,111.1L504.0,110.6L508.5,110.2L513.0,109.7L517.5,109.3L522.0,108.8L526.5,108.4L531.0,108.0L535.5,107.6L540.0,107.1L544.5,106.7L549.0,106.3L553.5,105.9L558.0,105.6L562.5,105.2L567.0,104.8L571.5,104.4L576.0,104.1L580.5,103.7L585.0,103.3L589.5,103.0L594.0,102.6L598.5,102.3L603.0,101.9L607.5,101.6L612.0,101.3L616.5,101.0L621.0,100.6L625.5,100.3L630.0,100.0"/>
+<path class="stk-acc2" d="M90.0,250.0L90.9,226.7L91.8,215.0L92.7,208.0L93.6,203.3L94.5,200.0L95.4,197.5L96.3,195.6L97.2,194.0L98.1,192.7L99.0,191.7L99.9,190.8L100.8,190.0L101.7,189.3L102.6,188.8L103.5,188.2L104.4,187.8L105.3,187.4L106.2,187.0L107.1,186.7L108.0,186.4L108.9,186.1L109.8,185.8L110.7,185.6L111.6,185.4L112.5,185.2L113.4,185.0L114.3,184.8L115.2,184.7L116.1,184.5L117.0,184.4L117.9,184.2L118.8,184.1L119.7,184.0L120.6,183.9L121.5,183.8L122.4,183.7L123.3,183.6L124.2,183.5L125.1,183.4L126.0,183.3L126.9,183.3L127.8,183.2L128.7,183.1L129.6,183.0L130.5,183.0L131.4,182.9L132.3,182.9L133.2,182.8L134.1,182.7L135.0,182.7L135.9,182.6L136.8,182.6L137.7,182.5L138.6,182.5L139.5,182.5L140.4,182.4L141.3,182.4L142.2,182.3L143.1,182.3L144.0,182.3L144.9,182.2L145.8,182.2L146.7,182.2L147.6,182.1L148.5,182.1L149.4,182.1L150.3,182.0L151.2,182.0L152.1,182.0L153.0,181.9L153.9,181.9L154.8,181.9L155.7,181.9L156.6,181.8L157.5,181.8L158.4,181.8L159.3,181.8L160.2,181.8L161.1,181.7L162.0,181.7L162.9,181.7L163.8,181.7L164.7,181.6L165.6,181.6L166.5,181.6L167.4,181.6L168.3,181.6L169.2,181.6L170.1,181.5L171.0,181.5L171.9,181.5L172.8,181.5L173.7,181.5L174.6,181.5L175.5,181.4L176.4,181.4L177.3,181.4L178.2,181.4L179.1,181.4L180.0,181.4L180.9,181.4L181.8,181.3L182.7,181.3L183.6,181.3L184.5,181.3L185.4,181.3L186.3,181.3L187.2,181.3L188.1,181.3L189.0,181.2L189.9,181.2L190.8,181.2L191.7,181.2L192.6,181.2L193.5,181.2L194.4,181.2L195.3,181.2L196.2,181.2L197.1,181.2L198.0,181.1L198.9,181.1L199.8,181.1L200.7,181.1L201.6,181.1L202.5,181.1L203.4,181.1L204.3,181.1L205.2,181.1L206.1,181.1L207.0,181.1L207.9,181.1L208.8,181.0L209.7,181.0L210.6,181.0L211.5,181.0L212.4,181.0L213.3,181.0L214.2,181.0L215.1,181.0L216.0,181.0L216.9,181.0L217.8,181.0L218.7,181.0L219.6,181.0L220.5,181.0L221.4,180.9L222.3,180.9L223.2,180.9L224.1,180.9L225.0,180.9L225.9,180.9L226.8,180.9L227.7,180.9L228.6,180.9L229.5,180.9L230.4,180.9L231.3,180.9L232.2,180.9L233.1,180.9L234.0,180.9L234.9,180.9L235.8,180.9L236.7,180.8L237.6,180.8L238.5,180.8L239.4,180.8L240.3,180.8L241.2,180.8L242.1,180.8L243.0,180.8L243.9,180.8L244.8,180.8L245.7,180.8L246.6,180.8L247.5,180.8L248.4,180.8L249.3,180.8L250.2,180.8L251.1,180.8L252.0,180.8L252.9,180.8L253.8,180.8L254.7,180.8L255.6,180.8L256.5,180.7L257.4,180.7L258.3,180.7L259.2,180.7L260.1,180.7L261.0,180.7L261.9,180.7L262.8,180.7L263.7,180.7L264.6,180.7L265.5,180.7L266.4,180.7L267.3,180.7L268.2,180.7L269.1,180.7L270.0,180.7L270.9,180.7L271.8,180.7L272.7,180.7L273.6,180.7L274.5,180.7L275.4,180.7L276.3,180.7L277.2,180.7L278.1,180.7L279.0,180.7L279.9,180.7L280.8,180.7L281.7,180.7L282.6,180.6L283.5,180.6L284.4,180.6L285.3,180.6L286.2,180.6L287.1,180.6L288.0,180.6L288.9,180.6L289.8,180.6L290.7,180.6L291.6,180.6L292.5,180.6L293.4,180.6L294.3,180.6L295.2,180.6L296.1,180.6L297.0,180.6L297.9,180.6L298.8,180.6L299.7,180.6L300.6,180.6L301.5,180.6L302.4,180.6L303.3,180.6L304.2,180.6L305.1,180.6L306.0,180.6L306.9,180.6L307.8,180.6L308.7,180.6L309.6,180.6L310.5,180.6L311.4,180.6L312.3,180.6L313.2,180.6L314.1,180.6L315.0,180.6L315.9,180.6L316.8,180.6L317.7,180.5L318.6,180.5L319.5,180.5L320.4,180.5L321.3,180.5L322.2,180.5L323.1,180.5L324.0,180.5L324.9,180.5L325.8,180.5L326.7,180.5L327.6,180.5L328.5,180.5L329.4,180.5L330.3,180.5L331.2,180.5L332.1,180.5L333.0,180.5L333.9,180.5L334.8,180.5L335.7,180.5L336.6,180.5L337.5,180.5L338.4,180.5L339.3,180.5L340.2,180.5L341.1,180.5L342.0,180.5L342.9,180.5L343.8,180.5L344.7,180.5L345.6,180.5L346.5,180.5L347.4,180.5L348.3,180.5L349.2,180.5L350.1,180.5L351.0,180.5L351.9,180.5L352.8,180.5L353.7,180.5L354.6,180.5L355.5,180.5L356.4,180.5L357.3,180.5L358.2,180.5L359.1,180.5L360.0,180.5L360.9,180.5L361.8,180.5L362.7,180.5L363.6,180.5L364.5,180.5L365.4,180.5L366.3,180.5L367.2,180.5L368.1,180.5L369.0,180.4L369.9,180.4L370.8,180.4L371.7,180.4L372.6,180.4L373.5,180.4L374.4,180.4L375.3,180.4L376.2,180.4L377.1,180.4L378.0,180.4L378.9,180.4L379.8,180.4L380.7,180.4L381.6,180.4L382.5,180.4L383.4,180.4L384.3,180.4L385.2,180.4L386.1,180.4L387.0,180.4L387.9,180.4L388.8,180.4L389.7,180.4L390.6,180.4L391.5,180.4L392.4,180.4L393.3,180.4L394.2,180.4L395.1,180.4L396.0,180.4L396.9,180.4L397.8,180.4L398.7,180.4L399.6,180.4L400.5,180.4L401.4,180.4L402.3,180.4L403.2,180.4L404.1,180.4L405.0,180.4L405.9,180.4L406.8,180.4L407.7,180.4L408.6,180.4L409.5,180.4L410.4,180.4L411.3,180.4L412.2,180.4L413.1,180.4L414.0,180.4L414.9,180.4L415.8,180.4L416.7,180.4L417.6,180.4L418.5,180.4L419.4,180.4L420.3,180.4L421.2,180.4L422.1,180.4L423.0,180.4L423.9,180.4L424.8,180.4L425.7,180.4L426.6,180.4L427.5,180.4L428.4,180.4L429.3,180.4L430.2,180.4L431.1,180.4L432.0,180.4L432.9,180.4L433.8,180.4L434.7,180.4L435.6,180.4L436.5,180.4L437.4,180.4L438.3,180.4L439.2,180.4L440.1,180.4L441.0,180.4L441.9,180.4L442.8,180.4L443.7,180.4L444.6,180.4L445.5,180.4L446.4,180.4L447.3,180.4L448.2,180.3L449.1,180.3L450.0,180.3L450.9,180.3L451.8,180.3L452.7,180.3L453.6,180.3L454.5,180.3L455.4,180.3L456.3,180.3L457.2,180.3L458.1,180.3L459.0,180.3L459.9,180.3L460.8,180.3L461.7,180.3L462.6,180.3L463.5,180.3L464.4,180.3L465.3,180.3L466.2,180.3L467.1,180.3L468.0,180.3L468.9,180.3L469.8,180.3L470.7,180.3L471.6,180.3L472.5,180.3L473.4,180.3L474.3,180.3L475.2,180.3L476.1,180.3L477.0,180.3L477.9,180.3L478.8,180.3L479.7,180.3L480.6,180.3L481.5,180.3L482.4,180.3L483.3,180.3L484.2,180.3L485.1,180.3L486.0,180.3L486.9,180.3L487.8,180.3L488.7,180.3L489.6,180.3L490.5,180.3L491.4,180.3L492.3,180.3L493.2,180.3L494.1,180.3L495.0,180.3L495.9,180.3L496.8,180.3L497.7,180.3L498.6,180.3L499.5,180.3L500.4,180.3L501.3,180.3L502.2,180.3L503.1,180.3L504.0,180.3L504.9,180.3L505.8,180.3L506.7,180.3L507.6,180.3L508.5,180.3L509.4,180.3L510.3,180.3L511.2,180.3L512.1,180.3L513.0,180.3L513.9,180.3L514.8,180.3L515.7,180.3L516.6,180.3L517.5,180.3L518.4,180.3L519.3,180.3L520.2,180.3L521.1,180.3L522.0,180.3L522.9,180.3L523.8,180.3L524.7,180.3L525.6,180.3L526.5,180.3L527.4,180.3L528.3,180.3L529.2,180.3L530.1,180.3L531.0,180.3L531.9,180.3L532.8,180.3L533.7,180.3L534.6,180.3L535.5,180.3L536.4,180.3L537.3,180.3L538.2,180.3L539.1,180.3L540.0,180.3L540.9,180.3L541.8,180.3L542.7,180.3L543.6,180.3L544.5,180.3L545.4,180.3L546.3,180.3L547.2,180.3L548.1,180.3L549.0,180.3L549.9,180.3L550.8,180.3L551.7,180.3L552.6,180.3L553.5,180.3L554.4,180.3L555.3,180.3L556.2,180.3L557.1,180.3L558.0,180.3L558.9,180.3L559.8,180.3L560.7,180.3L561.6,180.3L562.5,180.3L563.4,180.3L564.3,180.3L565.2,180.3L566.1,180.3L567.0,180.3L567.9,180.3L568.8,180.3L569.7,180.3L570.6,180.3L571.5,180.3L572.4,180.3L573.3,180.3L574.2,180.3L575.1,180.3L576.0,180.3L576.9,180.3L577.8,180.3L578.7,180.3L579.6,180.3L580.5,180.3L581.4,180.3L582.3,180.3L583.2,180.3L584.1,180.3L585.0,180.3L585.9,180.3L586.8,180.3L587.7,180.3L588.6,180.3L589.5,180.3L590.4,180.3L591.3,180.3L592.2,180.2L593.1,180.2L594.0,180.2L594.9,180.2L595.8,180.2L596.7,180.2L597.6,180.2L598.5,180.2L599.4,180.2L600.3,180.2L601.2,180.2L602.1,180.2L603.0,180.2L603.9,180.2L604.8,180.2L605.7,180.2L606.6,180.2L607.5,180.2L608.4,180.2L609.3,180.2L610.2,180.2L611.1,180.2L612.0,180.2L612.9,180.2L613.8,180.2L614.7,180.2L615.6,180.2L616.5,180.2L617.4,180.2L618.3,180.2L619.2,180.2L620.1,180.2L621.0,180.2L621.9,180.2L622.8,180.2L623.7,180.2L624.6,180.2L625.5,180.2L626.4,180.2L627.3,180.2L628.2,180.2L629.1,180.2L630.0,180.2"/>
+<path class="stk-n s-t" d="M90,150L270,150L270,250"/>
+<circle class="dot" cx="270" cy="150" r="3.2"/>
+<text class="sub" x="96" y="144">½ Vmax</text>
+<text class="sub" x="276" y="240">Km ≈ 10 mmol/l</text>
+<text class="lblb" x="470" y="74">glukokináza</text>
+<text class="sub" x="470" y="86">pečeň, β-bunky · vysoké Km</text>
+<text class="lblb" x="470" y="202">hexokináza</text>
+<text class="sub" x="470" y="214">ostatné tkanivá · nízke Km, malá Vmax</text>
+</svg>
+    <figcaption><b>Obr. 2.2 — Dva enzýmy, jedna reakcia, rôzne Km (schematicky).</b> Hexokináza je nasýtená už pri zlomku bežnej glykémie – tkanivo si berie glukózu stále rovnako. Glukokináza má Km okolo 10 mmol/l: po jedle, keď glykémia stúpne, pracuje rýchlejšie a pečeň odoberie prebytok.</figcaption>
+  </figure>
+
+  <table class="table keep" id="tab-2-8" style="margin:6px 0">
+    <thead><tr><th></th><th>Hexokináza</th><th>Glukokináza</th></tr></thead>
+    <tbody>
+      <tr><td><b>Kde</b></td><td>väčšina tkanív</td><td>pečeň, β-bunky pankreasu</td></tr>
+      <tr><td><b>Km pre glukózu</b></td><td>nízke – nasýtená aj nalačno</td><td>vysoké, ≈ 10 mmol/l</td></tr>
+      <tr><td><b>Vmax</b></td><td>malá</td><td>veľká</td></tr>
+      <tr><td><b>Inhibícia produktom (glukóza-6-fosfát)</b></td><td>áno</td><td>nie</td></tr>
+      <tr><td><b>Zmysel</b></td><td>tkanivo dostane glukózu aj pri nízkej glykémii, ale nevezme viac, než spotrebuje</td><td>pečeň berie glukózu až pri nadbytku a vtedy veľa; β-bunka podľa nej „meria“ glykémiu</td></tr>
+    </tbody>
+  </table>
+
+  <p>Hexokináza a glukokináza sú <b>izoenzýmy</b>: katalyzujú tú istú reakciu, ale líšia sa stavbou, kinetikou a tkanivom. Izoenzýmy sú spôsob, akým tá istá dráha dostane v rôznych orgánoch rôzne vlastnosti.</p>
+
+  <div class="box k-pozor aside keep">
+    <div class="label">Pozor</div>
+    <div class="body">
+      <p><b>Alosterický enzým sa rovnicou Michaelisa a Mentenovej neriadi.</b> Jeho krivka má tvar S (sigmoidná): v úzkom rozmedzí koncentrácií prejde z takmer nulovej aktivity na takmer plnú. Preto sú riadiace enzýmy dráh spravidla alosterické – správajú sa ako vypínač, nie ako plynulý regulátor (<a class="xref" href="#sub-2-5-2">→ 2.5.2</a>).</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h" id="sub-2-4-2"><span class="n">2.4.2</span>Inhibítory</h3>
+  <p>Látka, ktorá rýchlosť enzýmu znižuje, pôsobí jedným z dvoch spôsobov; rozlišujú sa podľa toho, kam sa na enzým viaže, a z toho plynie, ako menia Km a Vmax.</p>
+
+  <table class="table keep" id="tab-2-9" style="margin:6px 0">
+    <thead><tr><th></th><th>Kompetitívny inhibítor</th><th>Nekompetitívny inhibítor</th></tr></thead>
+    <tbody>
+      <tr><td><b>Kam sa viaže</b></td><td>do aktívneho miesta – podobá sa na substrát</td><td>mimo aktívneho miesta</td></tr>
+      <tr><td><b>Km</b></td><td>zdanlivo ↑ (treba viac substrátu)</td><td>nemení sa</td></tr>
+      <tr><td><b>Vmax</b></td><td>nemení sa</td><td>↓</td></tr>
+      <tr><td><b>Dá sa prekonať nadbytkom substrátu?</b></td><td>áno</td><td>nie</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box k-klin aside keep">
+    <div class="label">Klinika</div>
+    <div class="body">
+      <p><b>Liek ako kompetitívny inhibítor.</b> Statíny sa podobajú na substrát enzýmu, ktorý katalyzuje prvý nevratný krok syntézy cholesterolu, a obsadia jeho aktívne miesto. Bunka si cholesterolu vyrobí menej a musí ho viac odoberať z krvi – hladina cholesterolu v krvi klesne. Je to dôkaz pravidla zo sekcie 2.7: kto ovláda riadiaci krok, ovláda celú dráhu. Podrobne <span class="xref-soon" title="Kapitola sa pripravuje">→ 10 Metabolizmus cholesterolu a žlčových kyselín</span>.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h" id="sub-2-4-3"><span class="n">2.4.3</span>Prostredie: pH a teplota</h3>
+  <p>Aktivita enzýmu závisí od jeho priestorového tvaru a ten držia slabé interakcie (<a class="xref" href="01_zaklady_biomolekuly.html#sub-1-2-3">→ 1.2.3 Nekovalentné interakcie</a>). Všetko, čo ich mení, mení aj rýchlosť reakcie – v tele sú to najmä pH a teplota (Obr. 2.3).</p>
+
+  <figure class="chart keep" id="fig-ph-teplota">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 290" role="img" aria-labelledby="t-ph-teplota">
+<title id="t-ph-teplota">Vplyv prostredia na aktivitu enzýmu (schematicky). Vľavo: aktivita v závislosti od pH má tvar zvona; pepsín má vrchol v kyslej oblasti, ktorá zodpovedá žalúdočnej šťave s pH 2 až 3, enzým cytosolu okolo pH 7. Vpravo: s teplotou aktivita najprv stúpa, vrchol má väčšina ľudských enzýmov medzi 35 a 40 °C, potom prudko klesá, lebo enzým denaturuje.</title>
+<defs><marker id="fig-ph-teplota-sip" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk" d="M0,0L8,3.5L0,7z"/></marker></defs>
+<path class="arw" d="M60,232L330,232" marker-end="url(#fig-ph-teplota-sip)"/>
+<path class="arw" d="M60,232L60,30" marker-end="url(#fig-ph-teplota-sip)"/>
+<text class="lblb" x="195" y="274" text-anchor="middle">pH</text>
+<text class="lblb" x="26" y="130" text-anchor="middle" transform="rotate(-90 26 130)">aktivita enzýmu</text>
+<path class="stk-n" d="M112,232v5M164,232v5M216,232v5M268,232v5M320,232v5"/>
+<text class="sub" x="112" y="250" text-anchor="middle">2</text>
+<text class="sub" x="164" y="250" text-anchor="middle">4</text>
+<text class="sub" x="216" y="250" text-anchor="middle">6</text>
+<text class="sub" x="268" y="250" text-anchor="middle">8</text>
+<text class="sub" x="320" y="250" text-anchor="middle">10</text>
+<rect class="zone-r" x="112" y="40" width="26" height="192"/>
+<path class="stk-acc2" d="M64,230C104,226 106,62 125,62C144,62 152,226 206,230"/>
+<path class="stk-acc" d="M178,230C222,226 228,62 247,62C266,62 274,226 318,230"/>
+<text class="sub" x="125" y="54" text-anchor="middle">pepsín</text>
+<text class="sub" x="247" y="54" text-anchor="middle">enzým cytosolu</text>
+<text class="sub" x="125" y="264" text-anchor="middle">žalúdok: pH 2–3</text>
+
+<path class="arw" d="M400,232L672,232" marker-end="url(#fig-ph-teplota-sip)"/>
+<path class="arw" d="M400,232L400,30" marker-end="url(#fig-ph-teplota-sip)"/>
+<text class="lblb" x="535" y="274" text-anchor="middle">teplota (°C)</text>
+<path class="stk-n" d="M474,232v5M548,232v5M622,232v5"/>
+<text class="sub" x="474" y="250" text-anchor="middle">20</text>
+<text class="sub" x="548" y="250" text-anchor="middle">40</text>
+<text class="sub" x="622" y="250" text-anchor="middle">60</text>
+<rect class="zone-i" x="530" y="40" width="18" height="192"/>
+<path class="stk-acc" d="M400,218C466,196 516,120 538,62C550,62 558,200 592,228L660,231"/>
+<text class="sub" x="474" y="140" text-anchor="end">rýchlejší pohyb</text>
+<text class="sub" x="474" y="152" text-anchor="end">molekúl</text>
+<text class="sub" x="539" y="34" text-anchor="middle">optimum 35–40 °C</text>
+<text class="sub" x="582" y="120">denaturácia –</text>
+<text class="sub" x="582" y="132">enzým stráca tvar</text>
+</svg>
+    <figcaption><b>Obr. 2.3 — Vplyv pH a teploty na aktivitu enzýmu (schematicky).</b> Vľavo: každý enzým má optimum pH tam, kde pracuje – pepsín v kyslom žalúdku, enzým cytosolu okolo pH 7. Vpravo: teplo reakciu zrýchľuje, kým enzým nezačne denaturovať; potom aktivita prudko padá.</figcaption>
+  </figure>
+
+  <ul>
+    <li><b>pH</b> mení náboj bočných reťazcov v aktívnom mieste aj na povrchu enzýmu (<a class="xref" href="01_zaklady_biomolekuly.html#sub-1-3-3">→ 1.3.3 Aminokyseliny a bielkoviny</a>). Krivka aktivity má tvar zvona s vrcholom pri <i>optime pH</i>, ktoré zodpovedá prostrediu, kde enzým pracuje.</li>
+    <li><b>Teplota</b> pôsobí dvoma protichodnými spôsobmi: molekuly sa pohybujú rýchlejšie, takže reakcia sa zrýchľuje, ale od istej teploty sa enzým rozbalí (denaturuje) a aktivita prudko klesá. Optimum väčšiny ľudských enzýmov leží medzi 35 a 40 °C.</li>
+  </ul>
+
+  <div class="box k-lab keep">
+    <div class="label">Pepsín ako modelový enzým</div>
+    <div class="body">
+      <p>Pepsín je žalúdočná endopeptidáza: štiepi peptidové väzby vnútri bielkovín potravy a pracuje v kyslej žalúdočnej šťave (pH 2–3). Pokus s ním ukazuje obe krivky z Obr. 2.3 naraz:</p>
+      <ul>
+    <li>v kyslom prostredí pri telesnej teplote substrát (bielkovinu) štiepi,</li>
+    <li>po zneutralizovaní alebo zalkalizovaní aktivitu stráca,</li>
+    <li>po povarení je neaktívny aj v správnom pH – denaturácia tepla je nevratná,</li>
+    <li>v chlade pracuje pomaly, ale po zohriatí sa aktivita vráti – chlad enzým nezničí, len spomalí.</li>
+  </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 2.5 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-2-5"><span class="n">2.5</span><span>Úrovne regulácie: štyri spôsoby, ako zmeniť tok</span></h2>
+<div class="sec-body">
+  <p>Bunka má na zmenu rýchlosti enzýmu niekoľko nástrojov. Líšia sa tým, <b>čo</b> na enzýme menia, a z toho plynie, <b>ako rýchlo</b> zaberú a ako dlho účinok trvá. Zoradené sú od najrýchlejšieho po najpomalší; rýchle nástroje dolaďujú tok zo sekundy na sekundu, pomalé prestavujú bunku na nový režim.</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p><b>Substrát a kompartment</b> (hneď) → <b>alostéria</b> (hneď; signál z bunky) → <b>fosforylácia</b> (sekundy až minúty; signál hormónu) → <b>množstvo enzýmu</b> (hodiny až dni). Rýchle dolaďujú, pomalé prestavujú.</p>
+    </div>
+  </div>
+
+  <table class="table keep" id="tab-2-10" style="margin:6px 0">
+    <thead><tr><th>Úroveň</th><th>Čo sa mení</th><th>Ako rýchlo</th><th>Odkiaľ prichádza signál</th><th>Príklad</th></tr></thead>
+    <tbody>
+      <tr><td><b>dostupnosť substrátu, kompartment</b></td><td>koľko substrátu sa k enzýmu dostane</td><td>okamžite</td><td>krv, prenášač cez membránu</td><td>glukokináza a glykémia</td></tr>
+      <tr><td><b>alostéria</b></td><td>tvar a afinita hotového enzýmu</td><td>okamžite</td><td>metabolity tej istej bunky</td><td>inhibícia konečným produktom</td></tr>
+      <tr><td><b>kovalentná modifikácia</b></td><td>fosfát na enzýme (alebo odštiepený kus reťazca)</td><td>sekundy až minúty</td><td>hormón cez druhého posla</td><td>glykogénfosforyláza</td></tr>
+      <tr><td><b>množstvo enzýmu</b></td><td>syntéza a rozklad enzýmu</td><td>hodiny až dni</td><td>hormóny, dlhodobý stav výživy</td><td>prestavba pečene pri hladovaní</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-h" id="sub-2-5-1"><span class="n">2.5.1</span>Dostupnosť substrátu a kompartment</h3>
+  <p>Najjednoduchšia regulácia nepotrebuje žiadny signál: enzým, ktorý nie je nasýtený, zrýchli, keď substrátu pribudne (<a class="xref" href="#sub-2-4-1">→ 2.4.1</a>). O tom, koľko substrátu sa k nemu dostane, však často rozhoduje membrána. Glukóza sa do svalu a tukového tkaniva dostáva vo väčšom množstve len na pokyn inzulínu; mastná kyselina vstúpi do mitochondrie len s pomocou prenášača. Prenos cez membránu je preto častým riadiacim krokom – dráha za ním môže byť pripravená, a predsa stojí.</p>
+
+  <h3 class="sub-h" id="sub-2-5-2"><span class="n">2.5.2</span>Alostéria: signál z vlastnej bunky</h3>
+  <p>Alosterický enzým má okrem aktívneho miesta aj miesto pre <i>efektor</i> – malú molekulu, ktorá po naviazaní zmení jeho tvar a tým afinitu k substrátu. Pozitívny efektor enzým zapína, negatívny vypína. Účinok nastupuje okamžite a trvá len dovtedy, kým je efektor prítomný. Efektormi sú metabolity tej istej bunky, takže alostéria prenáša dva druhy správ.</p>
+
+  <p><b>Správa o produkte.</b> Konečný produkt dráhy inhibuje enzým na jej začiatku – <i>spätná inhibícia</i>. Dráha sa tak sama vypne, keď je produktu dosť, a nespotrebúva substrát zbytočne.</p>
+
+  <p class="chain">A → B → C → D → <b>produkt</b><br>
+    keď produktu pribudne: produkt ⊣ prvý nevratný enzým (A → B) → celá dráha spomalí → produktu ubudne → inhibícia povolí ⟳</p>
+
+  <p><b>Správa o energii.</b> ATP, ADP a AMP sú efektormi mnohých enzýmov. Citlivým ukazovateľom je najmä AMP: adenylátkináza z dvoch ADP robí ATP a AMP, takže aj malý pokles ATP sa prejaví výrazným vzostupom AMP. AMP potom zapína dráhy, ktoré ATP vyrábajú – vo svale aktivuje fosfofruktokinázu-1 v glykolýze aj glykogénfosforylázu.</p>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>ADP</b> adenozíndifosfát</span> <span class="sk"><b>AMP</b> adenozínmonofosfát</span></div>
+  </div>
+
+  <div class="rev keep">
+    <div class="label"><span class="r">R</span>Revízia — energetický stav bunky číta aj kináza</div>
+    <div class="body">
+      <p><b>Kedysi:</b> energetický stav sa vysvetľoval len priamym, alosterickým pôsobením ATP, ADP a AMP na jednotlivé enzýmy. <b>Dnes:</b> bunka má navyše spoločný senzor – <b>AMP-aktivovanú proteínkinázu (AMPK)</b>. Aktivuje ju vzostup pomerov AMP : ATP a ADP : ATP; AMPK potom fosforyláciou zapína dráhy, ktoré ATP tvoria, a tlmí deje, ktoré ho spotrebúvajú. Signál „málo energie“ sa tak z alostérie prenáša aj na úroveň kovalentnej modifikácie a zasiahne naraz veľa dráh.</p>
+    </div>
+  </div>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>AMPK</b> proteínkináza aktivovaná AMP – senzor energie v bunke</span></div>
+  </div>
+
+  <h3 class="sub-h" id="sub-2-5-3"><span class="n">2.5.3</span>Kovalentná modifikácia: fosforylácia a zymogény</h3>
+  <p>Pri kovalentnej modifikácii sa na hotovom enzýme zmení kovalentná väzba. Podľa toho, či sa zmena dá vrátiť, ide o dva odlišné nástroje.</p>
+
+  <p><b>Vratná: fosforylácia.</b> Proteínkináza prenesie fosfát z ATP na hydroxyl serínu, treonínu alebo tyrozínu v enzýme; fosfoproteínfosfatáza ho vodou odštiepi. Dva záporné náboje fosfátu zmenia tvar enzýmu – niektoré enzýmy fosforylácia zapne, iné vypne. V tom je jej sila: jedna kináza môže tým istým krokom zapnúť rozklad a vypnúť syntézu tej istej látky.</p>
+
+  <table class="table keep" id="tab-2-11" style="margin:6px 0">
+    <thead><tr><th>Enzým</th><th>S fosfátom</th><th>Bez fosfátu</th></tr></thead>
+    <tbody>
+      <tr><td><b>glykogénfosforyláza (štiepi glykogén)</b></td><td><b>aktívna</b></td><td>neaktívna</td></tr>
+      <tr><td><b>glykogénsyntáza (stavia glykogén)</b></td><td>neaktívna</td><td><b>aktívna</b></td></tr>
+    </tbody>
+  </table>
+
+  <p>Signál na fosforyláciu prichádza spravidla zvonka bunky, od hormónu (<a class="xref" href="#sec-2-6">→ 2.6</a>). Oproti alostérii je o niečo pomalšia (sekundy až minúty), ale účinok vydrží, aj keď signál na chvíľu zoslabne, a jedna molekula hormónu ho cez kaskádu kináz mnohonásobne zosilní.</p>
+
+  <p><b>Nevratná: aktivácia zymogénu.</b> Niektoré enzýmy sa tvoria ako neaktívny predstupeň – <i>zymogén</i> (proenzým) – s úsekom reťazca navyše, ktorý bráni aktivite. Odštiepením tohto úseku vznikne aktívny enzým; cesta späť neexistuje, enzým sa dá už len rozložiť.</p>
+
+  <p class="chain">hlavné bunky žalúdka → pepsinogén (neaktívny) → v žalúdku: HCl zmení jeho tvar → odštiepi sa úsek reťazca → <b>pepsín</b><br>
+    pepsín sám štiepi ďalší pepsinogén (autokatalýza) → aktivácia sa lavínovite zrýchľuje ⟳</p>
+
+  <p>Zmysel je ochranný: proteáza, ktorá by bola aktívna už v bunke, kde vzniká, by ju strávila. Rovnako vznikajú trypsín a chymotrypsín v pankrease, inzulín (z proinzulínu) a faktory zrážania krvi.</p>
+
+  <div class="box k-zap aside keep">
+    <div class="label">Zapamätaj</div>
+    <div class="body">
+      <p>Kyselina chlorovodíková má v žalúdku dve úlohy naraz: aktivuje pepsinogén a denaturuje bielkoviny potravy, čím odkryje ich peptidové väzby. Sama bielkoviny neštiepi – na to je príliš zriedená.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h" id="sub-2-5-4"><span class="n">2.5.4</span>Množstvo enzýmu</h3>
+  <p>Najpomalšia, ale najtrvalejšia regulácia mení počet molekúl enzýmu, a teda Vmax. Bunka zrýchli alebo spomalí prepis génu a syntézu enzýmu (<i>indukcia</i> a <i>represia</i>) alebo zmení rýchlosť, akou enzým rozkladá. Účinok sa prejaví po hodinách až dňoch.</p>
+
+  <p>Podľa toho sa enzýmy delia na <i>konštitutívne</i>, ktorých je v bunke stále rovnako, a <i>indukovateľné</i>, ktorých množstvo sa prispôsobuje potrebe. Takto sa pečeň pri prechode z bežného striedania jedla a lačnenia do dlhého hladovania postupne prestaví: enzýmov glukoneogenézy pribudne, enzýmov na ukladanie tuku ubudne. Rýchle nástroje rozhodujú o tom, čo bunka robí v tejto chvíli; množstvo enzýmov určuje, čo vôbec dokáže.</p>
+</div>
+
+<!-- ══ 2.6 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-2-6"><span class="n">2.6</span><span>Hormonálny signál a recipročná regulácia</span></h2>
+<div class="sec-body">
+  <p>Nástroje z predošlej sekcie pracujú v jednej bunke. Aby sa pečeň, sval a tukové tkanivo správali ako celok, musí im niekto povedať, v akom stave telo je – to je úloha hormónov. Sekcia ukazuje na jednom príklade celú cestu: od zmeny glykémie cez hormón a signál v bunke až po fosforyláciu dvoch protismerných enzýmov.</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p>↓ glykémia → <b>glukagón</b> → cAMP → proteínkináza A → <b>fosforylácia</b>: rozklad glykogénu zap., syntéza vyp. ↑ glykémia → <b>inzulín</b> → fosfatáza → <b>defosforylácia</b>: opačne. Protismerné dráhy nikdy nebežia naraz.</p>
+    </div>
+  </div>
+
+  <div class="box k-reg keep">
+    <div class="label">Glykémia – regulačná slučka so dvoma hormónmi</div>
+    <div class="body">
+      <ul>
+    <li><b>Snímač:</b> bunky Langerhansových ostrovčekov. V β-bunke rozhoduje glukokináza a pomer ATP/ADP: viac glukózy → viac ATP → zavrie sa draslíkový kanál závislý od ATP → výdaj inzulínu. Pri poklese glykémie vydajú α-bunky glukagón.</li>
+    <li><b>Prenos do bunky:</b> glukagón (a adrenalín) sa naviaže zvonka na membránu; v bunke stúpne cAMP, ten prebudí proteínkinázu A a tá rozdá fosfáty enzýmom. Receptor inzulínu je sám tyrozínkináza; na konci jeho signálnej cesty stojí fosfoproteínfosfatáza, ktorá fosfáty z enzýmov zasa odoberie.</li>
+    <li><b>Riadiaci krok:</b> fosforylácia a defosforylácia enzýmov, ktoré stoja na nevratných krokoch protismerných dráh.</li>
+    <li><b>Výsledok ⟳:</b> pečeň glukózu vydá alebo uloží → glykémia sa vráti → podnet na výdaj hormónu zanikne.</li>
+  </ul>
+    </div>
+  </div>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>cAMP</b> cyklický adenozínmonofosfát – druhý posol</span></div>
+  </div>
+
+  <figure class="chart keep" id="fig-hormonalna-slucka">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 372" role="img" aria-labelledby="t-hormonalna-slucka">
+<title id="t-hormonalna-slucka">Regulačná slučka glykémie na príklade glykogénu v pečeni. Keď glukóza v krvi klesne, α-bunky pankreasu vydajú glukagón; ten cez cAMP a proteínkinázu A fosforyluje enzýmy. Fosforylovaná glykogénfosforyláza je aktívna, fosforylovaná glykogénsyntáza neaktívna – pečeň glykogén štiepi a glukózu vydá do krvi. Keď glukóza v krvi stúpne, β-bunky vydajú inzulín; ten cez receptor s tyrozínkinázou aktivuje fosfoproteínfosfatázu, enzýmy sa defosforylujú, syntáza sa zapne, fosforyláza vypne a pečeň glukózu ukladá.</title>
+<defs><marker id="fig-hormonalna-slucka-sip" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk" d="M0,0L8,3.5L0,7z"/></marker><marker id="fig-hormonalna-slucka-sip-akt" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-akt" d="M0,0L8,3.5L0,7z"/></marker><marker id="fig-hormonalna-slucka-sip-n" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-n" d="M0,0L8,3.5L0,7z"/></marker><marker id="fig-hormonalna-slucka-sip-nv" viewBox="0 0 11 10" refX="4" refY="5" markerWidth="11" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-nv" d="M0,0L11,5L0,10z"/></marker><marker id="fig-hormonalna-slucka-stop" viewBox="0 0 3 11" refX="1.5" refY="5.5" markerWidth="3" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path class="mk-inh" d="M1.5,0L1.5,11"/></marker></defs>
+<rect class="bx-c" x="303.6" y="22.8" width="92.7" height="22.5" rx="3"/><text class="lblb" x="350" y="37.8" text-anchor="middle">glukóza v krvi</text>
+<rect class="bx-k" x="51.3" y="16.5" width="121.5" height="35" rx="3"/><text class="lblb" x="112" y="31.6" text-anchor="middle">α-bunky pankreasu</text><text class="lblb" x="112" y="44.1" text-anchor="middle">glukagón</text>
+<rect class="bx-k" x="527.3" y="16.5" width="121.4" height="35" rx="3"/><text class="lblb" x="588" y="31.6" text-anchor="middle">β-bunky pankreasu</text><text class="lblb" x="588" y="44.1" text-anchor="middle">inzulín</text>
+<path class="vz" d="M299.6,34L176.7,34" marker-end="url(#fig-hormonalna-slucka-sip-n)"/><text class="sub" x="238.2" y="29" text-anchor="middle">keď klesne</text>
+<path class="vz" d="M400.4,34L523.3,34" marker-end="url(#fig-hormonalna-slucka-sip-n)"/><text class="sub" x="461.9" y="29" text-anchor="middle">keď stúpne</text>
+<rect class="bx-k" x="60.6" y="94.5" width="102.8" height="35" rx="3"/><text class="lblb" x="112" y="109.6" text-anchor="middle">cAMP →</text><text class="lblb" x="112" y="122.1" text-anchor="middle">proteínkináza A</text>
+<path class="akt" d="M112,55.5L112,90.5" marker-end="url(#fig-hormonalna-slucka-sip-akt)"/>
+<rect class="bx-k" x="71.2" y="172.5" width="81.6" height="35" rx="3"/><text class="lblb" x="112" y="187.6" text-anchor="middle">fosforylácia</text><text class="lblb" x="112" y="200.1" text-anchor="middle">enzýmov</text>
+<path class="akt" d="M112,133.5L112,168.5" marker-end="url(#fig-hormonalna-slucka-sip-akt)"/>
+<rect class="bx-k" x="508.9" y="94.5" width="158.3" height="35" rx="3"/><text class="lblb" x="588" y="109.6" text-anchor="middle">receptor (tyrozínkináza) →</text><text class="lblb" x="588" y="122.1" text-anchor="middle">fosfoproteínfosfatáza</text>
+<path class="akt" d="M588,55.5L588,90.5" marker-end="url(#fig-hormonalna-slucka-sip-akt)"/>
+<rect class="bx-k" x="540.8" y="172.5" width="94.4" height="35" rx="3"/><text class="lblb" x="588" y="187.6" text-anchor="middle">defosforylácia</text><text class="lblb" x="588" y="200.1" text-anchor="middle">enzýmov</text>
+<path class="akt" d="M588,133.5L588,168.5" marker-end="url(#fig-hormonalna-slucka-sip-akt)"/>
+
+<rect class="komp" x="150" y="238" width="400" height="104" rx="3"/>
+<text class="cap" x="158" y="252">pečeňová bunka</text>
+<rect class="bx-c" x="189.1" y="284.8" width="65.7" height="22.5" rx="3"/><text class="lblb" x="222" y="299.8" text-anchor="middle">glykogén</text>
+<rect class="bx-c" x="456.7" y="284.8" width="58.5" height="22.5" rx="3"/><text class="lblb" x="486" y="299.8" text-anchor="middle">glukóza</text>
+<path class="rx nv" d="M260.9,286L444.2,286" marker-end="url(#fig-hormonalna-slucka-sip-nv)"/><text class="enz" x="355.8" y="251.4" text-anchor="middle">glykogénfosforyláza</text><text class="t-akt" x="355.8" y="262.9" text-anchor="middle">↑ fosforylácia</text><text class="t-inh" x="355.8" y="274.4" text-anchor="middle">↓ defosforylácia</text>
+<path class="rx nv" d="M450.7,306L267.4,306" marker-end="url(#fig-hormonalna-slucka-sip-nv)"/><text class="enz" x="355.8" y="322.9" text-anchor="middle">glykogénsyntáza</text><text class="t-akt" x="355.8" y="334.4" text-anchor="middle">↑ defosforylácia</text><text class="t-inh" x="355.8" y="345.9" text-anchor="middle">↓ fosforylácia</text>
+<path class="vz" d="M112,211.5Q112,236 186,236" marker-end="url(#fig-hormonalna-slucka-sip-n)"/>
+<path class="vz" d="M588,211.5Q588,236 514,236" marker-end="url(#fig-hormonalna-slucka-sip-n)"/>
+<path class="rx" d="M496,280.8L366,49.3" marker-end="url(#fig-hormonalna-slucka-sip)" marker-start="url(#fig-hormonalna-slucka-sip)"/>
+<text class="lblb" x="272" y="126" text-anchor="middle">⟳ záporná spätná väzba</text>
+<text class="sub" x="272" y="140" text-anchor="middle">riadiaci krok: fosforylácia</text>
+<text class="sub" x="272" y="152" text-anchor="middle">a defosforylácia enzýmov</text>
+<path class="rx nv" d="M20,362L35.5,362" marker-end="url(#fig-hormonalna-slucka-sip-nv)"/><text class="sub" x="49" y="365.3">nevratný (riadiaci) krok</text><text class="enz" x="175.3" y="365.3">enzým</text><path class="akt" d="M221.3,362L243.3,362" marker-end="url(#fig-hormonalna-slucka-sip-akt)"/><text class="t-akt" x="250.3" y="365.3">↑ aktivuje</text><path class="inh" d="M313.3,362L335.3,362" marker-end="url(#fig-hormonalna-slucka-stop)"/><text class="t-inh" x="342.3" y="365.3">↓ inhibuje</text><path class="vz" d="M407.5,362L429.5,362" marker-end="url(#fig-hormonalna-slucka-sip-n)"/><text class="sub" x="436.5" y="365.3">iný vplyv, signál</text>
+</svg>
+    <figcaption><b>Obr. 2.4 — Regulačná slučka glykémie na príklade pečeňového glykogénu (⟳).</b> Zelené „↑“ a červené „↓“ pri enzýmoch ukazujú, že ten istý zásah – fosforylácia – jeden enzým zapne a druhý vypne. Glukagón a inzulín sa stretávajú na tých istých enzýmoch z opačných strán.</figcaption>
+  </figure>
+
+  <p>Usporiadanie na obrázku sa volá <b>recipročná regulácia</b> a opakuje sa pri každej dvojici protismerných dráh. Jeho zmysel vidno, keď si predstavíme opak: keby rozklad aj syntéza glykogénu bežali naraz, glukóza by sa točila v kruhu a jediným výsledkom by bola spotreba ATP – <i>jalový cyklus</i>. Pretože oba enzýmy počúvajú ten istý signál s opačným znamienkom, zapnutie jednej dráhy druhú automaticky vypne.</p>
+
+  <table class="table keep" id="tab-2-12" style="margin:6px 0">
+    <thead><tr><th>Dvojica protismerných dráh</th><th>Zapína inzulín (po jedle)</th><th>Zapína glukagón (nalačno)</th><th>Domov</th></tr></thead>
+    <tbody>
+      <tr><td><b>glykogén</b></td><td>syntézu</td><td>rozklad</td><td>kap. 3</td></tr>
+      <tr><td><b>glukóza</b></td><td>glykolýzu (v pečeni)</td><td>glukoneogenézu</td><td>kap. 4</td></tr>
+      <tr><td><b>MK</b></td><td>stavbu</td><td>β-oxidáciu</td><td>kap. 8</td></tr>
+      <tr><td><b>triacylglyceroly v tukovom tkanive</b></td><td>ukladanie</td><td>lipolýzu</td><td>kap. 9</td></tr>
+    </tbody>
+  </table>
+
+  <p>Mechanizmy v jednotlivých dráhach sa líšia v detailoch, logika je rovnaká. Receptory a druhí poslovia tu vystupujú len v rozsahu, ktorý treba na pochopenie regulácie dráh; ich úplný výklad patrí do časti knihy o prenose signálu.</p>
+
+  <div class="box k-klin aside keep">
+    <div class="label">Klinika</div>
+    <div class="body">
+      <p><b>Diabetes ako porucha signálu, nie nedostatok paliva.</b> Keď pri diabete 1. typu chýba inzulín, bunky dostávajú len signál glukagónu – „hladovanie“ – hoci glukózy je v krvi nadbytok. Pečeň ďalej vydáva glukózu, z tukových zásob prúdia MK a pečeň z nich robí ketolátky: hyperglykémia a ketoacidóza súčasne (<a class="xref" href="01_zaklady_biomolekuly.html#sub-1-6-4">→ 1.6.4 pH a tlmivé roztoky</a>). Podanie inzulínu vráti signál, a tým aj smer všetkých dráh.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 2.7 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-2-7"><span class="n">2.7</span><span>Riadiaci krok: ako ho v dráhe nájsť</span></h2>
+<div class="sec-body">
+  <p>Dráha s desiatimi enzýmami sa neriadi na desiatich miestach. Tok určuje jeden alebo niekoľko krokov a bunka sústreďuje všetky nástroje regulácie práve na ne. Sekcia dáva pravidlá, podľa ktorých sa riadiaci krok spozná aj v dráhe, ktorú čitateľ vidí prvý raz, a ukazuje, čo sa stane, keď enzým chýba úplne.</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p>Riadiaci krok = <b>nevratný</b>, spravidla <b>prvý, ktorý dráhu zaväzuje</b>, najpomalší, s <b>alosterickým</b> enzýmom, ktorý počúva aj hormón. Blok enzýmu: pred ním sa hromadí substrát, za ním chýba produkt, substrát uniká bočnou cestou.</p>
+    </div>
+  </div>
+
+  <p>Riadiaci enzým má spravidla všetky tieto vlastnosti naraz:</p>
+
+  <ul>
+    <li><b>katalyzuje nevratný krok</b> – len tam zmena aktivity enzýmu zmení tok; vratný krok by sa jednoducho ustálil v novej rovnováhe (<a class="xref" href="01_zaklady_biomolekuly.html#sec-1-5">→ 1.5 Energia reakcie</a>),</li>
+    <li><b>stojí na začiatku alebo hneď za vetvením</b> – je to prvý krok, po ktorom už medziprodukt nemá inú cestu (<i>zaväzujúci krok</i>); regulovať neskôr by znamenalo hromadiť medziprodukty,</li>
+    <li><b>je najpomalší</b> – jeho rýchlosť určuje rýchlosť celej dráhy,</li>
+    <li><b>je alosterický</b> a zároveň podlieha fosforylácii alebo zmene množstva – spája signál z bunky so signálom od hormónu,</li>
+    <li><b>v opačnej dráhe ho nahrádza iný enzým</b> – a ten je regulovaný opačne.</li>
+  </ul>
+
+  <table class="table keep" id="tab-2-13" style="margin:6px 0">
+    <thead><tr><th>Dráha</th><th>Riadiaci enzým</th><th>Domov</th></tr></thead>
+    <tbody>
+      <tr><td><b>glykolýza</b></td><td>fosfofruktokináza-1</td><td>kap. 4</td></tr>
+      <tr><td><b>rozklad a syntéza glykogénu</b></td><td>glykogénfosforyláza, glykogénsyntáza</td><td>kap. 3</td></tr>
+      <tr><td><b>syntéza cholesterolu</b></td><td>enzým prvého nevratného kroku (cieľ statínov)</td><td>kap. 10</td></tr>
+    </tbody>
+  </table>
+
+  <p>Kto v novej dráhe hľadá, kde sa reguluje, hľadá teda hrubé šípky v jej schéme – nevratné kroky – a pýta sa, ktorá z nich je prvá, za ktorou už niet odbočky.</p>
+
+  <div class="box k-klin aside keep">
+    <div class="label">Klinika</div>
+    <div class="body">
+      <p><b>Čo sa stane, keď enzým chýba.</b> Vrodený defekt enzýmu je trvalý blok na jednom mieste mapy a jeho následky sa dajú predpovedať bez učenia naspamäť: (1) <b>pred blokom</b> sa hromadí substrát a to, čo z neho vzniká bočnými cestami; (2) <b>za blokom</b> chýba produkt; (3) príznaky spôsobuje jedno, druhé alebo oboje. Diagnostika hľadá nahromadenú látku v krvi alebo moči, liečba obmedzuje prísun substrátu alebo dopĺňa chýbajúci produkt. Tento postup sa vráti pri každej dedičnej poruche v knihe.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 2.8 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-2-8"><span class="n">2.8</span><span>Laboratórium a klinika</span></h2>
+<div class="sec-body">
+  <p>Metabolizmus prebieha vnútri buniek, kam sa pri vyšetrení pacienta nedostaneme. Laboratórna medicína preto stojí na jednom predpoklade: zloženie krvi a moču odráža to, čo sa deje v tkanivách. Sekcia vysvetľuje, kedy tento predpoklad platí, a ukazuje ho na glykémii – veličine, ktorú strážia všetky mechanizmy tejto kapitoly.</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p>Meriame <b>mimo bunky</b> (krv, moč) a usudzujeme na dej <b>v bunke</b>. Hodnota má zmysel len so stavom organizmu: glykémia nalačno &lt; 5,6 mmol/l; ≥ 7,0 mmol/l = diabetes.</p>
+    </div>
+  </div>
+
+  <p>Najčastejšie sa vyšetruje krv a moč, pri cielenej otázke aj iná telesná tekutina, napríklad mozgovomiechový mok. Krv prináša tkanivám substráty a odnáša ich produkty, takže koncentrácia metabolitu v plazme je výslednicou toho, koľko ho tkanivá vydávajú a koľko odoberajú. Z jednej hodnoty sa preto nedá povedať, ktorá strana sa zmenila – vysoká glykémia môže znamenať, že pečeň vydáva priveľa, alebo že sval a tukové tkanivo odoberajú primálo. Rozlíši to až súvislosť: stav organizmu (nalačno, po jedle), ďalšie parametre a časový priebeh.</p>
+
+  <div class="box k-lab keep">
+    <div class="label">Laboratórium</div>
+    <div class="body">
+      <p><b>Glukóza v plazme nalačno</b> (najmenej 8 hodín bez jedla; kritériá ADA 2026)</p>
+      <ul>
+    <li>menej než 5,6 mmol/l – norma,</li>
+    <li>5,6–6,9 mmol/l – porušená glykémia nalačno,</li>
+    <li>7,0 mmol/l (126 mg/dl) a viac – diabetes mellitus; bez jasných príznakov treba nález potvrdiť druhým vyšetrením.</li>
+  </ul>
+      <p>Tá istá hodnota 7,5 mmol/l je dve hodiny po jedle bežná, nalačno je nálezom – preto patrí k číslu vždy aj stav, v ktorom bola krv odobratá.</p>
+    </div>
+  </div>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>ADA</b> Americká diabetologická asociácia</span></div>
+  </div>
+
+  <p>Že je glykémia nalačno u zdravého človeka taká stála, je priamym dôsledkom slučky z <a class="xref" href="#sec-2-6">→ 2.6</a>: každá odchýlka vyvolá hormón, ktorý ju vráti. Laboratórna hodnota mimo rozpätia preto neznamená len „veľa glukózy“, ale „regulácia, ktorá ju mala vrátiť, zlyhala“ – a otázka znie, na ktorom mieste slučky: chýba hormón, neodpovedá naň tkanivo, alebo zlyháva orgán, ktorý má glukózu vydať či odobrať.</p>
+
+  <div class="box k-klin aside keep">
+    <div class="label">Klinika</div>
+    <div class="body">
+      <p><b>Nízka glykémia ohrozuje mozog skôr než čokoľvek iné.</b> Mozog a erytrocyty nemajú za glukózu rýchlu náhradu (ketolátky nastupujú až po dňoch hladovania). Pri prudkom poklese glykémie – typicky po nadmernej dávke inzulínu – preto prichádzajú najprv príznaky z mozgu: zmätenosť, poruchy vedomia, kŕče. Glukóza podaná včas ich odstráni v priebehu minút.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 2.9 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-2-9"><span class="n">2.9</span><span>Súhrn a rýchle rozlíšenie</span></h2>
+<div class="sec-body">
+  <p>Súhrn sleduje dve časti kapitoly z <a class="xref" href="#sec-2-1">→ 2.1</a>: najprv cesty, potom riadenie.</p>
+
+  <table class="table keep" id="tab-2-14" style="margin:6px 0">
+    <thead><tr><th>Otázka</th><th>Odpoveď v jednej vete</th><th>Sekcia</th></tr></thead>
+    <tbody>
+      <tr><td><b>Kade prúdi palivo?</b></td><td>Tri stupne: trávenie → acetyl-CoA → citrátový cyklus a dýchací reťazec; križovatky glukóza-6-fosfát, pyruvát, acetyl-CoA.</td><td>2.2</td></tr>
+      <tr><td><b>Čím sa líši rozklad od stavby?</b></td><td>Rozklad oxiduje, zbieha sa a dáva ATP a NADH; stavba redukuje, rozbieha sa a míňa ATP a NADPH.</td><td>2.2.1</td></tr>
+      <tr><td><b>Kde je energia uložená?</b></td><td>Asi 85 % v tuku; glykogén je malý a rýchly, bielkoviny nie sú zásoba.</td><td>2.3.1</td></tr>
+      <tr><td><b>Kto potrebuje glukózu stále?</b></td><td>Erytrocyt (nemá mitochondrie) a mozog (≈ 150 g denne).</td><td>2.3.2</td></tr>
+      <tr><td><b>Čo prepína stav organizmu?</b></td><td>Pomer inzulínu a glukagónu: po jedle ukladať, nalačno uvoľňovať.</td><td>2.3.3</td></tr>
+      <tr><td><b>Čo hovorí Km?</b></td><td>Koncentráciu substrátu pri polovičnej rýchlosti – enzým s vysokým Km sleduje koncentráciu, s nízkym je stále nasýtený.</td><td>2.4.1</td></tr>
+      <tr><td><b>Kompetitívny × nekompetitívny inhibítor?</b></td><td>Prvý zvyšuje Km a dá sa prekonať substrátom, druhý znižuje Vmax a nedá.</td><td>2.4.2</td></tr>
+      <tr><td><b>Ako rýchlo zaberie regulácia?</b></td><td>Substrát a alostéria hneď, fosforylácia do minút, množstvo enzýmu za hodiny až dni.</td><td>2.5</td></tr>
+      <tr><td><b>Alostéria × fosforylácia?</b></td><td>Alostéria nesie signál z vlastnej bunky (produkt, energia), fosforylácia signál hormónu.</td><td>2.5.2, 2.5.3</td></tr>
+      <tr><td><b>Prečo zymogény?</b></td><td>Proteáza má byť aktívna až tam, kde nič nepoškodí; aktivácia je nevratná.</td><td>2.5.3</td></tr>
+      <tr><td><b>Čo je recipročná regulácia?</b></td><td>Ten istý signál zapne jednu dráhu a vypne opačnú – nevznikne jalový cyklus.</td><td>2.6</td></tr>
+      <tr><td><b>Ako spoznám riadiaci krok?</b></td><td>Nevratný, prvý zaväzujúci, najpomalší, alosterický; v opačnej dráhe ho nahrádza iný enzým.</td><td>2.7</td></tr>
+      <tr><td><b>Čo spôsobí blok enzýmu?</b></td><td>Hromadenie pred blokom, nedostatok za ním, únik substrátu bočnou cestou.</td><td>2.7</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>NADH</b> redukovaná forma NAD⁺ – nesie dva elektróny</span></div>
+  </div>
+</div>
+
+<!-- ══ 2.10 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-2-10"><span class="n">2.10</span><span>Otázky na zopakovanie</span></h2>
+<div class="sec-body">
+  <ol class="quiz">
+    <li><details><summary>Prečo má telo ako hlavnú zásobu energie tuk, a nie glykogén, hoci glykogén sa mobilizuje rýchlejšie?</summary><div class="ans">Tuk nesie na gram viac než dvojnásobok energie (38 oproti 17 kJ/g) a ukladá sa takmer bez vody – tukové tkanivo jej má asi 15 %, sval okolo 80 %. Pätnásť kilogramov tuku tak drží asi 85 % uloženej energie; rovnaká energia v glykogéne by vážila mnohonásobne viac. Glykogén ostáva ako malá rýchla rezerva, z ktorej sa dá uvoľniť glukóza. <a class="xref" href="#sub-2-3-1">→ 2.3.1</a></div></details></li>
+    <li><details><summary>Prečo svalový glykogén nepomôže mozgu pri hypoglykémii, hoci ho je štyrikrát viac než pečeňového?</summary><div class="ans">Aby sa glukóza dostala z bunky do krvi, musí z nej enzým odštiepiť fosfát – nabitý glukóza-6-fosfát cez membránu neprejde. Enzým, ktorý to robí (glukóza-6-fosfatáza), pečeň má, sval nie. Svalový glykogén preto skončí v glykolýze vlastnej bunky. <a class="xref" href="#sub-2-3-2">→ 2.3.2</a> · <a class="xref" href="01_zaklady_biomolekuly.html#sub-1-2-1">→ 1.2.1 Funkčné skupiny</a></div></details></li>
+    <li><details><summary>Hexokináza a glukokináza katalyzujú tú istú reakciu. Čo by sa stalo po jedle bohatom na sacharidy, keby mala pečeň len hexokinázu?</summary><div class="ans">Hexokináza má nízke Km a je nasýtená už pri glykémii nalačno, navyše ju brzdí vlastný produkt glukóza-6-fosfát. Pečeň by po jedle nedokázala zvýšiť odber glukózy, prebytok by ostal v krvi a glykémia by stúpla vyššie a na dlhšie. Glukokináza s Km okolo 10 mmol/l zrýchľuje práve vtedy, keď glykémia rastie, a produkt ju nebrzdí. <a class="xref" href="#sub-2-4-1">→ 2.4.1</a></div></details></li>
+    <li><details><summary>Podľa čoho v pokuse rozlíšiš kompetitívny inhibítor od nekompetitívneho?</summary><div class="ans">Pridaním veľkého nadbytku substrátu. Kompetitívny inhibítor súťaží o aktívne miesto, takže ho substrát vytlačí a rýchlosť dosiahne pôvodnú Vmax (zvýšené je len Km). Nekompetitívny sa viaže inde; nadbytok substrátu nepomôže a Vmax ostane znížená. <a class="xref" href="#sub-2-4-2">→ 2.4.2</a></div></details></li>
+    <li><details><summary>Prečo sa pepsín po povarení neobnoví, ale po vybratí z chladničky áno?</summary><div class="ans">Var enzým denaturuje – rozbije slabé interakcie, ktoré držia jeho priestorový tvar, a reťazec sa už správne nezloží. Chlad tvar nemení, len spomaľuje pohyb molekúl; po zohriatí sa rýchlosť vráti. <a class="xref" href="#sub-2-4-3">→ 2.4.3</a> · <a class="xref" href="01_zaklady_biomolekuly.html#sub-1-2-3">→ 1.2.3 Nekovalentné interakcie</a></div></details></li>
+    <li><details><summary>Prečo je výhodné, že glukagón reguluje glykogénfosforylázu fosforyláciou, a nie zmenou jej množstva?</summary><div class="ans">Glykémiu treba vrátiť v priebehu minút. Fosforylácia mení hotový enzým za sekundy až minúty, je vratná a signál sa kaskádou kináz zosilní; syntéza nového enzýmu by trvala hodiny. Tá istá kináza navyše tým istým krokom vypne glykogénsyntázu, takže nevznikne jalový cyklus. <a class="xref" href="#sub-2-5-3">→ 2.5.3</a> · <a class="xref" href="#sec-2-6">→ 2.6</a></div></details></li>
+    <li><details><summary>V neznámej dráhe sú štyri kroky; prvý a tretí sú nevratné, za prvým sa dráha vetví. Ktorý enzým bude najskôr riadiaci a prečo nie druhý?</summary><div class="ans">Tretí: je nevratný a je prvý, po ktorom už medziprodukt nemá inú cestu (zaväzujúci krok). Prvý krok síce tiež môže byť regulovaný, ale jeho produkt slúži aj druhej vetve. Druhý krok je vratný – zmena aktivity enzýmu by len posunula rovnováhu, tok by nezmenila. <a class="xref" href="#sec-2-7">→ 2.7</a> · <a class="xref" href="01_zaklady_biomolekuly.html#sec-1-5">→ 1.5 Energia reakcie</a></div></details></li>
+    <li><details><summary>Prípad: 19-ročný pacient, niekoľko dní smäd a časté močenie, teraz vracia a dýcha zhlboka. Glykémia 24 mmol/l, v moči ketolátky. Ako môže mať naraz nadbytok glukózy a „hladovať“?</summary><div class="ans">Chýba inzulín (diabetes 1. typu). Bez neho sval ani tuk glukózu z krvi neberú a všetky tkanivá dostávajú len signál glukagónu – ako pri hladovaní. Pečeň štiepi glykogén a tvorí ďalšiu glukózu, z tukových zásob prúdia MK a pečeň z nich robí ketolátky. Tie sú kyseliny: pH klesá a hlboké dýchanie je kompenzácia. <a class="xref" href="#sec-2-6">→ 2.6</a> · <a class="xref" href="01_zaklady_biomolekuly.html#sub-1-6-4">→ 1.6.4 pH a tlmivé roztoky</a></div></details></li>
+    <li><details><summary>Prípad: dieťa s vrodeným defektom enzýmu, ktorý mení látku B na látku C v dráhe A → B → C → D. Čo budeš hľadať v krvi a moči a z čoho môžu byť príznaky?</summary><div class="ans">Pred blokom sa hromadí B (a možno A) a látky, ktoré z B vznikajú bočnými cestami – tie hľadáme v krvi a moči. Za blokom chýbajú C a D. Príznaky môžu byť z toxicity nahromadeného B, z nedostatku D alebo z oboch; podľa toho liečba obmedzuje prísun A alebo dopĺňa D. <a class="xref" href="#sec-2-7">→ 2.7</a></div></details></li>
+  </ol>
+</div>
+
+<!-- ══ 2.11 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-2-11"><span class="n">2.11</span><span>Zdroje</span></h2>
+<div class="sec-body src">
+  <div class="micro" style="margin-top:8px">Učebnice (kontrola faktov)</div>
+
+  <ul>
+    <li>Harvey R. A., Ferrier D. R.: <i>Lippincott's Illustrated Reviews: Biochemistry</i>, 5. vyd., Philadelphia: Lippincott Williams &amp; Wilkins, 2011. ISBN 978-1-60831-412-6. (enzýmy – kinetika, inhibícia, regulácia a jej rýchlosť; úvod do metabolizmu; glykogén; trávenie bielkovín; inzulín a glukagón)</li>
+    <li>Lieberman M., Peet A.: <i>Marks' Basic Medical Biochemistry: A Clinical Approach</i>, 5. vyd., Philadelphia: Wolters Kluwer, 2018. ISBN 978-1-4963-2481-8. (palivá a zásoby, stav po jedle a nalačno, požiadavky tkanív, regulačné enzýmy)</li>
+    <li>Rodwell V. W., Bender D. A., Botham K. M., Kennelly P. J., Weil P. A.: <i>Harper's Illustrated Biochemistry</i>, 31. vyd., New York: McGraw-Hill Education, 2018. ISBN 978-1-25-983793-7. (kinetika enzýmov, regulácia aktivity, proenzýmy)</li>
+  </ul>
+
+  <div class="micro" style="margin-top:8px">Názvoslovie, odporúčania a prehľady</div>
+
+  <ul>
+    <li>American Diabetes Association Professional Practice Committee: 2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2026. <i>Diabetes Care</i> 2026;49(Suppl 1):S27–S49. <a href="https://doi.org/10.2337/dc26-S002" target="_blank" rel="noopener noreferrer">doi:10.2337/dc26-S002</a></li>
+    <li>Steinberg G. R., Hardie D. G.: New insights into activation and function of the AMPK. <i>Nat Rev Mol Cell Biol</i> 2023;24:255–272. <a href="https://doi.org/10.1038/s41580-022-00547-x" target="_blank" rel="noopener noreferrer">doi:10.1038/s41580-022-00547-x</a></li>
+    <li>PubChem (National Center for Biotechnology Information): záznamy zlúčenín – štruktúry molekúl v schémach. <a href="https://pubchem.ncbi.nlm.nih.gov/" target="_blank" rel="noopener noreferrer">pubchem.ncbi.nlm.nih.gov</a></li>
+  </ul>
+
+  <div class="micro" style="margin-top:8px">Obrázky</div>
+
+  <p>Všetky schémy a vzorce v kapitole sú vlastné kresby (SVG); štruktúry molekúl sú overené v databáze PubChem. Súhrn je v registri <code>ZDROJE-OBRAZKOV.md</code>.</p>
+</div>
+
+<p class="next"><b>Pokračuje v:</b>
+  <a class="xref" href="03_sacharidy_glykogen.html">→ 3 Trávenie sacharidov a metabolizmus glykogénu</a>
+</p>
+
+<div class="running-foot">
+  <span>BIOCHEM — poznámky z biochémie · Kapitola 2</span>
+  <span class="tnum">§ 2.1–2.11</span>
+</div>
+
+</main>
+  </div>
+  <div class="site-spacer" aria-hidden="true"></div>
+</div>
+
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/peek.js" defer></script>
+<script src="../assets/js/toc-collapse.js" defer></script>
+<script>
+/* PATOLA: tlač kapitoly otvorenej v ráme hlavnej stránky (index.html).
+   Rodič pošle "pf:print"; Ctrl/Cmd+P vo vnútri rámu tlačí rám, nie obsah knihy. */
+(function(){
+  var imgs = function(){ return Array.prototype.slice.call(document.querySelectorAll('img[loading="lazy"]')); };
+  // lenivé obrázky sa po načítaní stránky dotiahnu na pozadí, aby v tlači neboli prázdne
+  window.addEventListener("load", function(){ setTimeout(function(){ imgs().forEach(function(i){ i.loading = "eager"; }); }, 800); });
+  // v tlači sú odpovede na otázky vidieť (zatvorený <details> by sa vytlačil bez nich)
+  var shut = [];
+  // predvolený názov súboru pri tlači = kapitola („Kapitola 3 – Zápal …“); title sa po tlači vráti
+  // (po maximalizovanom náhľade je v document.title už iná kapitola, preto sa číta až teraz)
+  var keep = null;
+  function printTitle(){ return document.title.replace(/^(\d+) · /, "Kapitola $1 – "); }
+  function titleOn(){ if (keep === null) { keep = document.title; document.title = printTitle(); } }
+  function titleOff(){ if (keep !== null) { document.title = keep; keep = null; } }
+  window.addEventListener("beforeprint", function(){ titleOn(); shut = Array.prototype.filter.call(document.querySelectorAll("ol.quiz details"), function(d){ return !d.open; }); shut.forEach(function(d){ d.open = true; }); });
+  window.addEventListener("afterprint", function(){ titleOff(); shut.forEach(function(d){ d.open = false; }); shut = []; });
+  if (window.top === window.self) return;
+  // v ráme berie prehliadač názov súboru z hlavnej stránky → pošli jej názov kapitoly
+  window.addEventListener("afterprint", function(){ try { window.parent.postMessage({ pf: "title", title: null }, "*"); } catch (e) {} });
+  function printMe(){
+    var all = Array.prototype.slice.call(document.images);
+    all.forEach(function(i){ i.loading = "eager"; });
+    try { window.parent.postMessage({ pf: "title", title: printTitle() }, "*"); } catch (e) {}
+    var t0 = Date.now();
+    (function wait(){
+      if (Date.now() - t0 > 150 && (all.every(function(i){ return i.complete; }) || Date.now() - t0 > 4000)) { try { window.focus(); window.print(); } catch (e) {} }
+      else setTimeout(wait, 100);
+    })();
+  }
+  window.addEventListener("message", function(e){ if (e.data === "pf:print") printMe(); });
+  document.addEventListener("keydown", function(e){
+    if ((e.ctrlKey || e.metaKey) && !e.altKey && (e.key === "p" || e.key === "P")) { e.preventDefault(); printMe(); }
+  });
+})();
+</script>
+<script src="../assets/glossary/01-struktury-reakcie-meranie.js" defer></script>
+<script src="../assets/glossary/02-metabolizmus-a-regulacia.js" defer></script>
+<script src="../assets/glossary/03-travenie-sacharidov-a-glykogen.js" defer></script>
+<script src="../assets/glossary/04-glykolyza-a-glukoneogeneza.js" defer></script>
+<script src="../assets/glossary/05-pentozy-fruktoza-galaktoza.js" defer></script>
+<script src="../assets/glossary/06-acetyl-coa-a-citratovy-cyklus.js" defer></script>
+<script src="../assets/glossary/07-biologicke-oxidacie-a-atp.js" defer></script>
+<script src="../assets/glossary/08-lipidy-a-mastne-kyseliny.js" defer></script>
+<script src="../assets/js/glossary.js" defer></script>
+<script src="../assets/js/view-toggle.js" defer></script>
+</body>
+</html>

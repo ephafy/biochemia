@@ -1,0 +1,17 @@
+nazov: 2-hydroxyglutarát
+skratka: 2-HG
+sumarny: C5H6O5
+smiles: C(CC(=O)O)[C@H](C(=O)O)O
+zdroj: PubChem CID 439391 (kyselina D-2-hydroxyglutárová) · overené 2026-10-07
+projekcia: skeletálny vzorec, dianión; na C2 hydroxyl namiesto ketoskupiny 2-oxoglutarátu; konfigurácia (D) nie je vyznačená
+---
+a C2 . 0 0
++ O2 C2 90 OH
++ C1 C2 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-
++ C3 C2 210 .
++ C4 C3 150 .
++ C5 C4 210 .
++ O5a C5 270 O 2
++ O5b C5 150 ^-O <

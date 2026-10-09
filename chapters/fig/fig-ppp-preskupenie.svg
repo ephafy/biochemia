@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 916" role="img" aria-labelledby="t-ppp-preskupenie">
+<title id="t-ppp-preskupenie">Neoxidačná časť pentózofosfátovej dráhy ako tri vratné výmeny, ktoré na seba nadväzujú zhora nadol. Stredný stĺpec je príjemca: ribóza-5-fosfát dostane od xylulóza-5-fosfátu dva uhlíky (transketoláza s tiamíndifosfátom) a stane sa sedoheptulóza-7-fosfátom; ten odovzdá tri uhlíky (transaldoláza) a ostane z neho erytróza-4-fosfát; tá dostane dva uhlíky od druhej molekuly xylulóza-5-fosfátu (transketoláza) a stane sa fruktóza-6-fosfátom. Ľavý stĺpec: z prvej xylulózy ostane po odovzdaní dvoch uhlíkov glyceraldehyd-3-fosfát, ktorý v druhej výmene prijme tri uhlíky a stane sa fruktóza-6-fosfátom. Pravý stĺpec: z druhej xylulózy ostane glyceraldehyd-3-fosfát. Dva fruktóza-6-fosfáty a jeden glyceraldehyd-3-fosfát odchádzajú do glykolýzy.</title>
+<text class="cap" x="12" y="14">cytosol · neoxidačná časť (vratná): 3 × C₅ ⇌ 2 × C₆ + C₃</text>
+
+<mol v="xyluloza-5-fosfat" id="x1" x="140" y="100" zv="C1,C2,O2,C1-C2,C2-O2"/>
+<mol v="riboza-5-fosfat" id="r1" x="350" y="100"/>
+
+<mol v="glyceraldehyd-3-fosfat-fischer" id="g1" x="140" y="318"/>
+<mol v="sedoheptuloza-7-fosfat" id="s1" x="350" y="318" zv="C1,C2,O2,C3,O3,H3,C1-C2,C2-O2,C2-C3,C3-O3,C3-H3"/>
+
+<mol v="fruktoza-6-fosfat-fischer" id="f2" x="140" y="548" zv="C1,C2,O2,C3,O3,H3,C1-C2,C2-O2,C2-C3,C3-O3,C3-H3"/>
+<mol v="erytroza-4-fosfat" id="e2" x="350" y="548"/>
+<mol v="xyluloza-5-fosfat" id="x3" x="560" y="548" zv="C1,C2,O2,C1-C2,C2-O2"/>
+<text class="sub" x="560" y="{x3.t.y-6}" text-anchor="middle">druhá molekula</text>
+
+<mol v="fruktoza-6-fosfat-fischer" id="f3" x="350" y="750" zv="C1,C2,O2,C1-C2,C2-O2"/>
+<mol v="glyceraldehyd-3-fosfat-fischer" id="g3" x="560" y="750"/>
+
+<!-- 1. výmena -->
+<rx id="t1" od="{r1.b}" do="{s1.t}" typ="vratna" enzym="transketoláza|(tiamíndifosfát)" krok="1" e="vpravo"/>
+<path class="rx" d="M140,{x1.b.y} L140,{g1.t.y}" marker-end="url(#sip)" marker-start="url(#sip)"/>
+<path class="stk-acc" d="M140,{t1.m.y} L341,{t1.m.y}"/><path class="fill-acc" d="M349,{t1.m.y} l-9,-4.5 v9z"/>
+<text class="at hl" x="245" y="{t1.m.y-6}" text-anchor="middle">+ C₂</text>
+<text class="sub" x="{t1.el.x+4}" y="{t1.eb.y+10}">C₅ + C₅ ⇌ C₃ + C₇</text>
+
+<!-- 2. výmena -->
+<rx id="t2" od="{s1.b}" do="{e2.t}" typ="vratna" enzym="transaldoláza" krok="2" e="vpravo"/>
+<path class="rx" d="M140,{g1.b.y} L140,{f2.t.y}" marker-end="url(#sip)" marker-start="url(#sip)"/>
+<path class="stk-acc" d="M350,{t2.m.y} L149,{t2.m.y}"/><path class="fill-acc" d="M141,{t2.m.y} l9,-4.5 v9z"/>
+<text class="at hl" x="245" y="{t2.m.y-6}" text-anchor="middle">+ C₃</text>
+<text class="sub" x="{t2.el.x+4}" y="{t2.eb.y+10}">C₃ + C₇ ⇌ C₆ + C₄</text>
+
+<!-- 3. výmena -->
+<rx id="t3" od="{e2.b}" do="{f3.t}" typ="vratna" enzym="transketoláza|(tiamíndifosfát)" krok="3" e="vlavo"/>
+<path class="rx" d="M560,{x3.b.y} L560,{g3.t.y}" marker-end="url(#sip)" marker-start="url(#sip)"/>
+<path class="stk-acc" d="M560,{t3.m.y} L359,{t3.m.y}"/><path class="fill-acc" d="M351,{t3.m.y} l9,-4.5 v9z"/>
+<text class="at hl" x="455" y="{t3.m.y-6}" text-anchor="middle">+ C₂</text>
+<text class="sub" x="{t3.er.x-4}" y="{t3.eb.y+10}" text-anchor="end">C₄ + C₅ ⇌ C₆ + C₃</text>
+
+<!-- výstup -->
+<uzol id="gly" x="350" y="868" w="500" text="glykolýza alebo glukoneogenéza (kapitola 4)"/>
+<path class="rx" d="M140,{f2.b.y} L140,{gly.t.y}" marker-end="url(#sip)" marker-start="url(#sip)"/>
+<path class="rx" d="M350,{f3.b.y} L350,{gly.t.y}" marker-end="url(#sip)" marker-start="url(#sip)"/>
+<path class="rx" d="M560,{g3.b.y} L560,{gly.t.y}" marker-end="url(#sip)" marker-start="url(#sip)"/>
+<legenda x="130" y="903" polozky="vr,enz,zv" w="560"/>
+</svg>

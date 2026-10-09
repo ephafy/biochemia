@@ -1,0 +1,25 @@
+nazov: NADH (redukovaný)
+sumarny: C6H8N2O
+smiles: C1C=CN(C=C1C(=O)N)
+zdroj: PubChem CID 439153 (NADH) · overené 2026-10-07
+projekcia: skeletálny vzorec nikotínamidového kruhu; R = zvyšok molekuly; na C4 dva vodíky (prijatý hydridový ión), dusík bez náboja
+kontrola: nie
+---
+a N1 N -0 1
+a C2 . 0.866 0.5
+a C3 . 0.866 -0.5
+a C4 . 0 -1
+a C5 . -0.866 -0.5
+a C6 . -0.866 0.5
+b N1 C2
+b C2 C3 2
+b C3 C4
+b C4 C5
+b C5 C6 2
+b C6 N1
++ R N1 270 R
++ C7 C3 30 .
++ O7 C7 90 O 2
++ N7 C7 330 NH_2
++ H4a C4 60 H
++ H4b C4 120 H

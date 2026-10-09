@@ -1,0 +1,13 @@
+nazov: 2,4-dinitrofenolát
+sumarny: C6H3N2O5-
+smiles: C1=CC(=C(C=C1[N+](=O)[O-])[N+](=O)[O-])[O-]
+zdroj: PubChem CID 167909 (2,4-dinitrofenolát) · overené 2026-10-08
+projekcia: skeletálny vzorec; anión, ktorý ostane po odovzdaní protónu – v tejto forme sa vracia na kyslú stranu membrány; nitroskupiny skrátene NO₂
+---
+kruh n6 A1 A2 A3 A4 A5 A6 rot 90
+b A1 A2 2r
+b A3 A4 2r
+b A5 A6 2r
++ O1 A1 0 O^-
++ N2 A2 300 NO_2
++ N4 A4 180 O_2N <

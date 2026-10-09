@@ -1,0 +1,14 @@
+nazov: glycerol-3-fosfát
+skratka: Gro-3-P
+sumarny: C3H9O6P
+smiles: C([C@H](COP(=O)(O)O)O)O
+zdroj: PubChem CID 439162 (sn-glycerol-3-fosfát) · overené 2026-10-07
+projekcia: skeletálny vzorec (cik-cak); fosfát na C3 ako P v krúžku; od dihydroxyacetónfosfátu sa líši hydroxylom na C2 namiesto ketoskupiny
+---
+a C2 . 0 0
++ O2 C2 90 OH
++ C1 C2 330 .
++ O1 C1 30 OH
++ C3 C2 210 .
++ O3 C3 150 O
++ P3 O3 210*1.15 (P)

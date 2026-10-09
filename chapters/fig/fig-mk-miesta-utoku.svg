@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 440" role="img" aria-labelledby="t-mk-miesta-utoku">
+<title id="t-mk-miesta-utoku">Tri miesta, na ktorých sa dá mastná kyselina oxidovať, a α-oxidácia kyseliny fytánovej. Hore palmitát: β-oxidácia útočí na tretí uhlík a je hlavnou cestou v mitochondrii a pre veľmi dlhé reťazce v peroxizóme; α-oxidácia útočí na druhý uhlík a skracuje reťazec o jeden uhlík; ω-oxidácia v endoplazmatickom retikule oxiduje posledný, metylový uhlík a vzniká dikarboxylová kyselina. Dole kyselina fytánová: metylová skupina na treťom uhlíku bráni β-oxidácii. Fytanoyl-CoA-hydroxyláza v peroxizóme hydroxyluje druhý uhlík a prvý uhlík odíde ako oxid uhličitý; vznikne kyselina pristánová s metylom na druhom uhlíku, ktorú β-oxidácia už spracuje.</title>
+<text class="cap" x="12" y="14">tri miesta útoku na reťazec</text>
+<mol v="palmitat" id="pal" x="350" y="92" zv="C3,C2,C16" popis="nie"/>
+<path class="vz plna" d="M{pal.C3.x},{pal.C3.y-22} L{pal.C3.x},{pal.C3.y-8}" marker-end="url(#sip-n)"/>
+<text class="lblb" x="{pal.C3.x}" y="46" text-anchor="middle">β-oxidácia</text>
+<text class="sub" x="{pal.C3.x}" y="58" text-anchor="middle">mitochondria · peroxizóm</text>
+<path class="vz plna" d="M{pal.C2.x},{pal.C2.y+34} L{pal.C2.x},{pal.C2.y+16}" marker-end="url(#sip-n)"/>
+<text class="lblb" x="{pal.C2.x+10}" y="146" text-anchor="middle">α-oxidácia</text>
+<text class="sub" x="{pal.C2.x+10}" y="158" text-anchor="middle">peroxizóm · rozvetvené MK</text>
+<path class="vz plna" d="M{pal.C16.x-4},{pal.C16.y+38} L{pal.C16.x-4},{pal.C16.y+18}" marker-end="url(#sip-n)"/>
+<text class="lblb" x="{pal.C16.x+6}" y="146" text-anchor="middle">ω-oxidácia</text>
+<text class="sub" x="{pal.C16.x+26}" y="158" text-anchor="middle">endoplazmatické retikulum</text>
+<text class="sub" x="{pal.C16.x+26}" y="169" text-anchor="middle">→ dikarboxylová kyselina</text>
+<text class="mn" x="350" y="128" text-anchor="middle">palmitát</text>
+
+<path class="vz plna" d="M12,190 L688,190"/>
+<text class="cap" x="12" y="208">α-oxidácia kyseliny fytánovej · peroxizóm</text>
+<mol v="fytanat" id="fy" x="300" y="256" zv="M3,C3-M3,C1,O1a,O1b"/>
+<mol v="pristanat" id="pri" x="300" y="390" zv="M2,C2-M2"/>
+<rx od="{fy.b+60,0}" do="{pri.t+60,0}" enzym="fytanoyl-CoA-|hydroxyláza a ďalšie" ko="O₂>CO₂" e="vpravo"/>
+<text class="sub" x="530" y="240">metyl na β-uhlíku:</text>
+<text class="sub" x="530" y="251">β-oxidácia tu nemôže</text>
+<text class="sub" x="530" y="262">vytvoriť oxoskupinu</text>
+<uzol id="box" x="596" y="390" text="β-oxidácia" trieda="bx-c" w="100"/>
+<rx od="{pri.r+4,0}" do="{box.l}"/>
+<text class="sub" x="596" y="422" text-anchor="middle">metyl je už na α-uhlíku</text>
+</svg>

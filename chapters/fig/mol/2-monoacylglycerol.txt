@@ -1,0 +1,17 @@
+nazov: 2-monoacylglycerol
+skratka: 2-MAG
+sumarny: C19H38O4
+smiles: CCCCCCCCCCCCCCCC(=O)OC(CO)CO
+zdroj: PubChem CID 123409 (2-palmitoylglycerol) – vzor; R² = reťazec MK · overené 2026-10-07
+projekcia: skeletálny vzorec: glycerol s jedným acylom na strednom hydroxyle; krajné hydroxyly voľné
+kontrola: nie
+---
+a C2 . 0 0
++ O2 C2 90 O
++ A2 O2 30 .
++ Q2 A2 90 O 2
++ R2 A2 330 R^2
++ C1 C2 330 .
++ O1 C1 30 OH
++ C3 C2 210 .
++ O3 C3 150 HO <

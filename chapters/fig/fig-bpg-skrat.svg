@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 312" role="img" aria-labelledby="t-bpg-skrat">
+<title id="t-bpg-skrat">Odbočka glykolýzy v erytrocyte. Priama cesta: fosfoglycerátkináza mení 1,3-bisfosfoglycerát na 3-fosfoglycerát a vzniká ATP. Odbočka: bisfosfoglycerátmutáza presunie fosfát z uhlíka 1 na uhlík 2 a vznikne 2,3-bisfosfoglycerát; fosfatáza z neho odštiepi fosfát na 3-fosfoglycerát. Na odbočke ATP nevzniká. 2,3-bisfosfoglycerát sa viaže na deoxyhemoglobín a znižuje jeho afinitu ku kyslíku.</title>
+<text class="cap" x="12" y="14">erytrocyt</text>
+<mol v="1-3-bisfosfoglycerat" id="b13" x="100" y="78"/>
+<mol v="3-fosfoglycerat" id="pg3" x="604" y="78"/>
+<rx od="{b13.r+4,0}" do="{pg3.l-4,0}" typ="vratna" enzym="fosfoglycerátkináza (krok 7)" ko="ADP>ATP" e="hore"/>
+<mol v="2-3-bisfosfoglycerat" id="b23" x="352" y="208" zv="P2"/>
+<rx od="{b13.b+10,0}" do="{b23.l-6,0}" cez="110,208" enzym="bisfosfoglycerát-|mutáza" e="dole"/>
+<rx od="{b23.r+6,0}" do="{pg3.b-10,0}" cez="594,208" enzym="fosfatáza" ko="H₂O>Pᵢ" e="dole"/>
+<text class="sub" x="352" y="150" text-anchor="middle">odbočka (dole): bez ATP</text>
+<uzol id="hb" x="352" y="296" text="viaže sa na deoxyhemoglobín → hemoglobín ľahšie odovzdá O₂ tkanivám"/>
+<vplyv od="{b23.b}" do="{hb.t}"/>
+</svg>

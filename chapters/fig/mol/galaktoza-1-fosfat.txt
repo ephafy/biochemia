@@ -1,0 +1,16 @@
+nazov: galaktóza-1-fosfát
+skratka: Gal-1-P
+sumarny: C6H13O9P
+smiles: C([C@@H]1[C@@H]([C@@H]([C@H]([C@H](O1)OP(=O)(O)O)O)O)O)O
+zdroj: PubChem CID 123912 (α-D-galaktóza-1-fosfát) · overené 2026-10-07
+projekcia: Haworthov vzorec, α-D-pyranóza; OH na C4 hore (galakto-konfigurácia); fosfát na anomérnom kyslíku C1 (dole) ako P v krúžku
+---
+kruh pyranoza C1 C2 C3 C4 C5 O5
++ O1 C1 d O
++ P1 O1 0*1.15 (P)
++ O2 C2 d HO <
++ O3 C3 u OH
++ O4 C4 u HO <
++ C6 C5 u CH_2OH
+c C1 1 20
+c C4 4 200

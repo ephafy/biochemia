@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 372" role="img" aria-labelledby="t-hormonalna-slucka">
+<title id="t-hormonalna-slucka">Regulačná slučka glykémie na príklade glykogénu v pečeni. Keď glukóza v krvi klesne, α-bunky pankreasu vydajú glukagón; ten cez cAMP a proteínkinázu A fosforyluje enzýmy. Fosforylovaná glykogénfosforyláza je aktívna, fosforylovaná glykogénsyntáza neaktívna – pečeň glykogén štiepi a glukózu vydá do krvi. Keď glukóza v krvi stúpne, β-bunky vydajú inzulín; ten cez receptor s tyrozínkinázou aktivuje fosfoproteínfosfatázu, enzýmy sa defosforylujú, syntáza sa zapne, fosforyláza vypne a pečeň glukózu ukladá.</title>
+<uzol id="gly" x="350" y="34" text="glukóza v krvi" trieda="bx-c"/>
+<uzol id="a" x="112" y="34" text="α-bunky pankreasu|glukagón"/>
+<uzol id="b" x="588" y="34" text="β-bunky pankreasu|inzulín"/>
+<vplyv od="{gly.l}" do="{a.r}" text="keď klesne"/>
+<vplyv od="{gly.r}" do="{b.l}" text="keď stúpne"/>
+<uzol id="ca" x="112" y="112" text="cAMP →|proteínkináza A"/>
+<vplyv typ="akt" od="{a.b}" do="{ca.t}"/>
+<uzol id="fo" x="112" y="190" text="fosforylácia|enzýmov"/>
+<vplyv typ="akt" od="{ca.b}" do="{fo.t}"/>
+<uzol id="pp" x="588" y="112" text="receptor (tyrozínkináza) →|fosfoproteínfosfatáza"/>
+<vplyv typ="akt" od="{b.b}" do="{pp.t}"/>
+<uzol id="de" x="588" y="190" text="defosforylácia|enzýmov"/>
+<vplyv typ="akt" od="{pp.b}" do="{de.t}"/>
+
+<rect class="komp" x="150" y="238" width="400" height="104" rx="3"/>
+<text class="cap" x="158" y="252">pečeňová bunka</text>
+<uzol id="gg" x="222" y="296" text="glykogén" trieda="bx-c"/>
+<uzol id="g1" x="486" y="296" text="glukóza" trieda="bx-c"/>
+<rx id="fy" od="{gg.r+2,-10}" do="{g1.l-2,-10}" typ="nevratna" enzym="glykogénfosforyláza" akt="fosforylácia" inh="defosforylácia" e="hore"/>
+<rx id="sy" od="{g1.l-2,10}" do="{gg.r+2,10}" typ="nevratna" enzym="glykogénsyntáza" akt="defosforylácia" inh="fosforylácia" e="dole"/>
+<vplyv od="{fo.b}" do="186,236" cez="112,236"/>
+<vplyv od="{de.b}" do="514,236" cez="588,236"/>
+<rx od="{g1.t+10,0}" do="{gly.b+16,0}" typ="vratna"/>
+<text class="lblb" x="272" y="126" text-anchor="middle">⟳ záporná spätná väzba</text>
+<text class="sub" x="272" y="140" text-anchor="middle">riadiaci krok: fosforylácia</text>
+<text class="sub" x="272" y="152" text-anchor="middle">a defosforylácia enzýmov</text>
+<legenda x="20" y="362" polozky="nv,enz,akt,inh,vz"/>
+</svg>

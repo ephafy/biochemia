@@ -1,0 +1,42 @@
+nazov: FADH₂ (redukovaný)
+sumarny: C27H35N9O15P2
+smiles: CC1=CC2=C(C=C1C)N(C3=C(N2)C(=O)NC(=O)N3)C
+zdroj: PubChem CID 446013 (FADH₂) · overené 2026-10-07
+projekcia: skeletálny vzorec izoaloxazínového kruhu; R = zvyšok molekuly; na N1 a N5 pribudli vodíky
+kontrola: nie
+---
+a C6 . 0 -1
+a C7 . -0.866 -0.5
+a C8 . -0.866 0.5
+a C9 . -0 1
+a C9a . 0.866 0.5
+a C5a . 0.866 -0.5
+a N5 NH 1.732 -1
+a N10 N 1.732 1
+a C10a . 2.598 0.5
+a C4a . 2.598 -0.5
+a C4 . 3.464 -1
+a N1 NH 3.464 1
+a C2 . 4.33 0.5
+a N3 NH 4.33 -0.5
+b C6 C7 2
+b C7 C8
+b C8 C9 2
+b C9 C9a
+b C9a C5a 2
+b C5a C6
+b C5a N5
+b N5 C4a
+b C4a C10a 2
+b C10a N10
+b N10 C9a
+b C10a N1
+b C4a C4
+b C4 N3
+b N3 C2
+b C2 N1
++ M7 C7 150 H_3C <
++ M8 C8 210 H_3C <
++ R N10 270 R
++ O4 C4 90 O 2
++ O2 C2 330 O 2

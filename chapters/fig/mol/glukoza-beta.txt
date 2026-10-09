@@ -1,0 +1,14 @@
+nazov: β-D-glukóza
+skratka: β-Glc
+sumarny: C6H12O6
+smiles: C([C@@H]1[C@H]([C@@H]([C@H]([C@@H](O1)O)O)O)O)O
+zdroj: PubChem CID 64689 (β-D-glukopyranóza) · overené 2026-10-06
+projekcia: Haworthov vzorec, β-D-pyranóza (anomérny OH hore, na strane C6)
+---
+kruh pyranoza C1 C2 C3 C4 C5 O5
++ O1 C1 u OH
++ O2 C2 d OH
++ O3 C3 u OH
++ O4 C4 d HO <
++ C6 C5 u CH_2OH
+c C1 1 340

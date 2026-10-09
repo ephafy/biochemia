@@ -1,0 +1,13 @@
+nazov: glyceraldehyd
+sumarny: C3H6O3
+smiles: C([C@H](C=O)O)O
+zdroj: PubChem CID 79014 (D-glyceraldehyd) · overené 2026-10-07
+projekcia: skeletálny vzorec (cik-cak); aldehyd na C1; konfigurácia na C2 (D) nie je vyznačená
+---
+a C2 . 0 0
++ O2 C2 90 OH
++ C1 C2 330 .
++ O1 C1 30 O 2
++ H1 C1 270 H
++ C3 C2 210 .
++ O3 C3 150 HO <

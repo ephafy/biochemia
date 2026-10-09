@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 392" role="img" aria-labelledby="t-cesta-sacharidov">
+<title id="t-cesta-sacharidov">Mapa kapitoly: cesta sacharidov z potravy do zásoby a späť. V lúmene čreva štiepi α-amyláza škrob a disacharidázy kefkového lemu disacharidy na glukózu, galaktózu a fruktózu; vlákninu rozkladajú až baktérie hrubého čreva. Monosacharidy prejdú cez enterocyt do krvi portálnej žily. Glykémiu riadia inzulín, glukagón a adrenalín. V bunke sa glukóza fosforyluje na glukóza-6-fosfát; z neho sa po jedle stavia glykogén a nalačno alebo pri záťaži sa glykogén štiepi späť. Pečeň vracia glukózu do krvi, sval ju spáli v glykolýze.</title>
+<text class="cap" x="12" y="14">1 · trávenie v lúmene čreva (3.2)</text>
+<uzol id="ps" x="130" y="42" text="škrob (a glykogén) potravy"/>
+<uzol id="ds" x="372" y="42" text="sacharóza · laktóza"/>
+<uzol id="vl" x="596" y="42" text="vláknina"/>
+<uzol id="mono" x="250" y="112" text="glukóza · galaktóza · fruktóza" trieda="bx-c"/>
+<rx od="{ps.b}" do="176,{mono.t.y}"/>
+<text class="enz" x="142" y="84" text-anchor="end">α-amyláza</text>
+<rx od="{ds.b}" do="336,{mono.t.y}"/>
+<text class="enz" x="368" y="80">disacharidázy</text>
+<text class="enz" x="368" y="91">kefkového lemu</text>
+<uzol id="bk" x="596" y="112" text="baktérie hrubého čreva:|krátke MK, plyny"/>
+<rx od="{vl.b}" do="{bk.t}"/>
+<text class="cap" x="12" y="152">2 · vstrebanie a rozvoz (3.3, 3.4)</text>
+<uzol id="ent" x="250" y="178" text="enterocyt: SGLT1, GLUT5 → GLUT2"/>
+<rx od="{mono.b}" do="{ent.t}"/>
+<uzol id="krv" x="250" y="236" text="glukóza v krvi" trieda="bx-c"/>
+<rx od="{ent.b}" do="{krv.t}"/>
+<text class="sub" x="258" y="210">portálna žila</text>
+<uzol id="hor" x="540" y="236" text="inzulín × glukagón, adrenalín"/>
+<vplyv od="{hor.l}" do="{krv.r}" text="stráži glykémiu"/>
+<text class="cap" x="12" y="276">3 · bunka (3.5 – 3.9)</text>
+<mol v="glukoza-6-fosfat" id="g6p" x="250" y="326" m="0.8" popis="vlavo"/>
+<rx od="{krv.b}" do="{krv.b.x},{g6p.t.y}" typ="nevratna" enzym="GLUT → hexokináza,|glukokináza"/>
+<uzol id="gg" x="540" y="316" text="glykogén" trieda="bx-m" w="110"/>
+<rx od="{g6p.r+8,-10}" do="{gg.l-2,-6}" enzym="syntéza: po jedle" e="hore"/>
+<rx od="{gg.l-2,8}" do="{g6p.r+8,4}" enzym="rozklad: nalačno, pri záťaži" e="dole"/>
+<vplyv od="{hor.b}" do="{gg.t}"/>
+<uzol id="pe" x="170" y="378" text="pečeň: glukóza späť do krvi"/>
+<uzol id="sv" x="372" y="378" text="sval: glykolýza"/>
+<rx od="{g6p.b-14,0}" do="{pe.t+30,0}"/>
+<rx od="{g6p.b+14,0}" do="{sv.t-30,0}"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 296" role="img" aria-labelledby="t-pdh-regulacia">
+<title id="t-pdh-regulacia">Regulácia pyruvátdehydrogenázového komplexu fosforyláciou. Kináza komplexu pripojí na enzým E1 fosfát z ATP a komplex vypne; kinázu aktivujú acetyl-CoA, NADH a ATP a brzdia pyruvát a ADP; brzdí ju aj liek dichlóracetát. Fosfatáza fosfát odštiepi a komplex zapne; aktivujú ju vápenaté ióny a inzulín. Produkty acetyl-CoA a NADH brzdia komplex aj priamo.</title>
+<uzol id="on" x="130" y="140" text="komplex aktívny|E1 bez fosfátu" trieda="bx-c" w="150"/>
+<uzol id="off" x="570" y="140" text="komplex vypnutý|E1 s fosfátom" w="150"/>
+<rx id="kin" od="{on.tr}" do="{off.tl}" cez="350,56" enzym="kináza komplexu" akt="acetyl-CoA · NADH · ATP" inh="pyruvát · ADP · dichlóracetát (liek)" ko="ATP>ADP" e="hore"/>
+<rx id="fos" od="{off.bl}" do="{on.br}" cez="350,224" enzym="fosfatáza komplexu" akt="Ca²⁺ · inzulín" ko="H₂O>Pᵢ" e="dole"/>
+<text class="lblb" x="350" y="144" text-anchor="middle">⟳</text>
+<text class="sub" x="130" y="182" text-anchor="middle">pyruvát → acetyl-CoA</text>
+<text class="t-inh" x="130" y="196" text-anchor="middle">↓ acetyl-CoA · NADH (priamo)</text>
+<text class="sub" x="130" y="102" text-anchor="middle">po jedle, pri svalovej práci</text>
+<text class="sub" x="570" y="102" text-anchor="middle">nalačno, pri hladovaní</text>
+<text class="sub" x="570" y="182" text-anchor="middle">pyruvát sa šetrí</text>
+<text class="sub" x="570" y="194" text-anchor="middle">pre glukoneogenézu</text>
+<legenda x="20" y="284" polozky="rx,enz,ko,akt,inh"/>
+</svg>

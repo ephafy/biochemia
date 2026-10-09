@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7 · Biologické oxidácie, dýchací reťazec a tvorba ATP</title>
+<script>/* PATOLA: stránka v náhľade (assets/js/peek.js) — skryť hlavičku skôr, než sa vykreslí */if(/[?&]embed=/.test(location.search))document.documentElement.classList.add("pk-embed")</script>
+<script>/* PATOLA: pri F5/Späť ukázať stránku až na obnovenej pozícii (peek.js odkryje; poistka 2 s) */(function(){try{var h=document.documentElement,n=performance.getEntriesByType("navigation")[0],t=n&&n.type,s=location.search;if(/[?&]y=[1-9]/.test(s)||(!/[?&]embed=/.test(s)&&(t==="reload"||t==="back_forward")&&parseInt(sessionStorage.getItem("pk-y:"+location.pathname),10)>0)){h.classList.add("pk-restoring");setTimeout(function(){h.classList.remove("pk-restoring")},2000)}}catch(e){}})()</script>
+<script>/* BIOCHEM: skrytý bočný obsah (assets/js/toc-collapse.js) — zapnúť pred vykreslením, nech stránka neblikne */try{if(localStorage.getItem("bc-toc-collapsed")==="1")document.documentElement.classList.add("toc-collapsed")}catch(e){}</script>
+<script src="../assets/js/view-early.js"></script>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/styles/site.css">
+<link rel="stylesheet" href="../assets/styles/glossary.css">
+<link rel="stylesheet" href="../assets/styles/view-toggle.css">
+<style>
+/* ══ Broadsheet — design-system tokens ══════════════════════════════════ */
+:root{
+  --color-bg:#f3f2f2;
+  --color-surface:#eae9e9;
+  --color-text:#201e1d;
+  --color-accent:#0088b0;
+  --color-accent-2:#d6006c;
+  --color-divider:color-mix(in srgb,#201e1d 16%,transparent);
+
+  --color-neutral-100:#f8f4f4; --color-neutral-200:#eae7e7; --color-neutral-300:#d7d3d3;
+  --color-neutral-400:#bab6b6; --color-neutral-500:#9b9797; --color-neutral-600:#7d7979;
+  --color-neutral-700:#605d5d; --color-neutral-800:#444141; --color-neutral-900:#2d2b2b;
+
+  --color-accent-100:#e9f8ff; --color-accent-200:#cbeeff; --color-accent-300:#99e0ff;
+  --color-accent-400:#62c5ee; --color-accent-500:#38a6cf; --color-accent-600:#1186ac;
+  --color-accent-700:#006786; --color-accent-800:#004961; --color-accent-900:#0a303e;
+
+  --color-accent-2-100:#fff1f4; --color-accent-2-200:#ffdee6; --color-accent-2-300:#ffc0d0;
+  --color-accent-2-400:#ff90b1; --color-accent-2-500:#ff458e; --color-accent-2-600:#d82071;
+  --color-accent-2-700:#aa0b56; --color-accent-2-800:#790e3d; --color-accent-2-900:#4b1528;
+
+  --color-process-yellow:#edbb00;
+
+  --font-heading:"Source Serif 4",system-ui,serif;
+  --font-heading-weight:600;
+  --font-body:"Source Serif 4",system-ui,serif;
+  --font-mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+
+  --space-1:5px; --space-2:10px; --space-3:15px; --space-4:20px; --space-6:30px; --space-8:40px;
+  --radius-sm:1px; --radius-md:2px; --radius-lg:4px;
+
+  --shadow-sm:0 1px 2px color-mix(in srgb,#2d2b2b 14%,transparent);
+  --shadow-md:0 3px 10px color-mix(in srgb,#2d2b2b 16%,transparent);
+  --shadow-lg:0 12px 32px color-mix(in srgb,#2d2b2b 22%,transparent);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--color-text);font-family:var(--font-body);
+  font-size:calc(15px*var(--z,1));line-height:1.55;font-weight:400;padding:0}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:var(--font-heading-weight);
+  line-height:1.12;letter-spacing:-0.015em;margin:0 0 var(--space-2)}
+p{margin:0 0 var(--space-3)}
+a{color:var(--color-accent);text-underline-offset:3px}
+img{display:block;max-width:100%}
+figure{margin:0}
+figcaption{font-size:calc(11px*var(--z,1));margin-top:var(--space-1);
+  color:color-mix(in srgb,var(--color-text) 55%,transparent)}
+.text-muted{color:color-mix(in srgb,var(--color-text) 55%,transparent)}
+:focus{outline:none}
+:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+::selection{background:color-mix(in srgb,var(--color-accent) 30%,transparent)}
+.hr{height:1px;border:0;margin:var(--space-4) 0;background:var(--color-divider)}
+
+/* — tables — */
+.table{width:100%;border-collapse:collapse;font-size:calc(14px*var(--z,1))}
+.table th{text-align:left;font-size:calc(11px*var(--z,1));letter-spacing:0.08em;text-transform:uppercase;
+  color:color-mix(in srgb,var(--color-text) 60%,transparent);
+  padding:var(--space-2);border-bottom:1px solid var(--color-divider)}
+.table td{padding:var(--space-2);
+  border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent)}
+.table tbody tr:hover{background:color-mix(in srgb,var(--color-text) 4%,transparent)}
+
+/* — tags — */
+.tag{display:inline-flex;align-items:center;font-size:calc(11px*var(--z,1));letter-spacing:0.02em;
+  padding:3px 10px;border-radius:calc(var(--radius-md)*0.75)}
+.tag-accent{background:var(--color-accent-100);color:var(--color-accent-800)}
+.tag-accent-2{background:var(--color-accent-2-100);color:var(--color-accent-2-800)}
+.tag-neutral{background:var(--color-neutral-100);color:var(--color-neutral-800)}
+
+/* — the plate numeral: three process inks, no black plate — */
+.cmyk-num{--cmyk-num-ground:var(--color-bg);position:relative;width:fit-content;
+  line-height:0.9;font-feature-settings:"pnum" 1;
+  padding:0.12em;margin:-0.12em}
+.cmyk-num .paper{color:var(--color-bg);
+  text-shadow:0.036em 0.025em 0 var(--color-bg),-0.031em -0.023em 0 var(--color-bg)}
+.cmyk-num .plate{position:absolute;inset:0.12em;mix-blend-mode:multiply}
+.cmyk-num .plate-c{color:var(--color-accent)}
+.cmyk-num .plate-m{color:var(--color-accent-2);translate:0.036em 0.025em}
+.cmyk-num .plate-y{color:var(--color-process-yellow);translate:-0.031em -0.023em}
+
+/* ══ doc-page — the printed sheet ═══════════════════════════════════════ */
+.page{--color-bg:#fff;margin:0 auto;background:#fff;
+  padding:50px;box-shadow:none;border:0;
+  font-size:calc(13.5px*var(--z,1));line-height:1.42;text-wrap:pretty}
+.page p{margin:0 0 6px;orphans:3;widows:3}
+.page ul,.page ol{margin:0 0 6px;padding-left:15px}
+.page li{margin:0 0 2px;orphans:3;widows:3}
+.page table.table{font-size:calc(12px*var(--z,1));line-height:1.3}
+.page table.table th,.page table.table td{padding:3px 8px 3px 0;vertical-align:top}
+.keep{break-inside:avoid}
+.page sup{font-size:calc(9px*var(--z,1));line-height:0}
+
+.running-head{display:flex;justify-content:space-between;align-items:baseline;
+  font-size:calc(10px*var(--z,1));letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-600);
+  padding-bottom:4px;border-bottom:1px solid var(--color-neutral-300);margin-bottom:14px}
+.running-foot{display:flex;justify-content:space-between;align-items:baseline;
+  font-size:calc(10px*var(--z,1));color:var(--color-neutral-600);
+  padding-top:4px;border-top:1px solid var(--color-neutral-300);margin-top:22px}
+
+/* — chapter opener — */
+.opener{display:flex;align-items:flex-start;gap:18px;margin-bottom:10px}
+.opener .num{font-family:var(--font-heading);font-size:calc(64px*var(--z,1));font-weight:600;
+  letter-spacing:-0.03em;--cmyk-num-ground:#fff}
+.eyebrow{font-size:calc(10px*var(--z,1));letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--color-accent-2);margin-bottom:4px}
+.opener h1{font-size:calc(29px*var(--z,1));line-height:1.05;font-weight:600;letter-spacing:-0.015em}
+.standfirst{margin:6px 0 0;font-size:calc(13px*var(--z,1));font-style:italic;
+  color:var(--color-neutral-700);max-width:46em}
+
+/* — contents block — */
+.contents{column-count:3;column-gap:22px;font-size:calc(11.5px*var(--z,1));line-height:1.35;padding:8px 0;
+  border-top:2px solid var(--color-text);border-bottom:1px solid var(--color-neutral-300);
+  margin-bottom:16px}
+.contents .label{column-span:all;font-size:calc(10px*var(--z,1));letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--color-neutral-600);margin-bottom:5px}
+.contents .row{display:flex;gap:6px;break-inside:avoid}
+.contents .row span:first-child{color:var(--color-accent);font-variant-numeric:tabular-nums}
+
+/* — numbered sections — */
+.sec-h{display:flex;gap:10px;font-size:calc(16px*var(--z,1));font-weight:600;margin:0 0 5px}
+.sec-h .n{color:var(--color-accent);font-variant-numeric:tabular-nums}
+.sec-body{padding-left:calc(2.6em + 10px);margin-bottom:14px}
+.sub-h{font-size:calc(13.5px*var(--z,1));font-weight:600;margin:12px 0 4px}
+.sub-h .n{color:var(--color-accent-700);font-variant-numeric:tabular-nums;margin-right:6px}
+.micro{font-size:calc(11px*var(--z,1));letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--color-neutral-600);margin-bottom:4px}
+
+/* — callouts — */
+.flag{margin:10px 0;padding:8px 10px;background:var(--color-accent-2-100);
+  border-left:3px solid var(--color-accent-2)}
+.flag .label{font-size:calc(10px*var(--z,1));letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--color-accent-2-800);margin-bottom:3px}
+.flag .body{font-size:calc(12px*var(--z,1));line-height:1.38;color:var(--color-accent-2-900)}
+.flag .body p{margin:0 0 5px}.flag .body p:last-child{margin:0}
+
+.note{margin:10px 0;padding:8px 10px;background:var(--color-accent-100);
+  border-left:3px solid var(--color-accent)}
+.note .label{font-size:calc(10px*var(--z,1));letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--color-accent-800);margin-bottom:3px}
+.note .body{font-size:calc(12px*var(--z,1));line-height:1.38;color:var(--color-accent-900)}
+.note .body p{margin:0 0 5px}.note .body p:last-child{margin:0}
+
+.plain{margin:10px 0;padding:8px 10px;background:var(--color-neutral-100);
+  border-left:3px solid var(--color-neutral-400)}
+.plain .label{font-size:calc(10px*var(--z,1));letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--color-neutral-700);margin-bottom:3px}
+.plain .body{font-size:calc(12px*var(--z,1));line-height:1.38;color:var(--color-neutral-900)}
+.plain .body p{margin:0 0 5px}.plain .body p:last-child{margin:0}
+
+/* — REVÍZIA block (CLAUDE.md §1.3, značka [R]) ————————————————————————
+   Zámerne NIE .note/.flag/.plain: site.js tie tri triedy vyplaví do
+   bočného stĺpca ako poznámky na okraji, a revízia patrí do hlavného
+   toku textu — je to obsah, nie komentár. Preto vlastná trieda.        */
+.rev{margin:11px 0;padding:9px 12px;break-inside:avoid;
+  background:linear-gradient(180deg,#fffaf0,#fff);
+  border:1px solid color-mix(in srgb,var(--color-process-yellow) 55%,transparent);
+  border-left:4px solid var(--color-process-yellow)}
+.rev .label{display:inline-flex;align-items:center;gap:6px;
+  font-size:calc(9.5px*var(--z,1));letter-spacing:0.12em;text-transform:uppercase;
+  color:#7a5c00;margin-bottom:4px;font-weight:600}
+.rev .label .r{display:inline-flex;align-items:center;justify-content:center;
+  width:15px;height:15px;border-radius:50%;background:var(--color-process-yellow);
+  color:#3d2e00;font-size:calc(9px*var(--z,1));font-weight:700;letter-spacing:0}
+.rev .body{font-size:calc(12px*var(--z,1));line-height:1.4}
+.rev .body p{margin:0 0 5px}.rev .body p:last-child{margin:0}
+.rev table.table{margin:6px 0 5px}
+
+/* — mechanism diagram in the press's own monospace — */
+.diagram{font-family:var(--font-mono);font-size:calc(10px*var(--z,1));line-height:1.35;
+  background:var(--color-surface);border-left:2px solid var(--color-neutral-400);
+  padding:9px 11px;margin:9px 0;overflow-x:auto;white-space:pre;
+  color:var(--color-neutral-900);border-radius:var(--radius-sm)}
+
+/* — kaskáda v riadku a rozvetvenie (CLAUDE.md §2.5) — */
+.chain{font-size:calc(12.5px*var(--z,1));line-height:1.5;margin:8px 0;padding:7px 10px;
+  background:var(--color-accent-100);border-left:3px solid var(--color-accent-400)}
+.chain b{color:var(--color-accent-800)}
+.fork{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;
+  margin:9px 0;font-size:calc(12px*var(--z,1));line-height:1.38}
+.fork>div{padding:7px 9px;background:var(--color-neutral-100);
+  border-top:2px solid var(--color-neutral-400)}
+.fork>div b{display:block;margin-bottom:2px;color:var(--color-neutral-900)}
+
+/* — charts — */
+.chart{margin:12px 0;break-inside:avoid;max-width:700px}
+.chart svg{width:100%;height:auto;display:block;font-family:var(--font-body)}
+.chart figcaption{font-size:calc(10.5px*var(--z,1));line-height:1.35;margin-top:4px;color:var(--color-neutral-700)}
+.chart figcaption b{color:var(--color-text)}
+.chart .ax{stroke:var(--color-neutral-400);stroke-width:1}
+.chart .grid{stroke:var(--color-neutral-300);stroke-width:1;stroke-dasharray:2 3}
+.chart .ser{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.chart .s-c{stroke:var(--color-accent)}
+.chart .s-m{stroke:var(--color-accent-2)}
+.chart .s-k{stroke:var(--color-neutral-700)}
+.chart .f-c{fill:var(--color-accent);opacity:.13}
+.chart .f-m{fill:var(--color-accent-2);opacity:.13}
+.chart .band-c{fill:var(--color-accent-100)}
+.chart .band-m{fill:var(--color-accent-2-100)}
+.chart .tick{font-size:9.5px;fill:var(--color-neutral-600);font-variant-numeric:tabular-nums}
+.chart .lbl{font-size:10.5px;fill:var(--color-neutral-800)}
+.chart .lbl-c{font-size:10.5px;fill:var(--color-accent-700)}
+.chart .lbl-m{font-size:10.5px;fill:var(--color-accent-2-700)}
+.chart .cap{font-size:9.5px;fill:var(--color-neutral-600);letter-spacing:.08em;text-transform:uppercase}
+.chart .mark{stroke:var(--color-neutral-800);stroke-width:1;stroke-dasharray:3 3}
+.chart .bar-c{fill:var(--color-accent-500)}
+.chart .bar-m{fill:var(--color-accent-2-500)}
+
+/* — krížové odkazy (CLAUDE.md §3.1) ————————————————————————————————————
+   a.xref  = odkaz na kapitolu, ktorá už existuje. Ostáva skutočným
+             <a href>, takže funguje aj bez JS a bez shellu; keď pribudne
+             split.js, otvorí sa vedľa v druhom paneli.
+   .xref-soon = tá istá informácia pre kapitolu, ktorá ešte nie je
+             napísaná. Zámerne NIE <a>: mŕtvy odkaz je horší než žiadny.
+             Text nesie číslo aj názov, takže dáva zmysel aj v tlači.   */
+.xref{color:var(--color-accent-700);text-decoration:none;
+  border-bottom:1px solid color-mix(in srgb,var(--color-accent) 45%,transparent);
+  white-space:nowrap}
+.xref:hover{background:var(--color-accent-100);border-bottom-color:var(--color-accent)}
+.xref-soon{color:var(--color-neutral-600);
+  border-bottom:1px dotted var(--color-neutral-400);white-space:nowrap;cursor:help}
+
+.deps,.next{font-size:calc(11.5px*var(--z,1));line-height:1.5;margin:0 0 10px;padding:7px 10px;
+  background:var(--color-neutral-100);border-top:2px solid var(--color-neutral-400)}
+.deps b,.next b{font-size:calc(10px*var(--z,1));letter-spacing:.1em;text-transform:uppercase;
+  color:var(--color-neutral-700);margin-right:6px}
+.next{border-top-color:var(--color-accent);background:var(--color-accent-100);margin:16px 0 0}
+.next b{color:var(--color-accent-800)}
+
+/* — two/three column content blocks — */
+.cols-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;
+  font-size:calc(12.5px*var(--z,1));line-height:1.35}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+  font-size:calc(12.5px*var(--z,1));line-height:1.35}
+.flow-2{column-count:2;column-gap:22px;font-size:calc(12.5px*var(--z,1));line-height:1.38}
+
+.lede{font-size:calc(12.5px*var(--z,1));color:var(--color-neutral-700)}
+b,strong{font-weight:600}
+.tnum{font-variant-numeric:tabular-nums}
+
+@media screen and (min-width:981px){
+  .sec-h,.sub-h,.micro,.hr,.diagram,.chart,.table,.running-foot,
+  .cols-2,.cols-3,.flow-2,.note,.flag,.plain,.rev,.fork,.chain{clear:both}
+  .sec-body::after{content:"";display:block;clear:both}
+}
+
+@media (max-width:820px){
+  body{padding:0}
+  .page{padding:20px 16px}
+  .contents{column-count:2}
+  .cols-3,.cols-2,.flow-2{grid-template-columns:1fr;column-count:1;display:block}
+  .cols-3>div,.cols-2>div{margin-bottom:12px}
+  .sec-body{padding-left:0}
+  .opener{gap:12px}
+  .opener .num{font-size:calc(46px*var(--z,1))}
+  .table{display:block;overflow-x:auto}
+  .chart{overflow-x:auto}
+  .chart svg{max-width:none;min-width:100%}
+  .xref,.xref-soon{white-space:normal}
+}
+@media print{
+  body{background:#fff;padding:0}
+  .page{max-width:none;padding:0.7in}
+  .diagram{overflow:visible}
+  .cols-2,.cols-3{display:block}
+  .cols-2>div,.cols-3>div{margin-bottom:8px}
+  .flow-2{column-count:1}
+  .contents{column-count:1}
+  .xref{color:#000;border-bottom:0}
+  .xref-soon{color:#444;border-bottom:0}
+  .rev{background:#fff;border:1px solid #999;border-left:4px solid #999}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* — doplnky pre generované kapitoly (tools/build.js) — */
+.src p,.src li{font-size:calc(11.5px*var(--z,1));line-height:1.4}
+.src ul{padding-left:16px}
+.src .micro{font-size:calc(10px*var(--z,1))}
+figure.keep>.diagram{margin:9px 0 3px}
+figure.keep>figcaption{font-size:calc(10.5px*var(--z,1));line-height:1.35;color:var(--color-neutral-700);margin:0 0 9px}
+figure.keep>figcaption b{color:var(--color-text)}
+.page code{font-family:var(--font-mono);font-size:.92em}
+.chart .bx{fill:var(--color-neutral-200)}
+.chart .bx-c{fill:var(--color-accent-200)}
+.chart .bx-m{fill:var(--color-accent-2-200)}
+.chart .bx-k{fill:var(--color-neutral-100);stroke:var(--color-neutral-400)}
+
+/* ══ BIOCHEM: farebné boxy = vrstvy z CLAUDE.md §1.1 (v PATOLE k-morf, k-detek, k-fyz) ══
+   Vlastné triedy (.box), NIE .note/.flag/.plain — tie site.js vyplavuje do
+   okraja ako poznámky, kým boxy sú jadro textu.  --c = farba pásika,
+   --cl = tmavší odtieň pre štítok (kontrast na tónovanom pozadí).        */
+.box{--c:var(--color-neutral-500);--cl:var(--color-neutral-800);
+  margin:10px 0;padding:8px 10px;break-inside:avoid;
+  background:color-mix(in srgb,var(--c) 8%,#fff);border-left:3px solid var(--c)}
+.box .label{font-size:calc(10px*var(--z,1));letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+  color:var(--cl);margin-bottom:3px}
+.box .body{font-size:calc(12px*var(--z,1));line-height:1.38}
+.box .body>*:last-child{margin-bottom:0}
+.box .body p{margin:0 0 5px}
+.box .body ul,.box .body ol{margin:0 0 5px}
+.box .body table.table{margin:5px 0}
+.k-mech{--c:var(--color-accent);--cl:var(--color-accent-800)}
+.k-reg{--c:var(--color-accent-2);--cl:var(--color-accent-2-800)}
+.k-lab{--c:var(--color-neutral-500);--cl:var(--color-neutral-800)}
+.k-klin{--c:var(--color-accent-800);--cl:var(--color-accent-900)}
+.k-pozor{--c:#d9601a;--cl:#8a3b08}
+.k-zap{--c:#1f8a8a;--cl:#0f5555}
+.k-chem{--c:#3f8a55;--cl:#24582f}
+
+/* ══ PATOLA: okraj stránky (CLAUDE.md §5.3) ═══════════════════════════════
+   Jadro (hlavná myšlienka sekcie) a Skratky nie sú vrstva výkladu → bez farebnej
+   plochy a bez ľavého pásika. Šírka pásika 0 zároveň znamená, že site.js k nim
+   nekreslí čiaru cez text (čiara má hrúbku ľavého okraja poznámky).           */
+.k-jadro{--cl:var(--color-neutral-900);background:none;border-left:0;
+  border-top:2px solid var(--color-neutral-900);padding:5px 0 1px}
+.k-jadro .body{line-height:1.42}
+.k-skr{background:var(--color-neutral-100);border-left:0;padding:4px 8px;margin:3px 0 9px}
+.box.k-skr .body{font-size:calc(10.5px*var(--z,1));line-height:1.4;color:var(--color-neutral-700)}
+.k-skr .sk b{font-weight:600;color:var(--color-text)}
+.k-skr .sk+.sk::before{content:"· "}
+@media screen and (min-width:981px){
+  /* na okraji jedna skratka na riadok; v texte (mobil, tlač) idú za sebou */
+  .k-skr.side-note .sk{display:block;margin:0 0 2px}
+  .k-skr.side-note .sk+.sk::before{content:none}
+}
+/* mobil: skratky rastú s ostatným písmom (blok na konci súboru ich pre vyššiu špecifickosť nezachytí) */
+@media screen and (max-width:820px){.box.k-skr .body{font-size:calc(11.5px*var(--z,1))}}
+
+/* ══ obrázky (rovnaké pravidlá ako v ručne písaných kapitolách patofyzie) ═
+   --fw = najväčšia rozumná šírka zobrazenia; malý obrázok sa nerozmaže.   */
+.fig{margin:11px auto;break-inside:avoid;max-width:min(100%,var(--fw,100%))}
+.fig img{display:block;width:100%;height:auto;background:transparent;border:0;cursor:zoom-in}
+.fig figcaption{font-size:calc(10.5px*var(--z,1));line-height:1.35;margin-top:4px;color:var(--color-neutral-700)}
+.fig figcaption b{color:var(--color-text)}
+.fig figcaption .src-link{display:inline-flex;align-items:center;gap:3px;
+  color:var(--color-neutral-500);text-decoration:none}
+.fig figcaption .src-link:hover{color:var(--color-accent);text-decoration:underline}
+.fig figcaption .src-link svg{width:10px;height:10px;flex:none;
+  fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.fig-row{display:flex;flex-wrap:wrap;align-items:flex-start;gap:14px;margin:11px 0}
+.fig-row .fig{flex:var(--ar,1) 1 0;min-width:0;margin:0;max-width:none}
+@media screen and (min-width:981px){
+  .box,.fig,.fig-row{clear:both}
+  .fig-row .fig{clear:none}
+}
+@media (max-width:820px){
+  .fig-row{display:block}
+  .fig-row .fig{margin-bottom:12px;max-width:min(100%,var(--fw,100%))}
+}
+@media print{
+  .box{background:#fff;border:1px solid #999;border-left:4px solid var(--c)}
+  .box.k-jadro{border:0;border-top:1.5px solid #000}
+  .box.k-skr{border:0}
+  .fig figcaption .src-link{display:inline;color:#555}
+  .fig figcaption .src-link svg{display:none}
+  .fig figcaption .src-link[href]::after{content:" (" attr(href) ")";font-size:calc(8px*var(--z,1));word-break:break-all}
+  .fig-row{display:block;overflow:hidden}
+  .fig-row .fig{float:left;width:calc(50% - 8px);margin:0 0 10px}
+  .fig-row .fig+.fig{float:right}
+}
+
+/* ══ PATOLA: náhľad inej kapitoly (assets/js/peek.js) ═════════════════════
+   Panel prekryje stred a pravý stĺpec; hlavička a ľavý obsah ostávajú.
+   --pk-left / --pk-top dopočíta skript z polohy bočného panela a hlavičky.
+   Maximalizácia = --pk-m → 0 (prechod na left/top/right/bottom, 0,5 s).   */
+.pk-backdrop{position:fixed;z-index:44;left:var(--pk-left,0px);top:var(--pk-top,52px);right:0;bottom:0;
+  background:rgba(32,28,40,.30);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);
+  opacity:0;transition:opacity .22s ease}
+.pk-backdrop.pk-in{opacity:1}
+.pk-backdrop.pk-max-on{opacity:0;transition:opacity .5s ease}
+.pk{--pk-m:16px;--pk-ease:cubic-bezier(.4,0,.2,1);
+  position:fixed;z-index:45;
+  left:calc(var(--pk-left,0px) + var(--pk-m));top:calc(var(--pk-top,52px) + var(--pk-m));
+  right:var(--pk-m);bottom:var(--pk-m);
+  display:flex;flex-direction:column;overflow:hidden;
+  background:#fff;border:1px solid var(--color-neutral-300);border-radius:12px;
+  box-shadow:0 22px 56px rgba(20,16,32,.30),0 2px 8px rgba(20,16,32,.12);
+  opacity:0;transform:translateY(12px) scale(.985);
+  transition:opacity .22s ease,transform .28s cubic-bezier(.2,.7,.2,1)}
+.pk.pk-in{opacity:1;transform:none}
+.pk.pk-max-on{--pk-m:0px;border-radius:0;border-color:transparent;box-shadow:0 0 0 rgba(0,0,0,0);
+  transition:left .5s var(--pk-ease),top .5s var(--pk-ease),right .5s var(--pk-ease),bottom .5s var(--pk-ease),
+    border-radius .5s var(--pk-ease),box-shadow .5s ease,border-color .5s ease}
+.pk-bar{flex:none;display:flex;align-items:center;gap:4px;height:44px;padding:0 8px 0 14px;overflow:hidden;
+  border-bottom:1px solid var(--color-neutral-200);background:var(--color-neutral-50,#faf9fb);
+  font-family:var(--site-font,system-ui,sans-serif);font-size:calc(12.5px*var(--z,1));color:var(--color-text);
+  transition:height .5s var(--pk-ease),opacity .3s ease,border-color .5s ease}
+.pk.pk-max-on .pk-bar{height:0;opacity:0;border-color:transparent}
+.pk-kind{flex:none;font-size:calc(10px*var(--z,1));letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+  color:var(--color-accent-700);padding:3px 7px;border-radius:4px;
+  background:color-mix(in srgb,var(--color-accent) 10%,transparent);margin-right:6px}
+.pk-title{flex:1;min-width:0;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pk-btn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;
+  border:0;border-radius:7px;background:transparent;color:var(--color-neutral-600);cursor:pointer;
+  transition:background .15s ease,color .15s ease}
+.pk-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.pk-btn-max:hover{background:color-mix(in srgb,var(--color-accent) 12%,transparent);color:var(--color-accent-700)}
+.pk-btn-close:hover{background:color-mix(in srgb,var(--color-accent-2) 14%,transparent);color:var(--color-accent-2-700)}
+.pk-btn:focus-visible{outline:2px solid var(--color-accent);outline-offset:1px}
+.pk-btn:active{transform:scale(.94)}
+.pk-frame{flex:1;display:block;width:100%;min-height:0;border:0;background:#fff}
+.pk-load{position:relative;flex:none;height:0;overflow:visible;pointer-events:none}
+.pk-load i{position:absolute;left:0;top:0;height:3px;width:40%;opacity:0;
+  background:linear-gradient(90deg,var(--color-accent),var(--color-accent-2))}
+.pk-load.on i{opacity:1;animation:pk-slide 1.1s ease-in-out infinite}
+@keyframes pk-slide{0%{left:-40%}100%{left:100%}}
+@media (max-width:980px){.pk{--pk-m:8px}}
+
+/* kým je náhľad otvorený: stránka pod ním stojí, posuvník nahradí odsadenie */
+html.pk-lock{overflow:hidden}
+html.pk-lock body{padding-right:var(--pk-sbw,0px)}
+
+/* bočný obsah pri maximalizácii (skript presunie body a animuje posun) */
+.pk-nav-gap{height:18px;margin:6px 8px 0;border-bottom:1px dashed var(--color-neutral-300)}
+.site-header .crumb{transition:opacity .25s ease}
+.site-header .crumb.pk-fade{opacity:0}
+
+/* stránka vnútri náhľadu: len obsah, bez hlavičky a bočného panela */
+html.pk-restoring body{visibility:hidden}
+/* fork: na samostatnom riadku je len nadpis stĺpca; tučné slová v texte ostávajú vo vete */
+.fork>div>b:not(:first-child){display:inline;margin:0}
+.pk-embed .site-header,.pk-embed .site-sidebar,.pk-embed .reading-progress,
+.pk-embed .reading-pct,.pk-embed .skip-link{display:none!important}
+
+/* návrat tlačidlom Späť */
+.pk-back-in .site-main{animation:pk-back .35s cubic-bezier(.2,.7,.2,1)}
+.pk-back-in .site-sidebar nav{animation:pk-fadein .35s ease}
+@keyframes pk-back{from{opacity:0;transform:translateX(-32px)}to{opacity:1;transform:none}}
+@keyframes pk-fadein{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .pk,.pk.pk-max-on,.pk-bar,.pk-backdrop{transition:none}
+  .pk-back-in .site-main,.pk-back-in .site-sidebar nav{animation:none}
+}
+@media print{.pk,.pk-backdrop{display:none!important}}
+
+/* ══ PATOLA: tlač ═════════════════════════════════════════════════════════
+   Strana A4 má ~700 px, takže sa v tlači zapínajú mobilné pravidlá
+   z chapter.css (@media max-width:820px): graf s posuvníkom, tabuľka ako blok.
+   Tu ich vraciame a riešime zlom strán.                                    */
+@page{size:A4;margin:14mm 15mm 16mm}
+@media print{
+  .page{padding:0!important}
+  .chart{overflow:visible!important;max-width:100%}
+  .chart svg{min-width:0!important;max-width:100%!important}
+  .table{display:table!important;overflow:visible!important;width:100%}
+  .diagram{white-space:pre-wrap}
+  /* fotografia nezaberie celú stranu – inak ostávajú polovičné prázdne strany */
+  .fig{max-width:100%!important}
+  .fig img{width:auto;max-width:100%;max-height:6.5cm;margin:0 auto}
+  .fig-row .fig img{max-height:5.2cm}
+  .chart svg{max-height:9.5cm}
+  /* úspornejšia tlač (4. 10. 2026): obsah kapitoly v dvoch stĺpcoch, zdroje drobnejším písmom v dvoch stĺpcoch */
+  .contents{column-count:2;column-gap:24px}
+  .sec-body.src{font-size:calc(9.5px*var(--z,1));line-height:1.35}
+  .sec-body.src ul{column-count:2;column-gap:22px;margin-top:3px}
+  .sec-body.src li{break-inside:avoid;margin-bottom:2px}
+  /* nadpis nikdy sám na spodku strany */
+  .sec-h,.sub-h,h2,h3,.box .label{break-after:avoid;page-break-after:avoid}
+  /* dlhé boxy sa smú zlomiť (inak nechajú prázdnu pol stranu); tabuľky a riadky nie */
+  .box.keep{break-inside:auto}
+  tr,.fig,.chart,figure.keep{break-inside:avoid}
+  p,li{orphans:3;widows:3}
+  .reader-ctl,#pt-zoom{display:none!important}
+}
+
+/* lupa (assets/js/zoom.js) */
+#pt-zoom{position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;
+  padding:24px;background:rgba(20,18,26,.82);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);cursor:zoom-out}
+#pt-zoom.on{display:flex}
+#pt-zoom img{max-width:100%;max-height:100%;background:#fff;box-shadow:var(--shadow-lg)}
+
+/* okrajové poznámky (site.js): na pôvodnom mieste v texte ostane čiara vo farbe a hrúbke
+   ľavého okraja poznámky, ktorá vedie až k nej; poznámka na čiare sedí spodkom.
+   Dlhé odkazy sa musia zalamovať, inak presiahnu úzky stĺpec (204–254 px, --side-w v site.css) a stránka dostane vodorovný posuv */
+.side-anchor{display:block;height:0;margin:10px 0;padding:0;position:relative;z-index:4;pointer-events:none}
+/* zalomenie čiary k poznámke, ktorú iná odtlačila nižšie (zvislý + vodorovný úsek, site.js) */
+.side-anchor i{display:none;position:absolute;background-color:inherit}
+@media (max-width:980px){.side-anchor{display:none}}
+@media (min-width:981px){.box.side-note{margin:0}}
+@media print{.side-anchor{display:none}}
+@media screen and (min-width:981px){.side-note{transform:none!important;overflow-wrap:anywhere}}
+.xref,.xref-soon{white-space:normal}
+
+/* ══ PATOLA: vlastné schémy (chapters/fig/*.svg) ═════════════════════════ */
+.chart .mk{fill:var(--color-neutral-700)}
+.chart .arw{fill:none;stroke:var(--color-neutral-700);stroke-width:1.5}
+.chart .arwd{fill:none;stroke:var(--color-neutral-600);stroke-width:1.3;stroke-dasharray:5 4}
+.chart .cell{fill:var(--color-accent-100);stroke:var(--color-accent-600);stroke-width:1.5}
+.chart .nuc{fill:var(--color-accent-400);stroke:var(--color-accent-800);stroke-width:1}
+.chart .cellm{fill:var(--color-accent-2-100);stroke:var(--color-accent-2-600);stroke-width:1.5}
+.chart .nucm{fill:var(--color-accent-2-500);stroke:var(--color-accent-2-800);stroke-width:1}
+.chart .dot{fill:var(--color-neutral-700)}
+.chart .dotm{fill:var(--color-accent-2-600)}
+.chart .lblb{font-size:11px;font-weight:600;fill:var(--color-neutral-900)}
+.chart .sub{font-size:9.5px;fill:var(--color-neutral-700)}
+.chart .zone-r{fill:var(--color-accent-2-100)}
+.chart .zone-i{fill:var(--color-accent-100)}
+.chart .s-d{stroke:var(--color-neutral-700);stroke-dasharray:6 4}
+.chart .s-t{stroke:var(--color-neutral-700);stroke-dasharray:2 4}
+.chart .fill-acc{fill:var(--color-accent-500)}
+.chart .fill-acc2{fill:var(--color-accent-2-500)}
+.chart .stk-acc{fill:none;stroke:var(--color-accent-600);stroke-width:2}
+.chart .stk-acc2{fill:none;stroke:var(--color-accent-2-600);stroke-width:2}
+.chart .stk-n{fill:none;stroke:var(--color-neutral-600);stroke-width:1.3}
+
+/* ══ BIOCHEM: štruktúrne vzorce a schémy dráh (CLAUDE.md §5.2) ═════════════
+   Vzorce kreslí tools/vzorce.js z opisov v chapters/fig/mol/, schémy skladá
+   tools/schema.js. Farebný kód je v celej knihe rovnaký:
+     žltá     = koenzým, kosubstrát          modrá (akcent) = enzým a skupina, o ktorú v reakcii ide
+     zelená ↑ = aktivuje                     červená ↓      = inhibuje (čiara končí priečkou)
+     plná čiara = premena látky              prerušovaná    = vplyv (regulácia, signál)
+     hrubá šípka = nevratný (riadiaci) krok
+   Veľkosti písma .at/.ix/.nm musia sedieť s konštantami FS/IX/NUM v tools/vzorce.js. */
+.chart{--sch-koe:#fae28c;--sch-koe-s:#c2940a;--sch-akt:#1f7d38;--sch-inh:#cd2b26}
+/* vzorec */
+.chart .bd{fill:none;stroke:var(--color-neutral-900);stroke-width:1.25;stroke-linecap:round}
+.chart .bd.bb{stroke-width:3.6;stroke-linecap:butt}
+.chart .wg{fill:var(--color-neutral-900);stroke:var(--color-neutral-900);stroke-width:.5;stroke-linejoin:round}
+.chart .at{font-size:10.5px;fill:var(--color-neutral-900)}
+.chart .at .ix{font-size:7.4px}
+.chart .pc{fill:#fff;stroke:var(--color-neutral-900);stroke-width:1.1}
+.chart .at.pt{font-size:9px;font-weight:600}
+.chart .nm{font-size:7px;fill:var(--color-neutral-600)}
+.chart .bd.hl{stroke:var(--color-accent-600);stroke-width:1.7}
+.chart .bd.bb.hl{stroke-width:3.6}
+.chart .wg.hl{fill:var(--color-accent-600);stroke:var(--color-accent-600)}
+.chart .at.hl{fill:var(--color-accent-700);font-weight:600}
+.chart .pc.hl{fill:var(--color-accent-100);stroke:var(--color-accent-600);stroke-width:1.5}
+.chart .mn{font-size:10.5px;font-weight:600;fill:var(--color-neutral-900)}
+.chart .ms{font-size:9px;fill:var(--color-neutral-700)}
+/* reakcia: šípka, enzým, koenzýmy */
+.chart .rx{fill:none;stroke:var(--color-neutral-800);stroke-width:1.5}
+.chart .rx.nv{stroke:var(--color-neutral-900);stroke-width:2.8}
+.chart .enz{font-size:10px;font-style:italic;fill:var(--color-accent-700)}
+.chart .enz .kr{font-style:normal;font-weight:600;fill:var(--color-neutral-900)}
+.chart .koe{fill:var(--sch-koe);stroke:var(--sch-koe-s);stroke-width:.8}
+.chart .koet{font-size:9.5px;font-weight:600;fill:#3a2d00}
+.chart .koa{fill:none;stroke:var(--sch-koe-s);stroke-width:1.3}
+/* regulácia a iné vzťahy */
+.chart .akt{fill:none;stroke:var(--sch-akt);stroke-width:1.4;stroke-dasharray:5 3.5}
+.chart .inh{fill:none;stroke:var(--sch-inh);stroke-width:1.4;stroke-dasharray:5 3.5}
+.chart .vz{fill:none;stroke:var(--color-neutral-600);stroke-width:1.3;stroke-dasharray:5 3.5}
+.chart .akt.plna,.chart .inh.plna,.chart .vz.plna{stroke-dasharray:none}
+.chart .t-akt{font-size:10px;font-weight:600;fill:var(--sch-akt)}
+.chart .t-inh{font-size:10px;font-weight:600;fill:var(--sch-inh)}
+/* hroty */
+.chart .mk-nv{fill:var(--color-neutral-900)}
+.chart .mk-n{fill:var(--color-neutral-600)}
+.chart .mk-akt{fill:var(--sch-akt)}
+.chart .mk-koe{fill:var(--sch-koe-s)}
+.chart .mk-inh{fill:none;stroke:var(--sch-inh);stroke-width:2.2}
+/* kompartment (cytosol, mitochondria…) a jeho popis */
+.chart .komp{fill:var(--color-neutral-100);stroke:var(--color-neutral-400);stroke-width:1;stroke-dasharray:2 3}
+.chart .komp-m{fill:var(--color-accent-100);stroke:var(--color-accent-400);stroke-width:1.2}
+@media print{.chart .koe,.chart .pc,.chart .komp,.chart .komp-m{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+/* rozkliknutie (CLAUDE.md §5.2, bod 7): krúžok ⊕ rozbalí výrez pod schémou, krúžok → skočí na podrobnú
+   schému. Správanie: assets/js/schema.js; značky rk=, href=, <vyrez>: tools/schema.js. */
+.chart .rk,.chart .rk-a{cursor:pointer;outline:none}
+.chart .rk-hit{fill:transparent;stroke:transparent;stroke-width:14;pointer-events:all}
+.chart .rk-b circle{fill:var(--color-accent-600);stroke:#fff;stroke-width:1.3}
+.chart .rk-b path{fill:none;stroke:#fff;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.chart .rk-b.rk-l circle{fill:var(--color-neutral-700)}
+.chart .rk.is-open>.rk-b .rk-v{display:none}
+.chart .rk.is-open>.rk-b circle{fill:var(--color-accent-800)}
+.chart .rk:hover>.rk-b circle,.chart .rk:focus-visible>.rk-b circle{fill:var(--color-accent-800)}
+.chart .rk-a:hover>.rk-b circle,.chart .rk-a:focus-visible>.rk-b circle{fill:var(--color-neutral-900)}
+.chart .rk:hover>rect:not(.rk-hit),.chart .rk-a:hover>rect:not(.rk-hit),
+.chart .rk:focus-visible>rect:not(.rk-hit),.chart .rk-a:focus-visible>rect:not(.rk-hit),
+.chart .rk.is-open>rect:not(.rk-hit){stroke:var(--color-accent-600);stroke-width:1.4}
+.chart .rk:hover>.rk-hit,.chart .rk-a:hover>.rk-hit,.chart .rk:focus-visible>.rk-hit,.chart .rk-a:focus-visible>.rk-hit{fill:var(--color-accent-100)}
+.chart .rk-panel{display:none}
+.chart .rk-panel.is-open{display:inline}
+.chart .rk-bg{fill:var(--color-neutral-100)}
+.chart .rk-line{fill:none;stroke:var(--color-accent-600);stroke-width:1.5}
+.chart .rk-t{font-size:10.5px;font-weight:600;letter-spacing:.02em;fill:var(--color-accent-800)}
+.chart .rk-x circle{fill:#fff;stroke:var(--color-neutral-400);stroke-width:1}
+.chart .rk-x path{fill:none;stroke:var(--color-neutral-700);stroke-width:1.5;stroke-linecap:round}
+.chart .rk-x:hover circle,.chart .rk-x:focus-visible circle{stroke:var(--color-accent-600);fill:var(--color-accent-100)}
+.chart .rk-n{font-size:9.5px;fill:var(--color-neutral-800)}
+.chart .rk-n b,.chart .rk-n .b{font-weight:600}
+.rk-bar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin:3px 0 2px;font-size:10.5px;line-height:1.3;color:var(--color-neutral-600)}
+.rk-bar button{font:inherit;font-weight:600;color:var(--color-accent-800);background:var(--color-accent-100);border:1px solid var(--color-accent-400);border-radius:2px;padding:2px 8px;cursor:pointer}
+.rk-bar button:hover,.rk-bar button:focus-visible{background:var(--color-accent-200);border-color:var(--color-accent-600)}
+.rk-bar i{font-style:normal;display:inline-block;width:12px;height:12px;line-height:12px;text-align:center;border-radius:50%;background:var(--color-accent-600);color:#fff;font-weight:600;font-size:10px;vertical-align:1px}
+.rk-bar i.l{background:var(--color-neutral-700)}
+@media print{
+  .rk-bar,.chart .rk-b,.chart .rk-x{display:none}
+  .chart .rk-bg{fill:none;stroke:var(--color-neutral-400);stroke-width:1}
+  figure.chart.has-rk-open svg{max-height:none}
+}
+/* ══ Odborná kontrola a otázky na zopakovanie (CLAUDE.md §1.3, §2.2) ═══════
+   Rovnaké v PATOLE aj v patofyzii (tools/chapter-extra.css oboch projektov). */
+.reviewed{font-size:calc(10.5px*var(--z,1));line-height:1.4;margin:-4px 0 12px;padding:0 10px;color:var(--color-neutral-700)}
+.reviewed b{font-size:calc(9.5px*var(--z,1));letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.reviewed a{color:var(--color-accent-800)}
+ol.quiz{margin:8px 0 4px;padding-left:26px}
+ol.quiz li{margin:0 0 6px}
+ol.quiz li::marker{color:var(--color-accent-800);font-weight:600}
+/* vlastná šípka za číslom — natívny trojuholník <summary> by sa prekrýval s číslom otázky */
+ol.quiz summary{display:block;list-style:none;cursor:pointer;font-weight:600;line-height:1.45;padding-left:14px;position:relative}
+ol.quiz summary::-webkit-details-marker{display:none}
+ol.quiz summary::before{content:"▸";position:absolute;left:0;top:0;color:var(--color-accent);transition:transform .15s ease}
+ol.quiz details[open]>summary::before{transform:rotate(90deg)}
+ol.quiz summary:hover{color:var(--color-accent-800)}
+ol.quiz .ans{margin:4px 0 2px 14px;padding:6px 10px;font-size:calc(12.5px*var(--z,1));line-height:1.45;
+  background:var(--color-accent-100);border-left:3px solid var(--color-accent)}
+@media print{
+  ol.quiz summary::before{content:none}
+  ol.quiz summary{padding-left:0}
+  ol.quiz .ans{margin-left:0}
+  ol.quiz .ans{background:none;border-left:1px solid var(--color-neutral-400);font-size:calc(10px*var(--z,1))}
+}
+
+/* stĺpce vedľa seba (blok ```cols) – vodorovné členenie rovnocenných vetiev */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px 14px;margin:9px 0 11px}
+.cols.n4{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.cols>div{padding:7px 11px 5px;background:var(--color-neutral-100);border-top:2px solid var(--color-accent-400);break-inside:avoid}
+.cols>div>p{margin:0 0 4px}
+.cols>div>ul,.cols>div>ol{margin:0 0 3px}
+@media print{.cols>div{background:none;border:1px solid var(--color-neutral-400);border-top-width:2px}}
+
+/* otázky na zopakovanie: reflektor pojmov okolo kurzora by napovedal a klik na pojem by namiesto
+   odpovede otvoril vysvetlivku → pojmy tu svietia a dajú sa otvoriť len pri zapnutom prepínači „Pojmy“ */
+html:not(.pf-terms-always) ol.quiz .pf-term{pointer-events:none;cursor:inherit}
+html:not(.pf-terms-always) ol.quiz .pf-term.is-lit{background-color:transparent;box-shadow:0 0 0 1.5px transparent}
+/* text otázky sa pri rýchlom otváraní a zatváraní (dvojklik) nemá označovať */
+ol.quiz summary{-webkit-user-select:none;user-select:none}
+
+/* ══ PATOLA: mobil — o stupeň väčšie písmo (≈ +7 %) ══════════════════════
+   Veľkosti v chapter.css sú v px (sadzba na tlačenú stranu), takže sa na
+   úzkej obrazovke zväčšujú po jednej, každá o rovnaký krok. `screen`, lebo
+   strana A4 je užšia než 820 px a tlač by pravidlo chytila tiež.
+   Musí ostať na konci súboru — prebíja pravidlá vyššie.
+   Od 8. 10. 2026 sa každá veľkosť ešte násobí mierkou --z (site.css): nová veľkosť = calc(Npx*var(--z,1)).                    */
+@media screen and (max-width:820px){
+  .page{font-size:calc(14.5px*var(--z,1))}
+  .sec-h{font-size:calc(17px*var(--z,1))}
+  .sub-h{font-size:calc(14.5px*var(--z,1))}
+  .standfirst{font-size:calc(14px*var(--z,1))}
+  .chain,.cols-2,.cols-3,.flow-2,.lede,ol.quiz .ans{font-size:calc(13.5px*var(--z,1))}
+  .page table.table,.box .body,.rev .body,.note .body,.flag .body,.plain .body,.fork{font-size:calc(13px*var(--z,1))}
+  .contents,.deps,.next,.src p,.src li{font-size:calc(12.5px*var(--z,1))}
+  .micro{font-size:calc(12px*var(--z,1))}
+  .fig figcaption,.chart figcaption,figure.keep>figcaption,.reviewed{font-size:calc(11.5px*var(--z,1))}
+  .box .label,.rev .label,.note .label,.flag .label,.plain .label,
+  .contents .label,.deps b,.next b,.eyebrow,.src .micro{font-size:calc(10.5px*var(--z,1))}
+  /* vysvetlivky a popis v lupe (glossary.css je zdieľaný s patofyziou, preto tu) */
+  .pf-tip{font-size:calc(14px*var(--z,1))}
+  .pf-tip h4{font-size:calc(15.5px*var(--z,1))}
+  .pf-tip .kicker,.pf-tip-body .fork > div{font-size:calc(13px*var(--z,1))}
+  .pf-tip-body .chain,.pf-tip-body .why,.pf-lb-cap{font-size:calc(13.5px*var(--z,1))}
+  .pf-tip figcaption{font-size:calc(12px*var(--z,1))}
+}
+
+/* „V tejto kapitole“: riadky sú odkazy na sekcie; vzhľad sa nemení, podčiarknutie až pri prejdení myšou */
+.contents a.row,.contents a.row:visited{color:inherit;text-decoration:none;border:0;background:none}
+.contents a.row:hover span:last-child,.contents a.row:focus-visible span:last-child{text-decoration:underline}
+
+/* okraj stránky (.page) sa odvíja od šírky okna: na užšom okne menej prázdneho miesta, na širokom viac
+   (chapter.css má pevných 50 px; mobil ≤ 820 px a tlač majú vlastné pravidlá) */
+@media screen and (min-width:821px){
+  .page{--pg-x:clamp(20px,3.6vw,84px);padding:clamp(22px,3.4vw,72px) var(--pg-x)}
+  /* hlavička kapitoly presahuje text do strán o 40 px (site.css) – najviac však o okraj stránky, inak na
+     tablete (821–980 px, kde vedľa stránky nie je stĺpec na poznámky) vytŕča z okna a stránka sa posúva do strán */
+  .chapter-hero{margin-left:calc(-1*min(40px,var(--pg-x)));margin-right:calc(-1*min(40px,var(--pg-x)))}
+}
+
+/* farebné stĺpce tabuľky (hlavička v .md končí {zel} | {fial} | {ruz} | {tyrk}) – keď sú stĺpce
+   rovnocenné kategórie, ktoré si má čitateľ zapamätať ako trojicu.
+   Značky sú rovnaké ako v PATOLE; {fial} = akcent knihy (tu modrá), {ruz} = akcent-2 (tu karmínová) */
+.c-zel{--tc:#3f8a55}.c-fial{--tc:var(--color-accent)}.c-ruz{--tc:var(--color-accent-2)}.c-tyrk{--tc:#1f8a8a}
+.page table.table th[class^="c-"]{color:var(--tc);font-weight:700;border-top:3px solid var(--tc);
+  background:color-mix(in srgb,var(--tc) 13%,#fff);padding:4px 8px}
+.page table.table td[class^="c-"]{background:color-mix(in srgb,var(--tc) 5%,#fff);padding-left:8px}
+@media print{.page table.table th[class^="c-"],.page table.table td[class^="c-"]{background:none}}
+
+/* vlastné schémy (SVG) idú na celú šírku textu, ale nikdy nie väčšie, než aby hlavné písmo schémy
+   (10,5 jednotky z viewBoxu 700) prerástlo písmo odseku: 700 / 10,5 = 66,67 em, kde em je písmo
+   odseku (.page). Písmo v schéme sa nemení – mení sa len šírka schémy; užšia schéma je vycentrovaná. */
+figure.chart{max-width:min(100%,66.667em);margin-left:auto;margin-right:auto}
+
+/* ══ BIOCHEM: skrytie bočného obsahu (assets/js/toc-collapse.js) ═════════════
+   ← v paneli obsah skryje, → pod hornou lištou ho vráti; len počítač (≥ 981 px), tablet a mobile majú šuplík. */
+.site-sidebar .toc-title{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.toc-collapse,.toc-expand{
+  display:none;align-items:center;justify-content:center;flex:none;
+  width:calc(30px*var(--z,1));height:calc(30px*var(--z,1));padding:0;
+  border:1px solid var(--site-border);border-radius:6px;
+  background:var(--site-bg);color:var(--site-text);
+  font:inherit;font-size:calc(15px*var(--z,1));line-height:1;text-transform:none;letter-spacing:0;cursor:pointer;
+}
+.toc-collapse:hover,.toc-expand:hover{background:color-mix(in srgb,var(--site-text) 10%,var(--site-bg))}
+.toc-expand{position:fixed;top:calc(var(--site-header-h) + 12px);left:12px;z-index:37}
+@media (min-width:981px){
+  .toc-collapse{display:inline-flex}
+  html.toc-collapsed .site-sidebar{display:none}
+  html.toc-collapsed .toc-expand{display:inline-flex}
+}
+@media print{.toc-collapse,.toc-expand{display:none!important}}
+.pk-embed .toc-expand{display:none!important}
+
+/* ══ BIOCHEM: odhad času na kapitolu (tools/build.js, timeHtml) ═════════════
+   „Prejsť“ = prvé prečítanie, „Naučiť sa“ = naučiť sa na skúšku; rozklikne sa na predpoklady výpočtu.
+   Nová veľkosť písma = aj riadok v bloku @media max-width:820 nižšie.                                */
+.cas{margin:12px 0 0;font-family:var(--site-font,system-ui,sans-serif);font-size:calc(12px*var(--z,1));
+  color:color-mix(in srgb,var(--color-text) 78%,transparent)}
+.cas summary{display:inline-flex;flex-wrap:wrap;align-items:center;gap:4px 8px;cursor:pointer;list-style:none;
+  padding:5px 10px;border:1px solid var(--color-divider);border-radius:var(--radius-lg);background:#fff}
+.cas summary::-webkit-details-marker{display:none}
+.cas summary:hover,.cas[open] summary{border-color:var(--color-accent)}
+.cas summary svg{width:14px;height:14px;flex:none;fill:none;stroke:var(--color-accent);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.cas summary b{font-weight:600;color:var(--color-text)}
+.cas summary i{font-style:normal;opacity:.45}
+.cas summary em{font-style:normal;font-size:calc(10px*var(--z,1));letter-spacing:.08em;text-transform:uppercase;opacity:.6}
+.cas p{margin:6px 0 0;max-width:46em;line-height:1.45;font-size:calc(11.5px*var(--z,1))}
+@media screen and (max-width:820px){.cas{font-size:calc(12.5px*var(--z,1))}.cas p{font-size:calc(12px*var(--z,1))}.cas summary em{font-size:calc(10.5px*var(--z,1))}}
+@media print{.cas summary{border:0;padding:0}}
+</style>
+<link rel="stylesheet" href="../assets/styles/palette.css">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#2a66ab">
+<link rel="icon" href="../assets/img/icon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BIOCHEM">
+<script src="../assets/js/pwa.js" defer></script>
+</head>
+<body>
+<!-- Súbor je GENEROVANÝ z 07_biologicke_oxidacie.md nástrojom tools/build.js — uprav .md, nie tento súbor. -->
+<a class="skip-link" href="#sec-7-1">Preskočiť na obsah</a>
+<header class="site-header">
+  <a class="brand" href="../index.html"><span class="mark" aria-hidden="true"></span>BIOCHEM</a>
+  <span class="crumb">Lekárska biochémia — <b>Dýchací reťazec a ATP</b></span>
+  <span class="spacer"></span>
+  <button class="site-toc-toggle" type="button" aria-label="Obsah kapitoly" aria-expanded="false">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+  </button>
+</header>
+
+<div class="reading-progress" role="progressbar" aria-label="Priebeh čítania kapitoly" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="bar"></div></div>
+<div class="reading-pct" aria-hidden="true">0 %</div>
+
+<button class="toc-expand" type="button" aria-label="Zobraziť obsah kapitoly" title="Zobraziť obsah">→</button>
+<div class="site-shell">
+  <aside class="site-sidebar">
+    <div class="toc-title"><span>Obsah kapitoly</span><button class="toc-collapse" type="button" aria-label="Skryť obsah kapitoly" title="Skryť obsah">←</button></div>
+    <nav></nav>
+  </aside>
+
+  <div class="site-main">
+<main class="page">
+
+<div class="chapter-hero">
+<div class="running-head">
+  <span>7 · Biologické oxidácie, dýchací reťazec a tvorba ATP</span>
+  <span style="color:var(--color-accent-700)">Lekárska biochémia</span>
+</div>
+
+<div class="opener">
+  <div class="cmyk-num num">
+    <span class="paper">7</span>
+    <span class="plate plate-c" aria-hidden="true">7</span>
+    <span class="plate plate-m" aria-hidden="true">7</span>
+    <span class="plate plate-y" aria-hidden="true">7</span>
+  </div>
+  <div style="padding-top:2px">
+    <div class="eyebrow">Mitochondria · spád, priehrada, turbína</div>
+    <h1>Biologické oxidácie, dýchací reťazec a tvorba ATP</h1>
+    <p class="standfirst">Predošlé kapitoly končili vždy rovnako – „vodíky prevezme NAD⁺ a o zvyšok sa postará dýchací reťazec“. Táto kapitola ten zvyšok otvára. Elektróny z paliva padajú po spáde ku kyslíku, ich pád pumpuje protóny cez membránu ako vodu do priehrady a jediná turbína, ATP-syntáza, z toho robí ATP. Kto pozná tieto tri časti, vie povedať, čo urobí kyanid, čo dinitrofenol a prečo sa novorodenec zohreje bez triašky.</p>
+    <details class="cas"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Prejsť</b> ≈ 1 h</span><i aria-hidden="true">·</i><span><b>Naučiť sa</b> ≈ 3 h 15 min</span><em>odhad</em></summary><p>Orientačný odhad z rozsahu kapitoly (4 528 slov, 7 schém, 9 otázok), nie meranie. <b>Prejsť</b> = prvé prečítanie s porozumením (≈ 100 slov za minútu, schéma ≈ 1,5 min). <b>Naučiť sa</b> = prvé čítanie ×2,5 (druhé čítanie s poznámkami, kreslenie dráh z pamäti) plus 5 min na každú otázku na zopakovanie. Platí pre študenta, ktorý látku ešte nepozná; rozlož to na viac dní, Anki karty sú navyše.</p></details>
+  </div>
+</div>
+</div>
+
+<p class="deps"><b>Predpoklady:</b>
+  <a class="xref" href="01_zaklady_biomolekuly.html#sec-1-5">→ 1.5 Energia reakcie</a> ·
+  <a class="xref" href="04_metabolizmus_glukozy.html#sec-4-4">→ 4.4 Bilancia glykolýzy</a> ·
+  <a class="xref" href="06_acetyl_coa_citratovy_cyklus.html#sec-6-4">→ 6.4 Bilancia: čo koleso vynesie</a>
+</p>
+<p class="reviewed"><b>Odborná kontrola:</b> zatiaľ neprebehla — fakty sú overené len podľa zdrojov uvedených na konci kapitoly · <a href="https://github.com/ephafy/biochemia/issues/new?title=Kap.%207%3A%20" target="_blank" rel="noopener noreferrer">Nahlásiť chybu</a></p>
+
+<div class="contents keep">
+  <div class="label">V tejto kapitole</div>
+  <a class="row" href="#sec-7-1"><span>7.1</span><span>Východisko a mapa: spád, priehrada, turbína</span></a>
+  <a class="row" href="#sec-7-2"><span>7.2</span><span>ATP: obeživo, nie zásoba</span></a>
+  <a class="row" href="#sec-7-3"><span>7.3</span><span>Biologické oxidácie: odkiaľ a kam elektróny tečú</span></a>
+  <a class="row" href="#sec-7-4"><span>7.4</span><span>Dýchací reťazec: spád, ktorý pumpuje protóny</span></a>
+  <a class="row" href="#sec-7-5"><span>7.5</span><span>Oxidačná fosforylácia: priehrada a turbína</span></a>
+  <a class="row" href="#sec-7-6"><span>7.6</span><span>Regulácia: tempo určuje spotreba ATP</span></a>
+  <a class="row" href="#sec-7-7"><span>7.7</span><span>Dovoz a vývoz: prenášače a člnky</span></a>
+  <a class="row" href="#sec-7-8"><span>7.8</span><span>Poruchy: keď spád, priehrada alebo turbína zlyhá</span></a>
+  <a class="row" href="#sec-7-9"><span>7.9</span><span>Laboratórium: farbivo, ktoré ukáže oxidáciu</span></a>
+  <a class="row" href="#sec-7-10"><span>7.10</span><span>Súhrn a rýchle rozlíšenie</span></a>
+  <a class="row" href="#sec-7-11"><span>7.11</span><span>Otázky na zopakovanie</span></a>
+  <a class="row" href="#sec-7-12"><span>7.12</span><span>Zdroje</span></a>
+</div>
+
+<!-- ══ 7.1 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-7-1"><span class="n">7.1</span><span>Východisko a mapa: spád, priehrada, turbína</span></h2>
+<div class="sec-body">
+  <p>Glykolýza, brána aj koleso citrátového cyklu odoberali palivu vodíky a ukladali ich na koenzýmy. Samy pritom vyrobili len hŕstku ATP priamo na substráte (<a class="xref" href="06_acetyl_coa_citratovy_cyklus.html#sec-6-4">→ 6.4 Bilancia: čo koleso vynesie</a>). Takmer všetka energia paliva je v tej chvíli uložená v NADH a FADH₂ – a až vnútorná membrána mitochondrie ju premení na ATP. Kapitola ide po ceste tej energie.</p>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>ATP</b> adenozíntrifosfát – univerzálny nosič energie</span> <span class="sk"><b>NADH</b> redukovaná forma NAD⁺ – nesie dva elektróny</span> <span class="sk"><b>FADH₂</b> redukovaný FAD – nesie dva vodíky</span></div>
+  </div>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p><b>Spád</b>: elektróny z NADH a FADH₂ → štyri komplexy → O₂. <b>Priehrada</b>: komplexy I, III, IV pumpujú H⁺ z matrix. <b>Turbína</b>: H⁺ späť cez ATP-syntázu → ATP. Tempo určuje <b>ADP</b>.</p>
+    </div>
+  </div>
+
+  <figure class="chart keep" id="fig-energia-mapa">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 372" role="img" aria-labelledby="t-energia-mapa">
+<title id="t-energia-mapa">Mapa kapitoly: spád, priehrada, turbína. Dehydrogenázy prenesú vodíky z palív na NAD+ a FAD. Dýchací reťazec vedie elektróny z NADH a FADH2 po spáde na kyslík a energiou spádu pumpuje protóny cez vnútornú membránu mitochondrie. Vzniknutý protónový gradient poháňa ATP-syntázu, ktorá z ADP a fosfátu tvorí ATP. ATP sa spotrebuje pri práci bunky a vracia sa ako ADP; množstvo ADP určuje rýchlosť reťazca. Kreatínfosfát je rýchla zásoba, z ktorej sa ATP dopĺňa. Ak sa gradient vybije mimo syntázy, energia sa uvoľní ako teplo.</title>
+<defs><marker id="fig-energia-mapa-sip" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk" d="M0,0L8,3.5L0,7z"/></marker><marker id="fig-energia-mapa-sip-akt" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-akt" d="M0,0L8,3.5L0,7z"/></marker><marker id="fig-energia-mapa-sip-n" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-n" d="M0,0L8,3.5L0,7z"/></marker><marker id="fig-energia-mapa-sip-nv" viewBox="0 0 11 10" refX="4" refY="5" markerWidth="11" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-nv" d="M0,0L11,5L0,10z"/></marker></defs>
+<text class="cap" x="12" y="14">vnútorná membrána mitochondrie · kde sa z elektrónov stáva ATP</text>
+<rect class="bx-k" x="25.4" y="34.3" width="97.2" height="47.5" rx="3"/><text class="lblb" x="74" y="49.3" text-anchor="middle">palivá</text><text class="lblb" x="74" y="61.8" text-anchor="middle">cukry · tuky</text><text class="lblb" x="74" y="74.3" text-anchor="middle">aminokyseliny</text>
+<a class="rk-a" href="#fig-prenasace-vodika"><title>Obr. 7.4: prenášače vodíka</title><rect class="bx-c" x="241.9" y="46.8" width="96.2" height="22.5" rx="3"/><text class="lblb" x="290" y="61.8" text-anchor="middle">NADH · FADH₂</text><g class="rk-b rk-l"><circle cx="337.1" cy="47.8" r="6.3"/><path d="M333.9,47.8H340.1M337.7,45.2L340.3,47.8L337.7,50.4"/></g></a>
+<path class="rx" d="M126.6,58L237.9,58" marker-end="url(#fig-energia-mapa-sip)"/><text class="enz" x="182.3" y="47.9" text-anchor="middle">dehydrogenázy</text>
+<a class="rk-a" href="#fig-dychaci-retazec"><title>Obr. 7.5: dýchací reťazec</title><rect class="bx-m" x="432" y="40.5" width="135.9" height="35" rx="3"/><text class="lblb" x="500" y="55.6" text-anchor="middle">dýchací reťazec (spád)</text><text class="lblb" x="500" y="68.1" text-anchor="middle">elektróny → O₂ → H₂O</text><g class="rk-b rk-l"><circle cx="567" cy="41.5" r="6.3"/><path d="M563.8,41.5H570M567.6,38.9L570.2,41.5L567.6,44.1"/></g></a>
+<path class="rx" d="M342.1,58L428,58" marker-end="url(#fig-energia-mapa-sip)"/>
+<rect class="bx-c" x="407.6" y="146.8" width="184.9" height="22.5" rx="3"/><text class="lblb" x="500" y="161.8" text-anchor="middle">protónový gradient (priehrada)</text>
+<path class="rx" d="M500,79.5L500,142.8" marker-end="url(#fig-energia-mapa-sip)"/><text class="enz" x="507" y="113.8" text-anchor="start">pumpy: komplexy I, III, IV</text>
+<a class="rk-a" href="#fig-dychaci-retazec"><title>Obr. 7.5: výrez ATP-syntáza</title><rect class="bx-m" x="432.3" y="246.8" width="135.5" height="22.5" rx="3"/><text class="lblb" x="500" y="261.8" text-anchor="middle">ATP-syntáza (turbína)</text><g class="rk-b rk-l"><circle cx="566.7" cy="247.8" r="6.3"/><path d="M563.5,247.8H569.7M567.3,245.2L569.9,247.8L567.3,250.4"/></g></a>
+<path class="rx" d="M500,173.3L500,242.8" marker-end="url(#fig-energia-mapa-sip)"/>
+<text class="sub" x="508" y="212">H⁺ späť do matrix</text>
+<a class="rk-a" href="#fig-atp-vzorec"><title>Obr. 7.2: vzorec ATP</title><rect class="bx-c" x="242" y="246.8" width="80" height="22.5" rx="3"/><text class="lblb" x="282" y="261.8" text-anchor="middle">ATP</text><g class="rk-b rk-l"><circle cx="321" cy="247.8" r="6.3"/><path d="M317.8,247.8H324M321.6,245.2L324.2,247.8L321.6,250.4"/></g></a>
+<path class="rx nv" d="M428.3,258L332.5,258" marker-end="url(#fig-energia-mapa-sip-nv)"/>
+<rect class="bx-k" x="16.1" y="240.5" width="135.8" height="35" rx="3"/><text class="lblb" x="84" y="255.6" text-anchor="middle">práca bunky</text><text class="lblb" x="84" y="268.1" text-anchor="middle">pumpy · sťah · syntézy</text>
+<path class="rx" d="M238,258L155.9,258" marker-end="url(#fig-energia-mapa-sip)"/>
+<rect class="bx-k" x="237" y="146.8" width="90" height="22.5" rx="3"/><text class="lblb" x="282" y="161.8" text-anchor="middle">ADP + Pᵢ</text>
+<path class="rx" d="M84,236.5Q84,158 233,158" marker-end="url(#fig-energia-mapa-sip)"/>
+<path class="rx" d="M308,173.3L428.3,242.8" marker-end="url(#fig-energia-mapa-sip)"/>
+<path class="akt" d="M331,142.8L428,79.5" marker-end="url(#fig-energia-mapa-sip-akt)"/><text class="t-akt" x="290" y="116" text-anchor="middle">↑ ADP určuje tempo</text>
+<text class="lblb" x="412" y="198" text-anchor="middle">⟳</text>
+<a class="rk-a" href="#sub-7-8-2"><title>7.8.2 Rozpojovače</title><rect class="bx-k" x="620" y="146.8" width="56" height="22.5" rx="3"/><text class="lblb" x="648" y="161.8" text-anchor="middle">teplo</text><g class="rk-b rk-l"><circle cx="675" cy="147.8" r="6.3"/><path d="M671.8,147.8H678M675.6,145.2L678.2,147.8L675.6,150.4"/></g></a>
+<path class="vz" d="M596.4,158L616,158" marker-end="url(#fig-energia-mapa-sip-n)"/>
+<text class="sub" x="648" y="190" text-anchor="middle">rozpojenie</text>
+<a class="rk-a" href="#fig-kreatinkinaza"><title>Obr. 7.3: kreatínkináza</title><rect class="bx-k" x="195.7" y="314.8" width="172.6" height="22.5" rx="3"/><text class="lblb" x="282" y="329.8" text-anchor="middle">kreatínfosfát – rýchla zásoba</text><g class="rk-b rk-l"><circle cx="367.3" cy="315.8" r="6.3"/><path d="M364.1,315.8H370.3M367.9,313.2L370.5,315.8L367.9,318.4"/></g></a>
+<path class="rx" d="M282,310.8L282,273.3" marker-end="url(#fig-energia-mapa-sip)" marker-start="url(#fig-energia-mapa-sip)"/>
+<path class="rx nv" d="M14,360L29.5,360" marker-end="url(#fig-energia-mapa-sip-nv)"/><text class="sub" x="43" y="363.3">nevratný (riadiaci) krok</text><path class="rx" d="M169.3,360L191.3,360" marker-end="url(#fig-energia-mapa-sip)" marker-start="url(#fig-energia-mapa-sip)"/><text class="sub" x="198.3" y="363.3">vratná reakcia</text><text class="enz" x="280.1" y="363.3">enzým</text><path class="akt" d="M326.1,360L348.1,360" marker-end="url(#fig-energia-mapa-sip-akt)"/><text class="t-akt" x="355.1" y="363.3">↑ aktivuje</text><path class="vz" d="M418.1,360L440.1,360" marker-end="url(#fig-energia-mapa-sip-n)"/><text class="sub" x="447.1" y="363.3">iný vplyv, signál</text><g class="rk-b rk-l"><circle cx="545.4" cy="360" r="6.3"/><path d="M542.2,360H548.4M546,357.4L548.6,360L546,362.6"/></g><text class="sub" x="557.9" y="363.3">klik: podrobná schéma</text>
+</svg>
+    <div class="rk-bar"><span><i class="l">→</i> skočí na podrobnú schému</span></div>
+    <figcaption><b>Obr. 7.1 — Mapa kapitoly.</b> Hore spád: vodíky z palív idú cez koenzýmy do reťazca. Vpravo priehrada a turbína. Dolu a vľavo obeh ATP a ADP; zelená čiara je spätná väzba, ktorou spotreba ATP riadi celý dej (⟳). Sivá prerušovaná čiara je únik energie ako teplo; dolu je rýchla zásoba. Krúžky so šípkou vedú na schémy jednotlivých častí.</figcaption>
+  </figure>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>ADP</b> adenozíndifosfát</span></div>
+  </div>
+
+  <p>Poradie sekcií sleduje mapu: najprv mena, ktorou bunka platí (<a class="xref" href="#sec-7-2">→ 7.2</a>), potom pravidlá, podľa ktorých elektróny tečú (<a class="xref" href="#sec-7-3">→ 7.3</a>), samotný reťazec (<a class="xref" href="#sec-7-4">→ 7.4</a>), premena gradientu na ATP a jej výnos (<a class="xref" href="#sec-7-5">→ 7.5</a>), riadenie (<a class="xref" href="#sec-7-6">→ 7.6</a>), prenos cez membránu (<a class="xref" href="#sec-7-7">→ 7.7</a>), poruchy a jedy (<a class="xref" href="#sec-7-8">→ 7.8</a>) a meranie (<a class="xref" href="#sec-7-9">→ 7.9</a>).</p>
+</div>
+
+<!-- ══ 7.2 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-7-2"><span class="n">7.2</span><span>ATP: obeživo, nie zásoba</span></h2>
+<div class="sec-body">
+  <p>ATP spája deje, ktoré energiu uvoľňujú, s dejmi, ktoré ju potrebujú (<a class="xref" href="01_zaklady_biomolekuly.html#sec-1-5">→ 1.5 Energia reakcie</a>). Bunka ho má málo – zásoba vystačí na sekundy – a preto ho nepretržite obnovuje. Sekcia najprv ukáže, kde v molekule energia je, a potom dva mechanizmy, ktoré hladinu ATP udržia, kým dobehne mitochondria.</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p>V ATP sú makroergické len <b>dve anhydridové väzby</b> medzi fosfátmi (≈ −30,5 kJ/mol). ATP stojí uprostred rebríčka: nad ním fosfoenolpyruvát, 1,3-bisfosfoglycerát, kreatínfosfát; pod ním fosfoestery. <b>Kreatínfosfát</b> a <b>adenylátkináza</b> tlmia výkyvy.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h" id="sub-7-2-1"><span class="n">7.2.1</span>Kde je v molekule energia</h3>
+  <p>ATP má tri časti a tri fosfáty, no nie každá väzba fosfátu je rovnaká (Obr. 7.2).</p>
+
+  <figure class="chart keep" id="fig-atp-vzorec">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" data-vb="0 0 700 280" role="img" aria-labelledby="t-atp-vzorec">
+<title id="t-atp-vzorec">Adenozíntrifosfát. Adenín je naviazaný na ribózu a tá nesie na uhlíku 5′ tri fosfáty označené alfa, beta a gama. Väzba medzi ribózou a prvým fosfátom je ester s nízkou energiou hydrolýzy. Dve väzby medzi fosfátmi sú anhydridové, makroergické; hydrolýza každej uvoľní pri štandardných podmienkach približne 30,5 kilojoulu na mol. Výrez: ATP sa štiepi dvoma spôsobmi – na ADP a fosfát, alebo na AMP a difosfát, ktorý pyrofosfatáza hneď rozloží.</title>
+<defs><marker id="fig-atp-vzorec-sip" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk" d="M0,0L8,3.5L0,7z"/></marker><marker id="fig-atp-vzorec-sip-n" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-n" d="M0,0L8,3.5L0,7z"/></marker><marker id="fig-atp-vzorec-sip-nv" viewBox="0 0 11 10" refX="4" refY="5" markerWidth="11" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-nv" d="M0,0L11,5L0,10z"/></marker></defs>
+<g class="mol" transform="translate(330,112)"><g transform="translate(47.2,28.3)"><path class="bd" d="M-35.2,-2.2L-5.4,-17.5M5.4,-17.5L35.2,-2.2M19.4,16.7L19.4,25.9M-19.4,16.7L-19.4,25.9M-35.2,-2.2L-35.2,-11.4M41,-21.4L53,-30.1M51.5,-29.6L44.7,-50.5M54.5,-30.6L47.7,-51.5M46.2,-51L30,-51M23.8,-44.7L18.9,-29.6M20.8,-45.7L15.9,-30.6M17.4,-30.1L29.4,-21.4M46.2,-51L60.9,-67.4M61.2,-68.9L77,-65.5M60.6,-65.8L76.3,-62.5M84.3,-57L89.2,-41.9M90.4,-40.8L80.9,-30.3M88.1,-42.9L78.6,-32.4M68.7,-26.8L53,-30.1M60.9,-67.4L56,-82.5M35.2,-2.2L35.2,-11.4M-80.7,-23L-80.7,-33.4M-77.6,-23L-77.6,-33.4M-79.2,-11.4L-79.2,-1M-118.1,-23L-118.1,-33.4M-115,-23L-115,-33.4M-116.6,-11.4L-116.6,-1M-155.5,-23L-155.5,-33.4M-152.4,-23L-152.4,-33.4M-154,-11.4L-154,-1M-47.8,-17.2L-74.1,-17.2M-159.1,-17.2L-170.6,-17.2"/><path class="bd hl" d="M-84.3,-17.2L-92.5,-17.2M-103.3,-17.2L-111.5,-17.2M-121.7,-17.2L-129.9,-17.2M-140.7,-17.2L-148.9,-17.2"/><path class="bd bb" d="M19.4,16.7L-19.4,16.7"/><path class="wg" d="M35.2,-2.2L20.8,17.9L17.9,15.5z"/><path class="wg" d="M-35.2,-2.2L-17.9,15.5L-20.8,17.9z"/><text class="at" x="-3.7" y="-16.6">O</text><text class="at" x="15.6" y="35.3">OH</text><text class="at" x="-15.6" y="35.3" text-anchor="end">HO</text><text class="at" x="-46.1" y="-13.6">OCH<tspan class="ix" dy="2.6">2</tspan></text><text class="at" x="31.1" y="-13.6">N</text><text class="at" x="20.1" y="-47.4">N</text><text class="at" x="70.4" y="-21.9">N</text><text class="at" x="78.3" y="-59.2">N</text><text class="at" x="50" y="-84.7">NH<tspan class="ix" dy="2.6">2</tspan></text><text class="at" x="-82.6" y="-13.6">P</text><text class="at" x="-82.9" y="-35.6">O</text><text class="at" x="-82.9" y="8.4">O<tspan class="ix" dy="-3.9">−</tspan></text><text class="at" x="-120" y="-13.6">P</text><text class="at" x="-120.3" y="-35.6">O</text><text class="at" x="-120.3" y="8.4">O<tspan class="ix" dy="-3.9">−</tspan></text><text class="at" x="-157.4" y="-13.6">P</text><text class="at" x="-157.7" y="-35.6">O</text><text class="at" x="-157.7" y="8.4">O<tspan class="ix" dy="-3.9">−</tspan></text><text class="at hl" x="-101.6" y="-13.6">O</text><text class="at hl" x="-139" y="-13.6">O</text><text class="at" x="-172.3" y="-13.6" text-anchor="end"><tspan class="ix" dy="-3.9">−</tspan><tspan dy="3.9">O</tspan></text></g></g>
+<text class="mn" x="459.7" y="24" text-anchor="middle">adenín</text>
+<text class="mn" x="446.4" y="172.1">ribóza</text>
+<text class="mn" x="223.2" y="79.1" text-anchor="middle">γ</text>
+<text class="mn" x="260.6" y="79.1" text-anchor="middle">β</text>
+<text class="mn" x="298" y="79.1" text-anchor="middle">α</text>
+<path class="vz" d="M241.9,173.1 L241.9,133.1" marker-end="url(#fig-atp-vzorec-sip-n)"/>
+<path class="vz" d="M279.3,173.1 L279.3,133.1" marker-end="url(#fig-atp-vzorec-sip-n)"/>
+<text class="lblb" x="287.3" y="189.1" text-anchor="end">dve anhydridové väzby</text>
+<text class="sub" x="287.3" y="203.1" text-anchor="end">makroergické: ΔG°′ ≈ −30,5 kJ/mol každá</text>
+<path class="vz" d="M329,219.1 L329,133.1" marker-end="url(#fig-atp-vzorec-sip-n)"/>
+<text class="lblb" x="329" y="235.1" text-anchor="middle">esterová väzba</text>
+<text class="sub" x="329" y="249.1" text-anchor="middle">obyčajná (ostáva v AMP)</text>
+<text class="sub" x="560" y="150">v bunke ako komplex</text>
+<text class="sub" x="560" y="162">s Mg²⁺</text>
+<g class="rk" data-rk="stiep" role="button" tabindex="0" aria-expanded="false"><title>Rozbaliť podrobnosti: dva spôsoby štiepenia ATP</title><g class="rk-b"><circle cx="299.3" cy="185.1" r="6.3"/><path d="M296.2,185.1H302.4"/><path class="rk-v" d="M299.3,182V188.2"/></g></g>
+<text class="at hl" x="14" y="271.6">O</text><text class="sub" x="33" y="271.3">skupina, o ktorú v reakcii ide</text><g class="rk-b"><circle cx="188.7" cy="268" r="6.3"/><path d="M185.6,268H191.8"/><path class="rk-v" d="M188.7,264.9V271.1"/></g><text class="sub" x="201.2" y="271.3">klik rozbalí podrobnosti</text>
+
+<g class="rk-panel" data-rk-panel="stiep" data-h="200" transform="translate(0,280)"><rect class="rk-bg" x="0" y="0" width="700" height="200"/><path class="rk-line" d="M0,.75H700"/><text class="rk-t" x="12" y="17">Dva spôsoby, ako bunka ATP štiepi</text><g class="rk rk-x is-open" data-rk="stiep" role="button" tabindex="0" aria-label="Zavrieť výrez"><title>Zavrieť</title><circle cx="686" cy="13" r="7.5"/><path d="M683,10l6,6m0,-6l-6,6"/></g>
+<rect class="bx-c" x="45" y="80.8" width="70" height="22.5" rx="3"/><text class="lblb" x="80" y="95.8" text-anchor="middle">ATP</text>
+<rect class="bx-k" x="267.4" y="44.8" width="65.1" height="22.5" rx="3"/><text class="lblb" x="300" y="59.8" text-anchor="middle">ADP + Pᵢ</text>
+<rect class="bx-k" x="262.5" y="116.8" width="74.9" height="22.5" rx="3"/><text class="lblb" x="300" y="131.8" text-anchor="middle">AMP + PPᵢ</text>
+<rect class="bx-k" x="500.5" y="116.8" width="39" height="22.5" rx="3"/><text class="lblb" x="520" y="131.8" text-anchor="middle">2 Pᵢ</text>
+<path class="rx" d="M119,92L263.4,56" marker-end="url(#fig-atp-vzorec-sip)"/>
+<path class="rx" d="M119,92L258.5,128" marker-end="url(#fig-atp-vzorec-sip)"/>
+<path class="rx nv" d="M341.5,128L490,128" marker-end="url(#fig-atp-vzorec-sip-nv)"/><text class="enz" x="419" y="116.4" text-anchor="middle">pyrofosfatáza</text>
+<text class="rk-n" x="390" y="52">bežný prípad: štiepi sa väzba medzi β a γ;</text>
+<text class="rk-n" x="390" y="65">ADP sa v mitochondrii fosforyluje späť</text>
+<text class="rk-n" x="350" y="160">difosfát sa hneď rozloží – tým sa celá reakcia stáva nevratnou</text>
+<text class="rk-n" x="14" y="186">Druhý spôsob (štiepi sa väzba medzi α a β) používajú reakcie, ktoré potrebujú viac energie, napríklad aktivácia cukru alebo mastnej kyseliny.</text>
+</g>
+</svg>
+    <div class="rk-bar"><button type="button" class="rk-all" aria-pressed="false">+ Rozbaliť všetky podrobnosti (1)</button><span><i>+</i> v schéme rozbalí jednu časť</span></div>
+    <figcaption><b>Obr. 7.2 — Adenozíntrifosfát.</b> Modré kyslíky spájajú fosfáty anhydridovou väzbou; ich hydrolýza uvoľní veľa energie. Väzba prvého fosfátu na ribózu je obyčajný ester – rovnaký ako v glukóza-6-fosfáte. Výrez ukazuje dva spôsoby, akými bunka ATP štiepi.</figcaption>
+  </figure>
+
+  <div class="box k-chem keep">
+    <div class="label">Chémia</div>
+    <div class="body">
+      <p><b>Čo znamená „makroergická“.</b> Hydrolýza koncového fosfátu ATP má ΔG°′ približne −30,5 kJ/mol; v bunke, kde je ATP oveľa viac než ADP a fosfátu, je to okolo −50 kJ/mol. Zlúčenina sa volá makroergická, ak jej hydrolýza uvoľní aspoň toľko. Nie je to vlastnosť „silnej“ väzby – naopak, produkty hydrolýzy sú oveľa stabilnejšie než východisková látka. V bunke je ATP viazaný na Mg²⁺.</p>
+    </div>
+  </div>
+
+  <p>Podľa toho, či zlúčenina stojí nad ATP alebo pod ním, sa dá povedať, ktorým smerom fosfát pôjde.</p>
+
+  <table class="table keep" id="tab-7-1" style="margin:6px 0">
+    <thead><tr><th></th><th class="c-zel">Nad ATP – fosfát odovzdajú na ADP</th><th class="c-fial">Pod ATP – fosfát z ATP prijímajú</th></tr></thead>
+    <tbody>
+      <tr><td><b>Typ väzby</b></td><td class="c-zel">enolfosfát, acylfosfát, fosfát na dusíku guanidínu</td><td class="c-fial">fosfoester, teda fosfát na hydroxyle</td></tr>
+      <tr><td><b>Príklady</b></td><td class="c-zel">fosfoenolpyruvát, 1,3-bisfosfoglycerát, kreatínfosfát</td><td class="c-fial">glukóza-6-fosfát, glycerol-3-fosfát, AMP</td></tr>
+      <tr><td><b>Kde sa s nimi čitateľ stretol</b></td><td class="c-zel">substrátové fosforylácie glykolýzy (<a class="xref" href="04_metabolizmus_glukozy.html#sub-4-2-2">→ 4.2.2 Výnosná fáza: oxidácia a dve substrátové fosforylácie</a>)</td><td class="c-fial">prvé kroky glykolýzy – „investícia“</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>AMP</b> adenozínmonofosfát</span></div>
+  </div>
+
+  <p>Makroergické sú aj tioestery koenzýmu A, hoci fosfát neobsahujú: energia sukcinyl-CoA stačí na vznik GTP (<a class="xref" href="06_acetyl_coa_citratovy_cyklus.html#sec-6-3">→ 6.3 Koleso: osem krokov citrátového cyklu</a>). GTP a ostatné nukleozidtrifosfáty sú s ATP rovnocenné a fosfát si s ním vymieňajú (enzým <i>nukleoziddifosfátkináza</i>). Medzi makroergické zlúčeniny patria aj aktivované stavebné jednotky – UDP-glukóza pri stavbe glykogénu a aminoacyl-tRNA pri stavbe bielkovín: energia na novú väzbu je v nich vložená vopred (<a class="xref" href="01_zaklady_biomolekuly.html#sub-1-4-3">→ 1.4.3 Kondenzácia a hydrolýza</a>).</p>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>CoA</b> koenzým A – nosič acylov</span> <span class="sk"><b>GTP</b> guanozíntrifosfát – energeticky rovnocenný s ATP</span> <span class="sk"><b>UDP</b> uridíndifosfát – nosič aktivovaných cukrov</span> <span class="sk"><b>tRNA</b> transferová RNA</span></div>
+  </div>
+
+  <p>Bunka štiepi ATP dvoma spôsobmi. Väčšinou odchádza koncový fosfát a ostane ADP. Reakcie, ktoré potrebujú viac energie – napríklad aktivácia cukru nukleotidom (<a class="xref" href="03_sacharidy_glykogen.html#sec-3-6">→ 3.6 Syntéza glykogénu</a>) –, odštiepia dva fosfáty naraz ako difosfát; ten sa hneď rozloží, a tým sa reakcia stáva nevratnou (výrez v Obr. 7.2).</p>
+
+  <div class="box k-pozor aside keep">
+    <div class="label">Pozor</div>
+    <div class="body">
+      <p><b>ATP má tri fosfáty, ale len dve makroergické väzby.</b> Tretia – medzi ribózou a prvým fosfátom – je ester. Preto AMP medzi makroergické zlúčeniny nepatrí.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h" id="sub-7-2-2"><span class="n">7.2.2</span>Rýchle zásobníky: kreatínfosfát a adenylátkináza</h3>
+  <p>Sval, srdce a mozog vedia spotrebu ATP zvýšiť za zlomok sekundy; mitochondria tak rýchlo nezareaguje. Medzeru vypĺňajú dva enzýmy, ktoré nič nespaľujú – len presúvajú fosfát (Obr. 7.3).</p>
+
+  <figure class="chart keep" id="fig-kreatinkinaza">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 204" data-vb="0 0 700 204" role="img" aria-labelledby="t-kreatinkinaza">
+<title id="t-kreatinkinaza">Kreatínkináza. Enzým vratne prenáša fosfát z ATP na dusík guanidínovej skupiny kreatínu; vzniká kreatínfosfát a ADP. V pokoji, keď je ATP dosť, sa zásoba kreatínfosfátu plní; pri práci beží reakcia opačne a kreatínfosfát okamžite dopĺňa ATP. Výrez: kreatínfosfát sa samovoľne uzatvára do kruhu na kreatinín, ktorý odchádza močom.</title>
+<defs><marker id="fig-kreatinkinaza-sip" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk" d="M0,0L8,3.5L0,7z"/></marker><marker id="fig-kreatinkinaza-sip-koe" viewBox="0 0 7 6" refX="6.4" refY="3" markerWidth="7" markerHeight="6" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-koe" d="M0,0L7,3L0,6z"/></marker><marker id="fig-kreatinkinaza-sip-nv" viewBox="0 0 11 10" refX="4" refY="5" markerWidth="11" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-nv" d="M0,0L11,5L0,10z"/></marker></defs>
+<g class="mol" transform="translate(130,80)"><g transform="translate(-24,-6.6)"><path class="bd" d="M0,0L-13.3,-7.7M-1.5,0L-1.5,-16.2M1.6,0L1.6,-16.2M0,0L13.3,7.7M19.1,16.8L19.1,27.2M24.8,7.7L38.1,0M38.1,0L57.2,11M58.7,11L58.7,27.2M55.6,11L55.6,27.2M57.2,11L70.8,3.1"/><text class="at hl" x="-15" y="-7.4" text-anchor="end">H<tspan class="ix" dy="2.6">2</tspan><tspan dy="-2.6">N</tspan></text><text class="at" x="-4.1" y="-18.4">NH<tspan class="ix" dy="2.6">2</tspan><tspan class="ix" dy="-6.5">+</tspan></text><text class="at" x="15" y="14.6">N</text><text class="at" x="15.6" y="36.6">CH<tspan class="ix" dy="2.6">3</tspan></text><text class="at" x="53.4" y="36.6">O</text><text class="at" x="72.5" y="3.6">O<tspan class="ix" dy="-3.9">−</tspan></text></g></g><text class="mn" x="130" y="124.7" text-anchor="middle">kreatín</text><text class="ms" x="130" y="135.5" text-anchor="middle">(Cr)</text>
+<g class="rk" data-rk="kreatinin" role="button" tabindex="0" aria-expanded="false"><title>Rozbaliť podrobnosti: kreatínfosfát</title><rect class="rk-hit" x="495.5" y="36.8" width="141.1" height="110" rx="3"/><g class="mol" transform="translate(566,80)"><g transform="translate(-18.4,-1.1)"><path class="bd" d="M0,0L-13.3,-7.7M-19.1,-16.8L-19.1,-27.2M-1.5,0L-1.5,-16.2M1.6,0L1.6,-16.2M0,0L13.3,7.7M19.1,16.8L19.1,27.2M24.8,7.7L38.1,0M38.1,0L57.2,11M58.7,11L58.7,27.2M55.6,11L55.6,27.2M57.2,11L70.8,3.1"/><path class="bd hl" d="M-24.8,-7.7L-35.1,-1.7"/><text class="at" x="-23.1" y="-7.4">N</text><text class="at" x="-23.4" y="-29.4">H</text><circle class="pc hl" cx="-41" cy="1.7" r="6.2"/><text class="at pt hl" x="-41" y="5" text-anchor="middle">P</text><text class="at" x="-4.1" y="-18.4">NH<tspan class="ix" dy="2.6">2</tspan><tspan class="ix" dy="-6.5">+</tspan></text><text class="at" x="15" y="14.6">N</text><text class="at" x="15.6" y="36.6">CH<tspan class="ix" dy="2.6">3</tspan></text><text class="at" x="53.4" y="36.6">O</text><text class="at" x="72.5" y="3.6">O<tspan class="ix" dy="-3.9">−</tspan></text></g></g><text class="mn" x="566" y="130.2" text-anchor="middle">kreatínfosfát</text><text class="ms" x="566" y="141" text-anchor="middle">(CrP)</text><g class="rk-b"><circle cx="640" cy="40" r="6.3"/><path d="M636.9,40H643.1"/><path class="rk-v" d="M640,36.9V43.1"/></g></g>
+<path class="rx" d="M203.9,80L486.5,80" marker-end="url(#fig-kreatinkinaza-sip)" marker-start="url(#fig-kreatinkinaza-sip)"/><text class="enz" x="345.2" y="69.9" text-anchor="middle">kreatínkináza</text><path class="koa" d="M328.7,95Q328.7,80 345.2,80" marker-start="url(#fig-kreatinkinaza-sip-koe)"/><rect class="koe" x="314.9" y="98" width="27.6" height="13" rx="2"/><text class="koet" x="328.7" y="107.8" text-anchor="middle">ATP</text><path class="koa" d="M345.2,80Q361.7,80 361.7,95" marker-end="url(#fig-kreatinkinaza-sip-koe)"/><rect class="koe" x="347.5" y="98" width="28.3" height="13" rx="2"/><text class="koet" x="361.7" y="107.8" text-anchor="middle">ADP</text>
+<text class="sub" x="348" y="138" text-anchor="middle">→ v pokoji: zásoba sa plní</text>
+<text class="sub" x="348" y="152" text-anchor="middle">← pri práci: ATP sa dopĺňa v priebehu sekúnd</text>
+<path class="rx" d="M14,190L36,190" marker-end="url(#fig-kreatinkinaza-sip)" marker-start="url(#fig-kreatinkinaza-sip)"/><text class="sub" x="43" y="193.3">vratná reakcia</text><text class="enz" x="124.8" y="193.3">enzým</text><rect class="koe" x="171" y="183.5" width="27.6" height="13" rx="2"/><text class="koet" x="184.8" y="193.3" text-anchor="middle">ATP</text><text class="sub" x="205.8" y="193.3">koenzým, kosubstrát</text><text class="at hl" x="317.6" y="193.6">O</text><text class="sub" x="336.6" y="193.3">skupina, o ktorú v reakcii ide</text><g class="rk-b"><circle cx="492.3" cy="190" r="6.3"/><path d="M489.2,190H495.4"/><path class="rk-v" d="M492.3,186.9V193.1"/></g><text class="sub" x="504.8" y="193.3">klik rozbalí podrobnosti</text>
+
+<g class="rk-panel" data-rk-panel="kreatinin" data-h="204" transform="translate(0,204)"><rect class="rk-bg" x="0" y="0" width="700" height="204"/><path class="rk-line" d="M0,.75H700"/><text class="rk-t" x="12" y="17">Kam zásoba odchádza: z kreatínfosfátu kreatinín</text><g class="rk rk-x is-open" data-rk="kreatinin" role="button" tabindex="0" aria-label="Zavrieť výrez"><title>Zavrieť</title><circle cx="686" cy="13" r="7.5"/><path d="M683,10l6,6m0,-6l-6,6"/></g>
+<g class="mol" transform="translate(120,92)"><g transform="translate(-18.4,-1.1)"><path class="bd" d="M0,0L-13.3,-7.7M-19.1,-16.8L-19.1,-27.2M-1.5,0L-1.5,-16.2M1.6,0L1.6,-16.2M0,0L13.3,7.7M19.1,16.8L19.1,27.2M24.8,7.7L38.1,0M38.1,0L57.2,11M58.7,11L58.7,27.2M55.6,11L55.6,27.2M57.2,11L70.8,3.1"/><path class="bd hl" d="M-24.8,-7.7L-35.1,-1.7"/><text class="at" x="-23.1" y="-7.4">N</text><text class="at" x="-23.4" y="-29.4">H</text><circle class="pc hl" cx="-41" cy="1.7" r="6.2"/><text class="at pt hl" x="-41" y="5" text-anchor="middle">P</text><text class="at" x="-4.1" y="-18.4">NH<tspan class="ix" dy="2.6">2</tspan><tspan class="ix" dy="-6.5">+</tspan></text><text class="at" x="15" y="14.6">N</text><text class="at" x="15.6" y="36.6">CH<tspan class="ix" dy="2.6">3</tspan></text><text class="at" x="53.4" y="36.6">O</text><text class="at" x="72.5" y="3.6">O<tspan class="ix" dy="-3.9">−</tspan></text></g></g><text class="mn" x="120" y="142.2" text-anchor="middle">kreatínfosfát</text><text class="ms" x="120" y="153" text-anchor="middle">(CrP)</text>
+<g class="mol" transform="translate(388,88)"><g transform="translate(13.7,3.9)"><path class="bd" d="M-12,-10L0,-18.7M0.9,-20L12.9,-11.3M-0.9,-17.5L11.1,-8.7M15.9,0L11,15.1M11,15.1L-11,15.1M-11,15.1L-15.9,0M0,-18.7L0,-34.9M12.3,14.2L21,26.2M9.7,16L18.5,28M-23.6,-7.7L-33.6,-10.9"/><text class="at" x="13.7" y="-2.2">N</text><text class="at" x="-21.9" y="-2.2">N</text><text class="at" x="-4.1" y="-37.1">NH<tspan class="ix" dy="2.6">2</tspan></text><text class="at" x="20.2" y="36.5">O</text><text class="at" x="-35.3" y="-9" text-anchor="end">H<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">C</tspan></text></g></g><text class="mn" x="388" y="140.9" text-anchor="middle">kreatinín</text>
+<path class="rx nv" d="M199.5,88L324.2,84.2" marker-end="url(#fig-kreatinkinaza-sip-nv)"/><text class="enz" x="263.1" y="74.4" text-anchor="middle">samovoľne, bez enzýmu</text><path class="koa" d="M265.1,86Q275.1,85.7 275.6,100.7" marker-end="url(#fig-kreatinkinaza-sip-koe)"/><rect class="koe" x="265.7" y="104" width="20.2" height="13" rx="2"/><text class="koet" x="275.9" y="113.8" text-anchor="middle">Pᵢ</text>
+<rect class="bx-m" x="497.9" y="72.8" width="124.3" height="22.5" rx="3"/><text class="lblb" x="560" y="87.8" text-anchor="middle">krv → oblička → moč</text>
+<path class="rx" d="M443.3,84L493.9,84" marker-end="url(#fig-kreatinkinaza-sip)"/>
+<text class="rk-n" x="14" y="176">Karboxyl sa spojí s dusíkom, na ktorom visel fosfát, a molekula sa uzavrie do kruhu. Deje sa to stále a malým, stálym tempom,</text>
+<text class="rk-n" x="14" y="190">takže množstvo kreatinínu vylúčené za deň odráža svalovú hmotu.</text>
+</g>
+</svg>
+    <div class="rk-bar"><button type="button" class="rk-all" aria-pressed="false">+ Rozbaliť všetky podrobnosti (1)</button><span><i>+</i> v schéme rozbalí jednu časť</span></div>
+    <figcaption><b>Obr. 7.3 — Kreatínkináza.</b> Fosfát z ATP sa prenesie na dusík kreatínu; väzba N–P (modro) má viac energie než anhydrid v ATP, takže reakcia sa ľahko obráti. Výrez: čo sa so zásobou deje, keď sa nepoužije.</figcaption>
+  </figure>
+
+  <div class="box k-mech keep">
+    <div class="label">Dva tlmiče výkyvov</div>
+    <div class="body">
+      <ul>
+    <li><b>Kreatínkináza</b>: kreatín + ATP ⇌ kreatínfosfát + ADP. V pokoji, pri nadbytku ATP, sa zásoba plní; pri práci reakcia beží späť a kreatínfosfát dopĺňa ATP v prvých sekundách.</li>
+    <li><b>Adenylátkináza</b> (vo svale sa jej hovorí aj <i>myokináza</i>): 2 ADP ⇌ ATP + AMP. Z dvoch „napoly minutých“ molekúl vyrobí jednu plnú. Vedľajší produkt je zároveň signál: už malý pokles ATP znamená veľký vzostup AMP, a ten zapína glykolýzu a kinázu AMPK (<a class="xref" href="02_uvod_regulacia_metabolizmu.html#sub-2-5-2">→ 2.5.2 Alostéria: signál z vlastnej bunky</a>).</li>
+  </ul>
+    </div>
+  </div>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>AMPK</b> proteínkináza aktivovaná AMP – senzor energie v bunke</span></div>
+  </div>
+
+  <p>Kreatínfosfát sa samovoľne, bez enzýmu, uzatvára do kruhu na kreatinín, ktorý odchádza močom – jeho množstvo preto odráža svalovú hmotu (výrez v Obr. 7.3).</p>
+
+  <div class="box k-lab aside keep">
+    <div class="label">Laboratórium</div>
+    <div class="body">
+      <p><b>Kreatínkináza v sére:</b> menej než 2,85 µkat/l (rozpätie jedného slovenského nemocničného laboratória). Enzým je vnútri svalových a nervových buniek; v krvi stúpa, keď sa rozpadajú. Tri izoenzýmy – svalový, srdcový a mozgový – pomáhajú určiť tkanivo (<a class="xref" href="04_metabolizmus_glukozy.html#sec-4-9">→ 4.9 Laboratórium: laktát a laktátdehydrogenáza</a>).</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 7.3 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-7-3"><span class="n">7.3</span><span>Biologické oxidácie: odkiaľ a kam elektróny tečú</span></h2>
+<div class="sec-body">
+  <p>Oxidácia je strata elektrónov, v biochémii najčastejšie spolu s protónom ako vodík (<a class="xref" href="01_zaklady_biomolekuly.html#sub-1-4-2">→ 1.4.2 Oxidácia a redukcia</a>). Čím viac vodíkov na uhlíkoch palivo nesie, tým viac energie jeho oxidácia dá – preto má gram tuku vyše dvojnásobok energie gramu cukru (<a class="xref" href="02_uvod_regulacia_metabolizmu.html#sub-2-3-1">→ 2.3.1 Palivá a zásoby</a>). Aby sa dalo predpovedať, ktorá látka elektróny odovzdá a ktorá prijme, treba jedinú veličinu. Sekcia ju zavedie, potom roztriedi enzýmy podľa toho, čo robia s kyslíkom, a nakoniec predstaví tri prenášače, ktoré elektróny medzi enzýmami nosia.</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p>Elektróny idú od nižšieho <b>redoxného potenciálu</b> k vyššiemu: NADH (−0,32 V) → … → O₂ (+0,82 V). Rozdiel 1,14 V = ≈ −220 kJ/mol. Dehydrogenázy dávajú vodík koenzýmu, oxidázy kyslíku, oxygenázy kyslík vkladajú do substrátu.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h" id="sub-7-3-1"><span class="n">7.3.1</span>Redoxný potenciál: miera ochoty odovzdať elektrón</h3>
+  <p>Každá dvojica oxidovanej a redukovanej formy má svoj štandardný redoxný potenciál E°′. Čím je zápornejší, tým ochotnejšie redukovaná forma elektróny odovzdá.</p>
+
+  <div class="box k-mech keep">
+    <div class="label">Od potenciálu k energii</div>
+    <div class="body">
+      <ul>
+    <li>Elektróny tečú samovoľne od páru s nižším potenciálom k páru s vyšším.</li>
+    <li>Uvoľnená energia je úmerná rozdielu: ΔG°′ = −n · F · ΔE°′, kde n je počet elektrónov a F Faradayova konštanta (96,5 kJ na volt a mol).</li>
+    <li>Tabuľkové potenciály platia pre štandardné podmienky. Skutočný potenciál závisí od pomeru oxidovanej a redukovanej formy páru; vyjadruje to <i>Nernstova rovnica</i>: E = E°′ + (RT / nF) · ln([ox] / [red]).</li>
+    <li>NAD⁺/NADH má −0,32 V, ½ O₂/H₂O +0,82 V. Rozdiel 1,14 V pri dvoch elektrónoch dáva približne <b>−220 kJ/mol</b>.</li>
+  </ul>
+    </div>
+  </div>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>NAD⁺</b> nikotínamid-adenín-dinukleotid, oxidovaná forma – prijíma elektróny</span></div>
+  </div>
+
+  <p>Jedno ATP stojí 30,5 kJ/mol. Keby NADH odovzdal elektróny kyslíku naraz, energia by sa uvoľnila ako teplo. Reťazec ju preto rozkladá na menšie schody (Obr. 7.5), z ktorých niektoré stačia na prácu.</p>
+
+  <h3 class="sub-h" id="sub-7-3-2"><span class="n">7.3.2</span>Štyri skupiny oxidoreduktáz</h3>
+  <p>Enzýmy, ktoré katalyzujú oxidáciu a redukciu, tvoria prvú triedu názvoslovia (<a class="xref" href="01_zaklady_biomolekuly.html#sub-1-4-1">→ 1.4.1 Sedem tried enzýmov</a>). Podľa toho, akú úlohu má v reakcii kyslík, sa delia na štyri skupiny.</p>
+
+  <table class="table keep" id="tab-7-2" style="margin:6px 0">
+    <thead><tr><th>Skupina</th><th>Čo robí s vodíkom a kyslíkom</th><th>Príklady</th></tr></thead>
+    <tbody>
+      <tr><td><b><b>dehydrogenázy</b></b></td><td>vodík prenesú na koenzým, kyslík nepotrebujú – oxidácia môže bežať aj bez neho</td><td>laktátdehydrogenáza (NAD⁺), glukóza-6-fosfátdehydrogenáza (NADP⁺), sukcinátdehydrogenáza (FAD)</td></tr>
+      <tr><td><b><b>oxidázy</b></b></td><td>vodík prenesú priamo na O₂; vznikne voda alebo peroxid vodíka</td><td>cytochróm-c-oxidáza (voda); xantínoxidáza, glukózaoxidáza, oxidáza L-aminokyselín (peroxid)</td></tr>
+      <tr><td><b><b>hydroperoxidázy</b></b></td><td>odstraňujú peroxidy</td><td>kataláza: 2 H₂O₂ → 2 H₂O + O₂; glutatiónperoxidáza (<a class="xref" href="05_pentozy_fruktoza_galaktoza.html#sec-5-3">→ 5.3 NADPH: redukčná sila bunky</a>)</td></tr>
+      <tr><td><b><b>oxygenázy</b></b></td><td>kyslík zabudujú do substrátu – oba atómy (dioxygenázy) alebo jeden, pričom druhý skončí vo vode (monooxygenázy, hydroxylázy)</td><td>monooxygenázy: cytochróm P450, fenylalanínhydroxyláza, dopamín-β-hydroxyláza; dioxygenáza: tryptofán-2,3-dioxygenáza</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>NADP⁺</b> NAD⁺ s fosfátom navyše, oxidovaná forma – po redukcii NADPH</span> <span class="sk"><b>FAD</b> flavín-adenín-dinukleotid – prijíma dva vodíky (→ FADH₂)</span> <span class="sk"><b>NADPH</b> redukovaný NADP⁺ (NAD⁺ s fosfátom navyše) – elektróny pre syntézy</span></div>
+  </div>
+
+  <div class="box k-pozor aside keep">
+    <div class="label">Pozor</div>
+    <div class="body">
+      <p><b>Oxidáza nie je dehydrogenáza.</b> Obe substrát oxidujú; rozdiel je v príjemcovi. Dehydrogenáza odovzdá vodík koenzýmu a o kyslíku „nevie“. Oxidáza ho odovzdá kyslíku. Väčšinu kyslíka, ktorý človek vdýchne, spotrebuje jediná oxidáza na konci dýchacieho reťazca.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h" id="sub-7-3-3"><span class="n">7.3.3</span>Prenášače vodíka: NAD⁺, flavíny, koenzým Q</h3>
+  <p>Medzi substrátom a kyslíkom stoja tri malé molekuly. Líšia sa tým, čo presne prenášajú a ako voľne sa pohybujú (Obr. 7.4).</p>
+
+  <figure class="chart keep" id="fig-prenasace-vodika">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 592" data-vb="0 0 700 592" role="img" aria-labelledby="t-prenasace-vodika">
+<title id="t-prenasace-vodika">Tri prenášače vodíka. Vľavo celý vzorec NAD+: nikotínamid na ribóze a adenozín, spojené difosfátom; NADP+ má navyše fosfát na 2′-hydroxyle ribózy adenozínu. Vpravo hore pracovná časť NAD+: nikotínamidový kruh prijme hydridový ión, teda dva elektróny a jeden protón, na uhlík 4; druhý protón ostane v roztoku. Vpravo v strede flavín FAD a FMN: izoaloxazínový kruh prijme dva vodíky na dusíky 1 a 5. Vpravo dole koenzým Q: chinón prijme dva vodíky a zmení sa na ubichinol. Výrez: celý vzorec FAD – izoaloxazínový kruh, ribitol, difosfát a adenozín.</title>
+<defs><marker id="fig-prenasace-vodika-sip" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk" d="M0,0L8,3.5L0,7z"/></marker><marker id="fig-prenasace-vodika-sip-koe" viewBox="0 0 7 6" refX="6.4" refY="3" markerWidth="7" markerHeight="6" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-koe" d="M0,0L7,3L0,6z"/></marker><marker id="fig-prenasace-vodika-sip-n" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-n" d="M0,0L8,3.5L0,7z"/></marker></defs>
+<g class="mol" transform="translate(118,262)"><g transform="translate(-14.7,-37)"><path class="bd" d="M-35.2,-2.2L-5.4,-17.5M5.4,-17.5L35.2,-2.2M19.4,16.7L19.4,25.9M-19.4,16.7L-19.4,25.9M-35.2,-2.2L-35.2,-11.4M-35.2,123.2L-5.4,107.9M5.4,107.9L35.2,123.2M19.4,142.1L19.4,151.3M-19.4,142.1L-19.4,151.3M-35.2,123.2L-35.2,114M-47.8,-17.2L-66.9,-17.2M-73.7,-10.4L-73.7,39.7M-73.7,51.3L-73.7,101.4M-66.9,108.2L-47.8,108.2M44.2,-24.2L53.5,-29.5M45.8,-21.5L55,-26.8M54.3,-28.2L54.3,-50.2M53.5,-48.8L34.4,-59.8M55,-51.5L36,-62.5M35.2,-61.2L16.1,-50.2M17.7,-50.2L17.7,-28.2M14.6,-50.2L14.6,-28.2M16.1,-28.2L29.4,-20.5M35.2,-2.2L35.2,-11.4M54.3,-50.2L73.3,-61.2M71.8,-61.2L71.8,-77.4M74.9,-61.2L74.9,-77.4M73.3,-61.2L86.6,-53.5M41,104L53,95.3M51.5,95.8L44.7,74.9M54.5,94.8L47.7,73.9M46.2,74.4L30,74.4M23.8,80.7L18.9,95.8M20.8,79.7L15.9,94.8M17.4,95.3L29.4,104M46.2,74.4L60.9,58M61.2,56.5L77,59.9M60.6,59.6L76.3,62.9M84.3,68.4L89.2,83.5M90.4,84.6L80.9,95.1M88.1,82.5L78.6,93M68.7,98.6L53,95.3M60.9,58L56,42.9M35.2,123.2L35.2,114"/><path class="bd bb" d="M19.4,16.7L-19.4,16.7M19.4,142.1L-19.4,142.1"/><path class="wg" d="M35.2,-2.2L20.8,17.9L17.9,15.5z"/><path class="wg" d="M-35.2,-2.2L-17.9,15.5L-20.8,17.9z"/><path class="wg" d="M35.2,123.2L20.8,143.3L17.9,140.9z"/><path class="wg" d="M-35.2,123.2L-17.9,140.9L-20.8,143.3z"/><text class="at" x="-3.7" y="-16.6">O</text><text class="at" x="15.6" y="35.3">OH</text><text class="at" x="-15.6" y="35.3" text-anchor="end">HO</text><text class="at" x="-46.1" y="-13.6">OCH<tspan class="ix" dy="2.6">2</tspan></text><text class="at" x="-3.7" y="108.8">O</text><text class="at" x="15.6" y="160.7">OH</text><text class="at" x="-15.6" y="160.7" text-anchor="end">HO</text><text class="at" x="-46.1" y="111.8">OCH<tspan class="ix" dy="2.6">2</tspan></text><circle class="pc" cx="-73.7" cy="-17.2" r="6.2"/><text class="at pt" x="-73.7" y="-13.9" text-anchor="middle">P</text><text class="at" x="-77.4" y="49.1">O</text><circle class="pc" cx="-73.7" cy="108.2" r="6.2"/><text class="at pt" x="-73.7" y="111.5" text-anchor="middle">P</text><text class="at" x="31.1" y="-13.6">N<tspan class="ix" dy="-3.9">+</tspan></text><text class="at" x="69.6" y="-79.6">O</text><text class="at" x="88.3" y="-46.6">NH<tspan class="ix" dy="2.6">2</tspan></text><text class="at" x="31.1" y="111.8">N</text><text class="at" x="20.1" y="78">N</text><text class="at" x="70.4" y="103.5">N</text><text class="at" x="78.3" y="66.2">N</text><text class="at" x="50" y="40.7">NH<tspan class="ix" dy="2.6">2</tspan></text></g></g>
+<text class="mn" x="118" y="24" text-anchor="middle">NAD⁺ – celá molekula</text>
+<text class="sub" x="198" y="96">nikotínamid</text>
+<text class="sub" x="198" y="108">(vitamín B₃)</text>
+<text class="sub" x="41.6" y="274.6">difosfát</text>
+<text class="sub" x="196" y="300">adenozín</text>
+<path class="vz" d="M182.7,416.1 L134.7,390.1" marker-end="url(#fig-prenasace-vodika-sip-n)"/>
+<text class="sub" x="186.7" y="422.1">v NADP⁺ je tu fosfát</text>
+<g class="mol" transform="translate(400,84)"><g transform="translate(-27.5,0)"><path class="bd" d="M9,15L18.3,9.7M10.6,17.7L19.8,12.3M19.1,11L19.1,-11M18.3,-9.7L-0.8,-20.7M19.8,-12.3L0.8,-23.3M0,-22L-19.1,-11M-17.5,-11L-17.5,11M-20.6,-11L-20.6,11M-19.1,11L-5.8,18.7M0,27.8L0,38.2M19.1,-11L38.1,-22M36.6,-22L36.6,-38.2M39.7,-22L39.7,-38.2M38.1,-22L51.4,-14.3"/><path class="bd hl" d="M0,-22L0,-38.2"/><text class="at" x="-4.1" y="25.6">N<tspan class="ix" dy="-3.9">+</tspan></text><text class="at" x="-3.8" y="47.6">R</text><text class="at" x="34.4" y="-40.4">O</text><text class="at" x="53.1" y="-7.4">NH<tspan class="ix" dy="2.6">2</tspan></text><text class="at hl" x="-4.4" y="-40.4">H</text></g></g><text class="mn" x="400" y="144.1" text-anchor="middle">NAD⁺ (oxidovaný)</text>
+<g class="mol" transform="translate(612,84)"><g transform="translate(-27.5,0)"><path class="bd" d="M5.8,18.7L19.1,11M17.5,11L17.5,-11M20.6,11L20.6,-11M19.1,-11L0,-22M0,-22L-19.1,-11M-17.5,-11L-17.5,11M-20.6,-11L-20.6,11M-19.1,11L-5.8,18.7M0,27.8L0,38.2M19.1,-11L38.1,-22M36.6,-22L36.6,-38.2M39.7,-22L39.7,-38.2M38.1,-22L51.4,-14.3"/><path class="bd hl" d="M0,-22L7.7,-35.3M0,-22L-7.7,-35.3"/><text class="at" x="-4.1" y="25.6">N</text><text class="at" x="-3.8" y="47.6">R</text><text class="at" x="34.4" y="-40.4">O</text><text class="at" x="53.1" y="-7.4">NH<tspan class="ix" dy="2.6">2</tspan></text><text class="at hl" x="6.6" y="-37.5">H</text><text class="at hl" x="-15.4" y="-37.5">H</text></g></g><text class="mn" x="612" y="144.1" text-anchor="middle">NADH (redukovaný)</text>
+<path class="rx" d="M460.5,78L547.2,78" marker-end="url(#fig-prenasace-vodika-sip)" marker-start="url(#fig-prenasace-vodika-sip)"/><path class="koa" d="M484.8,63Q484.8,78 503.9,78" marker-start="url(#fig-prenasace-vodika-sip-koe)"/><rect class="koe" x="451.7" y="47" width="66.2" height="13" rx="2"/><text class="koet" x="484.8" y="56.8" text-anchor="middle">H⁻ (2 e⁻ + H⁺)</text>
+<text class="sub" x="506" y="118" text-anchor="middle">druhý H⁺ ostane v roztoku</text>
+<g class="rk" data-rk="fad" role="button" tabindex="0" aria-expanded="false"><title>Rozbaliť podrobnosti: FAD (oxidovaný)</title><rect class="rk-hit" x="316.7" y="223.9" width="150.6" height="101" rx="3"/><g class="mol" transform="translate(392,268) scale(0.82)"><g transform="translate(-31.8,0)"><path class="bd" d="M0.8,-20.7L-18.3,-9.7M-0.8,-23.3L-19.8,-12.3M-19.1,-11L-19.1,11M-18.3,9.7L0.8,20.7M-19.8,12.3L-0.8,23.3M0,22L19.1,11M17.5,11L17.5,-11M20.6,11L20.6,-11M19.1,-11L0,-22M19.1,-11L32.3,-18.7M44.7,-20L57.9,-12.3M43.1,-17.3L56.4,-9.7M57.2,-11L57.2,11M57.2,11L43.9,18.7M32.3,18.7L19.1,11M57.9,9.7L71.2,17.3M56.4,12.3L69.6,20M57.2,-11L76.2,-22M76.2,-22L89.5,-14.3M95.3,-5.2L95.3,11M95.3,11L82,18.7M-19.1,-11L-32.9,-19M-19.1,11L-32.9,19M38.1,27.8L38.1,38.2M74.7,-22L74.7,-38.2M77.8,-22L77.8,-38.2M96,9.7L109.7,17.5M94.5,12.3L108.1,20.2"/><text class="at hl" x="34" y="-18.4">N</text><text class="at" x="34" y="25.6">N</text><text class="at hl" x="72.1" y="25.6">N</text><text class="at" x="91.2" y="-7.4">NH</text><text class="at" x="-34.6" y="-18.4" text-anchor="end">H<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">C</tspan></text><text class="at" x="-34.6" y="25.6" text-anchor="end">H<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">C</tspan></text><text class="at" x="34.3" y="47.6">R</text><text class="at" x="72.5" y="-40.4">O</text><text class="at" x="110.6" y="25.6">O</text></g></g><text class="mn" x="392" y="319.1" text-anchor="middle">FAD (oxidovaný)</text><g class="rk-b"><circle cx="466" cy="226" r="6.3"/><path d="M462.9,226H469.1"/><path class="rk-v" d="M466,222.9V229.1"/></g></g>
+<g class="mol" transform="translate(612,268) scale(0.82)"><g transform="translate(-31.8,0)"><path class="bd" d="M0.8,-20.7L-18.3,-9.7M-0.8,-23.3L-19.8,-12.3M-19.1,-11L-19.1,11M-18.3,9.7L0.8,20.7M-19.8,12.3L-0.8,23.3M0,22L19.1,11M17.5,11L17.5,-11M20.6,11L20.6,-11M19.1,-11L0,-22M19.1,-11L32.3,-18.7M48.1,-16.2L57.2,-11M58.7,-11L58.7,11M55.6,-11L55.6,11M57.2,11L43.9,18.7M32.3,18.7L19.1,11M57.2,11L70.4,18.7M57.2,-11L76.2,-22M76.2,-22L89.5,-14.3M95.3,-5.2L95.3,11M95.3,11L86.3,16.2M-19.1,-11L-32.9,-19M-19.1,11L-32.9,19M38.1,27.8L38.1,38.2M74.7,-22L74.7,-38.2M77.8,-22L77.8,-38.2M96,9.7L109.7,17.5M94.5,12.3L108.1,20.2"/><text class="at hl" x="34" y="-18.4">NH</text><text class="at" x="34" y="25.6">N</text><text class="at hl" x="72.1" y="25.6">NH</text><text class="at" x="91.2" y="-7.4">NH</text><text class="at" x="-34.6" y="-18.4" text-anchor="end">H<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">C</tspan></text><text class="at" x="-34.6" y="25.6" text-anchor="end">H<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">C</tspan></text><text class="at" x="34.3" y="47.6">R</text><text class="at" x="72.5" y="-40.4">O</text><text class="at" x="110.6" y="25.6">O</text></g></g><text class="mn" x="612" y="319.1" text-anchor="middle">FADH₂ (redukovaný)</text>
+<path class="rx" d="M474.3,268L529.7,268" marker-end="url(#fig-prenasace-vodika-sip)" marker-start="url(#fig-prenasace-vodika-sip)"/><path class="koa" d="M492,253Q492,268 502,268" marker-start="url(#fig-prenasace-vodika-sip-koe)"/><rect class="koe" x="480.2" y="237" width="23.7" height="13" rx="2"/><text class="koet" x="492" y="246.8" text-anchor="middle">2 H</text>
+<text class="sub" x="502" y="356" text-anchor="middle">riboflavín (B₂); pevne viazaný v enzýme; vie prijať aj jeden elektrón</text>
+<g class="mol" transform="translate(400,448) scale(0.9)"><g transform="translate(3.6,0)"><path class="bd" d="M0,-22L-19.1,-11M-17.5,-11L-17.5,11M-20.6,-11L-20.6,11M-19.1,11L0,22M0,22L19.1,11M17.5,11L17.5,-11M20.6,11L20.6,-11M19.1,-11L0,-22M-1.5,-22L-1.5,-38.2M1.6,-22L1.6,-38.2M1.6,22L1.5,38.2M-1.5,22L-1.6,38.2M-19.1,-11L-32.7,-18.9M-19.1,11L-32.7,18.9M19.1,11L32.6,18.8M19.1,-11L32.9,-19"/><text class="at hl" x="-3.7" y="-40.4">O</text><text class="at hl" x="-3.7" y="47.6">O</text><text class="at" x="-34.4" y="-18.4" text-anchor="end">H<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">CO</tspan></text><text class="at" x="-34.4" y="25.6" text-anchor="end">H<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">CO</tspan></text><text class="at" x="34.3" y="25.6">R</text><text class="at" x="34.6" y="-18.4">CH<tspan class="ix" dy="2.6">3</tspan></text></g></g><text class="mn" x="400" y="503.1" text-anchor="middle">ubichinón</text><text class="ms" x="400" y="513.9" text-anchor="middle">(Q)</text>
+<g class="mol" transform="translate(604,448) scale(0.9)"><g transform="translate(3.6,0)"><path class="bd" d="M0.8,-20.7L-18.3,-9.7M-0.8,-23.3L-19.8,-12.3M-19.1,-11L-19.1,11M-18.3,9.7L0.8,20.7M-19.8,12.3L-0.8,23.3M0,22L19.1,11M17.5,11L17.5,-11M20.6,11L20.6,-11M19.1,-11L0,-22M0,-22L0,-38.2M0,22L0,38.2M-19.1,-11L-32.7,-18.9M-19.1,11L-32.7,18.9M19.1,11L32.6,18.8M19.1,-11L32.9,-19"/><text class="at hl" x="-3.7" y="-40.4">OH</text><text class="at hl" x="-3.7" y="47.6">OH</text><text class="at" x="-34.4" y="-18.4" text-anchor="end">H<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">CO</tspan></text><text class="at" x="-34.4" y="25.6" text-anchor="end">H<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">CO</tspan></text><text class="at" x="34.3" y="25.6">R</text><text class="at" x="34.6" y="-18.4">CH<tspan class="ix" dy="2.6">3</tspan></text></g></g><text class="mn" x="604" y="503.1" text-anchor="middle">ubichinol</text><text class="ms" x="604" y="513.9" text-anchor="middle">(QH₂)</text>
+<path class="rx" d="M466,448L538,448" marker-end="url(#fig-prenasace-vodika-sip)" marker-start="url(#fig-prenasace-vodika-sip)"/><path class="koa" d="M492,433Q492,448 502,448" marker-start="url(#fig-prenasace-vodika-sip-koe)"/><rect class="koe" x="480.2" y="417" width="23.7" height="13" rx="2"/><text class="koet" x="492" y="426.8" text-anchor="middle">2 H</text>
+<text class="sub" x="502" y="540" text-anchor="middle">R = dlhý izoprenoidný reťazec – drží molekulu v membráne</text>
+<path class="vz" d="M300,30 L300,540"/>
+<path class="rx" d="M14,564L36,564" marker-end="url(#fig-prenasace-vodika-sip)" marker-start="url(#fig-prenasace-vodika-sip)"/><text class="sub" x="43" y="567.3">vratná reakcia</text><rect class="koe" x="125" y="557.5" width="27.6" height="13" rx="2"/><text class="koet" x="138.8" y="567.3" text-anchor="middle">ATP</text><text class="sub" x="159.8" y="567.3">koenzým, kosubstrát</text><text class="at hl" x="271.6" y="567.6">O</text><text class="sub" x="290.6" y="567.3">skupina, o ktorú v reakcii ide</text><path class="vz" d="M439.8,564L461.8,564" marker-end="url(#fig-prenasace-vodika-sip-n)"/><text class="sub" x="468.8" y="567.3">iný vplyv, signál</text><g class="rk-b"><circle cx="20.5" cy="581" r="6.3"/><path d="M17.4,581H23.6"/><path class="rk-v" d="M20.5,577.9V584.1"/></g><text class="sub" x="33" y="584.3">klik rozbalí podrobnosti</text>
+
+<g class="rk-panel" data-rk-panel="fad" data-h="326" transform="translate(0,592)"><rect class="rk-bg" x="0" y="0" width="700" height="326"/><path class="rk-line" d="M0,.75H700"/><text class="rk-t" x="12" y="17">FAD celý: čo sa skrýva za písmenom R</text><g class="rk rk-x is-open" data-rk="fad" role="button" tabindex="0" aria-label="Zavrieť výrez"><title>Zavrieť</title><circle cx="686" cy="13" r="7.5"/><path d="M683,10l6,6m0,-6l-6,6"/></g>
+<g class="mol" transform="translate(196,168)"><g transform="translate(-105.2,-72.1)"><path class="bd" d="M0.8,-20.7L-18.3,-9.7M-0.8,-23.3L-19.8,-12.3M-19.1,-11L-19.1,11M-18.3,9.7L0.8,20.7M-19.8,12.3L-0.8,23.3M0,22L19.1,11M17.5,11L17.5,-11M20.6,11L20.6,-11M19.1,-11L0,-22M19.1,-11L32.3,-18.7M44.7,-20L57.9,-12.3M43.1,-17.3L56.4,-9.7M57.2,-11L57.2,11M57.2,11L43.9,18.7M32.3,18.7L19.1,11M57.9,9.7L71.2,17.3M56.4,12.3L69.6,20M57.2,-11L76.2,-22M76.2,-22L89.5,-14.3M95.3,-5.2L95.3,11M95.3,11L82,18.7M-19.1,-11L-32.9,-19M-19.1,11L-32.9,19M38.1,27.8L38.1,44M38.1,44L49.1,63.1M49.1,63.1L65.7,63.1M49.1,63.1L38.1,82.1M38.1,82.1L21.5,82.1M38.1,82.1L49.1,101.2M49.1,101.2L65.7,101.2M49.1,101.2L38.1,120.2M38.1,120.2L45.8,133.5M54.5,139.3L68.7,139.3M82.3,139.3L95.1,139.3M140.4,154.2L170.1,139M181,139L210.8,154.2M194.9,173.1L194.9,182.3M156.2,173.1L156.2,182.3M140.4,154.2L140.4,145.1M108.7,139.3L127.7,139.3M216.6,135L228.6,126.3M227.1,126.8L220.3,105.9M230,125.8L223.2,104.9M221.8,105.4L205.6,105.4M199.3,111.7L194.4,126.8M196.4,110.7L191.5,125.8M193,126.3L205,135M221.8,105.4L236.5,89.1M236.8,87.5L252.5,90.9M236.2,90.6L251.9,93.9M259.9,99.4L264.8,114.6M265.9,115.6L256.4,126.1M263.6,113.5L254.1,124.1M244.3,129.7L228.6,126.3M236.5,89.1L231.6,73.9M210.8,154.2L210.8,145.1M74.7,-22L74.7,-38.2M77.8,-22L77.8,-38.2M96,9.7L109.7,17.5M94.5,12.3L108.1,20.2"/><path class="bd bb" d="M194.9,173.1L156.2,173.1"/><path class="wg" d="M210.8,154.2L196.4,174.4L193.5,171.9z"/><path class="wg" d="M140.4,154.2L157.7,171.9L154.7,174.4z"/><text class="at hl" x="34" y="-18.4">N</text><text class="at" x="34" y="25.6">N</text><text class="at hl" x="72.1" y="25.6">N</text><text class="at" x="91.2" y="-7.4">NH</text><text class="at" x="-34.6" y="-18.4" text-anchor="end">H<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">C</tspan></text><text class="at" x="-34.6" y="25.6" text-anchor="end">H<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">C</tspan></text><text class="at" x="67.4" y="66.7">OH</text><text class="at" x="19.8" y="85.7" text-anchor="end">HO</text><text class="at" x="67.4" y="104.8">OH</text><text class="at" x="45.4" y="142.9">O</text><circle class="pc" cx="75.5" cy="139.3" r="6.2"/><text class="at pt" x="75.5" y="142.6" text-anchor="middle">P</text><circle class="pc" cx="101.9" cy="139.3" r="6.2"/><text class="at pt" x="101.9" y="142.6" text-anchor="middle">P</text><text class="at" x="171.8" y="139.8">O</text><text class="at" x="191.2" y="191.7">OH</text><text class="at" x="159.9" y="191.7" text-anchor="end">HO</text><text class="at" x="129.4" y="142.9">OCH<tspan class="ix" dy="2.6">2</tspan></text><text class="at" x="206.7" y="142.9">N</text><text class="at" x="195.7" y="109">N</text><text class="at" x="246" y="134.5">N</text><text class="at" x="253.9" y="97.2">N</text><text class="at" x="225.6" y="71.7">NH<tspan class="ix" dy="2.6">2</tspan></text><text class="at" x="72.5" y="-40.4">O</text><text class="at" x="110.6" y="25.6">O</text></g></g>
+<text class="rk-n" x="380" y="48"><tspan class="b">izoaloxazínový kruh</tspan> – pracovná časť; vodíky</text>
+<text class="rk-n" x="380" y="61">prijímajú dva modré dusíky</text>
+<text class="rk-n" x="380" y="96"><tspan class="b">+ ribitol</tspan> (otvorený päťuhlíkový alkohol)</text>
+<text class="rk-n" x="380" y="109">= riboflavín, vitamín B₂</text>
+<text class="rk-n" x="380" y="134"><tspan class="b">+ jeden fosfát</tspan> = FMN (koenzým komplexu I)</text>
+<text class="rk-n" x="380" y="164"><tspan class="b">+ AMP</tspan> (druhý fosfát a adenozín) = FAD</text>
+<text class="rk-n" x="380" y="204">Adenozín je rukoväť, tak ako v NAD⁺ a v koenzýme A.</text>
+<text class="rk-n" x="380" y="217">Na rozdiel od NAD⁺ flavín z enzýmu neodchádza –</text>
+<text class="rk-n" x="380" y="230">enzýmy s FAD alebo FMN sa volajú flavoproteíny.</text>
+</g>
+</svg>
+    <div class="rk-bar"><button type="button" class="rk-all" aria-pressed="false">+ Rozbaliť všetky podrobnosti (1)</button><span><i>+</i> v schéme rozbalí jednu časť</span></div>
+    <figcaption><b>Obr. 7.4 — Tri prenášače vodíka.</b> Vľavo celá molekula NAD⁺; pracuje len nikotínamidový kruh hore. Vpravo oxidované a redukované formy pracovných častí; modro sú atómy, ktoré vodík prijímajú. Krúžok pri flavíne rozbalí celý vzorec FAD.</figcaption>
+  </figure>
+
+  <table class="table keep" id="tab-7-3" style="margin:6px 0">
+    <thead><tr><th></th><th>NAD⁺ / NADH</th><th>FAD, FMN</th><th>Koenzým Q (ubichinón)</th></tr></thead>
+    <tbody>
+      <tr><td><b>Vitamín</b></td><td>niacín (B₃)</td><td>riboflavín (B₂)</td><td>—</td></tr>
+      <tr><td><b>Čo prijme</b></td><td>hydridový ión: dva elektróny a jeden protón; druhý protón ostane v roztoku</td><td>dva vodíky; vie aj po jednom elektróne</td><td>dva vodíky; aj po jednom</td></tr>
+      <tr><td><b>Väzba na enzým</b></td><td>voľný – putuje od enzýmu k enzýmu</td><td>pevne viazaný, súčasť enzýmu</td><td>voľný, ale len v membráne</td></tr>
+      <tr><td><b>Úloha</b></td><td>zbiera vodíky z dehydrogenáz matrix aj cytosolu</td><td>most medzi darcom dvoch elektrónov a prenášačmi jedného</td><td>zberné miesto elektrónov v reťazci</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>FMN</b> flavínmononukleotid – flavínový koenzým komplexu I</span></div>
+  </div>
+
+  <p>Flavíny sú stavané po vrstvách: kruh s ribitolom je riboflavín, s jedným fosfátom FMN, s pripojeným AMP FAD (výrez v Obr. 7.4). Enzým, ktorý má flavín pevne viazaný, sa volá flavoproteín.</p>
+
+  <p>NADP⁺ sa od NAD⁺ líši jedným fosfátom (šípka v Obr. 7.4) a tým, kam elektróny nesie (<a class="xref" href="05_pentozy_fruktoza_galaktoza.html#sec-5-3">→ 5.3 NADPH: redukčná sila bunky</a>). Ďalej v reťazci už elektróny nenesú organické molekuly, ale železo: v centrách železo–síra a v héme cytochrómov, kde sa strieda Fe²⁺ a Fe³⁺ – na rozdiel od hemoglobínu, v ktorom železo ostáva dvojmocné.</p>
+</div>
+
+<!-- ══ 7.4 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-7-4"><span class="n">7.4</span><span>Dýchací reťazec: spád, ktorý pumpuje protóny</span></h2>
+<div class="sec-body">
+  <p>Reťazec leží vo vnútornej membráne mitochondrie. Tá je – na rozdiel od vonkajšej, ktorá väčšinu malých molekúl prepustí – nepriepustná pre ióny vrátane protónov a je zriasená do záhybov (<i>kristy</i>), aby sa do nej reťazcov zmestilo čo najviac. Priestor medzi oboma membránami sa preto zložením podobá cytosolu; vnútro uzavreté vnútornou membránou je <i>matrix</i>. Štyri bielkovinové komplexy a dva pohyblivé prenášače sú zoradené podľa stúpajúceho redoxného potenciálu (Obr. 7.5).</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p>NADH → <b>I</b> → Q → <b>III</b> → cytochróm c → <b>IV</b> → O₂. Sukcinát vstupuje cez <b>II</b> až na Q. Pumpujú I (4 H⁺), III (4 H⁺), IV (2 H⁺); II nie → NADH 10 H⁺, FADH₂ 6.</p>
+    </div>
+  </div>
+
+  <figure class="chart keep" id="fig-dychaci-retazec">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 504" data-vb="0 0 700 504" role="img" aria-labelledby="t-dychaci-retazec">
+<title id="t-dychaci-retazec">Dýchací reťazec a ATP-syntáza vo vnútornej membráne mitochondrie. Komplex I prijíma elektróny z NADH, komplex II zo sukcinátu; oba ich odovzdávajú koenzýmu Q. Z koenzýmu Q idú cez komplex III na cytochróm c a cez komplex IV na kyslík, ktorý sa redukuje na vodu. Komplexy I a III prečerpajú na každý pár elektrónov po štyri protóny z matrix do medzimembránového priestoru, komplex IV dva; komplex II nepumpuje. Protóny sa vracajú cez ATP-syntázu, ktorá z ADP a fosfátu tvorí ATP. Inhibítory: rotenón a amobarbital blokujú komplex I, malonát komplex II, antimycín A komplex III, kyanid, oxid uhoľnatý, azid a sulfán komplex IV, oligomycín ATP-syntázu. Rozpojovače, napríklad dinitrofenol a termogenín, vracajú protóny mimo syntázy a energia sa uvoľní ako teplo. Redoxný potenciál stúpa od NADH (mínus 0,32 voltu) po kyslík (plus 0,82 voltu). Výrezy: stavba a chod ATP-syntázy, prenášače vnútri komplexov a spôsob, akým dinitrofenol prenáša protóny cez membránu.</title>
+<defs><marker id="fig-dychaci-retazec-sip" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk" d="M0,0L8,3.5L0,7z"/></marker><marker id="fig-dychaci-retazec-sip-koe" viewBox="0 0 7 6" refX="6.4" refY="3" markerWidth="7" markerHeight="6" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-koe" d="M0,0L7,3L0,6z"/></marker><marker id="fig-dychaci-retazec-sip-n" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-n" d="M0,0L8,3.5L0,7z"/></marker><marker id="fig-dychaci-retazec-sip-nv" viewBox="0 0 11 10" refX="4" refY="5" markerWidth="11" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-nv" d="M0,0L11,5L0,10z"/></marker><marker id="fig-dychaci-retazec-stop" viewBox="0 0 3 11" refX="1.5" refY="5.5" markerWidth="3" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path class="mk-inh" d="M1.5,0L1.5,11"/></marker></defs>
+<text class="cap" x="12" y="14">medzimembránový priestor · protóny sa tu hromadia (kyslejší, kladný)</text>
+<rect class="komp-m" x="14" y="150" width="672" height="64" rx="3"/>
+<text class="cap" x="12" y="378">matrix · zásaditejšia, záporná</text>
+<rect class="bx-c" x="50" y="128" width="84" height="128" rx="3"/><text class="lblb" x="92" y="176" text-anchor="middle">komplex I</text><text class="sub" x="92" y="190" text-anchor="middle">FMN · Fe-S</text>
+<g class="rk" data-rk="vnutri" role="button" tabindex="0" aria-expanded="false"><title>Rozbaliť podrobnosti: prenášače vnútri komplexov</title><g class="rk-b"><circle cx="134" cy="128" r="6.3"/><path d="M130.9,128H137.1"/><path class="rk-v" d="M134,124.9V131.1"/></g></g>
+<rect class="bx-c" x="178" y="170" width="76" height="86" rx="3"/><text class="lblb" x="216" y="204" text-anchor="middle">komplex II</text><text class="sub" x="216" y="218" text-anchor="middle">FAD · Fe-S</text>
+<a class="rk-a" href="#fig-prenasace-vodika"><title>Obr. 7.4: koenzým Q</title><rect class="bx-k" x="283" y="168" width="30" height="28" rx="3"/><text class="lblb" x="298" y="185.8" text-anchor="middle">Q</text><g class="rk-b rk-l"><circle cx="313" cy="168" r="6.3"/><path d="M309.8,168H316M313.6,165.4L316.2,168L313.6,170.6"/></g></a>
+<rect class="bx-c" x="342" y="128" width="84" height="110" rx="3"/><text class="lblb" x="384" y="176" text-anchor="middle">komplex III</text><text class="sub" x="384" y="190" text-anchor="middle">cyt b, c₁ · Fe-S</text>
+<circle class="bx-k" cx="454" cy="118" r="17"/><text class="lblb" x="454" y="122" text-anchor="middle">cyt c</text>
+<rect class="bx-c" x="482" y="128" width="84" height="110" rx="3"/><text class="lblb" x="524" y="176" text-anchor="middle">komplex IV</text><text class="sub" x="524" y="190" text-anchor="middle">cyt a, a₃ · Cu</text>
+<rect class="bx-m" x="606" y="128" width="72" height="150" rx="3"/><text class="lblb" x="642" y="176" text-anchor="middle">ATP-</text><text class="lblb" x="642" y="189" text-anchor="middle">syntáza</text><text class="sub" x="642" y="204" text-anchor="middle">F₀ · F₁</text>
+<g class="rk" data-rk="syntaza" role="button" tabindex="0" aria-expanded="false"><title>Rozbaliť podrobnosti: stavba a chod ATP-syntázy</title><g class="rk-b"><circle cx="678" cy="128" r="6.3"/><path d="M674.9,128H681.1"/><path class="rk-v" d="M678,124.9V131.1"/></g></g>
+<path class="rx" d="M92,292 L92,260" marker-end="url(#fig-dychaci-retazec-sip)"/><text class="lblb" x="92" y="306" text-anchor="middle">NADH → NAD⁺</text>
+<path class="rx" d="M216,292 L216,260" marker-end="url(#fig-dychaci-retazec-sip)"/><a class="rk-a" href="06_acetyl_coa_citratovy_cyklus.html#fig-citratovy-cyklus"><title>Kapitola 6: krok 6 citrátového cyklu</title><text class="lblb" x="216" y="305.8" text-anchor="middle">sukcinát → fumarát</text><g class="rk-b rk-l"><circle cx="282" cy="302" r="6.3"/><path d="M278.8,302H285M282.6,299.4L285.2,302L282.6,304.6"/></g></a>
+<path class="rx" d="M134,160 Q216,138 284,174" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<path class="rx" d="M254,196 L282,188" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<path class="rx" d="M314,182 L340,182" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<path class="rx" d="M410,128 Q420,112 436,116" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<path class="rx" d="M472,116 Q490,112 498,126" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<path class="rx" d="M524,240 L524,290" marker-end="url(#fig-dychaci-retazec-sip)"/><text class="lblb" x="524" y="306" text-anchor="middle">½ O₂ + 2 H⁺ → H₂O</text>
+<text class="sub" x="298" y="212" text-anchor="middle">koenzým Q</text>
+<a class="rk-a" href="#fig-clnky"><title>Obr. 7.6: glycerolfosfátový člnok</title><text class="lblb" x="232" y="67.6" text-anchor="middle">na Q idú aj elektróny z glycerol-3-fosfátu</text><text class="lblb" x="232" y="80.1" text-anchor="middle">a z β-oxidácie mastných kyselín</text><g class="rk-b rk-l"><circle cx="352" cy="66" r="6.3"/><path d="M348.8,66H355M352.6,63.4L355.2,66L352.6,68.6"/></g></a>
+<path class="vz" d="M298,88 L298,164" marker-end="url(#fig-dychaci-retazec-sip-n)"/>
+<path class="rx nv" d="M66,126 L66,86" marker-end="url(#fig-dychaci-retazec-sip-nv)"/><text class="lblb" x="78" y="96">4 H⁺</text>
+<path class="rx nv" d="M358,126 L358,86" marker-end="url(#fig-dychaci-retazec-sip-nv)"/><text class="lblb" x="370" y="96">4 H⁺</text>
+<path class="rx nv" d="M530,126 L530,86" marker-end="url(#fig-dychaci-retazec-sip-nv)"/><text class="lblb" x="542" y="96">2 H⁺</text>
+<text class="sub" x="216" y="234" text-anchor="middle">nepumpuje</text>
+<path class="rx nv" d="M642,84 L642,120" marker-end="url(#fig-dychaci-retazec-sip-nv)"/><text class="lblb" x="654" y="100">H⁺</text>
+<text class="lblb" x="642" y="296" text-anchor="middle">ADP + Pᵢ → ATP</text>
+<text class="t-inh" x="92" y="328" text-anchor="middle">↓ rotenón</text><text class="t-inh" x="92" y="340" text-anchor="middle">↓ amobarbital</text>
+<text class="t-inh" x="216" y="328" text-anchor="middle">↓ malonát</text>
+<text class="t-inh" x="384" y="256" text-anchor="middle">↓ antimycín A</text>
+<text class="t-inh" x="524" y="328" text-anchor="middle">↓ kyanid · CO</text><text class="t-inh" x="524" y="340" text-anchor="middle">↓ azid · sulfán</text>
+<text class="t-inh" x="642" y="316" text-anchor="middle">↓ oligomycín</text>
+<path class="vz" d="M586,84 L586,290" marker-end="url(#fig-dychaci-retazec-sip-n)"/>
+<text class="sub" x="582" y="356" text-anchor="end">rozpojovače (dinitrofenol, termogenín):</text>
+<text class="sub" x="582" y="368" text-anchor="end">H⁺ späť mimo syntázy → teplo</text>
+<g class="rk" data-rk="rozpoj" role="button" tabindex="0" aria-expanded="false"><title>Rozbaliť podrobnosti: ako rozpojovač prenáša protóny</title><g class="rk-b"><circle cx="596" cy="362" r="6.3"/><path d="M592.9,362H599.1"/><path class="rk-v" d="M596,358.9V365.1"/></g></g>
+<path class="vz" d="M586,292 L586,350"/>
+<path class="rx" d="M60,416 L640,416" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<text class="sub" x="60" y="406">redoxný potenciál E°′ stúpa – elektróny tečú „dolu kopcom“</text>
+<text class="lblb" x="92" y="434" text-anchor="middle">−0,32 V</text><text class="sub" x="92" y="446" text-anchor="middle">NAD⁺/NADH</text>
+<text class="lblb" x="454" y="434" text-anchor="middle">+0,22 V</text><text class="sub" x="454" y="446" text-anchor="middle">cytochróm c</text>
+<text class="lblb" x="600" y="434" text-anchor="middle">+0,82 V</text><text class="sub" x="600" y="446" text-anchor="middle">½ O₂/H₂O</text>
+<text class="sub" x="12" y="464">na pár elektrónov z NADH: 10 H⁺ · zo sukcinátu (FADH₂): 6 H⁺ · na jedno ATP v cytosole treba približne 4 H⁺</text>
+<path class="rx" d="M14,490L36,490" marker-end="url(#fig-dychaci-retazec-sip)"/><text class="sub" x="43" y="493.3">premena</text><path class="rx nv" d="M99.9,490L115.4,490" marker-end="url(#fig-dychaci-retazec-sip-nv)"/><text class="sub" x="128.9" y="493.3">nevratný (riadiaci) krok</text><path class="inh" d="M255.2,490L277.2,490" marker-end="url(#fig-dychaci-retazec-stop)"/><text class="t-inh" x="284.2" y="493.3">↓ inhibuje</text><path class="vz" d="M349.5,490L371.5,490" marker-end="url(#fig-dychaci-retazec-sip-n)"/><text class="sub" x="378.5" y="493.3">iný vplyv, signál</text><g class="rk-b"><circle cx="476.8" cy="490" r="6.3"/><path d="M473.7,490H479.9"/><path class="rk-v" d="M476.8,486.9V493.1"/></g><text class="sub" x="489.3" y="493.3">klik rozbalí podrobnosti</text><g class="rk-b rk-l"><circle cx="20.5" cy="507" r="6.3"/><path d="M17.3,507H23.5M21.1,504.4L23.7,507L21.1,509.6"/></g><text class="sub" x="33" y="510.3">klik: podrobná schéma</text>
+
+<g class="rk-panel" data-rk-panel="vnutri" data-h="214" transform="translate(0,504)"><rect class="rk-bg" x="0" y="0" width="700" height="214"/><path class="rk-line" d="M0,.75H700"/><text class="rk-t" x="12" y="17">Čo nesie elektróny vnútri komplexov</text><g class="rk rk-x is-open" data-rk="vnutri" role="button" tabindex="0" aria-label="Zavrieť výrez"><title>Zavrieť</title><circle cx="686" cy="13" r="7.5"/><path d="M683,10l6,6m0,-6l-6,6"/></g>
+<rect class="komp" x="92" y="38" width="118" height="52" rx="3"/><text class="cap" x="98" y="50">komplex I</text>
+<rect class="komp" x="92" y="112" width="118" height="52" rx="3"/><text class="cap" x="98" y="124">komplex II</text>
+<rect class="komp" x="322" y="38" width="130" height="52" rx="3"/><text class="cap" x="328" y="50">komplex III</text>
+<rect class="komp" x="538" y="38" width="118" height="52" rx="3"/><text class="cap" x="544" y="50">komplex IV</text>
+<rect class="bx-c" x="14" y="58.8" width="52" height="22.5" rx="3"/><text class="lblb" x="40" y="73.8" text-anchor="middle">NADH</text>
+<rect class="bx-k" x="103" y="58.8" width="96" height="22.5" rx="3"/><text class="lblb" x="151" y="73.8" text-anchor="middle">FMN → Fe–S</text>
+<rect class="bx-c" x="9" y="132.8" width="62" height="22.5" rx="3"/><text class="lblb" x="40" y="147.8" text-anchor="middle">sukcinát</text>
+<rect class="bx-k" x="103" y="132.8" width="96" height="22.5" rx="3"/><text class="lblb" x="151" y="147.8" text-anchor="middle">FAD → Fe–S</text>
+<rect class="bx-k" x="249" y="92" width="34" height="28" rx="3"/><text class="lblb" x="266" y="109.8" text-anchor="middle">Q</text>
+<rect class="bx-k" x="328" y="58.8" width="118" height="22.5" rx="3"/><text class="lblb" x="387" y="73.8" text-anchor="middle">cyt b · Fe–S · cyt c₁</text>
+<rect class="bx-k" x="472" y="56" width="46" height="28" rx="3"/><text class="lblb" x="495" y="73.8" text-anchor="middle">cyt c</text>
+<rect class="bx-k" x="545" y="58.8" width="104" height="22.5" rx="3"/><text class="lblb" x="597" y="73.8" text-anchor="middle">Cu · hém a · a₃</text>
+<rect class="bx-m" x="565.4" y="132.8" width="63.1" height="22.5" rx="3"/><text class="lblb" x="597" y="147.8" text-anchor="middle">O₂ → H₂O</text>
+<path class="rx" d="M70,70L99,70" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<path class="rx" d="M203,70L249,90" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<path class="rx" d="M75,144L99,144" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<path class="rx" d="M203,144L249,122" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<path class="rx" d="M283,90L324,70" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<path class="rx" d="M450,70L468,70" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<path class="rx" d="M522,70L541,70" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<path class="rx" d="M597,85.3L597,128.8" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<text class="rk-n" x="14" y="188"><tspan class="b">Po dvoch a po jednom.</tspan> NADH, flavíny (FMN, FAD) a koenzým Q nesú dva elektróny spolu s vodíkmi; železo v centrách Fe–S a v hémoch</text>
+<text class="rk-n" x="14" y="202">cytochrómov a meď len po jednom. Flavín a Q vedia oboje – preto stoja tam, kde sa dvojica elektrónov delí na jednotlivé.</text>
+</g>
+
+<g class="rk-panel" data-rk-panel="syntaza" data-h="318" transform="translate(0,504)"><rect class="rk-bg" x="0" y="0" width="700" height="318"/><path class="rk-line" d="M0,.75H700"/><text class="rk-t" x="12" y="17">ATP-syntáza: rotor v membráne, hlavica v matrix</text><g class="rk rk-x is-open" data-rk="syntaza" role="button" tabindex="0" aria-label="Zavrieť výrez"><title>Zavrieť</title><circle cx="686" cy="13" r="7.5"/><path d="M683,10l6,6m0,-6l-6,6"/></g>
+<text class="cap" x="20" y="40">medzimembránový priestor</text>
+<rect class="komp-m" x="20" y="86" width="300" height="58" rx="3"/>
+<text class="cap" x="20" y="162">matrix</text>
+<rect class="bx-m" x="120" y="80" width="100" height="70" rx="3"/>
+<path class="stk-n" d="M132.5,80 V150 M145,80 V150 M157.5,80 V150 M170,80 V150 M182.5,80 V150 M195,80 V150 M207.5,80 V150"/>
+<rect class="bx" x="162" y="150" width="16" height="52" rx="2"/>
+<circle class="bx-c" cx="140" cy="232" r="27"/><circle class="bx-c" cx="200" cy="232" r="27"/><circle class="bx-c" cx="170" cy="272" r="27"/>
+<text class="lblb" x="140" y="236" text-anchor="middle">1</text><text class="lblb" x="200" y="236" text-anchor="middle">2</text><text class="lblb" x="170" y="280" text-anchor="middle">3</text>
+<path class="rx nv" d="M106,52 L106,96 Q106,110 122,112" marker-end="url(#fig-dychaci-retazec-sip-nv)"/><text class="lblb" x="96" y="66" text-anchor="end">H⁺</text>
+<path class="rx nv" d="M218,120 Q236,122 236,138 L236,172" marker-end="url(#fig-dychaci-retazec-sip-nv)"/><text class="lblb" x="246" y="170">H⁺</text>
+<path class="koa" d="M128,72 Q170,54 212,72" marker-end="url(#fig-dychaci-retazec-sip-koe)"/>
+<text class="sub" x="226" y="66">otáča sa</text>
+<text class="lblb" x="286" y="120" text-anchor="middle">F₀</text>
+<text class="sub" x="186" y="182">os</text>
+<text class="lblb" x="256" y="256" text-anchor="middle">F₁</text>
+<text class="rk-n" x="340" y="52"><tspan class="b">F₀ – rotor v membráne.</tspan> Prstenec rovnakých podjednotiek; protóny</text>
+<text class="rk-n" x="340" y="65">ním pretekajú z kyslej strany do matrix a otáčajú ho. Kanál</text>
+<text class="rk-n" x="340" y="78">upcháva oligomycín.</text>
+<text class="rk-n" x="340" y="102"><tspan class="b">Os</tspan> je s prstencom spojená a otáča sa vnútri hlavice.</text>
+<text class="rk-n" x="340" y="126"><tspan class="b">F₁ – hlavica v matrix.</tspan> Tri katalytické miesta (1–3) sú vždy</text>
+<text class="rk-n" x="340" y="139">v troch rôznych stavoch: jedno viaže ADP + Pᵢ, druhé ich pevne</text>
+<text class="rk-n" x="340" y="152">drží spojené ako ATP, tretie hotový ATP púšťa. Pootočenie osi</text>
+<text class="rk-n" x="340" y="165">posunie každé miesto o stav ďalej.</text>
+<text class="rk-n" x="340" y="189"><tspan class="b">Na čo ide energia.</tspan> Samotná väzba vznikne v pevnom zovretí</text>
+<text class="rk-n" x="340" y="202">takmer zadarmo; protóny platia za to, že enzým ATP pustí.</text>
+<text class="rk-n" x="340" y="226"><tspan class="b">Účet.</tspan> Jedna otáčka = 3 ATP. Prstenec stavovcov má 8 podjednotiek,</text>
+<text class="rk-n" x="340" y="239">teda 8 H⁺ na otáčku (≈ 2,7 na ATP). Ďalší ≈ 1 H⁺ stojí dovoz</text>
+<text class="rk-n" x="340" y="252">fosfátu a výmena ADP za ATP – spolu približne 4 H⁺ na ATP,</text>
+<text class="rk-n" x="340" y="265">s ktorými rátajú učebnice.</text>
+<text class="rk-n" x="340" y="289">Výmenu ADP za ATP robí translokáza; brzdí ju atraktylozid.</text>
+</g>
+
+<g class="rk-panel" data-rk-panel="rozpoj" data-h="284" transform="translate(0,504)"><rect class="rk-bg" x="0" y="0" width="700" height="284"/><path class="rk-line" d="M0,.75H700"/><text class="rk-t" x="12" y="17">Rozpojovač: ako dinitrofenol prevezie protón mimo syntázy</text><g class="rk rk-x is-open" data-rk="rozpoj" role="button" tabindex="0" aria-label="Zavrieť výrez"><title>Zavrieť</title><circle cx="686" cy="13" r="7.5"/><path d="M683,10l6,6m0,-6l-6,6"/></g>
+<rect class="komp-m" x="318" y="34" width="64" height="210" rx="3"/>
+<text class="cap" x="350" y="48" text-anchor="middle">membrána</text>
+<text class="cap" x="20" y="48">medzimembránový priestor · veľa H⁺</text>
+<text class="cap" x="680" y="48" text-anchor="end">matrix · málo H⁺</text>
+<g class="mol" transform="translate(170,92)"><g transform="translate(1.6,-12.7)"><path class="bd" d="M22,0L11,19.1M18,0.7L9.6,15.3M11,19.1L-11,19.1M-11,19.1L-22,0M-9.6,15.3L-18,0.7M-22,0L-11,-19.1M-11,-19.1L11,-19.1M-8.4,-16L8.4,-16M11,-19.1L22,0M22,0L38.6,0M11,19.1L18.7,32.3M-22,0L-38.2,0"/><text class="at hl" x="40.3" y="3.6">OH</text><text class="at" x="17.9" y="41.7">NO<tspan class="ix" dy="2.6">2</tspan></text><text class="at" x="-39.9" y="3.6" text-anchor="end">O<tspan class="ix" dy="2.6">2</tspan><tspan dy="-2.6">N</tspan></text></g></g>
+<g class="mol" transform="translate(530,92)"><g transform="translate(1.6,-12.7)"><path class="bd" d="M22,0L11,19.1M18,0.7L9.6,15.3M11,19.1L-11,19.1M-11,19.1L-22,0M-9.6,15.3L-18,0.7M-22,0L-11,-19.1M-11,-19.1L11,-19.1M-8.4,-16L8.4,-16M11,-19.1L22,0M22,0L38.6,0M11,19.1L18.7,32.3M-22,0L-38.2,0"/><text class="at hl" x="40.3" y="3.6">OH</text><text class="at" x="17.9" y="41.7">NO<tspan class="ix" dy="2.6">2</tspan></text><text class="at" x="-39.9" y="3.6" text-anchor="end">O<tspan class="ix" dy="2.6">2</tspan><tspan dy="-2.6">N</tspan></text></g></g>
+<g class="mol" transform="translate(530,206)"><g transform="translate(3.9,-12.7)"><path class="bd" d="M22,0L11,19.1M18,0.7L9.6,15.3M11,19.1L-11,19.1M-11,19.1L-22,0M-9.6,15.3L-18,0.7M-22,0L-11,-19.1M-11,-19.1L11,-19.1M-8.4,-16L8.4,-16M11,-19.1L22,0M22,0L38.6,0M11,19.1L18.7,32.3M-22,0L-38.2,0"/><text class="at hl" x="40.3" y="3.6">O<tspan class="ix" dy="-3.9">−</tspan></text><text class="at" x="17.9" y="41.7">NO<tspan class="ix" dy="2.6">2</tspan></text><text class="at" x="-39.9" y="3.6" text-anchor="end">O<tspan class="ix" dy="2.6">2</tspan><tspan dy="-2.6">N</tspan></text></g></g>
+<g class="mol" transform="translate(170,206)"><g transform="translate(3.9,-12.7)"><path class="bd" d="M22,0L11,19.1M18,0.7L9.6,15.3M11,19.1L-11,19.1M-11,19.1L-22,0M-9.6,15.3L-18,0.7M-22,0L-11,-19.1M-11,-19.1L11,-19.1M-8.4,-16L8.4,-16M11,-19.1L22,0M22,0L38.6,0M11,19.1L18.7,32.3M-22,0L-38.2,0"/><text class="at hl" x="40.3" y="3.6">O<tspan class="ix" dy="-3.9">−</tspan></text><text class="at" x="17.9" y="41.7">NO<tspan class="ix" dy="2.6">2</tspan></text><text class="at" x="-39.9" y="3.6" text-anchor="end">O<tspan class="ix" dy="2.6">2</tspan><tspan dy="-2.6">N</tspan></text></g></g>
+<path class="rx" d="M242,92L458,92" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<path class="rx" d="M460.3,206L239.7,206" marker-end="url(#fig-dychaci-retazec-sip)"/>
+<path class="rx" d="M560,127.7L560,170.3" marker-end="url(#fig-dychaci-retazec-sip)"/><path class="koa" d="M560,149Q560,159 575,159" marker-end="url(#fig-dychaci-retazec-sip-koe)"/><rect class="koe" x="578" y="152.5" width="19.3" height="13" rx="2"/><text class="koet" x="587.7" y="162.3" text-anchor="middle">H⁺</text>
+<path class="rx" d="M140,170.3L140,127.7" marker-end="url(#fig-dychaci-retazec-sip)"/><path class="koa" d="M125,159Q140,159 140,149"/><rect class="koe" x="102.7" y="152.5" width="19.3" height="13" rx="2"/><text class="koet" x="112.3" y="162.3" text-anchor="middle">H⁺</text>
+<text class="lblb" x="350" y="154" text-anchor="middle">⟳</text>
+<text class="sub" x="60" y="152" text-anchor="middle">prijme protón</text>
+<text class="sub" x="646" y="152" text-anchor="middle">odovzdá ho</text>
+<text class="rk-n" x="14" y="262">Dinitrofenol je slabá kyselina rozpustná v tukoch: s protónom aj bez neho prejde membránou. Každý obeh prenesie jeden H⁺ dnu bez toho,</text>
+<text class="rk-n" x="14" y="275">aby prešiel syntázou – gradient sa vybíja, reťazec zrýchli a energia sa uvoľní ako teplo. Termogenín robí to isté ako bielkovinový kanál.</text>
+</g>
+</svg>
+    <div class="rk-bar"><button type="button" class="rk-all" aria-pressed="false">+ Rozbaliť všetky podrobnosti (3)</button><span><i>+</i> v schéme rozbalí jednu časť</span><span><i class="l">→</i> skočí na podrobnú schému</span></div>
+    <figcaption><b>Obr. 7.5 — Dýchací reťazec a ATP-syntáza.</b> Tenké šípky sú cesta elektrónov, hrubé cesta protónov. Červeno sú inhibítory pri mieste, ktoré blokujú. Dolná os ukazuje, že každý ďalší člen má vyšší redoxný potenciál. Tri miesta sa dajú rozkliknúť: vnútro komplexov, ATP-syntáza a rozpojovač.</figcaption>
+  </figure>
+
+  <div class="box k-zap aside keep">
+    <div class="label">Zapamätaj</div>
+    <div class="body">
+      <p><b>Cytochróm c mimo reťazca.</b> Keď sa naruší vonkajšia membrána a cytochróm c unikne do cytosolu, spustí tam kaskádu proteáz – kaspáz – a bunka riadene zanikne (<i>apoptóza</i>). Prenášač elektrónov je tak zároveň signálom, že mitochondria je poškodená.</p>
+    </div>
+  </div>
+
+  <div class="box k-mech keep">
+    <div class="label">Štyri komplexy a dva spoje</div>
+    <div class="body">
+      <ul>
+    <li><b>Komplex I</b> (NADH-Q-oxidoreduktáza). Prevezme z NADH dva elektróny, cez FMN a centrá železo–síra ich odovzdá koenzýmu Q a prečerpá 4 H⁺.</li>
+    <li><b>Komplex II</b> je sukcinátdehydrogenáza z citrátového cyklu. Elektróny zo sukcinátu idú cez FAD a železo–síru tiež na Q. Energie je tu málo – nepumpuje.</li>
+    <li><b>Koenzým Q</b> zbiera elektróny z oboch komplexov a z ďalších flavoproteínov membrány: z glycerol-3-fosfátdehydrogenázy (<a class="xref" href="#sec-7-7">→ 7.7</a>) a z prvého kroku β-oxidácie MK.</li>
+    <li><b>Komplex III</b> (Q-cytochróm-c-oxidoreduktáza). Z redukovaného Q prenesie elektróny na cytochróm c a prečerpá 4 H⁺.</li>
+    <li><b>Cytochróm c</b> je malá bielkovina na vonkajšom povrchu membrány; nosí po jednom elektróne.</li>
+    <li><b>Komplex IV</b> (cytochróm-c-oxidáza) má hémy a a a₃ a meď. Štyri elektróny odovzdá molekule kyslíka: O₂ + 4 e⁻ + 4 H⁺ → 2 H₂O. Na pár elektrónov prečerpá 2 H⁺. Je to jediné miesto, kde sa dýchaný kyslík spotrebúva.</li>
+  </ul>
+    </div>
+  </div>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>MK</b> mastná kyselina</span></div>
+  </div>
+
+  <p>Miesto vstupu rozhoduje o výnose. Elektróny z NADH prejdú cez tri pumpy, elektróny z FADH₂ prvú obídu. To je celý dôvod, prečo FADH₂ „stojí“ menej ATP (<a class="xref" href="06_acetyl_coa_citratovy_cyklus.html#sec-6-3">→ 6.3 Koleso: osem krokov citrátového cyklu</a>).</p>
+
+  <div class="rev keep">
+    <div class="label"><span class="r">R</span>Revízia — komplexy nie sú osamelé ostrovy</div>
+    <div class="body">
+      <p><b>Kedysi:</b> štyri komplexy sa kreslili ako samostatné častice, ktoré v membráne voľne plávajú a elektróny si odovzdávajú pri náhodných stretnutiach. <b>Dnes:</b> kryoelektrónová mikroskopia ukázala, že sa v membráne spájajú do väčších celkov, <i>superkomplexov</i>. Aký to má význam pre rýchlosť a riadenie reťazca, sa ešte skúma; poradie prenosu elektrónov ani počty protónov sa tým nemenia.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 7.5 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-7-5"><span class="n">7.5</span><span>Oxidačná fosforylácia: priehrada a turbína</span></h2>
+<div class="sec-body">
+  <p>Reťazec sám ATP netvorí. Jeho výsledkom je rozdiel koncentrácie protónov a náboja na dvoch stranách membrány; ATP vzniká až pri ich návrate. Sekcia opíše tento princíp, enzým, ktorý ho využíva, a nakoniec spočíta výnos.</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p><b>Chemiosmotický princíp</b>: prenos elektrónov a syntézu ATP nespája chemický medziprodukt, ale <b>protónový gradient</b>. ATP-syntáza je rotor poháňaný prúdom H⁺. Výnos: <b>≈ 2,5 ATP na NADH, ≈ 1,5 na FADH₂</b> (staršie 3 a 2).</p>
+    </div>
+  </div>
+
+  <div class="box k-mech keep">
+    <div class="label">Od gradientu k ATP</div>
+    <div class="body">
+      <ol>
+    <li>Pumpy vytlačia H⁺ z matrix. Vonku je kyslejšie a kladnejšie; rozdiel pH a rozdiel náboja spolu tvoria <i>protónmotívnu silu</i>.</li>
+    <li>Membrána protóny späť nepustí. Jediná cesta vedie cez <b>ATP-syntázu</b>.</li>
+    <li>Syntáza má dve časti. <b>F₀</b> v membráne je kanál s prstencom podjednotiek, ktorý sa prúdom protónov otáča. <b>F₁</b> v matrix má tri katalytické miesta; do jej stredu zasahuje os spojená s prstencom.</li>
+    <li>Otáčanie osi mení tvar katalytických miest: miesto ADP a fosfát naviaže, spojí a hotové ATP uvoľní. V každej chvíli je každé z troch miest v inom z týchto stavov. Energiu si žiada najmä uvoľnenie ATP, nie vznik väzby (výrez v Obr. 7.5).</li>
+  </ol>
+    </div>
+  </div>
+
+  <p>Mechanizmus vysvetľuje dve pozorovania, ktoré by inak boli záhadou: prečo syntéza ATP potrebuje neporušenú, uzavretú membránu a prečo látka, ktorá membránu pre protóny „prederaví“, zastaví tvorbu ATP, hoci enzýmy nepoškodí (<a class="xref" href="#sec-7-8">→ 7.8</a>).</p>
+
+  <h3 class="sub-h" id="sub-7-5-1"><span class="n">7.5.1</span>Bilancia: koľko ATP za pár elektrónov</h3>
+  <p>Výnos sa udáva ako pomer P/O – počet ATP na jeden atóm kyslíka, teda na pár elektrónov. Ráta sa z protónov.</p>
+
+  <table class="table keep" id="tab-7-4" style="margin:6px 0">
+    <thead><tr><th>Darca</th><th>H⁺ prečerpané</th><th>H⁺ na 1 ATP</th><th>ATP (pomer P/O)</th><th>Predpoklad</th></tr></thead>
+    <tbody>
+      <tr><td><b>NADH (cez komplex I)</b></td><td>4 + 4 + 2 = 10</td><td>≈ 4</td><td><b>≈ 2,5</b></td><td>≈ 3 H⁺ pretečú syntázou, ≈ 1 H⁺ stojí dovoz fosfátu a výmena ADP za ATP</td></tr>
+      <tr><td><b>FADH₂ (cez Q)</b></td><td>4 + 2 = 6</td><td>≈ 4</td><td><b>≈ 1,5</b></td><td>to isté</td></tr>
+    </tbody>
+  </table>
+
+  <p>Zo 220 kJ, ktoré uvoľní oxidácia jedného mólu NADH, sa v 2,5 mol ATP zachytí asi 76 kJ, teda zhruba 35 až 40 %. Zvyšok je teplo – nie strata, ale hlavný zdroj telesnej teploty.</p>
+
+  <div class="rev keep">
+    <div class="label"><span class="r">R</span>Revízia — 3 a 2, alebo 2,5 a 1,5?</div>
+    <div class="body">
+      <p><b>Kedysi:</b> na NADH sa rátali tri ATP a na FADH₂ dve – celé čísla, akoby každý komplex „vyrobil“ jedno ATP. S nimi vychádzalo 12 ATP na otáčku citrátového cyklu a 36–38 na glukózu. <b>Dnes:</b> výnos sa odvodzuje z počtu protónov, a tie na celé ATP nevychádzajú: približne <b>2,5 a 1,5</b>. Odtiaľ 10 ATP na otáčku a 30–32 na glukózu (<a class="xref" href="04_metabolizmus_glukozy.html#sec-4-4">→ 4.4 Bilancia glykolýzy</a>). Ani to nie sú presné konštanty: rotor syntázy stavovcov má osem podjednotiek a na jednu otáčku, teda tri ATP, treba osem protónov – skutočný výnos je preto o niečo vyšší než 2,5. Na skúške aj v učebniciach platí 2,5 a 1,5.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 7.6 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-7-6"><span class="n">7.6</span><span>Regulácia: tempo určuje spotreba ATP</span></h2>
+<div class="sec-body">
+  <p>Reťazec nemá hormón ani kinázu, ktorá by ho zapínala. Riadi ho to, že je so syntázou <i>spriahnutý</i>: jedno bez druhého nebeží. Sekcia ukáže túto slučku a potom to, ako sa prejaví v štyroch stavoch bunky.</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p><b>Respiračná kontrola</b>: bez ADP sa H⁺ nevracajú → gradient narastie → pumpy nevládzu → prenos elektrónov a spotreba O₂ sa spomalí → NADH sa hromadí → brzdí cyklus aj bránu. Viac práce → viac ADP → všetko zrýchli.</p>
+    </div>
+  </div>
+
+  <div class="box k-reg keep">
+    <div class="label">Riadiacim „krokom“ je dostupnosť ADP</div>
+    <div class="body">
+      <ul>
+    <li>ATP-syntáza potrebuje ADP a fosfát. Keď bunka ATP nemíňa, ADP dôjde a syntáza zastane.</li>
+    <li>Protóny sa nemajú kadiaľ vrátiť, gradient stúpne na maximum a pumpy proti nemu už nedokážu čerpať. Elektróny v reťazci stoja, kyslík sa nespotrebúva.</li>
+    <li>NADH sa nemá kde oxidovať. Jeho nadbytok pribrzdí izocitrátdehydrogenázu, ďalšie dehydrogenázy cyklu a pyruvátdehydrogenázový komplex (<a class="xref" href="06_acetyl_coa_citratovy_cyklus.html#sec-6-5">→ 6.5 Regulácia kolesa</a>).</li>
+  </ul>
+    </div>
+  </div>
+
+  <p class="chain">sval začne pracovať → ATP → ADP + Pᵢ → syntáza má substrát → H⁺ pretekajú → gradient klesne → pumpy a prenos elektrónov zrýchlia → ↑ spotreba O₂<br>
+    → NADH sa oxiduje → citrátový cyklus a glykolýza zrýchlia → ATP sa doplní → ADP klesne → dej sa spomalí ⟳</p>
+
+  <p>Jedna premenná – ADP – tak spája spotrebu kyslíka v pľúcach s prácou svalu. Tkanivo teda neberie viac kyslíka preto, že ho má viac k dispozícii, ale preto, že míňa ATP.</p>
+
+  <table class="table keep" id="tab-7-5" style="margin:6px 0">
+    <thead><tr><th>Stav</th><th>Čo obmedzuje tempo</th><th>Spotreba O₂</th><th>Tvorba ATP</th><th>Teplo</th></tr></thead>
+    <tbody>
+      <tr><td><b><b>pokoj</b></b></td><td>málo ADP</td><td>nízka</td><td>nízka, zodpovedá potrebe</td><td>základné</td></tr>
+      <tr><td><b><b>práca</b></b></td><td>kapacita reťazca a prísun paliva</td><td>vysoká</td><td>vysoká</td><td>vyššie – svalová triaška využíva práve toto</td></tr>
+      <tr><td><b><b>nedostatok O₂</b></b></td><td>chýba príjemca elektrónov</td><td>nulová</td><td>len glykolýza → laktát (<a class="xref" href="04_metabolizmus_glukozy.html#sub-4-8-2">→ 4.8.2 Laktátová acidóza: tvorba prevýši odber</a>)</td><td>klesá</td></tr>
+      <tr><td><b><b>rozpojenie</b></b></td><td>nič – gradient sa vybíja mimo syntázy</td><td>najvyššia</td><td>nízka až nulová</td><td>veľmi vysoké</td></tr>
+    </tbody>
+  </table>
+
+  <p>V pokusoch s izolovanými mitochondriami sa tie isté situácie označujú číslami. <i>Stav 3</i> je rýchle dýchanie, keď je substrátu aj ADP nadbytok a tempo obmedzuje len kapacita reťazca. <i>Stav 4</i> je pomalé dýchanie po vyčerpaní ADP – v ňom je väčšina buniek v pokoji. <i>Stav 5</i> je zastavenie pre nedostatok kyslíka. Stavy 1 a 2 sú východiskové: mitochondriám chýba substrát.</p>
+
+  <div class="box k-mech keep">
+    <div class="label">Ako telo zaznamená, že kyslíka ubúda</div>
+    <div class="body">
+      <ul>
+    <li><b>Za sekundy – karotické teliesko</b> pri vetvení krčnej tepny. Pokles kyslíka zatvorí v jeho bunkách draslíkové kanály; bunka sa depolarizuje, vstúpi do nej Ca²⁺ a uvoľnený prenášač podráždi nerv, ktorý zrýchli dýchanie.</li>
+    <li><b>Za hodiny – každá bunka</b> zmenou prepisu génov. Faktor HIF-1α sa pri dostatku kyslíka neustále hydroxyluje na prolíne; bielkovina VHL ho podľa tejto značky pošle na rozklad. Bez kyslíka hydroxylázy nepracujú, HIF-1α sa hromadí a zapne gény pre erytropoetín, nové cievy a prestavbu metabolizmu (<a class="xref" href="06_acetyl_coa_citratovy_cyklus.html#sub-6-7-3">→ 6.7.3 Onkometabolity: keď medziprodukt mení gény</a>).</li>
+  </ul>
+    </div>
+  </div>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>HIF</b> transkripčný faktor indukovaný hypoxiou (<i>hypoxia-inducible factor</i>)</span></div>
+  </div>
+</div>
+
+<!-- ══ 7.7 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-7-7"><span class="n">7.7</span><span>Dovoz a vývoz: prenášače a člnky</span></h2>
+<div class="sec-body">
+  <p>Nepriepustnosť vnútornej membrány je podmienkou gradientu, no zároveň prekážkou: ATP vzniká vnútri a treba ho vonku, a NADH z glykolýzy vzniká vonku a reťazec je vnútri. Sekcia prejde najprv prenos nukleotidov a potom dve cesty pre elektróny cytosolového NADH.</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p>ADP dnu a ATP von vymieňa translokáza. NADH membránou neprejde – jeho elektróny nesú <b>člnky</b>: malát-aspartátový ich odovzdá matrixovému NAD⁺ (≈ 2,5 ATP), glycerolfosfátový rovno koenzýmu Q (≈ 1,5 ATP).</p>
+    </div>
+  </div>
+
+  <p>ATP z matrix vynáša a ADP dováža <i>translokáza adenínových nukleotidov</i> – jedno za jedno; brzdí ju jed atraktylozid, ktorý tak zastaví oxidačnú fosforyláciu bez toho, aby sa dotkol reťazca či syntázy. Fosfát má vlastný prenášač a vstupuje spolu s protónom; to je ten „štvrtý“ protón z bilancie (<a class="xref" href="#sub-7-5-1">→ 7.5.1</a>).</p>
+
+  <p>Pre NADH prenášač neexistuje. Bunka preto neprenáša koenzým, ale len jeho vodíky – na malej molekule, ktorá membránou prejde alebo sa oxiduje priamo na jej povrchu (Obr. 7.6).</p>
+
+  <figure class="chart keep" id="fig-clnky">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 590" role="img" aria-labelledby="t-clnky">
+<title id="t-clnky">Dva člnky, ktoré prenášajú elektróny cytosolového NADH do mitochondrie. Glycerolfosfátový člnok: cytosolová dehydrogenáza redukuje dihydroxyacetónfosfát na glycerol-3-fosfát a spotrebuje NADH; mitochondriová dehydrogenáza na vonkajšej strane vnútornej membrány ho oxiduje späť a elektróny odovzdá cez FAD koenzýmu Q, výnos je približne 1,5 ATP. Malát-aspartátový člnok: v cytosole sa oxalacetát redukuje pomocou NADH na malát, ten prejde do matrix výmenou za 2-oxoglutarát a tam sa oxiduje späť na oxalacetát, pričom vzniká NADH pre komplex I, výnos je približne 2,5 ATP. Oxalacetát cez membránu neprejde, preto sa transaminuje na aspartát, ktorý sa vráti do cytosolu výmenou za glutamát a tam sa zmení späť na oxalacetát.</title>
+<defs><marker id="fig-clnky-sip" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk" d="M0,0L8,3.5L0,7z"/></marker><marker id="fig-clnky-sip-koe" viewBox="0 0 7 6" refX="6.4" refY="3" markerWidth="7" markerHeight="6" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-koe" d="M0,0L7,3L0,6z"/></marker><marker id="fig-clnky-sip-n" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-n" d="M0,0L8,3.5L0,7z"/></marker></defs>
+<g transform="translate(0,-196)">
+<text class="cap" x="12" y="216">malát-aspartátový člnok · pečeň, srdce, oblička · ≈ 2,5 ATP na NADH</text>
+<rect class="komp-m" x="340" y="226" width="20" height="340" rx="2"/>
+<text class="cap" x="330" y="244" text-anchor="end">cytosol</text>
+<text class="cap" x="370" y="244">matrix</text>
+<g class="mol" transform="translate(84,318) scale(0.78)"><g transform="translate(9.5,-5.5)"><path class="bd" d="M-1.5,0L-1.5,-16.2M1.6,0L1.6,-16.2M0,0L19.1,11M20.6,11L20.6,27.2M17.5,11L17.5,27.2M19.1,11L32.7,3.1M0,0L-19.1,11M-19.1,11L-38.1,0M-39.7,0L-39.7,-16.2M-36.6,0L-36.6,-16.2M-38.1,0L-51.7,7.9"/><text class="at" x="-3.7" y="-18.4">O</text><text class="at" x="15.3" y="36.6">O</text><text class="at" x="34.4" y="3.6">O<tspan class="ix" dy="-3.9">−</tspan></text><text class="at" x="-41.8" y="-18.4">O</text><text class="at" x="-53.4" y="14.6" text-anchor="end"><tspan class="ix" dy="-3.9">−</tspan><tspan dy="3.9">O</tspan></text></g></g><text class="mn" x="84" y="354.2" text-anchor="middle">oxalacetát</text>
+<g class="mol" transform="translate(258,318) scale(0.78)"><g transform="translate(9.5,-5.5)"><path class="bd" d="M0,0L0,-16.2M0,0L19.1,11M20.6,11L20.6,27.2M17.5,11L17.5,27.2M19.1,11L32.7,3.1M0,0L-19.1,11M-19.1,11L-38.1,0M-39.7,0L-39.7,-16.2M-36.6,0L-36.6,-16.2M-38.1,0L-51.7,7.9"/><text class="at" x="-3.7" y="-18.4">OH</text><text class="at" x="15.3" y="36.6">O</text><text class="at" x="34.4" y="3.6">O<tspan class="ix" dy="-3.9">−</tspan></text><text class="at" x="-41.8" y="-18.4">O</text><text class="at" x="-53.4" y="14.6" text-anchor="end"><tspan class="ix" dy="-3.9">−</tspan><tspan dy="3.9">O</tspan></text></g></g><text class="mn" x="258" y="354.2" text-anchor="middle">malát</text>
+<g class="mol" transform="translate(446,318) scale(0.78)"><g transform="translate(9.5,-5.5)"><path class="bd" d="M0,0L0,-16.2M0,0L19.1,11M20.6,11L20.6,27.2M17.5,11L17.5,27.2M19.1,11L32.7,3.1M0,0L-19.1,11M-19.1,11L-38.1,0M-39.7,0L-39.7,-16.2M-36.6,0L-36.6,-16.2M-38.1,0L-51.7,7.9"/><text class="at" x="-3.7" y="-18.4">OH</text><text class="at" x="15.3" y="36.6">O</text><text class="at" x="34.4" y="3.6">O<tspan class="ix" dy="-3.9">−</tspan></text><text class="at" x="-41.8" y="-18.4">O</text><text class="at" x="-53.4" y="14.6" text-anchor="end"><tspan class="ix" dy="-3.9">−</tspan><tspan dy="3.9">O</tspan></text></g></g><text class="mn" x="446" y="354.2" text-anchor="middle">malát</text>
+<g class="mol" transform="translate(616,318) scale(0.78)"><g transform="translate(9.5,-5.5)"><path class="bd" d="M-1.5,0L-1.5,-16.2M1.6,0L1.6,-16.2M0,0L19.1,11M20.6,11L20.6,27.2M17.5,11L17.5,27.2M19.1,11L32.7,3.1M0,0L-19.1,11M-19.1,11L-38.1,0M-39.7,0L-39.7,-16.2M-36.6,0L-36.6,-16.2M-38.1,0L-51.7,7.9"/><text class="at" x="-3.7" y="-18.4">O</text><text class="at" x="15.3" y="36.6">O</text><text class="at" x="34.4" y="3.6">O<tspan class="ix" dy="-3.9">−</tspan></text><text class="at" x="-41.8" y="-18.4">O</text><text class="at" x="-53.4" y="14.6" text-anchor="end"><tspan class="ix" dy="-3.9">−</tspan><tspan dy="3.9">O</tspan></text></g></g><text class="mn" x="616" y="354.2" text-anchor="middle">oxalacetát</text>
+<path class="rx" d="M136.7,318L205.3,318" marker-end="url(#fig-clnky-sip)"/><text class="enz" x="171" y="296.4" text-anchor="middle">malát-</text><text class="enz" x="171" y="307.9" text-anchor="middle">dehydrogenáza</text><path class="koa" d="M150.8,333Q150.8,318 171,318"/><rect class="koe" x="131.9" y="336" width="37.7" height="13" rx="2"/><text class="koet" x="150.8" y="345.8" text-anchor="middle">NADH</text><path class="koa" d="M171,318Q191.2,318 191.2,333" marker-end="url(#fig-clnky-sip-koe)"/><rect class="koe" x="174.7" y="336" width="33" height="13" rx="2"/><text class="koet" x="191.2" y="345.8" text-anchor="middle">NAD⁺</text>
+<path class="rx" d="M310.7,318L393.3,318" marker-end="url(#fig-clnky-sip)"/>
+<path class="rx" d="M498.7,318L563.3,318" marker-end="url(#fig-clnky-sip)"/><text class="enz" x="531" y="296.4" text-anchor="middle">malát-</text><text class="enz" x="531" y="307.9" text-anchor="middle">dehydrogenáza</text><path class="koa" d="M510.8,333Q510.8,318 531,318"/><rect class="koe" x="494.3" y="336" width="33" height="13" rx="2"/><text class="koet" x="510.8" y="345.8" text-anchor="middle">NAD⁺</text><path class="koa" d="M531,318Q551.2,318 551.2,333" marker-end="url(#fig-clnky-sip-koe)"/><rect class="koe" x="532.3" y="336" width="37.7" height="13" rx="2"/><text class="koet" x="551.2" y="345.8" text-anchor="middle">NADH</text>
+<text class="sub" x="350" y="286" text-anchor="middle">výmena za</text>
+<text class="sub" x="350" y="298" text-anchor="middle">2-oxoglutarát</text>
+<a class="rk-a" href="07_biologicke_oxidacie.html#fig-dychaci-retazec"><title>Obr. 7.5: dýchací reťazec</title><text class="lblb" x="530" y="375.8" text-anchor="middle">→ komplex I</text><g class="rk-b rk-l"><circle cx="576" cy="372" r="6.3"/><path d="M572.8,372H579M576.6,369.4L579.2,372L576.6,374.6"/></g></a>
+<g class="mol" transform="translate(616,492) scale(0.78)"><g transform="translate(9.5,-5.5)"><path class="bd" d="M0,0L0,-16.2M0,0L19.1,11M20.6,11L20.6,27.2M17.5,11L17.5,27.2M19.1,11L32.7,3.1M0,0L-19.1,11M-19.1,11L-38.1,0M-39.7,0L-39.7,-16.2M-36.6,0L-36.6,-16.2M-38.1,0L-51.7,7.9"/><text class="at" x="-4.1" y="-18.4">NH<tspan class="ix" dy="2.6">3</tspan><tspan class="ix" dy="-6.5">+</tspan></text><text class="at" x="15.3" y="36.6">O</text><text class="at" x="34.4" y="3.6">O<tspan class="ix" dy="-3.9">−</tspan></text><text class="at" x="-41.8" y="-18.4">O</text><text class="at" x="-53.4" y="14.6" text-anchor="end"><tspan class="ix" dy="-3.9">−</tspan><tspan dy="3.9">O</tspan></text></g></g><text class="mn" x="616" y="528.2" text-anchor="middle">aspartát</text><text class="ms" x="616" y="539" text-anchor="middle">(Asp)</text>
+<g class="mol" transform="translate(84,492) scale(0.78)"><g transform="translate(9.5,-5.5)"><path class="bd" d="M0,0L0,-16.2M0,0L19.1,11M20.6,11L20.6,27.2M17.5,11L17.5,27.2M19.1,11L32.7,3.1M0,0L-19.1,11M-19.1,11L-38.1,0M-39.7,0L-39.7,-16.2M-36.6,0L-36.6,-16.2M-38.1,0L-51.7,7.9"/><text class="at" x="-4.1" y="-18.4">NH<tspan class="ix" dy="2.6">3</tspan><tspan class="ix" dy="-6.5">+</tspan></text><text class="at" x="15.3" y="36.6">O</text><text class="at" x="34.4" y="3.6">O<tspan class="ix" dy="-3.9">−</tspan></text><text class="at" x="-41.8" y="-18.4">O</text><text class="at" x="-53.4" y="14.6" text-anchor="end"><tspan class="ix" dy="-3.9">−</tspan><tspan dy="3.9">O</tspan></text></g></g><text class="mn" x="84" y="528.2" text-anchor="middle">aspartát</text><text class="ms" x="84" y="539" text-anchor="middle">(Asp)</text>
+<path class="rx" d="M616,361L616,461.8" marker-end="url(#fig-clnky-sip)"/><text class="enz" x="609" y="408.3" text-anchor="end">amino-</text><text class="enz" x="609" y="419.8" text-anchor="end">transferáza</text><path class="koa" d="M631,401.4Q616,401.4 616,411.4"/><rect class="koe" x="634" y="394.9" width="24.6" height="13" rx="2"/><text class="koet" x="646.3" y="404.7" text-anchor="middle">Glu</text><path class="koa" d="M616,411.4Q616,421.4 631,421.4" marker-end="url(#fig-clnky-sip-koe)"/><rect class="koe" x="634" y="414.9" width="30.4" height="13" rx="2"/><text class="koet" x="649.2" y="424.7" text-anchor="middle">2-OG</text>
+<path class="rx" d="M563.3,492L136.7,492" marker-end="url(#fig-clnky-sip)"/>
+<text class="sub" x="350" y="478" text-anchor="middle">výmena za glutamát</text>
+<path class="rx" d="M84,461.8L84,361" marker-end="url(#fig-clnky-sip)"/><text class="enz" x="91" y="408.3" text-anchor="start">amino-</text><text class="enz" x="91" y="419.8" text-anchor="start">transferáza</text><path class="koa" d="M69,421.4Q84,421.4 84,411.4"/><rect class="koe" x="35.6" y="414.9" width="30.4" height="13" rx="2"/><text class="koet" x="50.8" y="424.7" text-anchor="middle">2-OG</text><path class="koa" d="M84,411.4Q84,401.4 69,401.4" marker-end="url(#fig-clnky-sip-koe)"/><rect class="koe" x="41.4" y="394.9" width="24.6" height="13" rx="2"/><text class="koet" x="53.7" y="404.7" text-anchor="middle">Glu</text>
+<text class="lblb" x="350" y="404" text-anchor="middle">⟳</text>
+</g>
+<path class="vz" d="M14,384 L686,384"/>
+<g transform="translate(0,392)">
+<text class="cap" x="12" y="14">glycerolfosfátový člnok · mozog, rýchly sval · ≈ 1,5 ATP na NADH</text>
+<g class="mol" transform="translate(96,100) scale(0.9)"><g transform="translate(7.8,3.6)"><path class="bd" d="M0,0L19.1,11M19.1,11L32.7,3.1M0,0L-19.1,11M-19.1,11L-32.7,3.1M-43.5,3.1L-54.1,9.3"/><path class="bd hl" d="M-1.5,0L-1.5,-16.2M1.6,0L1.6,-16.2"/><text class="at hl" x="-3.7" y="-18.4">O</text><text class="at" x="34.4" y="3.6">OH</text><text class="at" x="-41.8" y="3.6">O</text><circle class="pc" cx="-60" cy="12.7" r="6.2"/><text class="at pt" x="-60" y="16" text-anchor="middle">P</text></g></g><text class="mn" x="96" y="132" text-anchor="middle">dihydroxyacetónfosfát</text><text class="ms" x="96" y="142.8" text-anchor="middle">(DHAP)</text>
+<g class="mol" transform="translate(420,100) scale(0.9)"><g transform="translate(7.8,3.6)"><path class="bd" d="M0,0L0,-16.2M0,0L19.1,11M19.1,11L32.7,3.1M0,0L-19.1,11M-19.1,11L-32.7,3.1M-43.5,3.1L-54.1,9.3"/><text class="at hl" x="-3.7" y="-18.4">OH</text><text class="at" x="34.4" y="3.6">OH</text><text class="at" x="-41.8" y="3.6">O</text><circle class="pc" cx="-60" cy="12.7" r="6.2"/><text class="at pt" x="-60" y="16" text-anchor="middle">P</text></g></g><text class="mn" x="420" y="132" text-anchor="middle">glycerol-3-fosfát</text><text class="ms" x="420" y="142.8" text-anchor="middle">(Gro-3-P)</text>
+<path class="rx" d="M167.3,64L353.7,64" marker-end="url(#fig-clnky-sip)"/><text class="enz" x="260.5" y="53.9" text-anchor="middle">cytosolová dehydrogenáza</text><path class="koa" d="M240.3,79Q240.3,64 260.5,64"/><rect class="koe" x="221.4" y="82" width="37.7" height="13" rx="2"/><text class="koet" x="240.3" y="91.8" text-anchor="middle">NADH</text><path class="koa" d="M260.5,64Q280.7,64 280.7,79" marker-end="url(#fig-clnky-sip-koe)"/><rect class="koe" x="264.2" y="82" width="33" height="13" rx="2"/><text class="koet" x="280.7" y="91.8" text-anchor="middle">NAD⁺</text>
+<path class="rx" d="M353.7,136L167.3,136" marker-end="url(#fig-clnky-sip)"/><text class="enz" x="260.5" y="151.4" text-anchor="middle">mitochondriová dehydrogenáza</text><text class="enz" x="260.5" y="162.9" text-anchor="middle">(vonkajšia strana vnútornej membrány)</text><path class="koa" d="M280,121Q280,136 260.5,136"/><rect class="koe" x="266" y="105" width="28.2" height="13" rx="2"/><text class="koet" x="280" y="114.8" text-anchor="middle">FAD</text><path class="koa" d="M260.5,136Q241,136 241,121" marker-end="url(#fig-clnky-sip-koe)"/><rect class="koe" x="221" y="105" width="40" height="13" rx="2"/><text class="koet" x="241" y="114.8" text-anchor="middle">FADH₂</text>
+<a class="rk-a" href="07_biologicke_oxidacie.html#fig-dychaci-retazec"><title>Obr. 7.5: dýchací reťazec</title><rect class="bx-m" x="540.8" y="82.5" width="130.3" height="35" rx="3"/><text class="lblb" x="606" y="97.6" text-anchor="middle">FADH₂ → Q →</text><text class="lblb" x="606" y="110.1" text-anchor="middle">komplex III → IV → O₂</text><g class="rk-b rk-l"><circle cx="670.2" cy="83.5" r="6.3"/><path d="M667,83.5H673.2M670.8,80.9L673.4,83.5L670.8,86.1"/></g></a>
+<path class="vz" d="M482.3,130Q520,160 536.8,121.5" marker-end="url(#fig-clnky-sip-n)"/>
+</g>
+<path class="rx" d="M14,580L36,580" marker-end="url(#fig-clnky-sip)"/><text class="sub" x="43" y="583.3">premena</text><text class="enz" x="99.9" y="583.3">enzým</text><rect class="koe" x="146.2" y="573.5" width="27.6" height="13" rx="2"/><text class="koet" x="159.9" y="583.3" text-anchor="middle">ATP</text><text class="sub" x="180.9" y="583.3">koenzým, kosubstrát</text><path class="vz" d="M292.7,580L314.7,580" marker-end="url(#fig-clnky-sip-n)"/><text class="sub" x="321.7" y="583.3">iný vplyv, signál</text><text class="at hl" x="413.5" y="583.6">O</text><text class="sub" x="432.5" y="583.3">skupina, o ktorú v reakcii ide</text><g class="rk-b rk-l"><circle cx="20.5" cy="597" r="6.3"/><path d="M17.3,597H23.5M21.1,594.4L23.7,597L21.1,599.6"/></g><text class="sub" x="33" y="600.3">klik: podrobná schéma</text>
+</svg>
+    <div class="rk-bar"><span><i class="l">→</i> skočí na podrobnú schému</span></div>
+    <figcaption><b>Obr. 7.6 — Dva člnky.</b> Hore: malát prenesie vodíky do matrix; späť sa vracia ako aspartát, lebo oxalacetát membránou neprejde (⟳). Dole: glycerol-3-fosfát odovzdá vodíky enzýmu na vonkajšej strane membrány a ten ich pošle na koenzým Q. Obe redoxné reakcie horného člnku robí malátdehydrogenáza – jedna v cytosole, druhá v matrix.</figcaption>
+  </figure>
+
+  <table class="table keep" id="tab-7-6" style="margin:6px 0">
+    <thead><tr><th></th><th>Malát-aspartátový člnok</th><th>Glycerolfosfátový člnok</th></tr></thead>
+    <tbody>
+      <tr><td><b>Čo nesie vodíky</b></td><td>malát</td><td>glycerol-3-fosfát</td></tr>
+      <tr><td><b>Kde vodíky skončia</b></td><td>NAD⁺ v matrix → komplex I</td><td>FAD enzýmu v membráne → koenzým Q</td></tr>
+      <tr><td><b>Výnos na cytosolový NADH</b></td><td>≈ 2,5 ATP</td><td>≈ 1,5 ATP</td></tr>
+      <tr><td><b>Smer</b></td><td>vratný – ide len vtedy, keď je NADH v cytosole pomerne viac než v matrix</td><td>jednosmerný</td></tr>
+      <tr><td><b>Tkanivá</b></td><td>pečeň, srdce, oblička</td><td>mozog, rýchly kostrový sval</td></tr>
+    </tbody>
+  </table>
+
+  <p>Odtiaľ pochádza rozpätie „30 až 32 ATP na glukózu“: dva cytosolové NADH z glykolýzy dajú tri alebo päť ATP podľa toho, ktorým člnkom idú (<a class="xref" href="04_metabolizmus_glukozy.html#sec-4-4">→ 4.4 Bilancia glykolýzy</a>).</p>
+
+  <div class="box k-zap aside keep">
+    <div class="label">Zapamätaj</div>
+    <div class="body">
+      <p>Malát ako „prezlečený“ oxalacetát už vystupoval v glukoneogenéze, tam opačným smerom – von z mitochondrie (<a class="xref" href="04_metabolizmus_glukozy.html#sub-4-5-2">→ 4.5.2 Prvá obchádzka: z pyruvátu na fosfoenolpyruvát</a>). Tá istá dvojica enzýmov, iný účel.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 7.8 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-7-8"><span class="n">7.8</span><span>Poruchy: keď spád, priehrada alebo turbína zlyhá</span></h2>
+<div class="sec-body">
+  <p>Čo sa stane po zásahu do oxidačnej fosforylácie, sa dá odvodiť z jedinej otázky: zastavil sa tok elektrónov, alebo sa len odpojil od syntázy? Sekcia podľa toho rozlišuje inhibítory a rozpojovače a nakoniec pridáva vrodené poruchy.</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p><b>Inhibítor</b> zastaví elektróny aj ATP; spotreba O₂ klesne (kyanid, rotenón, oligomycín). <b>Rozpojovač</b> vybije gradient: elektróny bežia rýchlejšie, O₂ sa míňa, ATP nevzniká, uvoľní sa teplo (dinitrofenol, termogenín). Mutácie mitochondriovej DNA postihnú tkanivá s najväčšou spotrebou ATP.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h" id="sub-7-8-1"><span class="n">7.8.1</span>Inhibítory: kde sa tok zastaví</h3>
+  <p>Každý inhibítor má svoje miesto (červené popisy v Obr. 7.5) a jedno spoločné pravidlo: všetko pred blokom ostane redukované, všetko za ním oxidované.</p>
+
+  <table class="table keep" id="tab-7-7" style="margin:6px 0">
+    <thead><tr><th>Miesto</th><th>Inhibítory</th><th>Čo ešte beží</th></tr></thead>
+    <tbody>
+      <tr><td><b>komplex I</b></td><td>rotenón (rybí jed, insekticíd), amobarbital</td><td>oxidácia sukcinátu a iných substrátov cez Q</td></tr>
+      <tr><td><b>komplex II</b></td><td>malonát</td><td>oxidácia NADH</td></tr>
+      <tr><td><b>komplex III</b></td><td>antimycín A</td><td>nič za koenzýmom Q</td></tr>
+      <tr><td><b>komplex IV</b></td><td>kyanid, azid, oxid uhoľnatý, sulfán</td><td>nič – kyslík sa nespotrebúva</td></tr>
+      <tr><td><b>ATP-syntáza</b></td><td>oligomycín (uzavrie kanál F₀)</td><td>nič: gradient narastie a zastaví aj reťazec</td></tr>
+    </tbody>
+  </table>
+
+  <p>Posledný riadok je priamym dôkazom spriahnutia. Oligomycín sa reťazca nedotkne, a predsa ho zastaví – tak isto ako nedostatok ADP.</p>
+
+  <div class="box k-klin aside keep">
+    <div class="label">Klinika</div>
+    <div class="body">
+      <p><b>Kyanid: kyslíka dosť, a nedá sa použiť.</b> Kyanid sa viaže na trojmocné železo cytochrómu a₃ a zablokuje posledný krok. Krv je okysličená, no tkanivá kyslík neodoberú; ATP ostane len z glykolýzy a laktát prudko stúpa – v publikovaných súboroch až nad 20 mmol/l (norma 0,5–2,2). Najčastejším zdrojom je dym pri požiari v uzavretom priestore. Protilátka hydroxokobalamín, prekurzor vitamínu B₁₂, kyanid naviaže na svoj kobalt a vzniknutý kyanokobalamín odíde močom.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h" id="sub-7-8-2"><span class="n">7.8.2</span>Rozpojovače: spád bez turbíny</h3>
+  <p>Rozpojovač je látka, ktorá prenesie protón cez membránu mimo syntázy. Gradient sa vybíja naprázdno a s ním mizne aj brzda, ktorou gradient reťazec pribrzďoval. Chemické rozpojovače, ako dinitrofenol, patria medzi <i>ionofóry</i> – látky rozpustné v tukoch, ktoré cez membránu prevedú určitý ión: dinitrofenol protón, valinomycín draslík.</p>
+
+  <table class="table keep" id="tab-7-8" style="margin:6px 0">
+    <thead><tr><th></th><th class="c-ruz">Inhibítor reťazca</th><th class="c-tyrk">Rozpojovač</th></tr></thead>
+    <tbody>
+      <tr><td><b>Prenos elektrónov</b></td><td class="c-ruz">zastavený</td><td class="c-tyrk">zrýchlený</td></tr>
+      <tr><td><b>Spotreba O₂</b></td><td class="c-ruz">klesne</td><td class="c-tyrk">stúpne</td></tr>
+      <tr><td><b>Protónový gradient</b></td><td class="c-ruz">podľa miesta bloku klesne alebo ostane</td><td class="c-tyrk">vybitý</td></tr>
+      <tr><td><b>Tvorba ATP</b></td><td class="c-ruz">klesne</td><td class="c-tyrk">klesne</td></tr>
+      <tr><td><b>Teplo</b></td><td class="c-ruz">klesne</td><td class="c-tyrk"><b>stúpne</b></td></tr>
+      <tr><td><b>Príklad</b></td><td class="c-ruz">kyanid</td><td class="c-tyrk">2,4-dinitrofenol, termogenín</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box k-mech keep">
+    <div class="label">Dva druhy rozpojovačov</div>
+    <div class="body">
+      <ul>
+    <li><b>2,4-dinitrofenol</b> je slabá kyselina rozpustná v tukoch. Na kyslej strane membrány protón prijme, v neutrálnej forme membránou prejde a v matrix ho odovzdá (výrez v Obr. 7.5). Vysoké dávky salicylátov pôsobia podobne.</li>
+    <li><b>Termogenín</b> (UCP1) je bielkovina vnútornej membrány hnedého tukového tkaniva – protónový kanál, ktorý otvárajú MK. Noradrenalín spustí v hnedom tuku štiepenie tukov; uvoľnené MK sú zároveň palivom aj signálom na rozpojenie. Výsledkom je teplo bez svalovej práce, <i>netrasová termogenéza</i>.</li>
+  </ul>
+    </div>
+  </div>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>UCP1</b> rozpojovacia bielkovina 1 – termogenín hnedého tuku (<i>uncoupling protein</i>)</span></div>
+  </div>
+
+  <div class="box k-klin aside keep">
+    <div class="label">Klinika</div>
+    <div class="body">
+      <p><b>Tabletka, ktorá „páli tuk“.</b> Dinitrofenol sa kedysi skúšal ako prostriedok na chudnutie a dodnes sa predáva cez internet. Logika je správna – palivo sa spaľuje naprázdno – a práve preto je nebezpečný: teplo sa nedá regulovať. Otrava sa prejaví prehriatím, potením, zrýchleným pulzom a dýchaním; v literatúre je opísaných vyše šesťdesiat úmrtí.</p>
+    </div>
+  </div>
+
+  <div class="box k-klin aside keep">
+    <div class="label">Klinika</div>
+    <div class="body">
+      <p><b>Teplo bez triašky.</b> Triaška vyrába teplo svalovou prácou, teda zvýšenou spotrebou ATP – reťazec pri nej ostáva spriahnutý. Novorodenec sa zohrieva najmä druhým spôsobom: hnedým tukom s termogenínom. U dospelého človeka ho ostáva málo.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h" id="sub-7-8-3"><span class="n">7.8.3</span>Vrodené poruchy: mitochondriová DNA</h3>
+  <p>Mitochondria má vlastnú kruhovú DNA. Kóduje len trinásť bielkovín – všetko podjednotky komplexov reťazca a ATP-syntázy – a k nim vlastné tRNA a rRNA; ostatné bielkoviny dodáva jadro. Jej osobitosti vysvetľujú, prečo sa tieto choroby dedia a prejavujú inak než bežné enzymopatie.</p>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>DNA</b> deoxyribonukleová kyselina</span> <span class="sk"><b>rRNA</b> ribozómová RNA</span></div>
+  </div>
+
+  <div class="box k-mech keep">
+    <div class="label">Tri zvláštnosti</div>
+    <div class="body">
+      <ul>
+    <li><b>Dedí sa po matke.</b> Mitochondrie zárodku pochádzajú z vajíčka.</li>
+    <li><b>Mutuje častejšie</b> než jadrová DNA.</li>
+    <li><b>V bunke je v mnohých kópiách.</b> Bunka môže niesť zmes zdravých a zmenených molekúl; závažnosť závisí od ich pomeru, a ten nemusí byť vo všetkých tkanivách rovnaký.</li>
+  </ul>
+    </div>
+  </div>
+
+  <p>Postihnuté sú orgány, ktoré majú najväčšiu spotrebu ATP: mozog, zrakový nerv a sietnica, sval a srdce. Príklady: <i>Leberova dedičná neuropatia zrakového nervu</i> – mutácie podjednotiek komplexu I vedú u mladých dospelých k strate centrálneho videnia – a syndróm <i>MELAS</i>, ktorý v názve nesie svoje hlavné znaky: myopatiu, encefalopatiu, laktátovú acidózu a príhody podobné mozgovej mŕtvici. K tej istej skupine patrí <i>MERRF</i> – myoklonická epilepsia s „roztrhanými“ červenými svalovými vláknami, najčastejšie z mutácie génu pre tRNA – a Pearsonov syndróm z rozsiahlej delécie mitochondriovej DNA.</p>
+
+  <div class="box k-skr aside keep">
+    <div class="body"><span class="sk"><b>MELAS</b> mitochondriová myopatia, encefalopatia, laktátová acidóza a príhody podobné mŕtvici</span></div>
+  </div>
+
+  <div class="box k-klin aside keep">
+    <div class="label">Klinika</div>
+    <div class="body">
+      <p><b>Laktát ako stopa.</b> Keď reťazec viazne, NADH sa hromadí a pyruvát sa redukuje na laktát. Zvýšený laktát bez zjavnej príčiny v obehu, spolu so svalovou slabosťou či postihnutím nervov, vedie k podozreniu na mitochondriovú chorobu. Oproti deficitu pyruvátdehydrogenázy (<a class="xref" href="06_acetyl_coa_citratovy_cyklus.html#sub-6-7-1">→ 6.7.1 Zatvorená brána</a>) tu pre nadbytok NADH stúpa laktát viac než pyruvát.</p>
+    </div>
+  </div>
+
+  <p>Reťazec je aj hlavným miestom, kde v bunke vznikajú reaktívne formy kyslíka: elektrón občas unikne, najmä z polovične redukovaného koenzýmu Q, priamo na kyslík a vznikne superoxid; z neho peroxid vodíka a hydroxylový radikál. Ochrana pred nimi – glutatión a hydroperoxidázy – bola v kapitole 5; podrobnosti patria do ďalšej časti knihy. A ešte jedna úloha mitochondrie mimo energie: cytochróm c uvoľnený do cytosolu je signálom, ktorý spúšťa programovanú smrť bunky.</p>
+</div>
+
+<!-- ══ 7.9 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-7-9"><span class="n">7.9</span><span>Laboratórium: farbivo, ktoré ukáže oxidáciu</span></h2>
+<div class="sec-body">
+  <p>Dehydrogenácia sa dá urobiť viditeľnou, ak sa prirodzený príjemca vodíka nahradí farbivom. Sekcia opíše tento pokus a jeho klinickú podobu, a pripomenie merania, ktoré o oxidačnej fosforylácii vypovedajú nepriamo.</p>
+
+  <div class="box k-jadro aside keep">
+    <div class="label">Jadro</div>
+    <div class="body">
+      <p><b>Metylénová modrá</b> prijme vodíky → bezfarebná leukoforma; kyslík ju vráti späť. Odfarbenie = beží dehydrogenácia. Ten istý princíp lieči methemoglobinémiu – ak má erytrocyt NADPH. Nepriame ukazovatele poruchy reťazca: laktát, kreatínkináza.</p>
+    </div>
+  </div>
+
+  <figure class="chart keep" id="fig-metylenova-modra">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 232" data-vb="0 0 700 232" role="img" aria-labelledby="t-metylenova-modra">
+<title id="t-metylenova-modra">Metylénová modrá ako umelý akceptor vodíka. Oxidovaná forma je modrá. Keď v skúmavke beží dehydrogenácia, farbivo prijme vodíky zo substrátu a zmení sa na bezfarebnú leukoformu. Kyslík zo vzduchu ju bez enzýmu oxiduje späť a roztok znova zmodrie. Výrez: v erytrocyte sa metylénová modrá redukuje pomocou NADPH z pentózofosfátovej dráhy a jej leukoforma vracia železo methemoglobínu do dvojmocného stavu.</title>
+<defs><marker id="fig-metylenova-modra-sip" viewBox="0 0 8 7" refX="7.4" refY="3.5" markerWidth="8" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk" d="M0,0L8,3.5L0,7z"/></marker><marker id="fig-metylenova-modra-sip-koe" viewBox="0 0 7 6" refX="6.4" refY="3" markerWidth="7" markerHeight="6" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-koe" d="M0,0L7,3L0,6z"/></marker><marker id="fig-metylenova-modra-sip-nv" viewBox="0 0 11 10" refX="4" refY="5" markerWidth="11" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="mk-nv" d="M0,0L11,5L0,10z"/></marker></defs>
+<g class="mol" transform="translate(150,84)"><g transform="translate(-40.1,-1.1)"><path class="bd" d="M0.8,-20.7L-18.3,-9.7M-0.8,-23.3L-19.8,-12.3M-19.1,-11L-19.1,11M-18.3,9.7L0.8,20.7M-19.8,12.3L-0.8,23.3M0,22L19.1,11M17.5,11L17.5,-11M20.6,11L20.6,-11M19.1,-11L0,-22M77,-23.3L96,-12.3M75.4,-20.7L94.5,-9.7M95.3,-11L95.3,11M95.3,11L76.2,22M75.4,23.3L56.4,12.3M77,20.7L57.9,9.7M57.2,11L57.2,-11M57.2,-11L76.2,-22M19.1,-11L32.3,-18.7M19.1,11L33.5,19.3M42.7,19.3L57.2,11M-19.1,11L-32.3,18.7M96,9.7L109.3,17.3M94.5,12.3L107.7,20"/><path class="bd hl" d="M44.7,-20L57.9,-12.3M43.1,-17.3L56.4,-9.7"/><text class="at hl" x="34" y="-18.4">N</text><text class="at" x="35.2" y="25.6">S</text><text class="at" x="-34" y="25.6" text-anchor="end">(H<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">C)</tspan><tspan class="ix" dy="2.6">2</tspan><tspan dy="-2.6">N</tspan></text><text class="at" x="110.2" y="25.6">N<tspan class="ix" dy="-3.9">+</tspan><tspan dy="3.9">(CH</tspan><tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">)</tspan><tspan class="ix" dy="2.6">2</tspan></text></g></g><text class="mn" x="150" y="123.2" text-anchor="middle">metylénová modrá – modrá</text>
+<g class="mol" transform="translate(552,84)"><g transform="translate(-38.1,-1.1)"><path class="bd" d="M0.8,-20.7L-18.3,-9.7M-0.8,-23.3L-19.8,-12.3M-19.1,-11L-19.1,11M-18.3,9.7L0.8,20.7M-19.8,12.3L-0.8,23.3M0,22L19.1,11M17.5,11L17.5,-11M20.6,11L20.6,-11M19.1,-11L0,-22M77,-23.3L96,-12.3M75.4,-20.7L94.5,-9.7M95.3,-11L95.3,11M96,12.3L77,23.3M94.5,9.7L75.4,20.7M76.2,22L57.2,11M55.6,11L55.6,-11M58.7,11L58.7,-11M57.2,-11L76.2,-22M19.1,-11L32.3,-18.7M48.1,-16.2L57.2,-11M19.1,11L33.5,19.3M42.7,19.3L57.2,11M-19.1,11L-32.3,18.7M95.3,11L108.5,18.7"/><text class="at hl" x="34" y="-18.4">NH</text><text class="at" x="35.2" y="25.6">S</text><text class="at" x="-34" y="25.6" text-anchor="end">(H<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">C)</tspan><tspan class="ix" dy="2.6">2</tspan><tspan dy="-2.6">N</tspan></text><text class="at" x="110.2" y="25.6">N(CH<tspan class="ix" dy="2.6">3</tspan><tspan dy="-2.6">)</tspan><tspan class="ix" dy="2.6">2</tspan></text></g></g><text class="mn" x="552" y="123.2" text-anchor="middle">leukoforma – bezfarebná</text>
+<path class="rx" d="M280.1,66L423.9,66" marker-end="url(#fig-metylenova-modra-sip)"/><text class="enz" x="352" y="55.9" text-anchor="middle">dehydrogenáza: substrát odovzdá 2 H</text>
+<path class="rx" d="M423.9,102L280.1,102" marker-end="url(#fig-metylenova-modra-sip)"/><text class="enz" x="352" y="117.4" text-anchor="middle">kyslík zo vzduchu (bez enzýmu)</text>
+<text class="lblb" x="351" y="88" text-anchor="middle">⟳</text>
+<text class="sub" x="350" y="190" text-anchor="middle">odfarbenie = v skúmavke beží dehydrogenácia · zmodranie = pribudol kyslík</text>
+<g class="rk" data-rk="methb" role="button" tabindex="0" aria-expanded="false"><title>Rozbaliť podrobnosti: farbivo ako liek pri methemoglobinémii</title><g class="rk-b"><circle cx="618" cy="186" r="6.3"/><path d="M614.9,186H621.1"/><path class="rk-v" d="M618,182.9V189.1"/></g></g>
+<path class="rx" d="M14,218L36,218" marker-end="url(#fig-metylenova-modra-sip)"/><text class="sub" x="43" y="221.3">premena</text><text class="enz" x="99.9" y="221.3">enzým</text><text class="at hl" x="145.9" y="221.6">O</text><text class="sub" x="164.9" y="221.3">skupina, o ktorú v reakcii ide</text><g class="rk-b"><circle cx="320.6" cy="218" r="6.3"/><path d="M317.5,218H323.7"/><path class="rk-v" d="M320.6,214.9V221.1"/></g><text class="sub" x="333.1" y="221.3">klik rozbalí podrobnosti</text>
+
+<g class="rk-panel" data-rk-panel="methb" data-h="232" transform="translate(0,232)"><rect class="rk-bg" x="0" y="0" width="700" height="232"/><path class="rk-line" d="M0,.75H700"/><text class="rk-t" x="12" y="17">Farbivo ako liek: tri spriahnuté kolesá v erytrocyte</text><g class="rk rk-x is-open" data-rk="methb" role="button" tabindex="0" aria-label="Zavrieť výrez"><title>Zavrieť</title><circle cx="686" cy="13" r="7.5"/><path d="M683,10l6,6m0,-6l-6,6"/></g>
+<rect class="bx-c" x="44" y="46.8" width="104" height="22.5" rx="3"/><text class="lblb" x="96" y="61.8" text-anchor="middle">glukóza-6-fosfát</text>
+<a class="rk-a" href="05_pentozy_fruktoza_galaktoza.html#fig-nadph-glutation"><title>Kapitola 5: NADPH v erytrocyte</title><rect class="bx-k" x="515.2" y="46.8" width="133.6" height="22.5" rx="3"/><text class="lblb" x="582" y="61.8" text-anchor="middle">6-fosfoglukonolaktón</text><g class="rk-b rk-l"><circle cx="647.8" cy="47.8" r="6.3"/><path d="M644.6,47.8H650.8M648.4,45.2L651,47.8L648.4,50.4"/></g></a>
+<path class="rx nv" d="M152,58L504.7,58" marker-end="url(#fig-metylenova-modra-sip-nv)"/><text class="enz" x="331.6" y="46.4" text-anchor="middle">glukóza-6-fosfátdehydrogenáza</text><path class="koa" d="M308.3,73Q308.3,58 331.6,58"/><rect class="koe" x="288.7" y="76" width="39.2" height="13" rx="2"/><text class="koet" x="308.3" y="85.8" text-anchor="middle">NADP⁺</text><path class="koa" d="M331.6,58Q354.9,58 354.9,73" marker-end="url(#fig-metylenova-modra-sip-koe)"/><rect class="koe" x="332.9" y="76" width="43.9" height="13" rx="2"/><text class="koet" x="354.9" y="85.8" text-anchor="middle">NADPH</text>
+<rect class="bx-k" x="37" y="116.8" width="118" height="22.5" rx="3"/><text class="lblb" x="96" y="131.8" text-anchor="middle">metylénová modrá</text>
+<rect class="bx-c" x="541.9" y="116.8" width="80.2" height="22.5" rx="3"/><text class="lblb" x="582" y="131.8" text-anchor="middle">leukoforma</text>
+<path class="rx" d="M159,128L537.9,128" marker-end="url(#fig-metylenova-modra-sip)"/><path class="koa" d="M325.2,143Q325.2,128 348.5,128"/><rect class="koe" x="303.2" y="146" width="43.9" height="13" rx="2"/><text class="koet" x="325.2" y="155.8" text-anchor="middle">NADPH</text><path class="koa" d="M348.5,128Q371.7,128 371.7,143" marker-end="url(#fig-metylenova-modra-sip-koe)"/><rect class="koe" x="352.1" y="146" width="39.2" height="13" rx="2"/><text class="koet" x="371.7" y="155.8" text-anchor="middle">NADP⁺</text>
+<rect class="bx-m" x="514.4" y="180.5" width="135.2" height="35" rx="3"/><text class="lblb" x="582" y="195.6" text-anchor="middle">methemoglobín (Fe³⁺)</text><text class="lblb" x="582" y="208.1" text-anchor="middle">kyslík neviaže</text>
+<rect class="bx-c" x="38.9" y="186.8" width="114.2" height="22.5" rx="3"/><text class="lblb" x="96" y="201.8" text-anchor="middle">hemoglobín (Fe²⁺)</text>
+<path class="rx" d="M510.4,198L157.1,198" marker-end="url(#fig-metylenova-modra-sip)"/><path class="koa" d="M376.1,213Q376.1,198 333.8,198"/><rect class="koe" x="344.4" y="216" width="63.4" height="13" rx="2"/><text class="koet" x="376.1" y="225.8" text-anchor="middle">leukoforma</text><path class="koa" d="M333.8,198Q291.4,198 291.4,213" marker-end="url(#fig-metylenova-modra-sip-koe)"/><rect class="koe" x="243.3" y="216" width="96.1" height="13" rx="2"/><text class="koet" x="291.4" y="225.8" text-anchor="middle">metylénová modrá</text>
+<text class="t-inh" x="340" y="166" text-anchor="middle">deficit dehydrogenázy: NADPH chýba → farbivo ostane oxidované a samo zaťaží krvinku</text>
+</g>
+</svg>
+    <div class="rk-bar"><button type="button" class="rk-all" aria-pressed="false">+ Rozbaliť všetky podrobnosti (1)</button><span><i>+</i> v schéme rozbalí jednu časť</span><span><i class="l">→</i> skočí na podrobnú schému</span></div>
+    <figcaption><b>Obr. 7.7 — Metylénová modrá a jej leukoforma (⟳).</b> Modrý dusík v strede prijíma vodík; tým sa preruší sústava striedavých dvojitých väzieb, ktorá dáva farbu. Výrez ukazuje, ako to isté farbivo pracuje v erytrocyte ako liek.</figcaption>
+  </figure>
+
+  <div class="box k-lab keep">
+    <div class="label">Oxidoredukčná reakcia s metylénovou modrou</div>
+    <div class="body">
+      <ol>
+    <li>Farbivo je <i>umelý akceptor vodíka</i>: v oxidovanej forme modré, v redukovanej bezfarebné.</li>
+    <li>V skúmavke s tkanivom alebo enzýmom a substrátom prevezme vodíky, ktoré dehydrogenáza substrátu odobrala. Roztok sa odfarbí – tým rýchlejšie, čím je enzým aktívnejší.</li>
+    <li>Kyslík zo vzduchu leukoformu bez enzýmu oxiduje späť. Po pretrepaní roztok znova zmodrie; pod vrstvou, ktorá bráni prístupu vzduchu, ostane bezfarebný.</li>
+  </ol>
+      <p>Pokus ukazuje dve veci naraz: že oxidácia substrátu je odoberanie vodíka a že kyslík je až posledným príjemcom.</p>
+    </div>
+  </div>
+
+  <div class="box k-klin aside keep">
+    <div class="label">Klinika</div>
+    <div class="body">
+      <p><b>Farbivo ako liek – a kedy zlyhá.</b> Pri methemoglobinémii je železo hemoglobínu oxidované na Fe³⁺ a kyslík neviaže. Metylénová modrá sa v erytrocyte redukuje pomocou NADPH a jej leukoforma vráti železo na Fe²⁺. NADPH má erytrocyt len z pentózofosfátovej dráhy: pri deficite glukóza-6-fosfátdehydrogenázy liek nezaberie a sám pôsobí ako oxidačná záťaž – môže vyvolať hemolýzu (<a class="xref" href="05_pentozy_fruktoza_galaktoza.html#sec-5-4">→ 5.4 Deficit glukóza-6-fosfátdehydrogenázy</a>).</p>
+    </div>
+  </div>
+
+  <p>Meranie, ktoré stojí na rovnakom základe, čitateľ už pozná: NADH a NADPH pohlcujú svetlo pri 340 nm, ich oxidované formy nie, takže každá dehydrogenázová reakcia sa dá sledovať fotometrom (<a class="xref" href="06_acetyl_coa_citratovy_cyklus.html#sec-6-8">→ 6.8 Laboratórium: glukóza v sére a čo sa stane vo vzorke</a>).</p>
+</div>
+
+<!-- ══ 7.10 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-7-10"><span class="n">7.10</span><span>Súhrn a rýchle rozlíšenie</span></h2>
+<div class="sec-body">
+  <p>Súhrn sleduje mapu z <a class="xref" href="#sec-7-1">→ 7.1</a>: mena, spád, priehrada, turbína, riadenie, prenos, poruchy.</p>
+
+  <table class="table keep" id="tab-7-9" style="margin:6px 0">
+    <thead><tr><th>Otázka</th><th>Odpoveď v jednej vete</th><th>Sekcia</th></tr></thead>
+    <tbody>
+      <tr><td><b>Koľko makroergických väzieb má ATP?</b></td><td>Dve – anhydridové medzi fosfátmi; väzba na ribózu je ester.</td><td>7.2.1</td></tr>
+      <tr><td><b>Čo robí kreatínkináza?</b></td><td>Vratne prenáša fosfát medzi ATP a kreatínom; kreatínfosfát je zásoba na prvé sekundy práce.</td><td>7.2.2</td></tr>
+      <tr><td><b>Načo je adenylátkináza?</b></td><td>Z dvoch ADP robí ATP a AMP; AMP je signál nedostatku energie.</td><td>7.2.2</td></tr>
+      <tr><td><b>Kam tečú elektróny?</b></td><td>Od páru s nižším redoxným potenciálom k vyššiemu: od NADH ku kyslíku.</td><td>7.3.1</td></tr>
+      <tr><td><b>Dehydrogenáza × oxidáza × oxygenáza?</b></td><td>Vodík na koenzým × vodík na kyslík × kyslík do substrátu.</td><td>7.3.2</td></tr>
+      <tr><td><b>Čo prijíma NAD⁺?</b></td><td>Hydridový ión – dva elektróny a jeden protón.</td><td>7.3.3</td></tr>
+      <tr><td><b>Ktoré komplexy pumpujú protóny?</b></td><td>I, III a IV (4, 4 a 2 na pár elektrónov); II nie.</td><td>7.4</td></tr>
+      <tr><td><b>Čo je koenzým Q a cytochróm c?</b></td><td>Dva pohyblivé prenášače: Q v membráne medzi I/II a III, cytochróm c na povrchu medzi III a IV.</td><td>7.4</td></tr>
+      <tr><td><b>Kde sa spotrebúva kyslík?</b></td><td>V komplexe IV, ktorý ho redukuje na vodu.</td><td>7.4</td></tr>
+      <tr><td><b>Čo spája reťazec so syntézou ATP?</b></td><td>Protónový gradient cez vnútornú membránu.</td><td>7.5</td></tr>
+      <tr><td><b>Koľko ATP dá NADH a FADH₂?</b></td><td>Približne 2,5 a 1,5 (staršie 3 a 2).</td><td>7.5.1</td></tr>
+      <tr><td><b>Čo riadi rýchlosť dýchania bunky?</b></td><td>Dostupnosť ADP, teda spotreba ATP.</td><td>7.6</td></tr>
+      <tr><td><b>Ktorý člnok dá viac ATP?</b></td><td>Malát-aspartátový (≈ 2,5); glycerolfosfátový len ≈ 1,5.</td><td>7.7</td></tr>
+      <tr><td><b>Inhibítor × rozpojovač?</b></td><td>Prvý zastaví elektróny aj spotrebu O₂; druhý ich zrýchli a energiu zmení na teplo.</td><td>7.8.2</td></tr>
+      <tr><td><b>Čo blokuje kyanid a čo oligomycín?</b></td><td>Kyanid komplex IV, oligomycín kanál ATP-syntázy.</td><td>7.8.1</td></tr>
+      <tr><td><b>Načo je termogenín?</b></td><td>Rozpája v hnedom tuku reťazec od syntázy – teplo bez triašky.</td><td>7.8.2</td></tr>
+      <tr><td><b>Ako sa dedí mitochondriová DNA?</b></td><td>Po matke; kóduje 13 podjednotiek reťazca a syntázy.</td><td>7.8.3</td></tr>
+      <tr><td><b>Čo ukazuje odfarbenie metylénovej modrej?</b></td><td>Že v skúmavke beží dehydrogenácia; kyslík farbu vráti.</td><td>7.9</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ══ 7.11 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-7-11"><span class="n">7.11</span><span>Otázky na zopakovanie</span></h2>
+<div class="sec-body">
+  <ol class="quiz">
+    <li><details><summary>Prečo sa elektróny z NADH neodovzdajú kyslíku jedným krokom, ale cez niekoľko prenášačov?</summary><div class="ans">Rozdiel potenciálov 1,14 V zodpovedá asi 220 kJ/mol – jediným krokom by sa uvoľnili ako teplo. Rozdelením na menšie schody sa dá energia troch z nich použiť na čerpanie protónov. Bunka tak z jedného NADH získa približne 2,5 ATP namiesto žiadneho. <a class="xref" href="#sub-7-3-1">→ 7.3.1</a> · <a class="xref" href="#sec-7-4">→ 7.4</a></div></details></li>
+    <li><details><summary>FADH₂ zo sukcinátu dá menej ATP než NADH. Kde presne ten rozdiel vzniká?</summary><div class="ans">V mieste vstupu. Elektróny z NADH prejdú komplexom I, ktorý prečerpá štyri protóny. Elektróny zo sukcinátu vstupujú cez komplex II až na koenzým Q a prvú pumpu obídu: 6 protónov namiesto 10, teda asi 1,5 ATP namiesto 2,5. Komplex II nepumpuje, lebo rozdiel potenciálov medzi sukcinátom a Q je malý. <a class="xref" href="#sec-7-4">→ 7.4</a> · <a class="xref" href="#sub-7-5-1">→ 7.5.1</a></div></details></li>
+    <li><details><summary>K izolovaným mitochondriám so substrátom a kyslíkom pridáme oligomycín. Spotreba kyslíka klesne. Potom pridáme dinitrofenol a spotreba prudko stúpne. Vysvetli oba kroky.</summary><div class="ans">Oligomycín uzavrie kanál syntázy; protóny sa nevracajú, gradient narastie na maximum a pumpy proti nemu nevládzu – reťazec zastane, hoci sám poškodený nie je. Dinitrofenol prenesie protóny cez membránu mimo syntázy, gradient sa vybije, brzda zmizne a elektróny tečú naplno. ATP však nevzniká ani v jednom prípade. <a class="xref" href="#sub-7-8-1">→ 7.8.1</a> · <a class="xref" href="#sub-7-8-2">→ 7.8.2</a></div></details></li>
+    <li><details><summary>Človek otrávený kyanidom má v žilovej krvi nezvyčajne veľa kyslíka a vysoký laktát. Prečo?</summary><div class="ans">Kyanid blokuje komplex IV, takže tkanivá kyslík z krvi neodoberajú – vracia sa do žíl okysličená. Reťazec stojí, NADH sa hromadí, citrátový cyklus sa zastaví a jediným zdrojom ATP ostane glykolýza. Aby mohla bežať, pyruvát sa redukuje na laktát. <a class="xref" href="#sub-7-8-1">→ 7.8.1</a> · <a class="xref" href="04_metabolizmus_glukozy.html#sec-4-3">→ 4.3 Pyruvát a laktát: čo s NADH</a></div></details></li>
+    <li><details><summary>Úplná oxidácia glukózy dá 30 alebo 32 ATP. Od čoho závisí, ktoré číslo platí? (Vráť sa ku kapitole 4.)</summary><div class="ans">Od člnku, ktorým sa do mitochondrie dostanú elektróny dvoch NADH z glykolýzy. Malát-aspartátový ich odovzdá matrixovému NAD⁺ a každý dá asi 2,5 ATP – spolu 32. Glycerolfosfátový ich odovzdá cez FAD koenzýmu Q, komplex I sa obíde a každý dá len asi 1,5 – spolu 30. <a class="xref" href="#sec-7-7">→ 7.7</a> · <a class="xref" href="04_metabolizmus_glukozy.html#sec-4-4">→ 4.4 Bilancia glykolýzy</a></div></details></li>
+    <li><details><summary>Prečo je kreatínfosfát vhodná rýchla zásoba, a glukóza-6-fosfát nie, hoci oba nesú fosfát?</summary><div class="ans">Rozhoduje typ väzby. V kreatínfosfáte je fosfát na dusíku guanidínovej skupiny a jeho hydrolýza uvoľní viac energie než hydrolýza ATP – kreatínkináza ho preto vie preniesť na ADP. Glukóza-6-fosfát je obyčajný ester s nízkou energiou; fosfát z ATP prijal a späť ho na ADP odovzdať nevie. <a class="xref" href="#sub-7-2-1">→ 7.2.1</a> · <a class="xref" href="#sub-7-2-2">→ 7.2.2</a></div></details></li>
+    <li><details><summary>Sval prejde z pokoja do práce a spotreba kyslíka stúpne mnohonásobne v priebehu sekúnd. Ktorý signál to spôsobí a prečo netreba hormón?</summary><div class="ans">ADP. Práca štiepi ATP, ADP dá syntáze substrát, protóny začnú pretekať, gradient klesne a pumpy s prenosom elektrónov zrýchlia. NADH sa oxiduje a odbrzdí cyklus. Reťazec je so syntázou spriahnutý, takže spotreba ATP sa prenesie až na spotrebu kyslíka sama. <a class="xref" href="#sec-7-6">→ 7.6</a> · <a class="xref" href="06_acetyl_coa_citratovy_cyklus.html#sec-6-5">→ 6.5 Regulácia kolesa</a></div></details></li>
+    <li><details><summary>Prípad: 19-ročný muž si objednal na internete „spaľovač tukov“. Privezú ho s teplotou 40,5 °C, spoteného, s pulzom 150/min a zrýchleným dýchaním. Čo prípravok najskôr obsahoval a prečo antipyretikum nepomôže?</summary><div class="ans">Rozpojovač, najskôr 2,4-dinitrofenol. Prenáša protóny cez vnútornú membránu mimo ATP-syntázy; reťazec beží naplno, kyslík sa míňa, ATP nevzniká a energia paliva sa mení na teplo. Teplota nie je nastavená v mozgu ako pri horúčke, ale vzniká priamo v mitochondriách – liek na horúčku jej príčinu neovplyvní. <a class="xref" href="#sub-7-8-2">→ 7.8.2</a></div></details></li>
+    <li><details><summary>Prípad: pacient s deficitom glukóza-6-fosfátdehydrogenázy dostane pre methemoglobinémiu metylénovú modrú. Stav sa nezlepší a objaví sa hemolýza. Prečo?</summary><div class="ans">Metylénová modrá lieči len ako leukoforma, a na jej redukciu erytrocyt potrebuje NADPH. Ten má iba z pentózofosfátovej dráhy, ktorej prvý enzým pacientovi chýba. Farbivo ostane oxidované, methemoglobín neredukuje a samo zaťažuje bunku oxidačne – glutatión sa minie a krvinky sa rozpadnú. <a class="xref" href="#sec-7-9">→ 7.9</a> · <a class="xref" href="05_pentozy_fruktoza_galaktoza.html#sec-5-4">→ 5.4 Deficit glukóza-6-fosfátdehydrogenázy</a></div></details></li>
+  </ol>
+</div>
+
+<!-- ══ 7.12 ════════════════════════════════════════════════════════════ -->
+<h2 class="sec-h" id="sec-7-12"><span class="n">7.12</span><span>Zdroje</span></h2>
+<div class="sec-body src">
+  <div class="micro" style="margin-top:8px">Učebnice (kontrola faktov)</div>
+
+  <ul>
+    <li>Rodwell V. W., Bender D. A., Botham K. M., Kennelly P. J., Weil P. A.: <i>Harper's Illustrated Biochemistry</i>, 31. vyd., New York: McGraw-Hill Education, 2018. ISBN 978-1-25-983793-7. (makroergické zlúčeniny a dva spôsoby štiepenia ATP, adenylátkináza, skupiny oxidoreduktáz, počty protónov a pomer P/O, stavba a chod ATP-syntázy, inhibítory vrátane atraktylozidu, člnky, metylénová modrá a NADPH)</li>
+    <li>Harvey R. A., Ferrier D. R.: <i>Lippincott's Illustrated Reviews: Biochemistry</i>, 5. vyd., Philadelphia: Lippincott Williams &amp; Wilkins, 2011. ISBN 978-1-60831-412-6. (redoxné potenciály, zložky reťazca, ATP-syntáza a oligomycín, rozpojovacie bielkoviny, mitochondriová DNA, methemoglobinémia)</li>
+    <li>Lieberman M., Peet A.: <i>Marks' Basic Medical Biochemistry: A Clinical Approach</i>, 5. vyd., Philadelphia: Wolters Kluwer, 2018. ISBN 978-1-4963-2481-8. (dinitrofenol, hnedý tuk u dospelých, vznik superoxidu)</li>
+  </ul>
+
+  <div class="micro" style="margin-top:8px">Názvoslovie, odporúčania a prehľady</div>
+
+  <ul>
+    <li>Vercellino I., Sazanov L. A.: The assembly, regulation and function of the mitochondrial respiratory chain. <i>Nat Rev Mol Cell Biol</i> 2022;23:141–161. <a href="https://doi.org/10.1038/s41580-021-00415-0" target="_blank" rel="noopener noreferrer">doi:10.1038/s41580-021-00415-0</a></li>
+    <li>Watt I. N., Montgomery M. G., Runswick M. J., Leslie A. G. W., Walker J. E.: Bioenergetic cost of making an adenosine triphosphate molecule in animal mitochondria. <i>Proc Natl Acad Sci USA</i> 2010;107:16823–16827. <a href="https://doi.org/10.1073/pnas.1011099107" target="_blank" rel="noopener noreferrer">doi:10.1073/pnas.1011099107</a></li>
+    <li>Dunne R., Goodloe J. M., Augustine J. J. a kol.: Intravenous hydroxocobalamin for cyanide poisoning from smoke inhalation: a comprehensive scoping review. <i>J Am Coll Emerg Physicians Open</i> 2026;7:100340. <a href="https://doi.org/10.1016/j.acepjo.2026.100340" target="_blank" rel="noopener noreferrer">doi:10.1016/j.acepjo.2026.100340</a></li>
+    <li>Grundlingh J., Dargan P. I., El-Zanfaly M., Wood D. M.: 2,4-dinitrophenol (DNP): a weight loss agent with significant acute toxicity and risk of death. <i>J Med Toxicol</i> 2011;7:205–212. <a href="https://doi.org/10.1007/s13181-011-0162-6" target="_blank" rel="noopener noreferrer">doi:10.1007/s13181-011-0162-6</a></li>
+    <li>Kasturiarachi B. M., Robinson D., Karkoska K., Gollamudi J.: Uncovering an undisclosed diagnosis: a glucose-6-phosphate dehydrogenase deficiency diagnosis in a critically ill adult. <i>EJHaem</i> 2024;5:231–234. <a href="https://doi.org/10.1002/jha2.853" target="_blank" rel="noopener noreferrer">doi:10.1002/jha2.853</a></li>
+    <li>The Nobel Assembly at Karolinska Institutet: The Nobel Prize in Physiology or Medicine 2019 – tlačová správa (ako bunky vnímajú kyslík). <a href="https://www.nobelprize.org/prizes/medicine/2019/press-release/" target="_blank" rel="noopener noreferrer">nobelprize.org/prizes/medicine/2019/press-release</a></li>
+    <li>Buckler K. J.: TASK channels in arterial chemoreceptors and their role in oxygen and acid sensing. <i>Pflugers Arch</i> 2015;467:1013–1025. <a href="https://doi.org/10.1007/s00424-015-1689-1" target="_blank" rel="noopener noreferrer">doi:10.1007/s00424-015-1689-1</a></li>
+    <li>PubChem (National Center for Biotechnology Information): záznamy zlúčenín – štruktúry molekúl v schémach (medzi nimi ATP, CID 5957; NAD⁺, CID 5892; FAD, CID 643975; kreatinín, CID 588; 2,4-dinitrofenol, CID 1493). <a href="https://pubchem.ncbi.nlm.nih.gov/" target="_blank" rel="noopener noreferrer">pubchem.ncbi.nlm.nih.gov</a></li>
+  </ul>
+
+  <div class="micro" style="margin-top:8px">Obrázky</div>
+
+  <p>Všetky schémy a vzorce v kapitole sú vlastné kresby (SVG); štruktúry molekúl sú overené v databáze PubChem. Súhrn je v registri <code>ZDROJE-OBRAZKOV.md</code>.</p>
+</div>
+
+<p class="next"><b>Pokračuje v:</b>
+  <a class="xref" href="08_lipidy_mastne_kyseliny.html">→ 8 Trávenie lipidov a metabolizmus mastných kyselín</a>
+</p>
+
+<div class="running-foot">
+  <span>BIOCHEM — poznámky z biochémie · Kapitola 7</span>
+  <span class="tnum">§ 7.1–7.12</span>
+</div>
+
+</main>
+  </div>
+  <div class="site-spacer" aria-hidden="true"></div>
+</div>
+
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/peek.js" defer></script>
+<script src="../assets/js/toc-collapse.js" defer></script>
+<script src="../assets/js/schema.js" defer></script>
+<script>
+/* PATOLA: tlač kapitoly otvorenej v ráme hlavnej stránky (index.html).
+   Rodič pošle "pf:print"; Ctrl/Cmd+P vo vnútri rámu tlačí rám, nie obsah knihy. */
+(function(){
+  var imgs = function(){ return Array.prototype.slice.call(document.querySelectorAll('img[loading="lazy"]')); };
+  // lenivé obrázky sa po načítaní stránky dotiahnu na pozadí, aby v tlači neboli prázdne
+  window.addEventListener("load", function(){ setTimeout(function(){ imgs().forEach(function(i){ i.loading = "eager"; }); }, 800); });
+  // v tlači sú odpovede na otázky vidieť (zatvorený <details> by sa vytlačil bez nich)
+  var shut = [];
+  // predvolený názov súboru pri tlači = kapitola („Kapitola 3 – Zápal …“); title sa po tlači vráti
+  // (po maximalizovanom náhľade je v document.title už iná kapitola, preto sa číta až teraz)
+  var keep = null;
+  function printTitle(){ return document.title.replace(/^(\d+) · /, "Kapitola $1 – "); }
+  function titleOn(){ if (keep === null) { keep = document.title; document.title = printTitle(); } }
+  function titleOff(){ if (keep !== null) { document.title = keep; keep = null; } }
+  window.addEventListener("beforeprint", function(){ titleOn(); shut = Array.prototype.filter.call(document.querySelectorAll("ol.quiz details"), function(d){ return !d.open; }); shut.forEach(function(d){ d.open = true; }); });
+  window.addEventListener("afterprint", function(){ titleOff(); shut.forEach(function(d){ d.open = false; }); shut = []; });
+  if (window.top === window.self) return;
+  // v ráme berie prehliadač názov súboru z hlavnej stránky → pošli jej názov kapitoly
+  window.addEventListener("afterprint", function(){ try { window.parent.postMessage({ pf: "title", title: null }, "*"); } catch (e) {} });
+  function printMe(){
+    var all = Array.prototype.slice.call(document.images);
+    all.forEach(function(i){ i.loading = "eager"; });
+    try { window.parent.postMessage({ pf: "title", title: printTitle() }, "*"); } catch (e) {}
+    var t0 = Date.now();
+    (function wait(){
+      if (Date.now() - t0 > 150 && (all.every(function(i){ return i.complete; }) || Date.now() - t0 > 4000)) { try { window.focus(); window.print(); } catch (e) {} }
+      else setTimeout(wait, 100);
+    })();
+  }
+  window.addEventListener("message", function(e){ if (e.data === "pf:print") printMe(); });
+  document.addEventListener("keydown", function(e){
+    if ((e.ctrlKey || e.metaKey) && !e.altKey && (e.key === "p" || e.key === "P")) { e.preventDefault(); printMe(); }
+  });
+})();
+</script>
+<script src="../assets/glossary/01-struktury-reakcie-meranie.js" defer></script>
+<script src="../assets/glossary/02-metabolizmus-a-regulacia.js" defer></script>
+<script src="../assets/glossary/03-travenie-sacharidov-a-glykogen.js" defer></script>
+<script src="../assets/glossary/04-glykolyza-a-glukoneogeneza.js" defer></script>
+<script src="../assets/glossary/05-pentozy-fruktoza-galaktoza.js" defer></script>
+<script src="../assets/glossary/06-acetyl-coa-a-citratovy-cyklus.js" defer></script>
+<script src="../assets/glossary/07-biologicke-oxidacie-a-atp.js" defer></script>
+<script src="../assets/glossary/08-lipidy-a-mastne-kyseliny.js" defer></script>
+<script src="../assets/js/glossary.js" defer></script>
+<script src="../assets/js/view-toggle.js" defer></script>
+</body>
+</html>

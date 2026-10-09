@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 390" role="img" aria-labelledby="t-regulacia-glykogenu">
+<title id="t-regulacia-glykogenu">Regulácia metabolizmu glykogénu v pečeni a v kostrovom svale. V oboch tkanivách vedie cAMP cez proteínkinázu A a fosforylázakinázu k fosforylácii: glykogénfosforyláza sa ňou aktivuje, glykogénsyntáza inaktivuje. Inzulín cez proteínfosfatázu 1 a útlm kinázy GSK-3 pôsobí opačne. V pečeni spúšťajú kaskádu glukagón a adrenalín, vápnik uvoľnený adrenalínom cez α1-receptor ju podporuje; fosforylázu brzdí voľná glukóza, glukóza-6-fosfát a ATP. Vo svale glukagón nepôsobí; kaskádu spúšťa adrenalín, fosforylázakinázu priamo aktivuje vápnik uvoľnený pri kontrakcii a fosforylázu AMP. Glukóza-6-fosfát v oboch tkanivách aktivuje syntázu.</title>
+<path class="stk-n s-d" d="M350,6L350,366"/>
+<text class="cap" x="12" y="14">pečeň</text>
+<uzol id="hp" x="175" y="38" text="glukagón · adrenalín (β)"/>
+<uzol id="kp" x="175" y="104" text="cAMP → proteínkináza A →|fosforylázakináza" trieda="bx-c"/>
+<vplyv typ="akt" od="{hp.b}" do="{kp.t}"/>
+<text class="t-akt" x="175" y="138" text-anchor="middle">↑ Ca²⁺ (adrenalín cez α₁-receptor)</text>
+<rect class="bx-m" x="24" y="178" width="136" height="62" rx="3"/>
+<text class="lblb" x="92" y="194" text-anchor="middle">glykogénfosforyláza</text>
+<text class="t-inh" x="92" y="209.0" text-anchor="middle">↓ glukóza</text>
+<text class="t-inh" x="92" y="221.5" text-anchor="middle">↓ Glc-6-P · ATP</text>
+<rect class="bx-m" x="190" y="178" width="136" height="62" rx="3"/>
+<text class="lblb" x="258" y="194" text-anchor="middle">glykogénsyntáza</text>
+<text class="t-akt" x="258" y="209.0" text-anchor="middle">↑ Glc-6-P</text>
+<vplyv typ="akt" od="{kp.b-40,22}" do="92,174"/>
+<vplyv typ="inh" od="{kp.b+40,22}" do="258,174"/><text class="sub" x="175" y="166" text-anchor="middle">fosforylácia</text>
+<uzol id="ip" x="175" y="310" text="inzulín → proteínfosfatáza 1|a útlm GSK-3 (cez Akt)"/>
+<vplyv typ="inh" od="{ip.t-40,0}" do="92,244"/>
+<vplyv typ="akt" od="{ip.t+40,0}" do="258,244"/><text class="sub" x="175" y="262" text-anchor="middle">defosforylácia</text>
+<text class="sub" x="175" y="348" text-anchor="middle">cieľ: glykémia celého tela –</text>
+<text class="sub" x="175" y="360" text-anchor="middle">rozklad nalačno a v strese, syntéza po jedle</text>
+<text class="cap" x="362" y="14">kostrový sval</text>
+<uzol id="hs" x="525" y="38" text="adrenalín (β) – glukagón tu nepôsobí"/>
+<uzol id="ks" x="525" y="104" text="cAMP → proteínkináza A →|fosforylázakináza" trieda="bx-c"/>
+<vplyv typ="akt" od="{hs.b}" do="{ks.t}"/>
+<text class="t-akt" x="525" y="138" text-anchor="middle">↑ Ca²⁺ (nervový podnet = signál kontrakcie)</text>
+<rect class="bx-m" x="374" y="178" width="136" height="62" rx="3"/>
+<text class="lblb" x="442" y="194" text-anchor="middle">glykogénfosforyláza</text>
+<text class="t-akt" x="442" y="209.0" text-anchor="middle">↑ AMP</text>
+<text class="t-inh" x="442" y="221.5" text-anchor="middle">↓ ATP · Glc-6-P</text>
+<rect class="bx-m" x="540" y="178" width="136" height="62" rx="3"/>
+<text class="lblb" x="608" y="194" text-anchor="middle">glykogénsyntáza</text>
+<text class="t-akt" x="608" y="209.0" text-anchor="middle">↑ Glc-6-P</text>
+<vplyv typ="akt" od="{ks.b-40,22}" do="442,174"/>
+<vplyv typ="inh" od="{ks.b+40,22}" do="608,174"/><text class="sub" x="525" y="166" text-anchor="middle">fosforylácia</text>
+<uzol id="is" x="525" y="310" text="inzulín → proteínfosfatáza 1|a útlm GSK-3 (cez Akt)"/>
+<vplyv typ="inh" od="{is.t-40,0}" do="442,244"/>
+<vplyv typ="akt" od="{is.t+40,0}" do="608,244"/><text class="sub" x="525" y="262" text-anchor="middle">defosforylácia</text>
+<text class="sub" x="525" y="348" text-anchor="middle">cieľ: ATP pre vlastnú kontrakciu –</text>
+<text class="sub" x="525" y="360" text-anchor="middle">rozklad pri práci, syntéza v pokoji po nej</text>
+<legenda x="20" y="382" polozky="akt,inh"/>
+</svg>

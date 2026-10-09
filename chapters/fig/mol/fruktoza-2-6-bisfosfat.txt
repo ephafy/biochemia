@@ -1,0 +1,15 @@
+nazov: fruktóza-2,6-bisfosfát
+skratka: Fru-2,6-P₂
+sumarny: C6H14O12P2
+smiles: C([C@@H]1[C@H]([C@@H]([C@](O1)(CO)OP(=O)(O)O)O)O)OP(=O)(O)O
+zdroj: PubChem CID 105021 (β-D-fruktofuranóza-2,6-bisfosfát) · overené 2026-10-06
+projekcia: Haworthov vzorec, β-D-furanóza; fosfát na anomérnom kyslíku C2 (hore) a na C6, oba ako P v krúžku
+---
+kruh furanoza C2 C3 C4 C5 O5
++ O2 C2 u O
++ P2 O2 0*1.2 (P)
++ C1 C2 d CH_2OH
++ O3 C3 u HO <
++ O4 C4 d OH
++ C6 C5 u O|CH_2
++ P6 C6 l*1.75 (P)

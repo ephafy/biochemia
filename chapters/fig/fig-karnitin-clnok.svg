@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 440" role="img" aria-labelledby="t-karnitin-clnok">
+<title id="t-karnitin-clnok">Aktivácia mastnej kyseliny a karnitínový člnok. V cytosole acyl-CoA-syntetáza spojí mastnú kyselinu s koenzýmom A; ATP sa pritom štiepi na AMP a difosfát. Karnitínpalmitoyltransferáza I vo vonkajšej membráne mitochondrie prenesie acyl z koenzýmu A na hydroxyl karnitínu. Acylkarnitín prejde translokázou cez vnútornú membránu výmenou za voľný karnitín. Na strane matrix karnitínpalmitoyltransferáza II vráti acyl na koenzým A a uvoľnený karnitín sa vracia späť. Malonyl-CoA inhibuje karnitínpalmitoyltransferázu I. Mastné kyseliny kratšie než dvanásť uhlíkov prechádzajú do matrix bez karnitínu.</title>
+<rect class="komp-m" x="232" y="24" width="14" height="330" rx="2"/>
+<rect class="komp-m" x="470" y="24" width="14" height="330" rx="2"/>
+<text class="cap" x="12" y="16">cytosol</text>
+<text class="cap" x="358" y="16" text-anchor="middle">medzimembránový priestor</text>
+<text class="cap" x="688" y="16" text-anchor="end">matrix</text>
+<text class="sub" x="239" y="368" text-anchor="middle">vonkajšia membrána</text>
+<text class="sub" x="477" y="368" text-anchor="middle">vnútorná membrána</text>
+<mol v="mastna-kyselina" id="fa" x="96" y="64"/>
+<mol v="acyl-coa" id="acc" x="96" y="214"/>
+<rx od="{fa.b}" do="{acc.t}" typ="nevratna" enzym="acyl-CoA-|syntetáza" ko="ATP, CoA>AMP + PPᵢ" e="vpravo"/>
+<mol v="acylkarnitin" id="ak" x="358" y="200" zv="O3,A-O3"/>
+<rx od="{acc.r+6,0}" do="{ak.l-6,14}" enzym="CPT I" inh="malonyl-CoA" ko="karnitín>CoA" e="hore" id="cpt1"/>
+<mol v="acyl-coa" id="acm" x="604" y="214"/>
+<rx od="{ak.r+6,14}" do="{acm.l-6,0}" enzym="translokáza|+ CPT II" ko="CoA>karnitín" e="hore" id="cpt2"/>
+<uzol id="box" x="604" y="320" text="β-oxidácia" trieda="bx-c" w="100"/>
+<rx od="{acm.b}" do="{box.t}"/>
+<mol v="karnitin" id="kar" x="358" y="312" zv="O3" m="0.9"/>
+<rx od="560,246" do="{kar.r+4,0}" cez="540,312"/>
+<rx od="{kar.l-4,0}" do="186,246" cez="200,312"/>
+<text class="lblb" x="358" y="272" text-anchor="middle">⟳</text>
+<path class="vz" d="M60,410 L640,410" marker-end="url(#sip-n)"/>
+<text class="sub" x="350" y="402" text-anchor="middle">MK kratšie než 12 uhlíkov: prejdú bez karnitínu a aktivujú sa až v matrix</text>
+<legenda x="20" y="432" polozky="rx,nv,enz,ko,inh,zv"/>
+</svg>

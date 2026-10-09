@@ -1,0 +1,18 @@
+nazov: kreatínfosfát
+skratka: CrP
+sumarny: C4H10N3O5P
+smiles: CN(CC(=O)O)/C(=N/P(=O)(O)O)/N
+zdroj: PubChem CID 9548602 (fosfokreatín) · overené 2026-10-07
+projekcia: skeletálny vzorec; fosfát (P v krúžku) viazaný na dusík guanidínovej skupiny – väzba N–P s vysokou energiou hydrolýzy
+---
+a C1 . 0 0
++ N1 C1 150 N
++ H1 N1 90 H
++ P1 N1 210*1.15 (P)
++ N2 C1 90 NH_2^+ 2
++ N3 C1 330 N
++ C4 N3 270 CH_3
++ C5 N3 30 .
++ C6 C5 330 .
++ O6a C6 270 O 2
++ O6b C6 30 O^-

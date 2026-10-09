@@ -1,0 +1,13 @@
+nazov: malonát
+sumarny: C3H2O4
+smiles: C(C(=O)O)C(=O)O
+zdroj: PubChem CID 867 (kyselina malónová) · overené 2026-10-07
+projekcia: skeletálny vzorec, dianión; o jeden uhlík kratší než sukcinát
+---
+a C2 . 0 0
++ C1 C2 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-
++ C3 C2 210 .
++ O3a C3 270 O 2
++ O3b C3 150 ^-O <

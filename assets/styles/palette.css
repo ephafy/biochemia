@@ -1,0 +1,30 @@
+/* ══════════════════════════════════════════════════════════════════════
+   PALETA BIOCHEM — jediné miesto, kde sa BIOCHEM vizuálne líši od PATOLY
+   a Patofyziológie. Všetko ostatné (site.css, site.js, tools/chapter.css)
+   je zdieľané; načítava sa POSLEDNÉ, takže prepíše tokeny z <style>
+   kapitoly aj zo site.css.
+
+   Farby sú z laboratória:
+     akcent   = meďnatá modrá (Cu²⁺ v biuretovom a Benedictovom činidle)
+     akcent-2 = karmínová (hém, krv)
+   Zámerne mimo farieb vyhradených boxom: oranžová (Pozor), tyrkysová
+   (Zapamätaj), zelená (Chémia) a žltá (revízia).
+   Zmena farby knihy = zmena týchto dvoch stupníc (9 hodnôt každá)
+   + theme-color v index.html, manifest.json a tools/build.js + ikony v assets/img/.
+   ══════════════════════════════════════════════════════════════════════ */
+:root{
+  --color-accent:#2a66ab;
+  --color-accent-2:#c23a55;
+
+  --color-accent-100:#eef4fb; --color-accent-200:#dae7f6; --color-accent-300:#b7d0ec;
+  --color-accent-400:#8bb2de; --color-accent-500:#5c91cd; --color-accent-600:#3774b9;
+  --color-accent-700:#265c9c; --color-accent-800:#1b4372; --color-accent-900:#112a48;
+
+  --color-accent-2-100:#fdf0f2; --color-accent-2-200:#f9dce1; --color-accent-2-300:#f2b9c3;
+  --color-accent-2-400:#e88c9c; --color-accent-2-500:#d95f76; --color-accent-2-600:#c23a55;
+  --color-accent-2-700:#9f2b43; --color-accent-2-800:#742032; --color-accent-2-900:#46131e;
+
+  /* shell (site.css) */
+  --site-accent:#2a66ab;
+  --site-accent-2:#c23a55;
+}

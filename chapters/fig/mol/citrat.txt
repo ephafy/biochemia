@@ -1,0 +1,17 @@
+nazov: citrát
+sumarny: C6H5O7
+smiles: C(C(=O)O)C(CC(=O)O)(C(=O)O)O
+zdroj: PubChem CID 311 (kyselina citrónová) · overené 2026-10-07
+projekcia: skeletálny vzorec, trianión – forma pri pH 7; na strednom uhlíku hydroxyl (terciárny alkohol) a tretí karboxyl
+---
+a C3 . 0 0
++ C6 C3 90 COO^-
++ O3 C3 270 OH
++ C2 C3 210 .
++ C1 C2 150 .
++ O1a C1 90 O 2
++ O1b C1 210 ^-O <
++ C4 C3 330 .
++ C5 C4 30 .
++ O5a C5 90 O 2
++ O5b C5 330 O^-

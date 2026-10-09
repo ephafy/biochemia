@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 412" role="img" aria-labelledby="t-vzor-schema">
+<title id="t-vzor-schema">Vzor schémy: posledný krok glykolýzy. Pyruvátkináza prenesie fosfát z fosfoenolpyruvátu na ADP, vznikne pyruvát a ATP; krok je nevratný. Fruktóza-1,6-bisfosfát z vyššej časti dráhy enzým aktivuje, ATP a alanín ho inhibujú. Výrez ukazuje, ako sa zjednodušené miesto schémy dá rozkliknúť.</title>
+<!--
+  VZOR, nie obrázok kapitoly (súbor začína „_“). Ukazuje, ako sa schéma skladá:
+  vzorce z knižnice (<mol>), reakcie (<rx>), vzťahy (<vplyv>) a vysvetlivky (<legenda>).
+  Značky a kotvy: tools/schema.js; pravidlá: CLAUDE.md §5.2. Fakty v schéme kapitoly musia
+  prejsť postupom §4.0 rovnako ako text.
+-->
+<text class="cap" x="20" y="14">cytosol</text>
+
+<mol v="fruktoza-1-6-bisfosfat" id="f16" x="230" y="52"/>
+<!-- zjednodušené miesto: rk="id" pridá krúžok ⊕, ktorý rozbalí <vyrez id="id"> dole; href="#fig-…" by spravil odkaz -->
+<uzol id="dalsie" x="230" y="124" text="⋮ ďalšie kroky dráhy" trieda="nic" rk="kroky" znak="304,124"/>
+
+<mol v="fosfoenolpyruvat" id="pep" x="230" y="186" zv="P2"/>
+<mol v="pyruvat" id="pyr" x="230" y="338" popis="vpravo"/>
+<rx id="pk" od="{pep.b}" do="{pep.b.x},{pyr.t.y}" typ="nevratna" enzym="pyruvátkináza" ko="ADP>ATP" akt="Fru-1,6-P₂" inh="ATP;alanín" krok="10"/>
+
+<!-- dopredná aktivácia: produkt skoršieho kroku zapína posledný krok -->
+<vplyv typ="akt" od="{f16.r+4,0}" do="{pk.er}" cez="470,52 470,{pk.er.y}"/>
+<text class="t-akt" x="478" y="150">dopredná aktivácia</text>
+<text class="sub" x="478" y="162">viac substrátu hore v dráhe</text>
+<text class="sub" x="478" y="173">→ rýchlejší posledný krok</text>
+
+<legenda x="20" y="388" polozky="nv,enz,ko,akt,inh,zv,rk"/>
+
+<!-- výrez: vlastné súradnice (0…700 × 0…h), obsah od y ≈ 30; kotvy hlavnej schémy tu neplatia -->
+<vyrez id="kroky" h="74" nadpis="Čo sa skrýva za tromi bodkami">
+<uzol id="v1" x="130" y="48" text="fruktóza-1,6-bisfosfát"/>
+<uzol id="v2" x="350" y="48" text="kroky 4–9 glykolýzy"/>
+<uzol id="v3" x="570" y="48" text="fosfoenolpyruvát"/>
+<rx od="{v1.r}" do="{v2.l}"/>
+<rx od="{v2.r}" do="{v3.l}"/>
+</vyrez>
+</svg>

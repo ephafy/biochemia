@@ -1,0 +1,22 @@
+nazov: laktóza
+skratka: Gal β(1→4) Glc
+sumarny: C12H22O11
+smiles: C([C@@H]1[C@@H]([C@@H]([C@H]([C@@H](O1)O[C@@H]2[C@H](O[C@@H]([C@@H]([C@H]2O)O)O)CO)O)O)O)O
+zdroj: PubChem CID 84571 (α-laktóza), CID 6134 (β-laktóza) · overené 2026-10-06
+projekcia: Haworthov vzorec; β-D-galaktopyranóza (vľavo, anomérny kyslík hore) spojená väzbou β(1→4) s D-glukopyranózou (vpravo, posunutá vyššie); redukujúci koniec nakreslený ako α-anomér
+---
+kruh pyranoza C1 C2 C3 C4 C5 O5
++ O2 C2 d OH
++ O3 C3 u OH
++ O4 C4 u HO <
++ C6 C5 u CH_2OH
+kruh pyranoza C1b C2b C3b C4b C5b O5b @ 4.6 -1.44
+a O1 O 2.3 -0.7
+b C1 O1
+b O1 C4b
++ O1b C1b d OH
++ O2b C2b d OH
++ O3b C3b u OH
++ C6b C5b u CH_2OH
+c C1 1 340
+c C4b 4 200

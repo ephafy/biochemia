@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 794" role="img" aria-labelledby="t-citratovy-cyklus">
+<title id="t-citratovy-cyklus">Citrátový cyklus zo vzorcov, v smere hodinových ručičiek. Krok 1: citrátsyntáza nevratne spojí acetyl-CoA s oxalacetátom na citrát; brzdí ju citrát. Krok 2: akonitáza vratne mení citrát na izocitrát. Krok 3: izocitrátdehydrogenáza nevratne oxiduje a dekarboxyluje izocitrát na 2-oxoglutarát, vzniká NADH a oxid uhličitý; aktivujú ju ADP a vápnik, brzdia ATP a NADH. Krok 4: 2-oxoglutarátdehydrogenázový komplex nevratne tvorí sukcinyl-CoA, NADH a druhý oxid uhličitý; aktivuje ho vápnik, brzdia NADH a sukcinyl-CoA. Krok 5: sukcinyl-CoA-syntetáza štiepi tioester a vzniká GTP. Krok 6: sukcinátdehydrogenáza s FAD oxiduje sukcinát na fumarát; brzdí ju malonát. Krok 7: fumaráza pripojí vodu a vznikne malát. Krok 8: malátdehydrogenáza oxiduje malát na oxalacetát a vzniká tretí NADH. Výrezy: medzistupeň akonitázy cis-akonitát, medzistupeň izocitrátdehydrogenázy oxalosukcinát a porovnanie sukcinátu s inhibítorom malonátom.</title>
+<text class="cap" x="12" y="14">matrix mitochondrie · jedna otáčka</text>
+<mol v="acetyl-coa" id="ac" x="350" y="44" m="0.8" zv="C1,C2,O1"/>
+<mol v="oxalacetat" id="oaa" x="214" y="170" m="0.8" popis="nad"/>
+<mol v="citrat" id="cit" x="486" y="170" m="0.8" zv="C6,O3"/>
+<mol v="izocitrat" id="iso" x="596" y="312" m="0.8" zv="O2"/>
+<mol v="2-oxoglutarat" id="og" x="596" y="486" m="0.8" zv="O2,C2-O2"/>
+<mol v="sukcinyl-coa" id="sc" x="486" y="692" m="0.8" zv="S1"/>
+<mol v="sukcinat" id="su" x="214" y="692" m="0.8"/>
+<mol v="fumarat" id="fu" x="104" y="486" m="0.8" zv="C2-C3"/>
+<mol v="malat" id="ma" x="104" y="312" m="0.8" zv="O2"/>
+<rx id="k1" od="{oaa.r+4,0}" do="{cit.l-4,0}" typ="nevratna" enzym="citrátsyntáza" krok="1" inh="citrát" e="dole"/>
+<path class="rx" d="M{ac.b} L350,{oaa.r.y-4}" marker-end="url(#sip)"/>
+<text class="sub" x="358" y="118">+ H₂O → CoA–SH</text>
+<rx od="{cit.r+2,0}" do="{iso.t}" cez="596,170" typ="vratna" enzym="akonitáza" krok="2" e="vlavo" rk="akon" znak="522,226"/>
+<rx od="{iso.b}" do="{iso.b.x},{og.t.y}" typ="nevratna" enzym="izocitrát-|dehydrogenáza" krok="3" akt="ADP · Ca²⁺" inh="ATP · NADH" ko="NAD⁺>NADH;>CO₂" e="vlavo" rk="idh" znak="500,376"/>
+<rx od="{og.b}" do="{sc.r+2,0}" cez="596,692" typ="nevratna" enzym="2-oxoglutarát-|dehydrogenáza" krok="4" akt="Ca²⁺" inh="NADH;sukcinyl-CoA" ko="NAD⁺>NADH;CoA>CO₂" e="vpravo"/>
+<uzol id="jakob" x="636" y="724" text="stavba ako brána" trieda="nic" w="96" href="#fig-pdh-komplex" tip="Obr. 6.3: rovnako stavaný komplex" znak="690,724"/>
+<rx od="{sc.l-4,0}" do="{su.r+4,0}" typ="vratna" enzym="sukcinyl-CoA-syntetáza" krok="5" ko="GDP, Pᵢ>GTP, CoA" e="hore"/>
+<text class="sub" x="350" y="744" text-anchor="middle">GTP + ADP ⇌ GDP + ATP</text>
+<rx od="{su.l-2,0}" do="{fu.b}" cez="104,692" typ="vratna" enzym="sukcinát-|dehydrogenáza" krok="6" inh="malonát" ko="FAD>FADH₂" e="vpravo" rk="sdh" znak="210,632"/>
+<rx od="{fu.t}" do="{fu.t.x},{ma.b.y}" typ="vratna" enzym="fumaráza" krok="7" ko="H₂O>" e="vpravo"/>
+<rx od="{ma.t}" do="{oaa.l-2,0}" cez="104,170" typ="vratna" enzym="malát-|dehydrogenáza" krok="8" ko="NAD⁺>NADH" e="vpravo"/>
+<text class="lblb" x="350" y="372" text-anchor="middle">⟳</text>
+<text class="lblb" x="350" y="396" text-anchor="middle">výnos jednej otáčky</text>
+<text class="sub" x="350" y="412" text-anchor="middle">2 CO₂ · 3 NADH · 1 FADH₂ · 1 GTP</text>
+<text class="sub" x="350" y="430" text-anchor="middle">oxalacetát sa obnoví – nespotrebúva sa</text>
+<legenda x="14" y="768" polozky="nv,vr,enz,ko,akt,inh,zv,rk,odk" w="672"/>
+
+<vyrez id="akon" h="196" nadpis="Krok 2 – akonitáza: hydroxyl sa „presunie“ cez dvojitú väzbu">
+<mol v="citrat" id="a-c" x="96" y="84" zv="O3"/>
+<mol v="cis-akonitat" id="a-a" x="350" y="84" zv="C2-C3"/>
+<mol v="izocitrat" id="a-i" x="604" y="84" zv="O2"/>
+<rx od="{a-c.r+6,-4}" do="{a-a.l-6,-4}" typ="vratna" ko=">H₂O"/>
+<rx od="{a-a.r+6,-4}" do="{a-i.l-6,-4}" typ="vratna" ko="H₂O>"/>
+<text class="rk-n" x="14" y="150">Enzým najprv vodu odštiepi (vznikne dvojitá väzba), potom ju pripojí opačne – hydroxyl tak skončí na susednom uhlíku, kde sa dá oxidovať.</text>
+<text class="rk-n" x="14" y="165">Medzistupeň enzým neopúšťa. V rovnováhe je asi 90 % citrátu; dopredu reakciu ťahá krok 3, ktorý izocitrát odoberá.</text>
+<text class="rk-n" x="14" y="180">Akonitáza má v aktívnom mieste železo a síru. Blokuje ju fluórcitrát, ktorý bunka sama vyrobí z jedu fluóracetátu.</text>
+</vyrez>
+
+<vyrez id="idh" h="212" nadpis="Krok 3 – izocitrátdehydrogenáza: najprv oxidácia, až potom CO₂">
+<mol v="izocitrat" id="i-i" x="96" y="88" zv="O2"/>
+<mol v="oxalosukcinat" id="i-o" x="350" y="88" zv="O2,C2-O2,C6"/>
+<mol v="2-oxoglutarat" id="i-g" x="604" y="88" zv="O2,C2-O2"/>
+<rx od="{i-i.r+6,-4}" do="{i-o.l-6,-4}" ko="NAD⁺>NADH"/>
+<rx od="{i-o.r+6,-4}" do="{i-g.l-6,-4}" ko=">CO₂"/>
+<text class="sub" x="350" y="148" text-anchor="middle">(ostáva viazaný na enzým)</text>
+<text class="rk-n" x="14" y="166">Oxidácia hydroxylu vytvorí ketoskupinu. Stredný karboxyl (modrý) je od nej o jeden uhlík ďalej – a z takej polohy sa CO₂ odštiepi ľahko.</text>
+<text class="rk-n" x="14" y="181">Preto poradie nemôže byť opačné. Rovnako pracuje 6-fosfoglukonátdehydrogenáza pentózofosfátovej dráhy.</text>
+<text class="rk-n" x="14" y="196">V kolese beží izoenzým s NAD⁺. Dva ďalšie používajú NADP⁺ (jeden v cytosole, jeden v mitochondrii) – tie sa menia v nádoroch.</text>
+</vyrez>
+
+<vyrez id="sdh" h="214" nadpis="Krok 6 – sukcinátdehydrogenáza a prečo ju malonát brzdí">
+<mol v="sukcinat" id="s-s" x="110" y="84" zv="C2,C3,C2-C3"/>
+<mol v="fumarat" id="s-f" x="350" y="84" zv="C2-C3"/>
+<rx od="{s-s.r+6,-4}" do="{s-f.l-6,-4}" typ="vratna" ko="FAD>FADH₂"/>
+<mol v="malonat" id="s-m" x="590" y="84" zv="C2"/>
+<text class="t-inh" x="590" y="134" text-anchor="middle">kompetitívny inhibítor</text>
+<text class="rk-n" x="14" y="160">Enzým odoberie po jednom vodíku z dvoch susedných uhlíkov sukcinátu (modré) a vznikne medzi nimi dvojitá väzba.</text>
+<text class="rk-n" x="14" y="175">Malonát má oba karboxyly ako sukcinát, takže do aktívneho miesta sadne – medzi nimi však len jeden uhlík, a dvojitá väzba nemá kde vzniknúť.</text>
+<text class="rk-n" x="14" y="190">Jediný enzým kolesa, ktorý sedí vo vnútornej membráne: je zároveň komplexom II dýchacieho reťazca.</text>
+<uzol id="s-k" x="604" y="196" text="komplex II v reťazci" trieda="nic" href="07_biologicke_oxidacie#fig-dychaci-retazec" tip="Kapitola 7: dýchací reťazec" znak="668,196"/>
+</vyrez>
+</svg>

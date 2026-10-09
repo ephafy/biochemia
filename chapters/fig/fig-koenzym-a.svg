@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 176" role="img" aria-labelledby="t-koenzym-a">
+<title id="t-koenzym-a">Koenzým A. Molekulu tvorí dlhé rameno a nukleotid. Rameno sa začína cysteamínom s voľnou SH-skupinou, pokračuje kyselinou pantoténovou, ktorá je vitamínom, a cez difosfát sa pripája na adenozín s fosfátom na 3′-hydroxyle. Na SH-skupinu sa tioesterovou väzbou viaže acyl, napríklad acetyl. Výrez ukazuje celý vzorec vrátane nukleotidu.</title>
+<mol v="koenzym-a" id="coa" x="372" y="62" zv="S1" popis="nie"/>
+<path class="vz" d="M{coa.S1.x-16},104 L{coa.N1.x+6},104"/>
+<text class="sub" x="{coa.C1.x}" y="118" text-anchor="middle">cysteamín</text>
+<path class="vz" d="M{coa.C3.x-6},104 L{coa.C9.x+4},104"/>
+<text class="sub" x="{coa.C6.x}" y="118" text-anchor="middle">kyselina pantoténová (vitamín B₅)</text>
+<path class="vz" d="M{coa.O9.x},104 L{coa.X1.x+86},104"/>
+<text class="sub" x="{coa.P2.x+10}" y="118" text-anchor="middle">difosfát a nukleotid</text>
+<plus rk="cely" x="{coa.P2.x+74}" y="115" tip="celý vzorec koenzýmu A"/>
+<text class="lblb" x="{coa.S1.x-8}" y="146" text-anchor="middle">sem sa viaže acyl:</text>
+<text class="sub" x="{coa.S1.x-8}" y="160" text-anchor="middle">R–CO–S–CoA (tioester)</text>
+<path class="vz" d="M{coa.S1.x-8},134 L{coa.S1.x-8},76" marker-end="url(#sip-n)"/>
+<text class="mn" x="372" y="20" text-anchor="middle">koenzým A (CoA–SH)</text>
+
+<vyrez id="cely" h="282" nadpis="Koenzým A celý – aj s nukleotidom, ktorý sa v schémach skracuje">
+<mol v="koenzym-a-plny" id="c-full" x="350" y="144" zv="S1" popis="nie"/>
+<path class="stk-n" d="M{c-full.S1.x-18},238 H{c-full.N1.x+8} M{c-full.C3.x-8},238 H{c-full.C9.x+4} M{c-full.O9.x+2},238 H{c-full.PB.x+12} M{c-full.C5r.x-14},238 H{c-full.aC2.x+8}"/>
+<text class="rk-n" x="{c-full.C1.x}" y="252" text-anchor="middle"><tspan class="b">cysteamín</tspan></text>
+<text class="rk-n" x="{c-full.C6.x}" y="252" text-anchor="middle"><tspan class="b">kyselina pantoténová</tspan> (B₅)</text>
+<text class="rk-n" x="{c-full.OAB.x}" y="252" text-anchor="middle"><tspan class="b">difosfát</tspan></text>
+<text class="rk-n" x="{c-full.C1r.x}" y="252" text-anchor="middle"><tspan class="b">adenozín-3′-fosfát</tspan></text>
+<text class="rk-n" x="14" y="44">Pracuje len SH-skupina (modrá). Zvyšok molekuly je rukoväť, za ktorú enzýmy acyl držia – preto sa v schémach píše len „–S–CoA“.</text>
+<text class="rk-n" x="14" y="272">Nukleotid je ten istý adenozín ako v ATP a NAD⁺; od nich ho odlišuje fosfát na 3′-kyslíku ribózy.</text>
+</vyrez>
+</svg>

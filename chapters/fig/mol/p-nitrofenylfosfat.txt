@@ -1,0 +1,14 @@
+nazov: p-nitrofenylfosfát
+skratka: pNPP
+sumarny: C6H4NO6P
+smiles: C1=CC(=CC=C1[N+](=O)[O-])OP(=O)(O)O
+zdroj: PubChem CID 378 (4-nitrofenyl-dihydrogénfosfát, C6H6NO6P) · overené 2026-10-06
+projekcia: skeletálny vzorec, benzénové jadro s nitroskupinou a fosfátom v polohe para; fosfát ako P v krúžku (pri pH 7 dianión); nitroskupina skrátene NO₂
+---
+kruh n6 A1 A2 A3 A4 A5 A6 rot 90
+b A1 A2 2r
+b A3 A4 2r
+b A5 A6 2r
++ O1 A1 0 O
++ P1 O1 0*1.2 (P)
++ N4 A4 180 O_2N <

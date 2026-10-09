@@ -1,0 +1,14 @@
+nazov: 2-fosfoglycerát
+skratka: 2-PG
+sumarny: C3H7O7P
+smiles: C([C@H](C(=O)O)OP(=O)(O)O)O
+zdroj: PubChem CID 439278 (kyselina 2-fosfo-D-glycerová) · overené 2026-10-06
+projekcia: skeletálny vzorec (cik-cak), karboxylát – forma pri pH 7; fosfát na C2 ako P v krúžku
+---
+a C2 . 0 0
++ O2 C2 90 O
++ P2 O2 30*1.15 (P)
++ C1 C2 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-
++ C3 C2 210 HOH_2C <

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" role="img" aria-labelledby="t-propionyl">
+<title id="t-propionyl">Premena propionyl-CoA na sukcinyl-CoA. Propionyl-CoA vzniká v poslednom kole β-oxidácie mastnej kyseliny s nepárnym počtom uhlíkov a z niektorých aminokyselín. Propionyl-CoA-karboxyláza s biotínom naň za spotreby ATP naviaže hydrogenuhličitan; vznikne metylmalonyl-CoA. Po zmene konfigurácie racemázou presunie metylmalonyl-CoA-mutáza s koenzýmom odvodeným od vitamínu B12 skupinu s koenzýmom A na metylový uhlík a vznikne sukcinyl-CoA, medziprodukt citrátového cyklu. Pri nedostatku vitamínu B12 alebo deficite mutázy sa metylmalonyl-CoA hromadí a v krvi a moči sa objaví kyselina metylmalónová.</title>
+<text class="cap" x="12" y="14">matrix mitochondrie · tri uhlíky, ktoré ostanú</text>
+<uzol id="src" x="92" y="52" text="MK s nepárnym počtom C|izoleucín · valín · metionín" w="170"/>
+<mol v="propionyl-coa" id="pr" x="92" y="150"/>
+<rx od="{src.b}" do="{pr.t}"/>
+<mol v="metylmalonyl-coa" id="mm" x="356" y="156" zv="C3,O3a,O3b"/>
+<rx od="{pr.r+6,0}" do="{mm.l-6,-6}" typ="nevratna" enzym="propionyl-CoA-|karboxyláza (biotín)" ko="HCO₃⁻, ATP>ADP, Pᵢ" e="hore"/>
+<mol v="sukcinyl-coa" id="su" x="612" y="150"/>
+<rx od="{mm.r+6,-6}" do="{su.l-6,0}" enzym="racemáza, potom|mutáza" ko="B₁₂>" e="hore" id="mut"/>
+<uzol id="cyk" x="612" y="52" text="citrátový cyklus|→ oxalacetát → glukóza" trieda="bx-c" w="160"/>
+<rx od="{su.t}" do="{cyk.b}"/>
+<uzol id="mma" x="356" y="264" text="kyselina metylmalónová v krvi a moči" w="230"/>
+<vplyv od="{mm.b}" do="{mma.t}"/>
+<text class="sub" x="366" y="234">pri nedostatku B₁₂ alebo deficite mutázy</text>
+</svg>

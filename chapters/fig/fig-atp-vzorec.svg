@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" role="img" aria-labelledby="t-atp-vzorec">
+<title id="t-atp-vzorec">Adenozíntrifosfát. Adenín je naviazaný na ribózu a tá nesie na uhlíku 5′ tri fosfáty označené alfa, beta a gama. Väzba medzi ribózou a prvým fosfátom je ester s nízkou energiou hydrolýzy. Dve väzby medzi fosfátmi sú anhydridové, makroergické; hydrolýza každej uvoľní pri štandardných podmienkach približne 30,5 kilojoulu na mol. Výrez: ATP sa štiepi dvoma spôsobmi – na ADP a fosfát, alebo na AMP a difosfát, ktorý pyrofosfatáza hneď rozloží.</title>
+<mol v="atp" id="a" x="330" y="112" popis="nie" zv="OAB,OBG,PA-OAB,OAB-PB,PB-OBG,OBG-PG"/>
+<text class="mn" x="{a.N1.x}" y="24" text-anchor="middle">adenín</text>
+<text class="mn" x="{a.C1r.x+34}" y="{a.C1r.y+34}">ribóza</text>
+<text class="mn" x="{a.PG.x}" y="{a.PG.y-44}" text-anchor="middle">γ</text>
+<text class="mn" x="{a.PB.x}" y="{a.PB.y-44}" text-anchor="middle">β</text>
+<text class="mn" x="{a.PA.x}" y="{a.PA.y-44}" text-anchor="middle">α</text>
+<path class="vz" d="M{a.OBG.x},{a.OBG.y+50} L{a.OBG.x},{a.OBG.y+10}" marker-end="url(#sip-n)"/>
+<path class="vz" d="M{a.OAB.x},{a.OAB.y+50} L{a.OAB.x},{a.OAB.y+10}" marker-end="url(#sip-n)"/>
+<text class="lblb" x="{a.OAB.x+8}" y="{a.PB.y+66}" text-anchor="end">dve anhydridové väzby</text>
+<text class="sub" x="{a.OAB.x+8}" y="{a.PB.y+80}" text-anchor="end">makroergické: ΔG°′ ≈ −30,5 kJ/mol každá</text>
+<path class="vz" d="M{a.C5r.x-13},{a.C5r.y+96} L{a.C5r.x-13},{a.C5r.y+10}" marker-end="url(#sip-n)"/>
+<text class="lblb" x="{a.C5r.x-13}" y="{a.C5r.y+112}" text-anchor="middle">esterová väzba</text>
+<text class="sub" x="{a.C5r.x-13}" y="{a.C5r.y+126}" text-anchor="middle">obyčajná (ostáva v AMP)</text>
+<text class="sub" x="560" y="150">v bunke ako komplex</text>
+<text class="sub" x="560" y="162">s Mg²⁺</text>
+<plus rk="stiep" x="{a.OAB.x+20}" y="{a.PB.y+62}" tip="dva spôsoby štiepenia ATP"/>
+<legenda x="14" y="268" polozky="zv,rk" w="672"/>
+
+<vyrez id="stiep" h="200" nadpis="Dva spôsoby, ako bunka ATP štiepi">
+<uzol id="s-atp" x="80" y="92" text="ATP" trieda="bx-c" w="70"/>
+<uzol id="s-adp" x="300" y="56" text="ADP + Pᵢ"/>
+<uzol id="s-amp" x="300" y="128" text="AMP + PPᵢ"/>
+<uzol id="s-pi" x="520" y="128" text="2 Pᵢ"/>
+<rx od="{s-atp.r}" do="{s-adp.l}"/>
+<rx od="{s-atp.r}" do="{s-amp.l}"/>
+<rx od="{s-amp.r}" do="{s-pi.l}" typ="nevratna" enzym="pyrofosfatáza" e="hore"/>
+<text class="rk-n" x="390" y="52">bežný prípad: štiepi sa väzba medzi β a γ;</text>
+<text class="rk-n" x="390" y="65">ADP sa v mitochondrii fosforyluje späť</text>
+<text class="rk-n" x="350" y="160">difosfát sa hneď rozloží – tým sa celá reakcia stáva nevratnou</text>
+<text class="rk-n" x="14" y="186">Druhý spôsob (štiepi sa väzba medzi α a β) používajú reakcie, ktoré potrebujú viac energie, napríklad aktivácia cukru alebo mastnej kyseliny.</text>
+</vyrez>
+</svg>

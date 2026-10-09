@@ -1,0 +1,28 @@
+nazov: glutatión
+skratka: GSH
+sumarny: C10H16N3O6S-
+smiles: C(CC(=O)N[C@@H](CS)C(=O)NCC(=O)O)[C@@H](C(=O)O)N
+zdroj: PubChem CID 124886 (glutatión, redukovaná forma) · overené 2026-10-08
+projekcia: skeletálny vzorec tripeptidu γ-glutamyl-cysteinyl-glycín, forma pri pH 7; glutamát je na cysteín pripojený bočným (γ) karboxylom, nie α-karboxylom; pracovnou časťou je SH-skupina cysteínu
+---
+a C1 . 0 0
++ O1a C1 270 O 2
++ O1b C1 150 ^-O <
++ CA C1 30 .
++ NA CA 90 NH_3^+
++ CB CA 330 .
++ CG CB 30 .
++ CD CG 330 .
++ OD CD 270 O 2
++ N1 CD 30 NH
++ CA2 N1 330 .
++ CB2 CA2 270 .
++ S CB2 330 SH
++ C2 CA2 30 .
++ O2 C2 90 O 2
++ N2 C2 330 N
++ HN2 N2 270 H
++ CA3 N2 30 .
++ C3 CA3 330 .
++ O3a C3 270 O 2
++ O3b C3 30 O^-

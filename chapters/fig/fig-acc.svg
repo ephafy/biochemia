@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 430" role="img" aria-labelledby="t-acc">
+<title id="t-acc">Acetyl-CoA-karboxyláza: riadiaci krok syntézy mastných kyselín a jeho regulácia. Hore reakcia: acetyl-CoA, hydrogenuhličitan a ATP dávajú malonyl-CoA; kofaktorom je biotín a krok je nevratný. Citrát enzým aktivuje, palmitoyl-CoA inhibuje. Dole prepínač: defosforylovaný enzým je aktívny a tvorí polyméry, fosforylovaný je neaktívny dimér. Fosforyluje ho kináza AMPK, ktorú zapína AMP a nepriamo glukagón a adrenalín; fosfát odstraňuje fosfatáza, ktorú podporuje inzulín. Malonyl-CoA brzdí karnitínpalmitoyltransferázu I, takže počas syntézy mastné kyseliny do mitochondrie nevstupujú.</title>
+<text class="cap" x="12" y="14">cytosol · riadiaci krok syntézy</text>
+<mol v="acetyl-coa" id="ac" x="96" y="86" skratka="nie"/>
+<mol v="malonyl-coa" id="mal" x="560" y="86" zv="C3,O3a,O3b"/>
+<rx od="{ac.r+8,0}" do="{mal.l-8,0}" typ="nevratna" enzym="acetyl-CoA-karboxyláza (biotín)" ko="HCO₃⁻, ATP>ADP, Pᵢ" akt="citrát" inh="palmitoyl-CoA" e="hore" id="acc"/>
+<text class="sub" x="560" y="138" text-anchor="middle">modro: karboxyl, ktorý pri</text>
+<text class="sub" x="560" y="149" text-anchor="middle">stavbe reťazca zasa odíde</text>
+
+<uzol id="on" x="130" y="284" text="karboxyláza aktívna|bez fosfátu · polymér" trieda="bx-c" w="170"/>
+<uzol id="off" x="450" y="284" text="karboxyláza vypnutá|s fosfátom · dimér" w="170"/>
+<rx id="kin" od="{on.tr}" do="{off.tl}" cez="290,212" enzym="kináza AMPK" akt="AMP · glukagón · adrenalín" ko="ATP>ADP" e="hore"/>
+<rx id="fos" od="{off.bl}" do="{on.br}" cez="290,356" enzym="fosfatáza" akt="inzulín" ko="H₂O>Pᵢ" e="dole"/>
+<text class="lblb" x="290" y="288" text-anchor="middle">⟳</text>
+<uzol id="cpt" x="620" y="284" text="vstup MK do|mitochondrie|(CPT I)" w="110"/>
+<vplyv typ="inh" od="650,106" do="{cpt.t+24,0}" text="malonyl-CoA" pri="648,216" zarovnaj="start"/>
+<text class="sub" x="620" y="330" text-anchor="middle">syntéza beží →</text>
+<text class="sub" x="620" y="341" text-anchor="middle">odbúranie stojí</text>
+<legenda x="20" y="420" polozky="rx,nv,enz,ko,akt,inh"/>
+</svg>

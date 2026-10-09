@@ -1,0 +1,49 @@
+nazov: adenozíntrifosfát
+skratka: ATP
+sumarny: C10H12N5O13P3
+smiles: C1=NC(=C2C(=N1)N(C=N2)[C@H]3[C@@H]([C@@H]([C@H](O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O)N
+zdroj: PubChem CID 5957 (adenozín-5′-trifosfát) · overené 2026-10-07
+projekcia: ribóza Haworthovým vzorcom (β-D-ribofuranóza), adenín na C1′, tri fosfáty na C5′ vypísané (anión pri pH 7): väzba ribóza–fosfát je ester, dve väzby medzi fosfátmi sú anhydridové
+---
+kruh furanoza C1r C2r C3r C4r O4r
++ O2r C2r d OH
++ O3r C3r d HO <
++ C5r C4r u O|CH_2
+a N9 N 1.6 -0.78
+a C4 . 2.409 -1.368
+a C5 . 2.1 -2.319
+a N7 N 1.1 -2.319
+a C8 . 0.791 -1.368
+a N3 N 3.387 -1.16
+a C2 . 4.056 -1.903
+a N1 N 3.747 -2.854
+a C6 . 2.769 -3.062
+b N9 C4
+b C4 C5 2
+b C5 N7
+b N7 C8 2
+b C8 N9
+b C5 C6
+b C6 N1 2
+b N1 C2
+b C2 N3 2
+b N3 C4
++ N6 C6 108 NH_2
+b C1r N9
+a PA P -3.6 -0.78
++ OA1 PA 90 O 2
++ OA2 PA 270 O^-
+a PB P -5.3 -0.78
++ OB1 PB 90 O 2
++ OB2 PB 270 O^-
+a PG P -7 -0.78
++ OG1 PG 90 O 2
++ OG2 PG 270 O^-
+b C5r PA
+a OAB O -4.45 -0.78
+b PA OAB
+b OAB PB
+a OBG O -6.15 -0.78
+b PB OBG
+b OBG PG
++ OG3 PG 180 ^-O <

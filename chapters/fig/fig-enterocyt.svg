@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 330" role="img" aria-labelledby="t-enterocyt">
+<title id="t-enterocyt">Prechod monosacharidov cez enterocyt. Na strane lúmenu prenáša SGLT1 glukózu alebo galaktózu spolu s dvoma iónmi sodíka; sodík ide po koncentračnom spáde a ťahá cukor proti spádu. Fruktóza vstupuje uľahčenou difúziou cez GLUT5. Všetky tri cukry opúšťajú bunku do krvi cez GLUT2. Sodíkovo-draslíková ATPáza na strane krvi vyčerpáva sodík z bunky za spotreby ATP a tým udržiava spád, ktorý poháňa SGLT1.</title>
+<rect class="komp" x="70" y="92" width="560" height="140" rx="3"/>
+<text class="cap" x="12" y="14">lúmen tenkého čreva</text>
+<text class="cap" x="80" y="166">enterocyt</text>
+<text class="cap" x="12" y="322">krv → portálna žila → pečeň</text>
+<text class="sub" x="688" y="86" text-anchor="end">apikálna membrána (kefkový lem)</text>
+<text class="sub" x="80" y="246">bazolaterálna membrána</text>
+<uzol id="g5" x="180" y="92" text="GLUT5" trieda="bx-c"/>
+<uzol id="s1" x="430" y="92" text="SGLT1" trieda="bx-m"/>
+<uzol id="g2" x="250" y="232" text="GLUT2" trieda="bx-c"/>
+<uzol id="nk" x="540" y="232" text="Na⁺/K⁺-ATPáza" trieda="bx-m"/>
+<text class="lblb" x="180" y="34" text-anchor="middle">fruktóza</text>
+<rx od="180,40" do="{g5.t}"/>
+<text class="sub" x="170" y="62" text-anchor="end">uľahčená difúzia</text>
+<text class="lblb" x="410" y="34" text-anchor="end">glukóza · galaktóza</text>
+<rx od="416,40" do="416,{s1.t.y}"/>
+<text class="lblb" x="440" y="34">2 Na⁺</text>
+<rx od="446,40" do="446,{s1.t.y}"/>
+<text class="sub" x="462" y="56">symport: Na⁺ ide po spáde</text>
+<text class="sub" x="462" y="67">a ťahá cukor proti spádu</text>
+<rx od="{g5.b}" do="{g2.t-14,0}" cez="180,180"/>
+<rx od="416,{s1.b.y}" do="{g2.t+14,0}" cez="400,190"/>
+<text class="sub" x="330" y="150" text-anchor="middle">glukóza, galaktóza</text>
+<rx od="446,{s1.b.y}" do="{nk.t-14,0}" cez="456,190"/>
+<text class="sub" x="500" y="150">Na⁺</text>
+<rx od="{g2.b}" do="250,292"/>
+<text class="lblb" x="250" y="306" text-anchor="middle">glukóza · galaktóza · fruktóza</text>
+<text class="sub" x="258" y="270">uľahčená difúzia</text>
+<rx od="{nk.b-26,0}" do="514,296" typ="nevratna" ko="ATP>ADP" e="vpravo"/>
+<text class="lblb" x="514" y="312" text-anchor="middle">3 Na⁺</text>
+<rx od="572,296" do="{nk.b+32,0}"/>
+<text class="lblb" x="572" y="312" text-anchor="middle">2 K⁺</text>
+<text class="sub" x="600" y="270">primárny aktívny</text>
+<text class="sub" x="600" y="281">transport</text>
+</svg>

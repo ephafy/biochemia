@@ -1,0 +1,37 @@
+/* BIOCHEM: prepínač zobrazenia mobil ↔ počítač (assets/js/view-toggle.js). Vlastný súbor BIOCHEM. */
+
+.bc-view-toggle{
+  display:inline-flex;align-items:center;gap:6px;flex:none;
+  height:26px;padding:0 9px;border-radius:13px;
+  border:1px solid var(--site-border,rgba(32,30,29,.14));
+  background:transparent;color:color-mix(in srgb,var(--site-text,#201e1d) 75%,transparent);
+  font-family:var(--site-font,system-ui,sans-serif);font-size:calc(11.5px*var(--z,1));line-height:1;
+  cursor:pointer;white-space:nowrap;
+}
+.bc-view-toggle:hover{background:var(--site-bg,#f3f2f2);color:var(--site-text,#201e1d)}
+.bc-view-toggle[hidden]{display:none}
+.bc-view-toggle svg{
+  width:15px;height:15px;flex:none;fill:none;stroke:currentColor;
+  stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;
+}
+@media (max-width:600px){.bc-view-toggle span.lbl{display:none}.bc-view-toggle{padding:0 7px}}
+
+/* ── nastavenia (ozubené koleso) ───────────────────────────────────── */
+.bc-gear{padding:0 7px}
+.bc-set{
+  position:fixed;top:calc(var(--site-header-h,52px) + 6px);right:12px;z-index:200;width:260px;max-width:calc(100vw - 24px);
+  padding:12px 14px;border:1px solid var(--site-border,rgba(32,30,29,.14));border-radius:8px;background:#fff;
+  font-family:var(--site-font,system-ui,sans-serif);font-size:calc(12.5px*var(--z,1));color:var(--site-text,#201e1d);
+  box-shadow:0 6px 24px rgba(0,0,0,.16);
+}
+.bc-set[hidden]{display:none}
+.bc-set .r{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;font-weight:600}
+.bc-set .c{display:flex;align-items:center;gap:8px}
+.bc-set .c input{flex:1;min-width:0;accent-color:var(--site-accent,#2a66ab)}
+.bc-set button{
+  font:inherit;line-height:1;cursor:pointer;color:inherit;background:#fff;
+  border:1px solid var(--site-border,rgba(32,30,29,.14));border-radius:14px;padding:6px 9px;
+}
+.bc-set button:hover{background:var(--site-bg,#f3f2f2)}
+.bc-set .z{margin-top:10px;width:100%}
+@media print{.bc-view-toggle,.bc-set{display:none!important}:root{--z:1!important}}

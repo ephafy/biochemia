@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 468" role="img" aria-labelledby="t-cyklus-krizovatka">
+<title id="t-cyklus-krizovatka">Citrátový cyklus ako križovatka. Odber medziproduktov: citrát odchádza do cytosolu na syntézu mastných kyselín a cholesterolu, z 2-oxoglutarátu vzniká glutamát, glutamín a GABA, zo sukcinyl-CoA hém, malát a oxalacetát idú do glukoneogenézy, z oxalacetátu vzniká aspartát. Doplnenie: pyruvátkarboxyláza, ktorú aktivuje acetyl-CoA, tvorí z pyruvátu oxalacetát; glutamát a glutamín dávajú 2-oxoglutarát; valín, izoleucín, metionín a mastné kyseliny s nepárnym počtom uhlíkov dávajú sukcinyl-CoA; fenylalanín a tyrozín fumarát; aspartát oxalacetát. Výrez: 2-oxoglutarát a glutamát, oxalacetát a aspartát sa líšia len skupinou na uhlíku 2.</title>
+<text class="cap" x="12" y="14">modré = doplnenie (anapleróza) · ružové = odber (katapleróza)</text>
+<uzol id="oaa" x="250" y="110" text="oxalacetát"/>
+<uzol id="cit" x="450" y="110" text="citrát"/>
+<uzol id="og" x="540" y="220" text="2-oxoglutarát"/>
+<uzol id="sc" x="450" y="330" text="sukcinyl-CoA"/>
+<uzol id="fu" x="250" y="330" text="fumarát"/>
+<uzol id="ma" x="160" y="220" text="malát"/>
+<rx od="{oaa.r}" do="{cit.l}"/>
+<rx od="{cit.r}" do="{og.t}" cez="540,110"/>
+<rx od="{og.b}" do="{sc.r}" cez="540,330"/>
+<rx od="{sc.l}" do="{fu.r}"/>
+<rx od="{fu.l}" do="{ma.b}" cez="160,330"/>
+<rx od="{ma.t}" do="{oaa.l}" cez="160,110"/>
+<text class="lblb" x="350" y="224" text-anchor="middle">⟳</text>
+<uzol id="pyr" x="84" y="46" text="pyruvát" trieda="bx-c"/>
+<rx od="{pyr.r}" do="{oaa.t}" cez="250,46" typ="nevratna" enzym="pyruvátkarboxyláza (biotín)" akt="acetyl-CoA" e="hore"/>
+<text class="sub" x="262" y="76">+ CO₂ + ATP</text>
+<uzol id="asp" x="350" y="170" text="aspartát" trieda="bx-c" rk="amino"/>
+<rx od="{asp.tl}" do="{oaa.b}" typ="vratna"/>
+<uzol id="mk" x="610" y="46" text="MK · cholesterol|(cytosol)" trieda="bx-m" href="08_lipidy_mastne_kyseliny#fig-citrat-clnok" tip="Kapitola 8: citrát vynáša acetyl do cytosolu"/>
+<rx od="{cit.t}" do="{mk.l}" cez="450,46"/>
+<uzol id="glu" x="634" y="150" text="glutamín|GABA" trieda="bx-m"/>
+<uzol id="glu2" x="634" y="270" text="glutamát|glutamín" trieda="bx-c" rk="amino"/>
+<rx od="{og.tr}" do="{glu.b}"/>
+<rx od="{glu2.t}" do="{og.br}"/>
+<uzol id="hem" x="634" y="350" text="hém" trieda="bx-m"/>
+<rx od="{sc.r}" do="{hem.l}"/>
+<uzol id="val" x="450" y="404" text="valín · izoleucín · metionín · MK s nepárnym počtom C" trieda="bx-c" href="08_lipidy_mastne_kyseliny#fig-propionyl" tip="Kapitola 8: propionyl-CoA → sukcinyl-CoA"/>
+<rx od="{val.t}" do="{sc.b}"/>
+<uzol id="phe" x="130" y="404" text="fenylalanín · tyrozín" trieda="bx-c"/>
+<rx od="{phe.t+40,0}" do="{fu.b}"/>
+<uzol id="gng" x="60" y="150" text="glukoneo-|genéza" trieda="bx-m" href="04_metabolizmus_glukozy#fig-obchadzka-pyruvat" tip="Kapitola 4: z oxalacetátu fosfoenolpyruvát"/>
+<rx od="{ma.tl}" do="{gng.b}"/>
+<legenda x="14" y="440" polozky="nv,vr,enz,akt,rk,odk" w="672"/>
+
+<vyrez id="amino" h="206" nadpis="Oxokyselina ⇌ aminokyselina: dva páry, ktoré sa líšia jednou skupinou">
+<mol v="2-oxoglutarat" id="a-og" x="96" y="78" zv="O2,C2-O2"/>
+<mol v="glutamat" id="a-glu" x="270" y="78" zv="N2"/>
+<rx od="{a-og.r+4,-6}" do="{a-glu.l-4,-6}" typ="vratna"/>
+<mol v="oxalacetat" id="a-oa" x="446" y="78" zv="O2,C2-O2"/>
+<mol v="aspartat" id="a-asp" x="610" y="78" zv="N2"/>
+<rx od="{a-oa.r+4,-6}" do="{a-asp.l-4,-6}" typ="vratna"/>
+<text class="rk-n" x="14" y="160"><tspan class="b">Kostra je tá istá</tspan> – na uhlíku 2 stojí buď ketoskupina, alebo aminoskupina (modro). Aminotransferázy ich vratne zamieňajú:</text>
+<text class="rk-n" x="14" y="173">aminokyselina odovzdá aminoskupinu oxokyseline a sama sa oxokyselinou stane. Preto môže koleso tými istými dverami</text>
+<text class="rk-n" x="14" y="186">medziprodukt vydať (na stavbu aminokyseliny) aj prijať (keď sa aminokyselina odbúrava). Osud dusíka patrí do ďalšej časti knihy.</text>
+</vyrez>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" role="img" aria-labelledby="t-triedy-enzymov">
+<title id="t-triedy-enzymov">Štyri typy reakcií na známych molekulách. Hexokináza (transferáza) prenesie fosfát z ATP na glukózu, vznikne glukóza-6-fosfát; krok je nevratný. Glukóza-6-fosfatáza (hydroláza) fosfát odštiepi vodou a vráti glukózu. Glukóza-6-fosfát-izomeráza (izomeráza) vratne prestavia glukóza-6-fosfát na fruktóza-6-fosfát. Laktátdehydrogenáza (oxidoreduktáza) vratne oxiduje laktát na pyruvát a elektróny odovzdá NAD⁺.</title>
+<mol v="glukoza" id="glc" x="90" y="112"/>
+<mol v="glukoza-6-fosfat" id="g6p" x="355" y="112" zv="P6"/>
+<mol v="fruktoza-6-fosfat" id="f6p" x="605" y="116"/>
+<rx id="hk" od="{glc.r+10,-36}" do="{g6p.l-8,-36}" typ="nevratna" enzym="hexokináza|transferáza (EC 2)" ko="ATP>ADP" e="dole"/>
+<rx id="g6pa" od="{g6p.l-8,36}" do="{glc.r+10,36}" typ="nevratna" enzym="glukóza-6-fosfatáza|hydroláza (EC 3)" ko="H₂O>Pᵢ" e="hore"/>
+<rx id="gpi" od="{g6p.r+10,0}" do="{f6p.l-10,-4}" typ="vratna" enzym="glukóza-6-fosfát-|izomeráza|izomeráza (EC 5)" e="hore"/>
+
+<mol v="laktat" id="lac" x="200" y="306" zv="O2"/>
+<mol v="pyruvat" id="pyr" x="500" y="306" zv="O2"/>
+<rx id="ldh" od="{lac.r+14,0}" do="{pyr.l-14,0}" typ="vratna" enzym="laktátdehydrogenáza|oxidoreduktáza (EC 1)" ko="NAD⁺>NADH + H⁺" e="hore"/>
+<legenda x="20" y="390" polozky="nv,vr,enz,ko,zv"/>
+</svg>

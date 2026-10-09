@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 176" role="img" aria-labelledby="t-glykozidova-vazba">
+<title id="t-glykozidova-vazba">Hydrolýza glykozidovej väzby. α-Glukozidáza (maltáza) pripojí vodu na väzbu α(1→4) medzi dvoma glukózami maltózy a uvoľní dve molekuly glukózy. Kyslík väzby patrí anomérnemu uhlíku C1 ľavej glukózy; po štiepení má každá glukóza voľný hydroxyl.</title>
+<mol v="maltoza" id="m" x="125" y="66" zv="O1"/>
+<mol v="glukoza" id="g1" x="455" y="66" zv="O1"/>
+<mol v="glukoza" id="g2" x="625" y="66" zv="O4"/>
+<text class="lblb" x="540" y="70" text-anchor="middle">+</text>
+<rx od="{m.r+8,0}" do="{g1.l-10,0}" typ="nevratna" enzym="α-glukozidáza (maltáza)|hydroláza (EC 3)" ko="H₂O>" e="hore"/>
+<text class="sub" x="20" y="150">Opačný smer – spojenie dvoch cukrov – v bunke nejde obyčajným odštiepením vody: donor musí byť najprv aktivovaný (napr. UDP-glukóza).</text>
+<legenda x="20" y="168" polozky="nv,enz,ko,zv"/>
+</svg>

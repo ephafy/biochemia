@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 606" role="img" aria-labelledby="t-mapa-metabolizmu">
+<title id="t-mapa-metabolizmu">Mapa metabolizmu v troch stupňoch. V prvom stupni sa škrob a glykogén, triacylglyceroly a bielkoviny hydrolyzujú na glukózu, mastné kyseliny s glycerolom a aminokyseliny. V druhom stupni sa tieto jednotky menia na spoločné medziprodukty: glukóza na glukóza-6-fosfát a pyruvát, pyruvát, mastné kyseliny aj väčšina aminokyselín na acetyl-CoA. V treťom stupni sa acetyl-CoA oxiduje v citrátovom cykle na oxid uhličitý; elektróny nesú NADH a FADH₂ do dýchacieho reťazca, kde vzniká ATP. Z glukóza-6-fosfátu odbočuje glykogén a pentózy s NADPH, z pyruvátu laktát, z acetyl-CoA syntézy mastných kyselín, cholesterolu a ketolátok.</title>
+<text class="cap" x="12" y="14">1 · trávenie: veľké molekuly → stavebné jednotky (hydrolýza, bez zisku ATP)</text>
+<uzol id="ps" x="160" y="40" text="škrob, glykogén"/>
+<uzol id="tg" x="410" y="40" text="triacylglyceroly"/>
+<uzol id="pr" x="600" y="40" text="bielkoviny"/>
+<uzol id="glc" x="160" y="98" text="glukóza" trieda="bx-c"/>
+<uzol id="mk" x="410" y="98" text="mastné kyseliny + glycerol" trieda="bx-c"/>
+<uzol id="ak" x="600" y="98" text="aminokyseliny" trieda="bx-c"/>
+<rx od="{ps.b}" do="{glc.t}"/>
+<rx od="{tg.b}" do="{mk.t}"/>
+<rx od="{pr.b}" do="{ak.t}"/>
+
+<text class="cap" x="6" y="138">2 · cesta k acetyl-CoA</text>
+<mol v="glukoza-6-fosfat" id="g6p" x="160" y="196" m="0.85"/>
+<rx od="{glc.b}" do="{g6p.t}" typ="nevratna"/>
+<uzol id="gg" x="318" y="178" text="glykogén"/>
+<rx od="{g6p.r+6,-18}" do="{gg.l}" typ="vratna"/>
+<uzol id="ppp" x="326" y="218" text="pentózy, NADPH"/>
+<rx od="{g6p.r+6,22}" do="{ppp.l}"/>
+<text class="sub" x="62" y="196" text-anchor="middle">križovatka 1</text>
+
+<mol v="pyruvat" id="pyr" x="160" y="334" popis="vpravo"/>
+<rx od="{g6p.b}" do="{g6p.b.x},{pyr.t.y}"/>
+<text class="sub" x="168" y="284">glykolýza</text>
+<uzol id="lak" x="46" y="334" text="laktát"/>
+<rx od="{pyr.l-2,0}" do="{lak.r}" typ="vratna"/>
+<text class="sub" x="62" y="372" text-anchor="middle">križovatka 2</text>
+
+<mol v="acetyl-coa" id="ac" x="410" y="442"/>
+<rx od="{pyr.b}" do="{ac.l-6,0}" cez="160,442" typ="nevratna"/>
+<text class="sub" x="262" y="466" text-anchor="middle">oxidačná dekarboxylácia</text>
+<rx od="{mk.b}" do="{mk.b.x},{ac.t.y}"/>
+<text class="sub" x="418" y="300">β-oxidácia</text>
+<rx od="{ak.b-20,0}" do="{ac.r+6,0}" cez="580,442"/>
+<uzol id="moc" x="652" y="178" text="NH₃ →|močovina"/>
+<rx od="{ak.b+36,0}" do="{moc.t-16,0}"/>
+<text class="sub" x="500" y="476" text-anchor="middle">križovatka 3</text>
+<uzol id="syn" x="205" y="524" text="syntézy: mastné kyseliny,|cholesterol, ketolátky"/>
+<rx od="{ac.l-6,16}" do="{syn.tr-6,0}"/>
+
+<text class="cap" x="460" y="508">3 · spoločná oxidácia</text>
+<uzol id="cc" x="410" y="540" text="citrátový cyklus" trieda="bx-c"/>
+<rx od="{ac.b}" do="{cc.t}"/>
+<uzol id="co2" x="410" y="590" text="CO₂"/>
+<rx od="{cc.b}" do="{co2.t}"/>
+<uzol id="dr" x="606" y="540" text="dýchací reťazec|O₂ → H₂O" trieda="bx-c"/>
+<rx od="{cc.r}" do="{dr.l}"/>
+<text class="sub" x="504" y="532" text-anchor="middle">NADH, FADH₂</text>
+<uzol id="atp" x="606" y="590" text="ATP" trieda="bx-m"/>
+<rx od="{dr.b}" do="{atp.t}"/>
+</svg>

@@ -1,0 +1,15 @@
+nazov: glukóza
+skratka: Glc
+sumarny: C6H12O6
+smiles: C([C@@H]1[C@H]([C@@H]([C@H]([C@H](O1)O)O)O)O)O
+zdroj: PubChem CID 5793 (D-glukóza), CID 79025 (α-D-glukopyranóza) · overené 2026-10-06
+projekcia: Haworthov vzorec, α-D-pyranóza (anomérny OH dole, oproti C6)
+---
+kruh pyranoza C1 C2 C3 C4 C5 O5
++ O1 C1 d OH
++ O2 C2 d OH
++ O3 C3 u OH
++ O4 C4 d HO <
++ C6 C5 u CH_2OH
+c C1 1 20
+c C6 6 150

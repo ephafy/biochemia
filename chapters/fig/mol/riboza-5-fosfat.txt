@@ -1,0 +1,19 @@
+nazov: ribóza-5-fosfát
+skratka: Rib-5-P
+sumarny: C5H11O8P
+smiles: C([C@@H]1[C@H]([C@H](C(O1)O)O)O)OP(=O)(O)O
+zdroj: PubChem CID 439167 (D-ribóza-5-fosfát; záznam je kruhová forma, kreslená je otvorená) · overené 2026-10-07
+projekcia: Fischerova projekcia otvorenej formy; aldopentóza – aldehyd na C1; OH na C2, C3 a C4 vpravo; fosfát na C5 ako P v krúžku (v nukleotidoch je ribóza v kruhu – furanóza)
+---
+a C1 CHO 0 0
++ C2 C1 270 .
++ O2 C2 0 OH
++ H2 C2 180 H <
++ C3 C2 270 .
++ O3 C3 0 OH
++ H3 C3 180 H <
++ C4 C3 270 .
++ O4 C4 0 OH
++ H4 C4 180 H <
++ C5 C4 270 CH_2O
++ P5 C5 r*2.35 (P)

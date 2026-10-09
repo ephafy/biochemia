@@ -1,0 +1,20 @@
+nazov: galaktitol
+sumarny: C6H14O6
+smiles: C([C@H]([C@@H]([C@@H]([C@H](CO)O)O)O)O)O
+zdroj: PubChem CID 11850 (galaktitol = dulcitol) · overené 2026-10-07
+projekcia: Fischerova projekcia; cukrový alkohol z galaktózy; OH na C2 vpravo, C3 a C4 vľavo, C5 vpravo (mezo-forma)
+---
+a C1 CH_2OH 0 0
++ C2 C1 270 .
++ O2 C2 0 OH
++ H2 C2 180 H <
++ C3 C2 270 .
++ O3 C3 180 HO <
++ H3 C3 0 H
++ C4 C3 270 .
++ O4 C4 180 HO <
++ H4 C4 0 H
++ C5 C4 270 .
++ O5 C5 0 OH
++ H5 C5 180 H <
++ C6 C5 270 CH_2OH

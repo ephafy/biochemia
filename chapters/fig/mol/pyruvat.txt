@@ -1,0 +1,13 @@
+nazov: pyruvát
+skratka: Pyr
+sumarny: C3H3O3-
+smiles: CC(=O)C(=O)[O-]
+zdroj: PubChem CID 107735 (pyruvát), CID 1060 (kyselina pyrohroznová) · overené 2026-10-06
+projekcia: skeletálny vzorec (cik-cak), anión – forma prevažujúca pri pH 7
+---
+a C2 . 0 0
++ C3 C2 210 H_3C <
++ O2 C2 90 O 2
++ C1 C2 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-

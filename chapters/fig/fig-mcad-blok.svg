@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 330" role="img" aria-labelledby="t-mcad-blok">
+<title id="t-mcad-blok">Čo sa stane pri deficite acyl-CoA-dehydrogenázy pre stredne dlhé reťazce. Mastné kyseliny z tukového tkaniva sa v mitochondrii pečene skracujú, kým nedosiahnu stredne dlhý reťazec okolo ôsmich uhlíkov; tam sa β-oxidácia zastaví. Pred blokom sa hromadí stredne dlhý acyl-CoA: časť sa prenesie na karnitín a ako oktanoylkarnitín sa objaví v krvi, časť spracuje ω-oxidácia na dikarboxylové kyseliny, ktoré odchádzajú močom. Za blokom chýba acetyl-CoA, a teda ketolátky, a chýba aj ATP, NADH a aktivácia pyruvátkarboxylázy pre glukoneogenézu. Výsledkom je hypoglykémia bez ketolátok.</title>
+<text class="cap" x="12" y="14">pečeň pri hladovaní · deficit dehydrogenázy pre stredne dlhé reťazce</text>
+<uzol id="mk" x="70" y="96" text="MK z tukového|tkaniva" w="110"/>
+<uzol id="lc" x="230" y="96" text="dlhý acyl-CoA|v matrix" trieda="bx-c" w="110"/>
+<uzol id="mc" x="400" y="96" text="stredne dlhý|acyl-CoA (≈ 8 C)" trieda="bx-m" w="130"/>
+<uzol id="ac" x="610" y="96" text="acetyl-CoA" w="100"/>
+<rx od="{mk.r}" do="{lc.l}"/>
+<rx od="{lc.r}" do="{mc.l}"/>
+<text class="sub" x="312" y="66" text-anchor="middle">β-oxidácia skracuje</text>
+<path class="rx" d="M{mc.r.x},96 L{ac.l.x-4},96" stroke-dasharray="3 4"/>
+<path class="inh plna" d="M508,82 L524,110 M524,82 L508,110"/>
+<text class="t-inh" x="516" y="72" text-anchor="middle">blok</text>
+<uzol id="c8" x="320" y="200" text="oktanoylkarnitín|v krvi" w="130"/>
+<uzol id="dk" x="480" y="200" text="dikarboxylové|kyseliny v moči" w="130"/>
+<rx od="{mc.b-24,0}" do="{c8.t+20,0}" enzym="+ karnitín" e="vlavo"/>
+<rx od="{mc.b+24,0}" do="{dk.t-20,0}" enzym="ω-oxidácia" e="vpravo"/>
+<uzol id="ke" x="610" y="200" text="ketolátky ↓" w="100"/>
+<vplyv od="{ac.b}" do="{ke.t}"/>
+<uzol id="gn" x="610" y="270" text="glukoneogenéza ↓|→ glukóza ↓" w="140"/>
+<vplyv od="{ke.b}" do="{gn.t}"/>
+<text class="sub" x="530" y="246" text-anchor="end">chýba ATP, NADH a aktivátor</text>
+<text class="sub" x="530" y="257" text-anchor="end">pyruvátkarboxylázy</text>
+<uzol id="vys" x="230" y="282" text="hypoketotická hypoglykémia" trieda="bx-m" w="200"/>
+<vplyv od="{gn.l}" do="{vys.r}"/>
+<text class="sub" x="320" y="236" text-anchor="middle">marker v skríningu</text>
+</svg>

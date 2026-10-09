@@ -1,0 +1,22 @@
+nazov: sacharóza
+skratka: Glc α(1↔2)β Fru
+sumarny: C12H22O11
+smiles: C([C@@H]1[C@H]([C@@H]([C@H]([C@H](O1)O[C@]2([C@H]([C@@H]([C@H](O2)CO)O)O)CO)O)O)O)O
+zdroj: PubChem CID 5988 (sacharóza) · overené 2026-10-06
+projekcia: Haworthov vzorec; α-D-glukopyranóza (hore, anomérny kyslík dole) a β-D-fruktofuranóza (dole, anomérny kyslík hore) spojené cez oba anomérne uhlíky – neredukujúci disacharid
+---
+kruh pyranoza C1 C2 C3 C4 C5 O5
++ O2 C2 d HO <
++ O3 C3 u OH
++ O4 C4 d HO <
++ C6 C5 u CH_2OH
+kruh furanoza C2f C3f C4f C5f O5f @ 0 3.0
+a O1 O 1.6 1.2
+b C1 O1
+b O1 C2f
++ C1f C2f d CH_2OH
++ O3f C3f u HO <
++ O4f C4f d OH
++ C6f C5f u HOH_2C <
+c C1 1 20
+c C2f 2 20

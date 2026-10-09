@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 286" role="img" aria-labelledby="t-onkometabolity">
+<title id="t-onkometabolity">Onkometabolity. 2-oxoglutarát je kosubstrátom dioxygenáz – prolylhydroxyláz, ktoré značia faktor HIF na rozklad, a demetyláz histónov a DNA. Sukcinát, fumarát a 2-hydroxyglutarát sa mu stavbou podobajú a tieto enzýmy brzdia. Sukcinát sa hromadí pri mutácii sukcinátdehydrogenázy, fumarát pri mutácii fumarázy, 2-hydroxyglutarát vzniká pri mutácii izocitrátdehydrogenázy 1 alebo 2. Výrez: zdravá izocitrátdehydrogenáza 1 a 2 mení izocitrát na 2-oxoglutarát a redukuje NADP+; zmutovaná berie 2-oxoglutarát a redukuje ho na 2-hydroxyglutarát.</title>
+<mol v="2-oxoglutarat" id="og" x="92" y="64"/>
+<mol v="sukcinat" id="su" x="276" y="64"/>
+<mol v="fumarat" id="fu" x="446" y="64"/>
+<mol v="2-hydroxyglutarat" id="hg" x="610" y="64" zv="O2"/>
+<text class="sub" x="276" y="132" text-anchor="middle">mutácia sukcinát-</text>
+<text class="sub" x="276" y="144" text-anchor="middle">dehydrogenázy</text>
+<text class="sub" x="446" y="132" text-anchor="middle">mutácia fumarázy</text>
+<text class="sub" x="596" y="144" text-anchor="middle">mutácia IDH1 alebo IDH2</text>
+<plus rk="idh" x="666" y="141" tip="čo robí zdravý a čo zmutovaný enzým"/>
+<uzol id="dio" x="350" y="226" text="dioxygenázy, ktoré potrebujú 2-oxoglutarát:|prolylhydroxylázy (rozklad HIF) · demetylázy histónov a DNA"/>
+<vplyv typ="akt" od="{og.b}" do="{dio.tl+30,0}" cez="92,200"/>
+<text class="t-akt" x="32" y="166">kosubstrát</text>
+<vplyv typ="inh" od="276,150" do="{dio.t-60,0}"/>
+<vplyv typ="inh" od="446,138" do="{dio.t+40,0}"/>
+<vplyv typ="inh" od="610,150" do="{dio.tr-30,0}" cez="610,200"/>
+<legenda x="14" y="274" polozky="akt,inh,zv,rk" w="672"/>
+
+<vyrez id="idh" h="300" nadpis="Izocitrátdehydrogenáza 1 a 2: zdravá a zmutovaná">
+<text class="rk-n" x="14" y="46"><tspan class="b">Zdravý enzým</tspan> – to isté, čo krok 3 kolesa, len s NADP⁺ (IDH1 v cytosole, IDH2 v mitochondrii):</text>
+<mol v="izocitrat" id="i-iso" x="150" y="96" zv="O2"/>
+<mol v="2-oxoglutarat" id="i-og" x="490" y="96" zv="O2,C2-O2"/>
+<rx od="{i-iso.r+8,-4}" do="{i-og.l-8,-4}" ko="NADP⁺>NADPH;>CO₂" enzym="IDH1, IDH2" e="hore"/>
+<text class="rk-n" x="14" y="176"><tspan class="b">Zmutovaný enzým</tspan> (zmenený jeden arginín v aktívnom mieste) – berie produkt a redukuje ho:</text>
+<mol v="2-oxoglutarat" id="m-og" x="150" y="224" zv="O2,C2-O2"/>
+<mol v="2-hydroxyglutarat" id="m-hg" x="490" y="224" zv="O2"/>
+<rx od="{m-og.r+8,-4}" do="{m-hg.l-8,-4}" enzym="zmutovaná IDH1 alebo IDH2|redukcia ketoskupiny" e="hore"/>
+<text class="rk-n" x="14" y="288">Izoenzým, ktorý pracuje v samotnom kolese (IDH3, s NAD⁺), sa pri nádoroch nemení.</text>
+</vyrez>
+</svg>

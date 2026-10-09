@@ -1,0 +1,14 @@
+nazov: 6-fosfoglukonolaktón
+sumarny: C6H11O9P
+smiles: C([C@@H]1[C@H]([C@@H]([C@H](C(=O)O1)O)O)O)OP(=O)(O)O
+zdroj: PubChem CID 439452 (6-fosfo-D-glukono-1,5-laktón) · overené 2026-10-07
+projekcia: Haworthov vzorec; na C1 namiesto anomérneho OH karbonyl – vnútorný ester (laktón) kyseliny glukónovej; fosfát na C6 ako P v krúžku
+---
+kruh pyranoza C1 C2 C3 C4 C5 O5
++ O1 C1 0 O 2
++ O2 C2 d OH
++ O3 C3 u OH
++ O4 C4 d HO <
++ C6 C5 u O|CH_2
++ P6 C6 l*1.75 (P)
+c C1 1 60

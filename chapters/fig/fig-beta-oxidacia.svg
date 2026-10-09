@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 470" role="img" aria-labelledby="t-beta-oxidacia">
+<title id="t-beta-oxidacia">Jedno kolo β-oxidácie v matrix mitochondrie. Acyl-CoA-dehydrogenáza s FAD vytvorí dvojitú väzbu trans medzi uhlíkmi alfa a beta. Enoyl-CoA-hydratáza na ňu naviaže vodu a vznikne L-3-hydroxyacyl-CoA. 3-hydroxyacyl-CoA-dehydrogenáza s NAD+ oxiduje hydroxyl na oxoskupinu. Tioláza pomocou ďalšieho koenzýmu A rozštiepi väzbu medzi uhlíkmi alfa a beta: uvoľní sa acetyl-CoA a ostane acyl-CoA kratší o dva uhlíky, ktorý vstupuje do ďalšieho kola. FADH2 odovzdá elektróny cez ETF koenzýmu Q, NADH komplexu I dýchacieho reťazca.</title>
+<text class="cap" x="12" y="14">matrix mitochondrie · jedno kolo</text>
+<mol v="acyl-coa" id="a" x="130" y="96" zv="C2-C3"/>
+<mol v="enoyl-coa" id="e" x="560" y="96" zv="C2-C3"/>
+<rx od="{a.r+8,0}" do="{e.l-8,0}" krok="1" enzym="acyl-CoA-dehydrogenáza" ko="FAD>FADH₂" e="hore"/>
+<mol v="3-hydroxyacyl-coa" id="h" x="560" y="314" zv="O3"/>
+<rx od="{e.b}" do="{h.t}" krok="2" enzym="enoyl-CoA-|hydratáza" ko="H₂O>" e="vpravo"/>
+<mol v="3-oxoacyl-coa" id="o" x="130" y="314" zv="O3,C2-C3"/>
+<rx od="{h.l-8,0}" do="{o.r+8,0}" krok="3" enzym="3-hydroxyacyl-CoA-dehydrogenáza" ko="NAD⁺>NADH" e="hore"/>
+<rx od="{o.t}" do="{a.b}" krok="4" enzym="tioláza" ko="CoA>" e="vlavo" id="tio"/>
+<mol v="acetyl-coa" id="ac" x="340" y="184" skratka="nie"/>
+<rx od="134,198" do="{ac.l-6,0}" cez="200,184"/>
+<text class="sub" x="56" y="182" text-anchor="middle">acyl-CoA</text>
+<text class="sub" x="56" y="193" text-anchor="middle">kratší o 2 C</text>
+<text class="lblb" x="56" y="208" text-anchor="middle">⟳</text>
+<uzol id="cyk" x="340" y="256" text="citrátový cyklus · ketolátky" w="170"/>
+<rx od="{ac.b}" do="{cyk.t}"/>
+<text class="sub" x="356" y="140" text-anchor="middle">FADH₂ → ETF → koenzým Q</text>
+<text class="sub" x="356" y="364" text-anchor="middle">NADH → komplex I</text>
+<uzol id="dr" x="356" y="404" text="dýchací reťazec → ATP" trieda="bx-m" w="160"/>
+<legenda x="20" y="460" polozky="rx,enz,ko,zv"/>
+</svg>

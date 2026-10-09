@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 572" role="img" aria-labelledby="t-glukoza-dva-smery">
+<title id="t-glukoza-dva-smery">Mapa kapitoly: glykolýza a glukoneogenéza ako jedna cesta s dvoma smermi. Sedem vratných krokov je spoločných. Na troch miestach sa smery rozchádzajú: glukózu fosforyluje hexokináza alebo glukokináza, opačne pracuje glukóza-6-fosfatáza; fruktóza-6-fosfát fosforyluje fosfofruktokináza-1, opačne pracuje fruktóza-1,6-bisfosfatáza; fosfoenolpyruvát mení na pyruvát pyruvátkináza, opačný smer vedie cez pyruvátkarboxylázu a fosfoenolpyruvátkarboxykinázu s medziproduktom oxalacetátom. Pri enzýmoch sú hlavné regulátory: fruktóza-2,6-bisfosfát a AMP aktivujú fosfofruktokinázu-1 a brzdia fruktóza-1,6-bisfosfatázu, ATP a citrát fosfofruktokinázu-1 brzdia, fruktóza-1,6-bisfosfát aktivuje pyruvátkinázu, acetyl-CoA aktivuje pyruvátkarboxylázu.</title>
+<text class="cap" x="12" y="14">glykolýza ↓ · všetky bunky · cytosol</text>
+<text class="cap" x="688" y="14" text-anchor="end">glukoneogenéza ↑ · pečeň, oblička</text>
+<uzol id="glc" x="350" y="34" text="glukóza" trieda="bx-c" w="200"/>
+<uzol id="g6p" x="350" y="118" text="glukóza-6-fosfát" w="200"/>
+<uzol id="f6p" x="350" y="176" text="fruktóza-6-fosfát" w="200"/>
+<uzol id="f16" x="350" y="268" text="fruktóza-1,6-bisfosfát" w="200"/>
+<uzol id="tri" x="350" y="326" text="2 × triózafosfát" w="200"/>
+<uzol id="pep" x="350" y="384" text="2 × fosfoenolpyruvát" w="200"/>
+<uzol id="pyr" x="350" y="496" text="2 × pyruvát" trieda="bx-c" w="200"/>
+<uzol id="oaa" x="560" y="440" text="2 × oxalacetát"/>
+<rx id="hk" od="{glc.b-50,0}" do="{g6p.t-50,0}" typ="nevratna" enzym="hexokináza|glukokináza (pečeň)" inh="Glc-6-P (len hexokinázu)" e="vlavo"/>
+<rx id="g6" od="{g6p.t+50,0}" do="{glc.b+50,0}" typ="nevratna" enzym="glukóza-6-fosfatáza" e="vpravo"/>
+<rx od="{g6p.b}" do="{f6p.t}" typ="vratna"/>
+<rx id="pfk" od="{f6p.b-50,0}" do="{f16.t-50,0}" typ="nevratna" enzym="fosfofruktokináza-1" akt="Fru-2,6-P₂ · AMP" inh="ATP · citrát" e="vlavo"/>
+<rx id="fbp" od="{f16.t+50,0}" do="{f6p.b+50,0}" typ="nevratna" enzym="fruktóza-1,6-bisfosfatáza" inh="Fru-2,6-P₂ · AMP" e="vpravo"/>
+<rx od="{f16.b}" do="{tri.t}" typ="vratna"/>
+<rx od="{tri.b}" do="{pep.t}" typ="vratna"/>
+<text class="sub" x="358" y="300">aldoláza, izomeráza</text>
+<text class="sub" x="358" y="358">5 vratných krokov</text>
+<rx id="pk" od="{pep.b-50,0}" do="{pyr.t-50,0}" typ="nevratna" enzym="pyruvátkináza" akt="Fru-1,6-P₂" inh="glukagón (pečeň) · alanín" e="vlavo"/>
+<rx id="pc" od="{pyr.r}" do="{oaa.b}" cez="560,496" typ="nevratna" enzym="pyruvátkarboxyláza" akt="acetyl-CoA" e="vpravo"/>
+<rx id="pck" od="{oaa.t}" do="{pep.r}" cez="560,384" typ="nevratna" enzym="fosfoenolpyruvát-|karboxykináza" e="vpravo"/>
+<vplyv typ="akt" od="{f16.l}" do="{pk.et}" cez="150,290 150,370"/>
+<text class="t-akt" x="60" y="330">dopredná</text>
+<text class="t-akt" x="60" y="342">aktivácia</text>
+<uzol id="lak" x="96" y="496" text="2 × laktát"/>
+<rx od="{pyr.l}" do="{lak.r}" typ="vratna"/>
+<uzol id="acc" x="350" y="546" text="acetyl-CoA → citrátový cyklus (kap. 6)"/>
+<rx od="{pyr.b}" do="{acc.t}" typ="nevratna"/>
+<uzol id="gly" x="620" y="326" text="glycerol"/>
+<rx od="{gly.l}" do="{tri.r}"/>
+<text class="sub" x="688" y="548" text-anchor="end">laktát, alanín → pyruvát</text>
+<text class="sub" x="688" y="560" text-anchor="end">iné aminokyseliny → oxalacetát</text>
+</svg>

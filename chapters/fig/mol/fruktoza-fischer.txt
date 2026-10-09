@@ -1,0 +1,20 @@
+nazov: D-fruktóza (otvorená forma)
+skratka: Fru
+sumarny: C6H12O6
+smiles: C([C@H]([C@H]([C@@H](C(=O)CO)O)O)O)O
+zdroj: PubChem CID 5984 (D-fruktóza, otvorená ketoforma) · overené 2026-10-07
+projekcia: Fischerova projekcia; ketohexóza – karbonyl na C2; OH na C3 vľavo, na C4 a C5 vpravo (kruhová forma: fruktoza)
+---
+a C1 CH_2OH 0 0
++ C2 C1 270 .
++ O2 C2 0 O 2
++ C3 C2 270 .
++ O3 C3 180 HO <
++ H3 C3 0 H
++ C4 C3 270 .
++ O4 C4 0 OH
++ H4 C4 180 H <
++ C5 C4 270 .
++ O5 C5 0 OH
++ H5 C5 180 H <
++ C6 C5 270 CH_2OH

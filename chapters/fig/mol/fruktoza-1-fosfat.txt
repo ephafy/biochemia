@@ -1,0 +1,15 @@
+nazov: fruktóza-1-fosfát
+skratka: Fru-1-P
+sumarny: C6H13O9P
+smiles: C([C@H]([C@H]([C@@H](C(=O)COP(=O)(O)O)O)O)O)O
+zdroj: PubChem CID 65246 (D-fruktóza-1-fosfát; záznam je otvorená forma, kreslená je kruhová) · overené 2026-10-07
+projekcia: Haworthov vzorec, β-D-furanóza (anomérny OH hore); fosfát na C1 ako P v krúžku
+---
+kruh furanoza C2 C3 C4 C5 O5
++ O2 C2 u OH
++ C1 C2 d CH_2O
++ P1 C1 r*2.35 (P)
++ O3 C3 u HO <
++ O4 C4 d OH
++ C6 C5 u HOH_2C <
+c C2 2 20
