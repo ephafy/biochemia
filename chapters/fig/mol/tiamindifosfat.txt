@@ -1,0 +1,42 @@
+nazov: tiamíndifosfát
+skratka: TDP
+sumarny: C12H18N4O7P2S
+smiles: CC1=C(SC=[N+]1CC2=CN=C(N=C2N)C)CCOP(=O)(O)OP(=O)(O)[O-]
+zdroj: PubChem CID 5431 (tiamínpyrofosfát) · overené 2026-10-08
+projekcia: skeletálny vzorec; vľavo pyrimidínový kruh, metylénový mostík, vpravo tiazóliový kruh s kladným nábojom na dusíku; pracovný je uhlík C2 medzi dusíkom a sírou (vodík vypísaný); difosfát ako dve P v krúžku
+kontrola: nie
+---
+a C2 . -0.0 0.851
+a S1 S 0.809 0.263
+a C5 . 0.5 -0.688
+a C4 . -0.5 -0.688
+a N3 N^+ -0.809 0.263
+b S1 C2
+b C2 N3 2
+b N3 C4
+b C4 C5 2
+b C5 S1
++ H2 C2 270 H
++ M4 C4 90 CH_3
++ C6 C5 54 .
++ C7 C6 354 .
++ O7 C7 54 O
++ P1 O7 0*1.2 (P)
++ P2 P1 0*1.2 (P)
+a CB . -1.76 0.572
+b N3 CB
+a pC5 . -2.626 0.072
+b CB pC5
+a pC6 . -2.626 -0.928
+a pN1 N -3.492 -1.428
+a pC2 . -4.358 -0.928
+a pN3 N -4.358 0.072
+a pC4 . -3.492 0.572
+b pC5 pC6 2
+b pC6 pN1
+b pN1 pC2 2
+b pC2 pN3
+b pN3 pC4 2
+b pC4 pC5
++ pM2 pC2 150 H_3C <
++ pN4 pC4 270 NH_2

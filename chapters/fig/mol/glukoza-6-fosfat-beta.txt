@@ -1,0 +1,15 @@
+nazov: β-glukóza-6-fosfát
+skratka: Glc-6-P
+sumarny: C6H13O9P
+smiles: C([C@@H]1[C@H]([C@@H]([C@H]([C@@H](O1)O)O)O)O)OP(=O)(O)O
+zdroj: PubChem CID 439427 (β-D-glukóza-6-fosfát) · overené 2026-10-08
+projekcia: Haworthov vzorec, β-D-pyranóza (anomérny OH hore) – forma, ktorú oxiduje glukóza-6-fosfátdehydrogenáza; fosfát na C6 ako P v krúžku
+---
+kruh pyranoza C1 C2 C3 C4 C5 O5
++ O1 C1 u OH
++ O2 C2 d OH
++ O3 C3 u OH
++ O4 C4 d HO <
++ C6 C5 u O|CH_2
++ P6 C6 l*1.75 (P)
+c C1 1 340

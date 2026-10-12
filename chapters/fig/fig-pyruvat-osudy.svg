@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 470" role="img" aria-labelledby="t-pyruvat-osudy">
+<title id="t-pyruvat-osudy">Štyri osudy pyruvátu. Laktátdehydrogenáza ho vratne redukuje na laktát a pritom obnoví NAD+ z NADH – cesta buniek bez kyslíka alebo bez mitochondrií. Pyruvátdehydrogenáza ho v mitochondrii nevratne mení na acetyl-CoA, pričom vzniká NADH a oxid uhličitý. Pyruvátkarboxyláza ho v mitochondrii nevratne karboxyluje na oxalacetát za spotreby ATP; aktivuje ju acetyl-CoA. Alanínaminotransferáza ho vratne mení na alanín.</title>
+<mol v="pyruvat" id="pyr" x="350" y="226" popis="nie"/>
+<text class="mn" x="322" y="272" text-anchor="end">pyruvát</text>
+<mol v="laktat" id="lak" x="76" y="226"/>
+<mol v="acetyl-coa" id="ac" x="622" y="226" zv="S1"/>
+<mol v="alanin" id="ala" x="350" y="52" nazov="alanín"/>
+<mol v="oxalacetat" id="oaa" x="350" y="400" popis="vpravo"/>
+<rx od="{pyr.l-4,0}" do="{lak.r+6,0}" typ="vratna" enzym="laktátdehydrogenáza" ko="NADH>NAD⁺" e="hore"/>
+<rx od="{pyr.r+4,0}" do="{ac.l-6,0}" typ="nevratna" enzym="pyruvátdehydrogenáza" ko="NAD⁺, CoA>NADH, CO₂" e="hore"/>
+<rx od="{pyr.t}" do="{pyr.t.x},{ala.b.y}" typ="vratna" enzym="alanín-|aminotransferáza" e="vlavo"/>
+<rx od="{pyr.b}" do="{pyr.b.x},{oaa.t.y}" typ="nevratna" enzym="pyruvátkarboxyláza|(biotín)" akt="acetyl-CoA" ko="CO₂>;ATP>ADP" e="vlavo"/>
+<text class="sub" x="76" y="296" text-anchor="middle">cytosol · bez O₂ alebo</text>
+<text class="sub" x="76" y="308" text-anchor="middle">bez mitochondrií:</text>
+<text class="sub" x="76" y="320" text-anchor="middle">obnova NAD⁺</text>
+<text class="sub" x="622" y="300" text-anchor="middle">mitochondria · s O₂:</text>
+<text class="sub" x="622" y="312" text-anchor="middle">spálenie v cykle,</text>
+<text class="sub" x="622" y="324" text-anchor="middle">stavba MK (kap. 6)</text>
+<text class="sub" x="470" y="48">prenos dusíka</text>
+<text class="sub" x="470" y="60">zo svalu do pečene</text>
+<text class="sub" x="530" y="392">mitochondria · nalačno:</text>
+<text class="sub" x="530" y="404">štart glukoneogenézy,</text>
+<text class="sub" x="530" y="416">doplnenie cyklu</text>
+<legenda x="20" y="462" polozky="nv,vr,enz,ko,akt"/>
+</svg>

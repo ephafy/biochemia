@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" role="img" aria-labelledby="t-glykolyza-vynos">
+<title id="t-glykolyza-vynos">Výnosná fáza glykolýzy, kroky 6 až 10, pre jednu z dvoch trióz. Glyceraldehyd-3-fosfátdehydrogenáza oxiduje glyceraldehyd-3-fosfát, redukuje NAD+ na NADH a pripojí anorganický fosfát; vznikne 1,3-bisfosfoglycerát. Fosfoglycerátkináza z neho prenesie fosfát na ADP – prvá substrátová fosforylácia – a vznikne 3-fosfoglycerát. Mutáza presunie fosfát na uhlík 2, enoláza odštiepi vodu a vznikne fosfoenolpyruvát; enolázu brzdí fluorid. Pyruvátkináza nevratne prenesie fosfát na ADP – druhá substrátová fosforylácia – a vznikne pyruvát.</title>
+<text class="cap" x="12" y="14">cytosol · výnosná fáza (2 × na glukózu): + 4 ATP, + 2 NADH</text>
+<mol v="glyceraldehyd-3-fosfat" id="gap" x="78" y="84"/>
+<mol v="1-3-bisfosfoglycerat" id="bpg" x="346" y="84" zv="P1,O1b"/>
+<mol v="3-fosfoglycerat" id="pg3" x="610" y="84"/>
+<rx od="{gap.r+4,0}" do="{bpg.l-4,0}" typ="vratna" enzym="glyceraldehyd-3-fosfát-|dehydrogenáza" krok="6" ko="NAD⁺, Pᵢ>NADH" e="hore"/>
+<rx od="{bpg.r+4,0}" do="{pg3.l-4,0}" typ="vratna" enzym="fosfoglycerát-|kináza" krok="7" ko="ADP>ATP" e="hore"/>
+<mol v="2-fosfoglycerat" id="pg2" x="610" y="286"/>
+<rx od="{pg3.b}" do="{pg3.b.x},{pg2.t.y}" typ="vratna" enzym="fosfoglycerát-|mutáza" krok="8" e="vlavo"/>
+<mol v="fosfoenolpyruvat" id="pep" x="346" y="286" zv="P2,O2"/>
+<mol v="pyruvat" id="pyr" x="78" y="294"/>
+<rx od="{pg2.l-4,0}" do="{pep.r+4,0}" typ="vratna" enzym="enoláza" krok="9" inh="fluorid" ko=">H₂O" e="hore"/>
+<rx od="{pep.l-4,0}" do="{pyr.r+6,-8}" typ="nevratna" enzym="pyruvátkináza" krok="10" ko="ADP>ATP" e="hore"/>
+<text class="t-akt" x="478" y="150" text-anchor="middle">substrátová</text>
+<text class="t-akt" x="478" y="162" text-anchor="middle">fosforylácia</text>
+<text class="t-akt" x="212" y="344" text-anchor="middle">substrátová</text>
+<text class="t-akt" x="212" y="356" text-anchor="middle">fosforylácia</text>
+<legenda x="20" y="390" polozky="nv,vr,enz,ko,inh,zv"/>
+</svg>

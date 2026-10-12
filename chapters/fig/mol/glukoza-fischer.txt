@@ -1,0 +1,23 @@
+nazov: D-glukóza (otvorená forma)
+skratka: Glc
+sumarny: C6H12O6
+smiles: C([C@H]([C@H]([C@@H]([C@H](C=O)O)O)O)O)O
+zdroj: PubChem CID 107526 (aldehydo-D-glukóza) · overené 2026-10-06
+projekcia: Fischerova projekcia, C1 hore; D-rad (OH na C5 vpravo); OH na C2 vpravo, C3 vľavo, C4 vpravo
+---
+a C1 CHO 0 0
++ C2 C1 270 .
++ O2 C2 0 OH
++ H2 C2 180 H <
++ C3 C2 270 .
++ O3 C3 180 HO <
++ H3 C3 0 H
++ C4 C3 270 .
++ O4 C4 0 OH
++ H4 C4 180 H <
++ C5 C4 270 .
++ O5 C5 0 OH
++ H5 C5 180 H <
++ C6 C5 270 CH_2OH
+c C1 1 180
+c C5 5 150

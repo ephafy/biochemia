@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" role="img" aria-labelledby="t-glykolyza-investicia">
+<title id="t-glykolyza-investicia">Investičná fáza glykolýzy, kroky 1 až 5. Hexokináza alebo glukokináza fosforyluje glukózu na glukóza-6-fosfát za spotreby ATP. Izomeráza ho vratne mení na fruktóza-6-fosfát. Fosfofruktokináza-1 pridá druhý fosfát z ATP a vznikne fruktóza-1,6-bisfosfát. Aldoláza ho vratne rozštiepi na dihydroxyacetónfosfát a glyceraldehyd-3-fosfát; triózafosfátizomeráza obe triózy vratne premieňa, takže ďalej pokračujú dve molekuly glyceraldehyd-3-fosfátu. Fáza spotrebuje dve ATP.</title>
+<text class="cap" x="12" y="14">cytosol · investičná fáza: − 2 ATP</text>
+<mol v="glukoza" id="glc" x="76" y="78"/>
+<mol v="glukoza-6-fosfat" id="g6p" x="308" y="78" zv="P6"/>
+<mol v="fruktoza-6-fosfat" id="f6p" x="582" y="78"/>
+<rx od="{glc.r+4,0}" do="{g6p.l-6,0}" typ="nevratna" enzym="hexokináza|glukokináza" krok="1" ko="ATP>ADP" e="hore"/>
+<rx od="{g6p.r+4,0}" do="{f6p.l-4,0}" typ="vratna" enzym="glukóza-6-fosfát-|izomeráza" krok="2" e="hore"/>
+<mol v="fruktoza-1-6-bisfosfat" id="f16" x="582" y="268" zv="P1"/>
+<rx od="{f6p.b}" do="{f6p.b.x},{f16.t.y}" typ="nevratna" enzym="fosfofruktokináza-1" krok="3" ko="ATP>ADP" e="vlavo"/>
+<mol v="dihydroxyacetonfosfat" id="dhap" x="250" y="268"/>
+<mol v="glyceraldehyd-3-fosfat" id="gap" x="250" y="420"/>
+<path class="rx" d="M{f16.l-4,0} L{dhap.r+4,0}" marker-start="url(#sip)" marker-end="url(#sip)"/>
+<path class="rx" d="M410,{f16.l.y} C350,{f16.l.y} 400,{gap.r.y} {gap.r+6,0}" marker-end="url(#sip)"/>
+<text class="enz" x="{f16.l.x-50}" y="{f16.l.y-9}" text-anchor="middle"><tspan class="kr">4</tspan> aldoláza</text>
+<rx od="{dhap.b}" do="{dhap.b.x},{gap.t.y}" typ="vratna" enzym="triózafosfát-|izomeráza" krok="5" e="vlavo"/>
+<rx od="{gap.l-4,0}" do="62,{gap.l.y}"/>
+<text class="lblb" x="56" y="412" text-anchor="end">2 ×</text>
+<text class="sub" x="56" y="426" text-anchor="end">výnosná</text>
+<text class="sub" x="56" y="438" text-anchor="end">fáza</text>
+<text class="sub" x="470" y="456" text-anchor="middle">šesťuhlíkový cukor sa štiepi na dve triózy;</text>
+<text class="sub" x="470" y="468" text-anchor="middle">ďalej ide len glyceraldehyd-3-fosfát</text>
+<legenda x="20" y="490" polozky="nv,vr,enz,ko,zv"/>
+</svg>

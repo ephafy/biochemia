@@ -1,0 +1,26 @@
+nazov: ubichinol (redukovaný koenzým Q)
+skratka: QH₂
+sumarny: C59H92O4
+smiles: CC1=C(C(=C(C(=C1O)OC)OC)O)C
+zdroj: PubChem CID 9962735 (ubichinol-10) · overené 2026-10-07
+projekcia: skeletálny vzorec; oba karbonyly redukované na hydroxyly, kruh je aromatický; R = izoprenoidný reťazec
+kontrola: nie
+---
+a C1 . 0 -1
+a C2 . -0.866 -0.5
+a C3 . -0.866 0.5
+a C4 . -0 1
+a C5 . 0.866 0.5
+a C6 . 0.866 -0.5
+b C1 C2 2
+b C2 C3
+b C3 C4 2
+b C4 C5
+b C5 C6 2
+b C6 C1
++ O1 C1 90 OH
++ O4 C4 270 OH
++ M2 C2 150 H_3CO <
++ M3 C3 210 H_3CO <
++ R C5 330 R
++ M6 C6 30 CH_3

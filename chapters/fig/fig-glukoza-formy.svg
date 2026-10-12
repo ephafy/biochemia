@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220" role="img" aria-labelledby="t-glukoza-formy">
+<title id="t-glukoza-formy">Tri formy glukózy v roztoku. Otvorená forma s aldehydovou skupinou na C1 sa uzatvára do kruhu, keď hydroxyl na C5 zaútočí na C1. Podľa toho, na ktorú stranu sa nový hydroxyl na C1 postaví, vznikne α-anomér alebo β-anomér; všetky tri formy sú v rovnováhe a prechádzajú jedna na druhú cez otvorenú formu.</title>
+<mol v="glukoza" id="a" x="105" y="88" nazov="α-D-glukóza" skratka="α-Glc" zv="O1"/>
+<mol v="glukoza-fischer" id="f" x="350" y="88" zv="C1,O5"/>
+<mol v="glukoza-beta" id="b" x="595" y="88" zv="O1"/>
+<rx od="{f.l-22,0}" do="{a.r+12,0}" typ="vratna"/>
+<rx od="{f.r+22,0}" do="{b.l-12,0}" typ="vratna"/>
+<text class="sub" x="228" y="78" text-anchor="middle">OH na C1 dole</text>
+<text class="sub" x="472" y="78" text-anchor="middle">OH na C1 hore</text>
+<text class="sub" x="105" y="168" text-anchor="middle">≈ 38 % molekúl</text>
+<text class="sub" x="350" y="194" text-anchor="middle">stopy · jediná má voľný aldehyd</text>
+<text class="sub" x="595" y="168" text-anchor="middle">≈ 62 % molekúl</text>
+<legenda x="20" y="212" polozky="vr,zv"/>
+</svg>

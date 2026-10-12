@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" role="img" aria-labelledby="t-kalibracna-krivka">
+<title id="t-kalibracna-krivka">Kalibračná krivka (schematicky). Na vodorovnej osi je koncentrácia p-nitrofenolu v piatich štandardoch od 1,2 do 6,0 µmol/l, na zvislej absorbancia pri 405 nm. Body ležia na priamke prechádzajúcej nulou. Absorbancia neznámej vzorky sa prenesie na priamku a na vodorovnej osi sa odčíta jej koncentrácia. Pri vyšších koncentráciách sa krivka ohýba – tam odčítanie neplatí a vzorku treba zriediť.</title>
+<path class="arw" d="M90,250L640,250" marker-end="url(#sip)"/>
+<path class="arw" d="M90,250L90,28" marker-end="url(#sip)"/>
+<text class="lblb" x="365" y="290" text-anchor="middle">koncentrácia p-nitrofenolu v skúmavke (µmol/l)</text>
+<text class="lblb" x="30" y="140" text-anchor="middle" transform="rotate(-90 30 140)">absorbancia pri 405 nm</text>
+<path class="stk-acc" d="M90,250L450,70"/>
+<path class="stk-n s-d" d="M450,70C500,45 550,36 610,32"/>
+<circle class="dot" cx="162" cy="214" r="3.4"/>
+<circle class="dot" cx="234" cy="178" r="3.4"/>
+<circle class="dot" cx="306" cy="142" r="3.4"/>
+<circle class="dot" cx="378" cy="106" r="3.4"/>
+<circle class="dot" cx="450" cy="70" r="3.4"/>
+<path class="stk-n" d="M162,250v5M234,250v5M306,250v5M378,250v5M450,250v5"/>
+<text class="sub" x="90" y="266" text-anchor="middle">0</text>
+<text class="sub" x="162" y="266" text-anchor="middle">1,2</text>
+<text class="sub" x="234" y="266" text-anchor="middle">2,4</text>
+<text class="sub" x="306" y="266" text-anchor="middle">3,6</text>
+<text class="sub" x="378" y="266" text-anchor="middle">4,8</text>
+<text class="sub" x="450" y="266" text-anchor="middle">6,0</text>
+<text class="sub" x="82" y="254" text-anchor="end">0</text>
+<path class="stk-acc2 s-d" d="M90,160L270,160L270,246" marker-end="url(#sip)"/>
+<circle class="dotm" cx="270" cy="160" r="3.6"/>
+<text class="sub" x="96" y="153">A vzorky</text>
+<text class="sub" x="276" y="236">c vzorky</text>
+<text class="sub" x="300" y="100" text-anchor="end">štandardy</text>
+<text class="sub" x="470" y="100">lineárny rozsah: A = ε · c · l</text>
+<text class="sub" x="530" y="60">mimo rozsahu –</text>
+<text class="sub" x="530" y="72">vzorku zriediť</text>
+<text class="sub" x="470" y="238">slepá vzorka nastaví nulu prístroja</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 410" role="img" aria-labelledby="t-nadph-glutation">
+<title id="t-nadph-glutation">Tri spriahnuté kolesá, ktorými erytrocyt odstraňuje peroxidy. Glukóza-6-fosfátdehydrogenáza oxiduje glukóza-6-fosfát a redukuje NADP+ na NADPH; NADPH enzým brzdí, takže dráha beží len takou rýchlosťou, akou sa NADPH spotrebúva. Glutatiónreduktáza prenesie vodíky z NADPH na oxidovaný glutatión a vzniknú dve molekuly redukovaného glutatiónu. Glutatiónperoxidáza nimi redukuje peroxid vodíka na vodu. Pri deficite glukóza-6-fosfátdehydrogenázy chýba NADPH, glutatión ostáva oxidovaný a peroxidy poškodia hemoglobín a membránu. Výrez: glutatión je tripeptid gama-glutamyl-cysteinyl-glycín; pracuje SH-skupina cysteínu, dve molekuly sa pri oxidácii spoja disulfidovým mostíkom.</title>
+<text class="cap" x="12" y="14">erytrocyt · od glukózy k zneškodneniu peroxidu</text>
+<uzol id="a1" x="130" y="52" text="glukóza-6-fosfát" trieda="bx-c"/>
+<uzol id="a2" x="560" y="52" text="6-fosfoglukonolaktón" href="#fig-ppp-oxidacna" tip="Obr. 5.2: oxidačná časť"/>
+<rx id="r1" od="{a1.r}" do="{a2.l}" typ="nevratna" enzym="glukóza-6-fosfátdehydrogenáza" inh="NADPH (spätná väzba)" ko="NADP⁺>NADPH" e="hore"/>
+<uzol id="b1" x="560" y="186" text="GSSG|oxidovaný glutatión"/>
+<uzol id="b2" x="130" y="186" text="2 GSH|redukovaný glutatión" trieda="bx-c" rk="gsh"/>
+<rx id="r2" od="{b1.l}" do="{b2.r}" enzym="glutatiónreduktáza" ko="NADPH>NADP⁺" e="dole"/>
+<uzol id="c1" x="130" y="320" text="H₂O₂ · peroxidy" trieda="bx-m"/>
+<uzol id="c2" x="560" y="320" text="2 H₂O"/>
+<rx id="r3" od="{c1.r}" do="{c2.l}" enzym="glutatiónperoxidáza (selén)" ko="2 GSH>GSSG" e="dole"/>
+<path class="koa" d="M366,84 L366,146" marker-end="url(#sip-koe)"/>
+<path class="koa" d="M318,146 L318,84" marker-end="url(#sip-koe)"/>
+<text class="lblb" x="342" y="119" text-anchor="middle">⟳</text>
+<path class="koa" d="M130,{b2.b.y} L130,264 Q130,282 300,284" marker-end="url(#sip-koe)"/>
+<path class="koa" d="M390,284 Q560,282 560,264 L560,{b1.b.y}" marker-end="url(#sip-koe)"/>
+<text class="lblb" x="345" y="254" text-anchor="middle">⟳</text>
+<text class="sub" x="345" y="362" text-anchor="middle">deficit dehydrogenázy: ↓ NADPH → glutatión ostáva oxidovaný → peroxidy poškodia hemoglobín a membránu → hemolýza</text>
+<legenda x="14" y="384" polozky="nv,enz,ko,inh,rk,odk" w="672"/>
+
+<vyrez id="gsh" h="196" nadpis="Glutatión: tripeptid s pracovnou SH-skupinou">
+<mol v="glutation" id="g-gsh" x="170" y="92" zv="S,CB2-S" nazov="glutatión – redukovaný"/>
+<text class="rk-n" x="72" y="46">glutamát (γ-väzbou)</text>
+<text class="rk-n" x="196" y="46">cysteín</text>
+<text class="rk-n" x="262" y="46">glycín</text>
+<text class="lblb" x="26" y="96" text-anchor="middle">2 ×</text>
+<rx od="330,92" do="456,92" typ="vratna" enzym="peroxidáza →|← reduktáza + NADPH" e="hore"/>
+<text class="lblb" x="566" y="66" text-anchor="middle">γ-Glu – Cys – Gly</text>
+<text class="lblb" x="566" y="124" text-anchor="middle">γ-Glu – Cys – Gly</text>
+<path class="bd hl" d="M566,84 V98"/>
+<text class="at hl" x="566" y="82" text-anchor="middle">S</text>
+<text class="at hl" x="566" y="108" text-anchor="middle">S</text>
+<path class="bd" d="M566,70 V73 M566,110 V113"/>
+<text class="mn" x="566" y="144" text-anchor="middle">glutatión – oxidovaný</text>
+<text class="ms" x="566" y="155" text-anchor="middle">(GSSG)</text>
+<text class="rk-n" x="14" y="172"><tspan class="b">Pracuje SH-skupina cysteínu.</tspan> Dve molekuly odovzdajú po jednom vodíku peroxidu a spoja sa disulfidovým mostíkom;</text>
+<text class="rk-n" x="14" y="185">reduktáza mostík vodíkmi z NADPH znova rozpojí. Tou istou SH-skupinou glutatión chráni SH-skupiny bielkovín.</text>
+</vyrez>
+</svg>

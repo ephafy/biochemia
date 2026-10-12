@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" role="img" aria-labelledby="t-glykogen-drahy">
+<title id="t-glykogen-drahy">Súhrnná schéma syntézy a rozkladu glykogénu. Glukóza sa nevratne fosforyluje na glukóza-6-fosfát, ten sa fosfoglukomutázou vratne mení na glukóza-1-fosfát. Syntéza: glukóza-1-fosfát reaguje s UTP na UDP-glukózu a glykogénsyntáza prenesie glukózu na neredukujúci koniec glykogénu; aktivuje ju glukóza-6-fosfát. Rozklad: glykogénfosforyláza odštepuje anorganickým fosfátom glukóza-1-fosfát; vo svale ju aktivuje AMP, brzdia ju ATP, glukóza-6-fosfát a v pečeni glukóza. Glukóza-6-fosfát v pečeni štiepi glukóza-6-fosfatáza na glukózu, ktorá ide do krvi; vo svale vstupuje do glykolýzy.</title>
+<text class="cap" x="12" y="14">cytosol</text>
+<mol v="glukoza" id="glc" x="150" y="62" popis="vlavo"/>
+<mol v="glukoza-6-fosfat" id="g6p" x="150" y="226" zv="P6"/>
+<mol v="glukoza-1-fosfat" id="g1p" x="402" y="226" zv="P1"/>
+<mol v="udp-glukoza" id="udp" x="616" y="226" zv="X1"/>
+<rx od="{glc.b}" do="{glc.b.x},{g6p.t.y}" typ="nevratna" enzym="hexokináza|glukokináza (pečeň)" ko="ATP>ADP"/>
+<rx od="{g6p.r+2,0}" do="{g1p.l-2,0}" typ="vratna" enzym="fosfoglukomutáza" e="hore"/>
+<rx id="py" od="{g1p.r+2,0}" do="{udp.l-2,0}" enzym="UDP-glukóza-|pyrofosforyláza" e="hore" ko="UTP>PPᵢ"/>
+<text class="sub" x="508" y="272" text-anchor="middle">PPᵢ + H₂O → 2 Pᵢ</text>
+<uzol id="gg" x="508" y="408" text="glykogén|(n zvyškov glukózy)" trieda="bx-m" w="176"/>
+<rx id="sy" od="{udp.b}" do="{gg.r+2,0}" cez="{udp.b.x},408" typ="nevratna" enzym="glykogénsyntáza" akt="Glc-6-P" ko=">UDP" e="vlavo"/>
+<rx id="fo" od="{gg.t-84,0}" do="{g1p.b}" typ="nevratna" enzym="glykogénfosforyláza" akt="AMP (sval)" inh="ATP · Glc-6-P;glukóza (pečeň)" ko="Pᵢ>" e="vlavo"/>
+<text class="sub" x="508" y="446" text-anchor="middle">vetviaci enzým pridáva vetvy α(1→6) · odvetvujúci enzým ich pri rozklade ruší</text>
+<text class="sub" x="508" y="458" text-anchor="middle">a z každého miesta vetvenia uvoľní jednu voľnú glukózu</text>
+<uzol id="out" x="150" y="408" text="glukóza → krv" trieda="bx-c"/>
+<rx od="{g6p.b}" do="{out.t}" typ="nevratna" enzym="glukóza-6-fosfatáza|v ER · pečeň, oblička" e="vlavo" ko="H₂O>Pᵢ"/>
+<uzol id="gl" x="296" y="408" text="glykolýza|(sval, pečeň)"/>
+<rx od="{g6p.b+34,-12}" do="{gl.t}"/>
+<legenda x="20" y="478" polozky="nv,vr,enz,ko,akt,inh,zv"/>
+</svg>

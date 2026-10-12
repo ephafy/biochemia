@@ -1,0 +1,26 @@
+nazov: ubichinón (koenzým Q)
+skratka: Q
+sumarny: C59H90O4
+smiles: CC1=C(C(=O)C(=C(C1=O)OC)OC)C
+zdroj: PubChem CID 5281915 (koenzým Q10) · overené 2026-10-07
+projekcia: skeletálny vzorec chinónového kruhu (dva karbonyly oproti sebe); R = izoprenoidný reťazec z desiatich jednotiek, ktorý drží molekulu v membráne
+kontrola: nie
+---
+a C1 . 0 -1
+a C2 . -0.866 -0.5
+a C3 . -0.866 0.5
+a C4 . -0 1
+a C5 . 0.866 0.5
+a C6 . 0.866 -0.5
+b C1 C2
+b C2 C3 2
+b C3 C4
+b C4 C5
+b C5 C6 2
+b C6 C1
++ O1 C1 90 O 2
++ O4 C4 270 O 2
++ M2 C2 150 H_3CO <
++ M3 C3 210 H_3CO <
++ R C5 330 R
++ M6 C6 30 CH_3

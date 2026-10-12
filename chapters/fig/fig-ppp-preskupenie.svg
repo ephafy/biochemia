@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 484" role="img" aria-labelledby="t-ppp-preskupenie">
+<title id="t-ppp-preskupenie">Neoxidačná časť pentózofosfátovej dráhy ako tri vratné výmeny idúce zľava doprava. Každá výmena je nakreslená dvoma oblúkmi, ktoré sa dotýkajú v jednom bode – je to jedna reakcia jedného enzýmu, do ktorej dve látky vstupujú a dve z nej vystupujú; tenká farebná šípka vedie od prenášaného zvyšku na jeho miesto v produkte. Stredný rad je príjemca: ribóza-5-fosfát dostane od xylulóza-5-fosfátu dva uhlíky (transketoláza s tiamíndifosfátom) a stane sa sedoheptulóza-7-fosfátom; ten odovzdá horné tri uhlíky (transaldoláza) a ostane z neho erytróza-4-fosfát; tá dostane dva uhlíky od druhej molekuly xylulóza-5-fosfátu (transketoláza) a stane sa fruktóza-6-fosfátom. Horný rad: z prvej xylulózy ostane po odovzdaní dvoch uhlíkov glyceraldehyd-3-fosfát, ktorý v druhej výmene prijme tri uhlíky a stane sa fruktóza-6-fosfátom. Dolný rad: z druhej xylulózy ostane glyceraldehyd-3-fosfát. Farby sledujú prenášané uhlíky: modré sú dva horné uhlíky ketózy, ktoré prenáša transketoláza; červený je uhlík, ktorý s nimi tvorí trojuhlíkový zvyšok prenášaný transaldolázou – prvý fruktóza-6-fosfát má preto dva modré uhlíky a jeden červený. Dva fruktóza-6-fosfáty a jeden glyceraldehyd-3-fosfát odchádzajú do glykolýzy.</title>
+<text class="cap" x="12" y="14">cytosol · neoxidačná časť (vratná): 3 × C₅ ⇌ 2 × C₆ + C₃</text>
+
+<!-- horný rad: prvá xylulóza a to, čo z nej ostane -->
+<mol v="xyluloza-5-fosfat" id="x1" x="64" y="92" zv="C1,C2,O2"/>
+<mol v="glyceraldehyd-3-fosfat-fischer" id="g1" x="254" y="92" nazov="glyceraldehyd-|3-fosfát"/>
+<mol v="fruktoza-6-fosfat-fischer" id="f2" x="446" y="92" zv="C1,C2,O2" zv2="C3,O3,H3,C2-C3"/>
+
+<!-- stredný rad: kostra príjemcu -->
+<mol v="riboza-5-fosfat" id="r1" x="64" y="246"/>
+<mol v="sedoheptuloza-7-fosfat" id="s1" x="246" y="246" zv="C1,C2,O2" zv2="C3,O3,H3,C2-C3"/>
+<mol v="erytroza-4-fosfat" id="e2" x="446" y="246"/>
+<mol v="fruktoza-6-fosfat-fischer" id="f3" x="636" y="246" zv="C1,C2,O2"/>
+
+<!-- dolný rad: druhá xylulóza -->
+<mol v="xyluloza-5-fosfat" id="x3" x="446" y="392" zv="C1,C2,O2"/>
+<text class="sub" x="{x3.c.x}" y="{x3.t.y-5}" text-anchor="middle">druhá molekula</text>
+<mol v="glyceraldehyd-3-fosfat-fischer" id="g3" x="636" y="392" nazov="glyceraldehyd-|3-fosfát"/>
+
+<!-- prenášané zvyšky: tenké farebné šípky od zátvorky pri darcovi na miesto v produkte; idú POD šípkami reakcií -->
+<path class="zv-s" d="M{x1.tr.x+22},{x1.C2.y-11} C178,58 196,150 {s1.C2.x-21},{s1.C2.y-12}" marker-end="url(#sip-zv)"/>
+<path class="zv2-s" d="M{s1.tr.x+13},{s1.C2.y-9} C300,120 350,62 {f2.C2.x-22},{f2.C2.y}" marker-end="url(#sip-zv2)"/>
+<path class="zv-s" d="M{x3.tr.x+12},{x3.C1.y-7} C496,286 540,198 {f3.C2.x-22},{f3.C2.y-11}" marker-end="url(#sip-zv)"/>
+
+<!-- 1. výmena: C₂ z xylulózy na ribózu. Dva oblúky jednej reakcie sa dotýkajú v jednom bode = jeden enzým -->
+<path class="halo" d="M{x1.r} C146,92 134,169 158,169 C183,169 175,92 {g1.l}"/><path class="rx" d="M{x1.r} C146,92 134,169 158,169 C183,169 175,92 {g1.l}" marker-end="url(#sip)" marker-start="url(#sip)"/>
+<path class="halo" d="M{r1.r} C142,246 134,169 158,169 C182,169 164,246 {s1.l}"/><path class="rx" d="M{r1.r} C142,246 134,169 158,169 C182,169 164,246 {s1.l}" marker-end="url(#sip)" marker-start="url(#sip)"/>
+<text class="enz" x="155" y="264.0" text-anchor="middle"><tspan class="kr">1</tspan> transketoláza</text>
+<text class="enz" x="155" y="275.5" text-anchor="middle">(tiamíndifosfát)</text>
+<text class="sub" x="155" y="289.0" text-anchor="middle">C₅ + C₅ ⇌ C₃ + C₇</text>
+<path class="br-zv" d="M{x1.tr.x-2},{x1.C1.y-8} h4 V{x1.C2.y+8} h-4"/>
+<text class="t-zv" x="{x1.tr.x+6}" y="{x1.C2.y-7.4}">C₂</text>
+
+<!-- 2. výmena: C₃ zo sedoheptulózy na glyceraldehyd-3-fosfát -->
+<path class="halo" d="M{g1.r} C330,92 324,169 348,169 C372,169 366,92 {f2.l}"/><path class="rx" d="M{g1.r} C330,92 324,169 348,169 C372,169 366,92 {f2.l}" marker-end="url(#sip)" marker-start="url(#sip)"/>
+<path class="halo" d="M{s1.r} C328,246 324,169 348,169 C372,169 368,246 {e2.l}"/><path class="rx" d="M{s1.r} C328,246 324,169 348,169 C372,169 368,246 {e2.l}" marker-end="url(#sip)" marker-start="url(#sip)"/>
+<text class="enz" x="348" y="264.0" text-anchor="middle"><tspan class="kr">2</tspan> transaldoláza</text>
+<text class="sub" x="348" y="277.5" text-anchor="middle">C₃ + C₇ ⇌ C₆ + C₄</text>
+<path class="br-zv2" d="M{s1.tr.x-2},{s1.C1.y-8} h4 V{s1.C3.y+8} h-4"/>
+<text class="t-zv2" x="{s1.tr.x+6}" y="{s1.C2.y+3.6}">C₃</text>
+
+<!-- 3. výmena: C₂ z druhej xylulózy na erytrózu -->
+<path class="halo" d="M{e2.r} C524,246 516,319 540,319 C564,319 554,246 {f3.l}"/><path class="rx" d="M{e2.r} C524,246 516,319 540,319 C564,319 554,246 {f3.l}" marker-end="url(#sip)" marker-start="url(#sip)"/>
+<path class="halo" d="M{x3.r} C528,392 516,319 540,319 C564,319 558,392 {g3.l}"/><path class="rx" d="M{x3.r} C528,392 516,319 540,319 C564,319 558,392 {g3.l}" marker-end="url(#sip)" marker-start="url(#sip)"/>
+<text class="enz" x="543" y="410.0" text-anchor="middle"><tspan class="kr">3</tspan> transketoláza</text>
+<text class="enz" x="543" y="421.5" text-anchor="middle">(tiamíndifosfát)</text>
+<text class="sub" x="543" y="435.0" text-anchor="middle">C₄ + C₅ ⇌ C₆ + C₃</text>
+<path class="br-zv" d="M{x3.tr.x-2},{x3.C1.y-8} h4 V{x3.C2.y+8} h-4"/>
+<text class="t-zv" x="{x3.tr.x+6}" y="{x3.C1.y+4}">C₂</text>
+
+<circle class="dot" cx="158" cy="169" r="2.6"/><circle class="dot" cx="348" cy="169" r="2.6"/><circle class="dot" cx="540" cy="319" r="2.6"/>
+
+<!-- výstup -->
+<uzol id="gly" x="636" y="92" text="glykolýza alebo|glukoneogenéza" href="04_metabolizmus_glukozy#fig-glykolyza-investicia" tip="Kapitola 4: investičná fáza glykolýzy"/>
+<path class="rx" d="M{f2.r} L{gly.l}" marker-end="url(#sip)" marker-start="url(#sip)"/>
+<path class="rx" d="M{f3.t} L{gly.b}" marker-end="url(#sip)" marker-start="url(#sip)"/>
+<path class="rx" d="M{g3.r} H708 V92 L{gly.r}" marker-end="url(#sip)" marker-start="url(#sip)"/>
+
+<!-- kľúč k farbám -->
+<text class="t-zv" x="14" y="386">C₂</text>
+<text class="sub" x="34" y="386">dva horné uhlíky ketózy – prenáša ich transketoláza (kroky 1 a 3)</text>
+<text class="t-zv2" x="14" y="404">C₃</text>
+<text class="sub" x="34" y="404">tri horné uhlíky – prenáša ich transaldoláza (krok 2):</text>
+<text class="sub" x="34" y="417">dva modré z kroku 1 a červený, ktorý bol uhlíkom 1 ribózy</text>
+<circle class="dot" cx="21" cy="432" r="2.6"/>
+<text class="sub" x="34" y="435.3">dva oblúky spojené v jednom bode = jedna reakcia, jeden enzým</text>
+<legenda x="14" y="456" polozky="vr,enz,odk" w="380"/>
+</svg>

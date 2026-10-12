@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 452" role="img" aria-labelledby="t-lipidy-mapa">
+<title id="t-lipidy-mapa">Mapa kapitoly: cesta mastnej kyseliny a jej nosiče. Hore: tuk z potravy sa v čreve rozštiepi, v micele sa dostane k enterocytu, ten z neho znova poskladá triacylglycerol a pošle ho v chylomikróne lymfou do krvi. V strede: lipoproteínová lipáza uvoľní mastné kyseliny pre tukové tkanivo, ktoré ich uloží; nalačno ich tukové tkanivo uvoľní a krvou ich nesie albumín. Dole bunka: v cytosole sa po jedle z acetyl-CoA cez malonyl-CoA stavia palmitát; v mitochondrii sa nalačno mastná kyselina po vstupe cez karnitín rozoberá β-oxidáciou na acetyl-CoA. Malonyl-CoA brzdí vstup mastných kyselín do mitochondrie, takže obe dráhy nebežia naraz.</title>
+<text class="cap" x="12" y="14">1 · z taniera do krvi</text>
+<uzol id="pot" x="78" y="52" text="tuk v potrave|(TAG)" w="112"/>
+<uzol id="lum" x="246" y="52" text="lúmen čreva|emulzia · lipáza · micela" w="176"/>
+<uzol id="ent" x="436" y="52" text="enterocyt|znova TAG" w="120"/>
+<uzol id="chy" x="612" y="52" text="chylomikrón|lymfa → krv" trieda="bx-c" w="124"/>
+<rx od="{pot.r}" do="{lum.l}"/>
+<rx od="{lum.r}" do="{ent.l}"/>
+<rx od="{ent.r}" do="{chy.l}"/>
+<text class="sub" x="246" y="88" text-anchor="middle">nosič: soli žlčových kyselín</text>
+<text class="sub" x="612" y="88" text-anchor="middle">nosič: lipoproteín</text>
+
+<text class="cap" x="12" y="130">krv a zásoba</text>
+<uzol id="tuk" x="560" y="170" text="tukové tkanivo|zásoba TAG" trieda="bx-m" w="130"/>
+<rx od="{chy.b+10,14}" do="{tuk.t+40,0}" enzym="lipoproteínová|lipáza" e="vpravo"/>
+<uzol id="alb" x="270" y="170" text="voľné MK v krvi|nosič: albumín" trieda="bx-c" w="140"/>
+<rx od="{tuk.l}" do="{alb.r}" enzym="lipolýza (nalačno, záťaž)" e="hore"/>
+<uzol id="tk" x="78" y="170" text="sval · srdce|pečeň" w="104"/>
+<rx od="{alb.l}" do="{tk.r}"/>
+
+<text class="cap" x="12" y="232">2 · stavba reťazca – cytosol, po jedle</text>
+<uzol id="glc" x="66" y="270" text="glukóza" w="76"/>
+<uzol id="acc" x="198" y="270" text="acetyl-CoA" trieda="bx-c" w="96"/>
+<uzol id="mal" x="372" y="270" text="malonyl-CoA" trieda="bx-m" w="104"/>
+<uzol id="pal" x="590" y="270" text="palmitát → TAG" w="120"/>
+<rx od="{glc.r}" do="{acc.l}"/>
+<rx od="{acc.r}" do="{mal.l}" typ="nevratna" enzym="karboxyláza" e="hore"/>
+<rx od="{mal.r}" do="{pal.l}" enzym="syntáza MK" e="hore"/>
+<text class="sub" x="462" y="288" text-anchor="middle">nosič: ACP</text>
+
+<text class="cap" x="12" y="338">3 · rozobratie reťazca – mitochondria, nalačno</text>
+<rect class="komp-m" x="318" y="352" width="370" height="78" rx="3"/>
+<text class="sub" x="680" y="366" text-anchor="end">matrix mitochondrie</text>
+<uzol id="mk" x="66" y="394" text="MK" w="56"/>
+<uzol id="acy" x="198" y="394" text="acyl-CoA" trieda="bx-c" w="96"/>
+<uzol id="box" x="424" y="394" text="β-oxidácia" trieda="bx-c" w="100"/>
+<uzol id="ac2" x="598" y="394" text="acetyl-CoA" w="96"/>
+<rx od="{mk.r}" do="{acy.l}"/>
+<rx od="{acy.r}" do="{box.l}" enzym="nosič: karnitín" e="dole" id="vst"/>
+<rx od="{box.r}" do="{ac2.l}"/>
+<vplyv typ="inh" od="{mal.b}" do="290,386" cez="372,330 300,340"/>
+<text class="t-inh" x="382" y="318">↓ vstup do mitochondrie</text>
+<text class="lblb" x="318" y="322" text-anchor="middle">⟳</text>
+</svg>

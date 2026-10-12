@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 246" role="img" aria-labelledby="t-udp-glukuronat">
+<title id="t-udp-glukuronat">Vznik a použitie UDP-glukuronátu. UDP-glukózadehydrogenáza oxiduje uhlík 6 glukózy viazanej v UDP-glukóze na karboxyl, pričom sa dve molekuly NAD+ redukujú na NADH. UDP-glukuronát je aktívna forma kyseliny glukurónovej: v endoplazmatickom retikule pečene sa z neho glukuronát prenáša na bilirubín, steroidné hormóny a lieky, ktoré sa tak stanú rozpustnými a vylúčia sa žlčou alebo močom; v spojive je stavebnou jednotkou glykozaminoglykánov. Výrez: dráha kyseliny urónovej – glukuronát sa cez L-gulonát, L-xylulózu a xylitol mení na xylulóza-5-fosfát a vracia sa do pentózofosfátovej dráhy; človeku chýba gulonolaktónoxidáza, takže z gulonátu nevyrobí kyselinu askorbovú.</title>
+<mol v="udp-glukoza" id="ug" x="96" y="84"/>
+<mol v="udp-glukuronat" id="ua" x="392" y="84" zv="C6"/>
+<rx od="{ug.r+4,0}" do="{ua.l-4,0}" typ="nevratna" enzym="UDP-glukózadehydrogenáza" ko="2 NAD⁺>2 NADH" e="hore"/>
+<uzol id="k1" x="604" y="40" text="konjugácia (pečeň, ER):|bilirubín, steroidy, lieky|→ žlč, moč" trieda="bx-m"/>
+<uzol id="k2" x="604" y="108" text="glykozaminoglykány|(spojivo)" trieda="bx-m"/>
+<uzol id="k3" x="604" y="166" text="dráha kyseliny urónovej" rk="uron"/>
+<rx od="{ua.r+2,-12}" do="{k1.l}"/>
+<rx od="{ua.r+2,2}" do="{k2.l}"/>
+<rx od="{ua.r+2,14}" do="{k3.l}"/>
+<uzol id="src" x="96" y="170" text="z glukóza-1-fosfátu a UTP" trieda="nic" href="03_sacharidy_glykogen#fig-glykogen-drahy" tip="Kapitola 3: vznik UDP-glukózy" znak="182,170"/>
+<legenda x="14" y="214" polozky="nv,enz,ko,zv,rk,odk" w="672"/>
+
+<vyrez id="uron" h="246" nadpis="Dráha kyseliny urónovej: glukuronát späť medzi pentózy">
+<uzol id="u1" x="70" y="58" text="glukuronát"/>
+<uzol id="u2" x="212" y="58" text="L-gulonát"/>
+<uzol id="u3" x="362" y="58" text="3-keto-L-gulonát"/>
+<uzol id="u4" x="520" y="58" text="L-xylulóza"/>
+<uzol id="u5" x="520" y="186" text="xylitol"/>
+<uzol id="u6" x="362" y="186" text="D-xylulóza"/>
+<uzol id="u7" x="204" y="186" text="xylulóza-5-fosfát"/>
+<uzol id="u8" x="62" y="186" text="pentózo-|fosfátová|dráha" trieda="bx-m"/>
+<rx od="{u1.r}" do="{u2.l}" ko="NADPH>NADP⁺"/>
+<rx od="{u2.r}" do="{u3.l}"/>
+<rx od="{u3.r}" do="{u4.l}" ko=">CO₂"/>
+<rx od="{u4.b}" do="{u5.t}" ko="NADPH>NADP⁺" e="vpravo"/>
+<rx od="{u5.l}" do="{u6.r}" ko="NAD⁺>NADH"/>
+<rx od="{u6.l}" do="{u7.r}"/>
+<rx od="{u7.l}" do="{u8.r}"/>
+<uzol id="u9" x="212" y="126" text="kyselina askorbová|(vitamín C)" trieda="bx-c"/>
+<rx od="{u2.b}" do="{u9.t}"/>
+<text class="t-inh" x="212" y="94" text-anchor="middle" style="font-size:15px">✗</text>
+<text class="t-inh" x="286" y="112">človeku a ostatným</text>
+<text class="t-inh" x="286" y="124">primátom chýba enzým</text>
+<text class="t-inh" x="286" y="136">(gulonolaktónoxidáza)</text>
+<text class="t-inh" x="540" y="112">esenciálna pentozúria:</text>
+<text class="sub" x="540" y="124">tento krok viazne, L-xylulóza</text>
+<text class="sub" x="540" y="136">odchádza močom</text>
+<text class="sub" x="440" y="224" text-anchor="middle">L-xylulóza sa cez alkohol xylitol „preklopí“ na D-formu</text>
+</vyrez>
+</svg>

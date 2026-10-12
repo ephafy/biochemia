@@ -1,0 +1,16 @@
+nazov: aspartát
+skratka: Asp
+sumarny: C4H6NO4
+smiles: C([C@@H](C(=O)O)N)C(=O)O
+zdroj: PubChem CID 5960 (kyselina L-asparágová) · overené 2026-10-07
+projekcia: skeletálny vzorec, forma pri pH 7 (aminoskupina s kladným nábojom, dva karboxyláty); od oxalacetátu sa líši aminoskupinou na C2
+---
+a C2 . 0 0
++ N2 C2 90 NH_3^+
++ C1 C2 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-
++ C3 C2 210 .
++ C4 C3 150 .
++ O4a C4 90 O 2
++ O4b C4 210 ^-O <

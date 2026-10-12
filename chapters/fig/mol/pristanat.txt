@@ -1,0 +1,27 @@
+nazov: pristanát
+sumarny: C19H37O2-
+smiles: CC(C)CCCC(C)CCCC(C)CCCC(C)C(=O)[O-]
+zdroj: PubChem CID 123929 (kyselina pristánová) · overené 2026-10-07
+projekcia: skeletálny vzorec (cik-cak), anión; 2,6,10,14-tetrametylpentadekanoát – o jeden uhlík kratší než fytanát, metyl je na C2 (α)
+---
+a C1 . 0 0
++ O1a C1 90 O 2
++ O1b C1 330 O^-
++ C2 C1 210 .
++ C3 C2 150 .
++ C4 C3 210 .
++ C5 C4 150 .
++ C6 C5 210 .
++ C7 C6 150 .
++ C8 C7 210 .
++ C9 C8 150 .
++ C10 C9 210 .
++ C11 C10 150 .
++ C12 C11 210 .
++ C13 C12 150 .
++ C14 C13 210 .
++ C15 C14 150 H_3C <
++ M2 C2 270 CH_3
++ M6 C6 270 CH_3
++ M10 C10 270 CH_3
++ M14 C14 270 CH_3

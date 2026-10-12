@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 590" role="img" aria-labelledby="t-clnky">
+<title id="t-clnky">Dva člnky, ktoré prenášajú elektróny cytosolového NADH do mitochondrie. Glycerolfosfátový člnok: cytosolová dehydrogenáza redukuje dihydroxyacetónfosfát na glycerol-3-fosfát a spotrebuje NADH; mitochondriová dehydrogenáza na vonkajšej strane vnútornej membrány ho oxiduje späť a elektróny odovzdá cez FAD koenzýmu Q, výnos je približne 1,5 ATP. Malát-aspartátový člnok: v cytosole sa oxalacetát redukuje pomocou NADH na malát, ten prejde do matrix výmenou za 2-oxoglutarát a tam sa oxiduje späť na oxalacetát, pričom vzniká NADH pre komplex I, výnos je približne 2,5 ATP. Oxalacetát cez membránu neprejde, preto sa transaminuje na aspartát, ktorý sa vráti do cytosolu výmenou za glutamát a tam sa zmení späť na oxalacetát.</title>
+<g transform="translate(0,-196)">
+<text class="cap" x="12" y="216">malát-aspartátový člnok · pečeň, srdce, oblička · ≈ 2,5 ATP na NADH</text>
+<rect class="komp-m" x="340" y="226" width="20" height="340" rx="2"/>
+<text class="cap" x="330" y="244" text-anchor="end">cytosol</text>
+<text class="cap" x="370" y="244">matrix</text>
+<mol v="oxalacetat" id="oc" x="84" y="318" m="0.78" skratka="nie"/>
+<mol v="malat" id="mc" x="258" y="318" m="0.78"/>
+<mol v="malat" id="mm" x="446" y="318" m="0.78"/>
+<mol v="oxalacetat" id="om" x="616" y="318" m="0.78" skratka="nie"/>
+<rx od="{oc.r+4,0}" do="{mc.l-4,0}" ko="NADH>NAD⁺" e="hore" enzym="malát-|dehydrogenáza"/>
+<rx od="{mc.r+4,0}" do="{mm.l-4,0}"/>
+<rx od="{mm.r+4,0}" do="{om.l-4,0}" ko="NAD⁺>NADH" e="hore" enzym="malát-|dehydrogenáza"/>
+<text class="sub" x="350" y="286" text-anchor="middle">výmena za</text>
+<text class="sub" x="350" y="298" text-anchor="middle">2-oxoglutarát</text>
+<uzol id="ki" x="530" y="372" text="→ komplex I" trieda="nic" w="80" href="07_biologicke_oxidacie#fig-dychaci-retazec" tip="Obr. 7.5: dýchací reťazec" znak="576,372"/>
+<mol v="aspartat" id="am" x="616" y="492" m="0.78"/>
+<mol v="aspartat" id="ac" x="84" y="492" m="0.78"/>
+<rx od="{om.b}" do="{om.b.x},{am.t.y}" enzym="amino-|transferáza" ko="Glu>2-OG" e="vlavo"/>
+<rx od="{am.l-4,0}" do="{ac.r+4,0}"/>
+<text class="sub" x="350" y="478" text-anchor="middle">výmena za glutamát</text>
+<rx od="{ac.t}" do="{ac.t.x},{oc.b.y}" enzym="amino-|transferáza" ko="2-OG>Glu" e="vpravo"/>
+<text class="lblb" x="350" y="404" text-anchor="middle">⟳</text>
+</g>
+<path class="vz" d="M14,384 L686,384"/>
+<g transform="translate(0,392)">
+<text class="cap" x="12" y="14">glycerolfosfátový člnok · mozog, rýchly sval · ≈ 1,5 ATP na NADH</text>
+<mol v="dihydroxyacetonfosfat" id="dh" x="96" y="100" m="0.9" zv="O2,C2-O2"/>
+<mol v="glycerol-3-fosfat" id="g3" x="420" y="100" m="0.9" zv="O2"/>
+<rx od="{dh.r+8,-36}" do="{g3.l-8,-36}" enzym="cytosolová dehydrogenáza" ko="NADH>NAD⁺" e="hore"/>
+<rx od="{g3.l-8,36}" do="{dh.r+8,36}" enzym="mitochondriová dehydrogenáza|(vonkajšia strana vnútornej membrány)" ko="FAD>FADH₂" e="dole"/>
+<uzol id="q" x="606" y="100" text="FADH₂ → Q →|komplex III → IV → O₂" trieda="bx-m" href="07_biologicke_oxidacie#fig-dychaci-retazec" tip="Obr. 7.5: dýchací reťazec"/>
+<vplyv od="{g3.r+4,30}" do="{q.bl}" cez="520,160"/>
+</g>
+<legenda x="14" y="580" polozky="rx,enz,ko,vz,zv,odk" w="672"/>
+</svg>

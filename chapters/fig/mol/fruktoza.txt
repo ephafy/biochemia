@@ -1,0 +1,14 @@
+nazov: fruktóza
+skratka: Fru
+sumarny: C6H12O6
+smiles: C([C@@H]1[C@H]([C@@H]([C@](O1)(CO)O)O)O)O
+zdroj: PubChem CID 439709 (β-D-fruktofuranóza) · overené 2026-10-06
+projekcia: Haworthov vzorec, β-D-furanóza (anomérny OH na C2 hore, na strane C6)
+---
+kruh furanoza C2 C3 C4 C5 O5
++ O2 C2 u OH
++ C1 C2 d CH_2OH
++ O3 C3 u HO <
++ O4 C4 d OH
++ C6 C5 u HOH_2C <
+c C2 2 20

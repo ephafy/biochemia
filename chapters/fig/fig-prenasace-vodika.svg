@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 592" role="img" aria-labelledby="t-prenasace-vodika">
+<title id="t-prenasace-vodika">Tri prenášače vodíka. Vľavo celý vzorec NAD+: nikotínamid na ribóze a adenozín, spojené difosfátom; NADP+ má navyše fosfát na 2′-hydroxyle ribózy adenozínu. Vpravo hore pracovná časť NAD+: nikotínamidový kruh prijme hydridový ión, teda dva elektróny a jeden protón, na uhlík 4; druhý protón ostane v roztoku. Vpravo v strede flavín FAD a FMN: izoaloxazínový kruh prijme dva vodíky na dusíky 1 a 5. Vpravo dole koenzým Q: chinón prijme dva vodíky a zmení sa na ubichinol. Výrez: celý vzorec FAD – izoaloxazínový kruh, ribitol, difosfát a adenozín.</title>
+<mol v="nad" id="n" x="118" y="262" popis="nie"/>
+<text class="mn" x="118" y="24" text-anchor="middle">NAD⁺ – celá molekula</text>
+<text class="sub" x="198" y="96">nikotínamid</text>
+<text class="sub" x="198" y="108">(vitamín B₃)</text>
+<text class="sub" x="{n.OB.x+12}" y="{n.OB.y+4}">difosfát</text>
+<text class="sub" x="196" y="300">adenozín</text>
+<path class="vz" d="M{n.O2b.x+60},{n.O2b.y+34} L{n.O2b.x+12},{n.O2b.y+8}" marker-end="url(#sip-n)"/>
+<text class="sub" x="{n.O2b.x+64}" y="{n.O2b.y+40}">v NADP⁺ je tu fosfát</text>
+<mol v="nikotinamid-ox" id="no" x="400" y="84" zv="C4,H4"/>
+<mol v="nikotinamid-red" id="nr" x="612" y="84" zv="C4,H4a,H4b"/>
+<rx od="{no.r+8,-6}" do="{nr.l-8,-6}" typ="vratna" ko="H⁻ (2 e⁻ + H⁺)>" e="dole"/>
+<text class="sub" x="506" y="118" text-anchor="middle">druhý H⁺ ostane v roztoku</text>
+<mol v="flavin-ox" id="fo" x="392" y="268" m="0.82" zv="N5,N1" rk="fad" znak="466,226"/>
+<mol v="flavin-red" id="fr" x="612" y="268" m="0.82" zv="N5,N1"/>
+<rx od="{fo.r+6,0}" do="{fr.l-6,0}" typ="vratna" ko="2 H>" e="dole"/>
+<text class="sub" x="502" y="356" text-anchor="middle">riboflavín (B₂); pevne viazaný v enzýme; vie prijať aj jeden elektrón</text>
+<mol v="ubichinon" id="qo" x="400" y="448" m="0.9" zv="O1,O4" nazov="ubichinón"/>
+<mol v="ubichinol" id="qr" x="604" y="448" m="0.9" zv="O1,O4" nazov="ubichinol"/>
+<rx od="{qo.r+8,0}" do="{qr.l-8,0}" typ="vratna" ko="2 H>" e="dole"/>
+<text class="sub" x="502" y="540" text-anchor="middle">R = dlhý izoprenoidný reťazec – drží molekulu v membráne</text>
+<path class="vz" d="M300,30 L300,540"/>
+<legenda x="14" y="564" polozky="vr,ko,zv,vz,rk" w="672"/>
+
+<vyrez id="fad" h="326" nadpis="FAD celý: čo sa skrýva za písmenom R">
+<mol v="fad" id="f-full" x="196" y="168" zv="N1,N5" popis="nie"/>
+<text class="rk-n" x="380" y="48"><tspan class="b">izoaloxazínový kruh</tspan> – pracovná časť; vodíky</text>
+<text class="rk-n" x="380" y="61">prijímajú dva modré dusíky</text>
+<text class="rk-n" x="380" y="96"><tspan class="b">+ ribitol</tspan> (otvorený päťuhlíkový alkohol)</text>
+<text class="rk-n" x="380" y="109">= riboflavín, vitamín B₂</text>
+<text class="rk-n" x="380" y="134"><tspan class="b">+ jeden fosfát</tspan> = FMN (koenzým komplexu I)</text>
+<text class="rk-n" x="380" y="164"><tspan class="b">+ AMP</tspan> (druhý fosfát a adenozín) = FAD</text>
+<text class="rk-n" x="380" y="204">Adenozín je rukoväť, tak ako v NAD⁺ a v koenzýme A.</text>
+<text class="rk-n" x="380" y="217">Na rozdiel od NAD⁺ flavín z enzýmu neodchádza –</text>
+<text class="rk-n" x="380" y="230">enzýmy s FAD alebo FMN sa volajú flavoproteíny.</text>
+</vyrez>
+</svg>

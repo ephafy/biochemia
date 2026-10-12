@@ -1,0 +1,39 @@
+nazov: leukoforma (redukovaná)
+sumarny: C16H19N3S
+smiles: CN(C)C1=CC2=C(C=C1)NC3=C(S2)C=C(C=C3)N(C)C
+zdroj: PubChem CID 164695 (leukometylénová modrá) · overené 2026-10-07
+projekcia: skeletálny vzorec; stredný dusík prijal vodík, striedanie dvojitých väzieb cez stredný kruh je prerušené – látka je bezfarebná
+kontrola: nie
+---
+a a5 . 0 -1
+a a6 . -0.866 -0.5
+a a1 . -0.866 0.5
+a a2 . -0 1
+a a3 . 0.866 0.5
+a a4 . 0.866 -0.5
+a N10 NH 1.732 -1
+a S5 S 1.732 1
+a b3 . 2.598 0.5
+a b4 . 2.598 -0.5
+a b5 . 3.464 -1
+a b2 . 3.464 1
+a b1 . 4.33 0.5
+a b6 . 4.33 -0.5
+b a5 a6 2
+b a6 a1
+b a1 a2 2
+b a2 a3
+b a3 a4 2
+b a4 a5
+b b5 b6 2
+b b6 b1
+b b1 b2 2
+b b2 b3
+b b3 b4 2
+b b4 b5
+b a4 N10
+b N10 b4
+b a3 S5
+b S5 b3
++ NA a1 210 (H_3C)_2N <
++ NB b1 330 N(CH_3)_2

@@ -1,0 +1,16 @@
+nazov: kreatín
+skratka: Cr
+sumarny: C4H9N3O2
+smiles: CN(CC(=O)O)C(=N)N
+zdroj: PubChem CID 586 (kreatín) · overené 2026-10-07
+projekcia: skeletálny vzorec, obojaký ión pri pH 7: guanidínová skupina s kladným nábojom, karboxylát
+---
+a C1 . 0 0
++ N1 C1 150 H_2N <
++ N2 C1 90 NH_2^+ 2
++ N3 C1 330 N
++ C4 N3 270 CH_3
++ C5 N3 30 .
++ C6 C5 330 .
++ O6a C6 270 O 2
++ O6b C6 30 O^-

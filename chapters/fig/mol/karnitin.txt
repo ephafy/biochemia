@@ -1,0 +1,14 @@
+nazov: karnitín
+sumarny: C7H15NO3
+smiles: C[N+](C)(C)C[C@@H](CC(=O)[O-])O
+zdroj: PubChem CID 10917 (L-karnitín) · overené 2026-10-07
+projekcia: skeletálny vzorec, obojaký ión: trimetylamóniová skupina a karboxylát; hydroxyl na C3 prijíma acyl; konfigurácia (L) nie je vyznačená
+---
+a C3 . 0 0
++ O3 C3 90 OH
++ C2 C3 330 .
++ C1 C2 30 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-
++ C4 C3 210 .
++ N C4 150 (H_3C)_3N^+ <

@@ -1,0 +1,16 @@
+nazov: erytróza-4-fosfát
+skratka: Ery-4-P
+sumarny: C4H9O7P
+smiles: C([C@H]([C@H](C=O)O)O)OP(=O)(O)O
+zdroj: PubChem CID 122357 (D-erytróza-4-fosfát) · overené 2026-10-07
+projekcia: Fischerova projekcia; aldotetróza – aldehyd na C1; OH na C2 a C3 vpravo; fosfát na C4 ako P v krúžku
+---
+a C1 CHO 0 0
++ C2 C1 270 .
++ O2 C2 0 OH
++ H2 C2 180 H <
++ C3 C2 270 .
++ O3 C3 0 OH
++ H3 C3 180 H <
++ C4 C3 270 CH_2O
++ P4 C4 r*2.35 (P)

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" role="img" aria-labelledby="t-hexozy-mapa">
+<title id="t-hexozy-mapa">Mapa kapitoly: čo ešte bunka robí s hexózami okrem glykolýzy. V strede je glykolýza od glukózy po pyruvát s riadiacim krokom fosfofruktokinázy-1. Z glukóza-6-fosfátu odbočuje pentózofosfátová dráha, ktorá dáva NADPH a ribóza-5-fosfát a vratným preskupením sa vracia do glykolýzy na úrovni fruktóza-6-fosfátu a triózafosfátov. Fruktóza vstupuje cez fruktóza-1-fosfát až medzi triózafosfáty, teda pod riadiacim krokom. Galaktóza sa fosforyluje na galaktóza-1-fosfát; ten si s UDP-glukózou vymení cukor, vznikne glukóza-1-fosfát a UDP-galaktóza. Glukóza-1-fosfát sa vratne mení na glukóza-6-fosfát a s UTP dáva UDP-glukózu. Z UDP-glukózy vzniká oxidáciou UDP-glukuronát pre konjugáciu a glykozaminoglykány. Výrez: triózafosfáty sú dihydroxyacetónfosfát a glyceraldehyd-3-fosfát, ktoré navzájom premieňa triózafosfátizomeráza.</title>
+<text class="cap" x="12" y="14">cytosol · pečeň (fruktóza, galaktóza, glukuronát) · všetky bunky (pentózofosfátová dráha)</text>
+
+<!-- os: glykolýza z kap. 4 -->
+<uzol id="glc" x="340" y="44" text="glukóza" trieda="bx-c" w="150"/>
+<uzol id="g6p" x="340" y="116" text="glukóza-6-fosfát" w="150"/>
+<uzol id="f6p" x="340" y="188" text="fruktóza-6-fosfát" w="150"/>
+<uzol id="f16" x="340" y="276" text="fruktóza-1,6-bisfosfát" w="150" href="04_metabolizmus_glukozy#fig-glykolyza-investicia" tip="Kapitola 4: investičná fáza glykolýzy"/>
+<uzol id="tri" x="340" y="348" text="triózafosfáty" w="150" rk="triozy"/>
+<uzol id="pyr" x="340" y="420" text="pyruvát" trieda="bx-c" w="150" href="04_metabolizmus_glukozy#fig-glykolyza-vynos" tip="Kapitola 4: výnosná fáza glykolýzy"/>
+<rx od="{glc.b}" do="{g6p.t}" typ="nevratna"/>
+<rx od="{g6p.b}" do="{f6p.t}" typ="vratna"/>
+<rx id="pfk" od="{f6p.b}" do="{f16.t}" typ="nevratna" enzym="fosfofruktokináza-1" e="vpravo"/>
+<text class="sub" x="356" y="247">riadiaci krok glykolýzy</text>
+<rx od="{f16.b}" do="{tri.t}" typ="vratna"/>
+<rx od="{tri.b}" do="{pyr.t}"/>
+
+<!-- 1. odbočka: pentózofosfátová dráha -->
+<uzol id="ppp" x="104" y="116" text="pentózofosfátová dráha|2 NADPH · CO₂ · ribóza-5-fosfát" trieda="bx-m" href="#fig-ppp-oxidacna" tip="Obr. 5.2: oxidačná časť"/>
+<rx od="{g6p.l}" do="{ppp.r}" typ="nevratna"/>
+<rx od="{ppp.b}" do="{f6p.l}" cez="104,188" typ="vratna"/>
+<text class="sub" x="116" y="206">vratné preskupenie</text>
+<text class="sub" x="116" y="218">(aj k triózafosfátom)</text>
+
+<!-- 2. odbočka: fruktóza -->
+<uzol id="fru" x="104" y="276" text="fruktóza" trieda="bx-c"/>
+<uzol id="f1p" x="104" y="348" text="fruktóza-1-fosfát" href="#fig-fruktoza-vstup" tip="Obr. 5.5: fruktóza v pečeni"/>
+<rx od="{fru.b}" do="{f1p.t}" typ="nevratna" enzym="fruktokináza" e="vlavo"/>
+<rx od="{f1p.r}" do="{tri.l}" enzym="aldoláza B" e="dole"/>
+<text class="lblb" x="104" y="398" text-anchor="middle">vstup pod riadiacim krokom</text>
+
+<!-- galaktóza a UDP-cukry -->
+<uzol id="gal" x="588" y="44" text="galaktóza" trieda="bx-c"/>
+<uzol id="g1g" x="588" y="116" text="galaktóza-1-fosfát" href="#fig-galaktoza-leloir" tip="Obr. 5.7: Leloirova dráha"/>
+<rx od="{gal.b}" do="{g1g.t}" typ="nevratna" enzym="galaktokináza" e="vlavo"/>
+<uzol id="g1p" x="588" y="218" text="glukóza-1-fosfát"/>
+<rx od="{g1g.b}" do="{g1p.t}" typ="vratna" enzym="uridyl-|transferáza" e="vlavo" ko="UDP-Glc>UDP-Gal"/>
+<rx od="{g1p.l}" do="{g6p.br}" typ="vratna" cez="470,214"/>
+<uzol id="udg" x="588" y="300" text="UDP-glukóza" href="03_sacharidy_glykogen#fig-glykogen-drahy" tip="Kapitola 3: UDP-glukóza a syntéza glykogénu"/>
+<rx od="{g1p.b}" do="{udg.t}" typ="nevratna" ko="UTP>PPᵢ" e="vlavo"/>
+<text class="sub" x="528" y="296" text-anchor="end">→ glykogén</text>
+<text class="sub" x="528" y="308" text-anchor="end">⇌ UDP-galaktóza</text>
+<uzol id="uda" x="588" y="382" text="UDP-glukuronát" href="#fig-udp-glukuronat" tip="Obr. 5.8: UDP-glukuronát"/>
+<rx od="{udg.b}" do="{uda.t}" typ="nevratna" ko="2 NAD⁺>2 NADH" e="vlavo"/>
+<uzol id="kon" x="588" y="448" text="konjugácia (bilirubín, lieky)|glykozaminoglykány" trieda="bx-m"/>
+<rx od="{uda.b}" do="{kon.t}"/>
+
+<legenda x="14" y="474" polozky="nv,vr,enz,ko,rk,odk" w="440"/>
+
+<vyrez id="triozy" h="190" nadpis="Triózafosfáty: dve formy, ktoré sa voľne premieňajú">
+<mol v="dihydroxyacetonfosfat" id="t-dhap" x="250" y="92"/>
+<mol v="glyceraldehyd-3-fosfat" id="t-gap" x="450" y="92"/>
+<rx od="{t-dhap.r+6,0}" do="{t-gap.l-6,0}" typ="vratna" enzym="triózafosfát-|izomeráza" e="hore"/>
+<text class="rk-n" x="14" y="52"><tspan class="b">Kto dodá ktorú</tspan></text>
+<text class="rk-n" x="14" y="68">aldoláza z fruktóza-1,6-P₂:</text>
+<text class="rk-n" x="14" y="80">obe naraz</text>
+<text class="rk-n" x="14" y="100">aldoláza B z fruktóza-1-P:</text>
+<text class="rk-n" x="14" y="112">DHAP + glyceraldehyd</text>
+<text class="rk-n" x="14" y="124">(ten dofosforyluje triózakináza)</text>
+<text class="rk-n" x="14" y="144">transketoláza: GAP</text>
+<text class="rk-n" x="560" y="68">Ďalej glykolýzou ide</text>
+<text class="rk-n" x="560" y="80">len GAP; izomeráza</text>
+<text class="rk-n" x="560" y="92">mu DHAP priebežne</text>
+<text class="rk-n" x="560" y="104">dopĺňa (kap. 4).</text>
+<text class="rk-n" x="350" y="176" text-anchor="middle">DHAP je zároveň východiskom glycerol-3-fosfátu – kostry triacylglycerolov.</text>
+</vyrez>
+</svg>

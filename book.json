@@ -1,0 +1,24 @@
+{
+  "slug": "biochem",
+  "brand": "BIOCHEM",
+  "title": "BIOCHEM — poznámky z biochémie",
+  "footer": "poznámky z biochémie",
+  "subject": "lekárskej biochémie",
+  "description": "Poznámky z lekárskej biochémie pre študentov medicíny. Funguje aj offline.",
+  "themeColor": "#2a66ab",
+  "backgroundColor": "#f3f2f2",
+  "monogram": "B",
+  "adminPort": 8788,
+  "issuesUrl": "https://github.com/ephafy/biochemia/issues/new",
+  "repos": { "private": "ephafy/BIOCHEM", "public": "ephafy/biochemia" },
+  "pagesUrl": "https://ephafy.github.io/biochemia/",
+  "boxes": ["MECH", "REG", "LAB", "KLINIKA", "POZOR", "ZAPAMATAJ", "CHEM", "POCUT", "JADRO"],
+  "asideShort": ["LAB"],
+  "policy": {
+    "circulus": "chýba regulačná slučka (⟳: spätná väzba, recipročná regulácia alebo circulus vitiosus) s pomenovaným riadiacim krokom (§2.2)",
+    "requireFigs": true,
+    "requireJadro": true,
+    "minXref": 8
+  },
+  "publishWith": []
+}

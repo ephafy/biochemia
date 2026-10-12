@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 178" role="img" aria-labelledby="t-alp-pnpp">
+<title id="t-alp-pnpp">Princíp stanovenia aktivity alkalickej fosfatázy. Enzým odštiepi vodou fosfát z bezfarebného umelého substrátu p-nitrofenylfosfátu. Vznikne p-nitrofenol, ktorý je v zásaditom roztoku žltým aniónom p-nitrofenolátom; jeho absorbancia pri 405 nm je úmerná množstvu produktu.</title>
+<mol v="p-nitrofenylfosfat" id="s" x="120" y="62" zv="P1,O1"/>
+<mol v="p-nitrofenolat" id="p" x="440" y="62" zv="O1"/>
+<rx id="alp" od="{s.r+10,0}" do="{p.l-10,0}" typ="nevratna" enzym="alkalická fosfatáza (ALP)|hydroláza, zásadité pH" ko="H₂O>Pᵢ" e="hore"/>
+<text class="sub" x="120" y="124" text-anchor="middle">bezfarebný substrát</text>
+<text class="sub" x="440" y="124" text-anchor="middle">žltý anión (pK fenolu 7,15)</text>
+<uzol id="fot" x="622" y="62" text="fotometer|A pri 405 nm" trieda="bx-c"/>
+<vplyv od="{p.r+6,0}" do="{fot.l}"/>
+<text class="sub" x="622" y="100" text-anchor="middle">A ~ množstvo produktu</text>
+<legenda x="20" y="168" polozky="nv,enz,ko,vz,zv"/>
+</svg>
