@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 590" role="img" aria-labelledby="t-fruktoza-vstup">
+<title id="t-fruktoza-vstup">Vstup fruktózy do glykolýzy v pečeni v porovnaní s glukózou. Glukóza prechádza cez glukóza-6-fosfát a fruktóza-6-fosfát k fosfofruktokináze-1, ktorú brzdia ATP a citrát a aktivujú AMP a fruktóza-2,6-bisfosfát; aldoláza potom štiepi fruktóza-1,6-bisfosfát na oba triózafosfáty. Fruktózu fosforyluje fruktokináza na fruktóza-1-fosfát. Aldoláza B ho štiepi na dihydroxyacetónfosfát a glyceraldehyd. Glyceraldehyd fosforyluje triózakináza na glyceraldehyd-3-fosfát. Obe triózy z fruktózy tak vznikajú pod fosfofruktokinázou-1 a ich tok nič nebrzdí. Deficit fruktokinázy je neškodná esenciálna fruktozúria, deficit aldolázy B je hereditárna intolerancia fruktózy. Výrezy: čo sa deje pri bloku aldolázy B a kam triózy z fruktózy pokračujú.</title>
+<text class="cap" x="12" y="14">pečeň · cytosol</text>
+<uzol id="glc" x="92" y="44" text="glukóza" trieda="bx-c" w="134"/>
+<uzol id="g6p" x="92" y="104" text="glukóza-6-fosfát" w="134"/>
+<uzol id="f6p" x="92" y="164" text="fruktóza-6-fosfát" w="134"/>
+<uzol id="f16" x="92" y="276" text="fruktóza-1,6-bisfosfát" w="134" href="04_metabolizmus_glukozy#fig-glykolyza-investicia" tip="Kapitola 4: investičná fáza glykolýzy"/>
+<rx od="{glc.b}" do="{g6p.t}" typ="nevratna"/>
+<rx od="{g6p.b}" do="{f6p.t}" typ="vratna"/>
+<rx od="{f6p.b}" do="{f16.t}" typ="nevratna" enzym="fosfofrukto-|kináza-1" inh="ATP · citrát" akt="AMP · Fru-2,6-P₂" e="vpravo"/>
+
+<mol v="fruktoza" id="fru" x="580" y="64"/>
+<mol v="fruktoza-1-fosfat" id="f1p" x="580" y="236" zv="P1"/>
+<rx od="{fru.b}" do="{fru.b.x},{f1p.t.y}" typ="nevratna" enzym="fruktokináza" ko="ATP>ADP" e="vlavo" krok="1"/>
+<text class="sub" x="572" y="182" text-anchor="end">deficit: esenciálna</text>
+<text class="sub" x="572" y="194" text-anchor="end">fruktozúria (neškodná)</text>
+
+<rect class="komp" x="158" y="372" width="372" height="112" rx="4"/>
+<text class="cap" x="168" y="386">triózafosfáty – spoločné s glykolýzou</text>
+<mol v="dihydroxyacetonfosfat" id="dhap" x="252" y="426"/>
+<mol v="glyceraldehyd-3-fosfat" id="gap" x="436" y="426"/>
+<mol v="glyceraldehyd" id="gla" x="622" y="426"/>
+<rx id="alb" od="{f1p.b}" do="{gla.t-10,0}" enzym="aldoláza B" e="vlavo" krok="2"/>
+<rx od="{f1p.b}" do="{dhap.t}" cez="252,300"/>
+<text class="sub" x="626" y="318">deficit:</text>
+<text class="sub" x="626" y="330">intolerancia</text>
+<text class="sub" x="626" y="342">fruktózy</text>
+<plus rk="blok" x="672" y="314" tip="čo sa stane pri bloku aldolázy B"/>
+<rx od="{gla.l-4,0}" do="{gap.r+4,0}" typ="nevratna" enzym="triózakináza" ko="ATP>ADP" e="hore" krok="3"/>
+<rx od="{dhap.r+4,0}" do="{gap.l-4,0}" typ="vratna"/>
+<rx od="{f16.b}" do="158,428" cez="92,428" typ="vratna" enzym="aldoláza" e="vlavo"/>
+<uzol id="out" x="344" y="528" text="ďalej podľa stavu pečene: glukóza a glykogén · pyruvát → acetyl-CoA → tuk" rk="osud"/>
+<rx od="344,484" do="{out.t}"/>
+<text class="lblb" x="372" y="150" text-anchor="middle">fruktóza vstupuje pod</text>
+<text class="lblb" x="372" y="164" text-anchor="middle">riadiacim krokom –</text>
+<text class="lblb" x="372" y="178" text-anchor="middle">jej tok nič nebrzdí</text>
+<legenda x="14" y="566" polozky="nv,vr,enz,ko,akt,inh,rk,odk" w="672"/>
+
+<vyrez id="blok" h="232" nadpis="Blok aldolázy B: fosfát uviazne vo fruktóza-1-fosfáte">
+<uzol id="b-f1p" x="96" y="70" text="fruktóza-1-fosfát ↑|nemá ho čo štiepiť" trieda="bx-m"/>
+<uzol id="b-pi" x="290" y="70" text="↓ voľný fosfát (Pᵢ)"/>
+<uzol id="b-atp" x="446" y="70" text="↓ ATP"/>
+<uzol id="b-amp" x="602" y="70" text="AMP sa odbúrava|→ ↑ kyselina močová"/>
+<rx od="{b-f1p.r}" do="{b-pi.l}"/>
+<rx od="{b-pi.r}" do="{b-atp.l}"/>
+<rx od="{b-atp.r}" do="{b-amp.l}"/>
+<text class="sub" x="193" y="62" text-anchor="middle">viaže ho</text>
+<text class="sub" x="375" y="50" text-anchor="middle">ADP sa nemá</text>
+<text class="sub" x="375" y="62" text-anchor="middle">čím fosforylovať</text>
+<uzol id="b-fos" x="230" y="150" text="glykogénfosforyláza|stojí"/>
+<uzol id="b-gng" x="470" y="150" text="glukoneogenéza|stojí"/>
+<vplyv typ="inh" od="{b-f1p.b}" do="{b-fos.l}" cez="96,150"/>
+<text class="t-inh" x="50" y="140">brzdí ju aj</text>
+<text class="t-inh" x="50" y="152">alostericky</text>
+<vplyv typ="inh" od="{b-pi.b}" do="{b-fos.tr-20,0}"/>
+<text class="sub" x="300" y="112">chýba jej Pᵢ</text>
+<vplyv typ="inh" od="{b-atp.b}" do="{b-gng.t}"/>
+<text class="sub" x="466" y="112">chýba jej ATP</text>
+<uzol id="b-hyp" x="350" y="206" text="pečeň nevydá glukózu ani zo zásoby, ani novú → hypoglykémia po fruktóze" trieda="bx-m"/>
+<rx od="{b-fos.b}" do="{b-hyp.t-60,0}"/>
+<rx od="{b-gng.b}" do="{b-hyp.t+60,0}"/>
+</vyrez>
+
+<vyrez id="osud" h="232" nadpis="Kam idú triózy z fruktózy">
+<uzol id="o-t" x="74" y="112" text="triózafosfáty|z fruktózy" trieda="bx-c"/>
+<uzol id="o-a" x="262" y="52" text="glukoneogenéza"/>
+<uzol id="o-a2" x="500" y="52" text="glukóza do krvi · glykogén" trieda="bx-c"/>
+<uzol id="o-b" x="262" y="112" text="pyruvát → acetyl-CoA"/>
+<uzol id="o-b2" x="430" y="112" text="mastné kyseliny"/>
+<uzol id="o-d" x="74" y="182" text="dihydroxy-|acetónfosfát"/>
+<mol v="glycerol-3-fosfat" id="o-g" x="330" y="182" m="0.85"/>
+<uzol id="o-c" x="596" y="148" text="triacylglycerol|→ VLDL, tuk v pečeni" trieda="bx-m"/>
+<rx od="{o-t.r}" do="{o-a.l}"/>
+<rx od="{o-a.r}" do="{o-a2.l}"/>
+<rx od="{o-t.r}" do="{o-b.l}"/>
+<rx od="{o-b.r}" do="{o-b2.l}"/>
+<rx od="{o-t.b}" do="{o-d.t}"/>
+<rx od="{o-d.r}" do="{o-g.l-4,-6}" ko="NADH>NAD⁺" e="hore"/>
+<rx od="{o-b2.r}" do="{o-c.l-0,-8}"/>
+<rx od="{o-g.r+4,-6}" do="{o-c.l-0,8}"/>
+<text class="sub" x="500" y="78" text-anchor="middle">osud veľkej časti fruktózy</text>
+<text class="sub" x="596" y="186" text-anchor="middle">z tej istej fruktózy sú</text>
+<text class="sub" x="596" y="198" text-anchor="middle">kyseliny aj kostra tuku</text>
+</vyrez>
+</svg>

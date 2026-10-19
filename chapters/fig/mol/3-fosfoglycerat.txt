@@ -1,0 +1,15 @@
+nazov: 3-fosfoglycerát
+skratka: 3-PG
+sumarny: C3H7O7P
+smiles: C([C@H](C(=O)O)O)OP(=O)(O)O
+zdroj: PubChem CID 439183 (kyselina 3-fosfo-D-glycerová) · overené 2026-10-06
+projekcia: skeletálny vzorec (cik-cak), karboxylát – forma pri pH 7; fosfát na C3 ako P v krúžku
+---
+a C2 . 0 0
++ O2 C2 90 OH
++ C1 C2 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-
++ C3 C2 210 .
++ O3 C3 150 O
++ P3 O3 210*1.15 (P)

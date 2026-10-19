@@ -1,0 +1,13 @@
+nazov: p-nitrofenolát
+skratka: pNP
+sumarny: C6H4NO3-
+smiles: C1=CC(=CC=C1[N+](=O)[O-])[O-]
+zdroj: PubChem CID 644235 (4-nitrofenolát), CID 980 (4-nitrofenol; pK 7,15) · overené 2026-10-06
+projekcia: skeletálny vzorec, anión (fenolát) – žltá forma v zásaditom roztoku; nitroskupina skrátene NO₂
+---
+kruh n6 A1 A2 A3 A4 A5 A6 rot 90
+b A1 A2 2r
+b A3 A4 2r
+b A5 A6 2r
++ O1 A1 0 O^-
++ N4 A4 180 O_2N <

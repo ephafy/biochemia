@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 520" role="img" aria-labelledby="t-synteza-mk">
+<title id="t-synteza-mk">Syntéza mastnej kyseliny na syntáze mastných kyselín, prvé kolo a výsledok. Acetyl zo štartovacieho acetyl-CoA sa kondenzuje s malonylom viazaným na ACP; pritom odchádza oxid uhličitý a vzniká štvoruhlíkový acetoacetyl-ACP. Jeho oxoskupina sa redukuje pomocou NADPH na hydroxyl, odštiepi sa voda a vznikne dvojitá väzba, ktorú druhý NADPH zredukuje; výsledkom je nasýtený butyryl-ACP. Ten zaujme miesto acetylu a kolo sa zopakuje ešte šesťkrát, vždy s novým malonylom. Po siedmich kolách tioesteráza uvoľní šestnásťuhlíkový palmitát; dva uhlíky na jeho metylovom konci pochádzajú zo štartovacieho acetylu.</title>
+<text class="cap" x="12" y="14">cytosol · syntáza mastných kyselín · prvé kolo</text>
+<mol v="acetyl-coa" id="ac" x="82" y="92" nazov="acetyl-CoA|(štartér)" skratka="nie" zv="C1,C2"/>
+<text class="lblb" x="160" y="90" text-anchor="middle">+</text>
+<mol v="malonyl-acp" id="ml" x="250" y="92" zv="C3,O3a,O3b"/>
+<mol v="acetoacetyl-acp" id="aa" x="586" y="92" zv="O3,C3-O3"/>
+<rx od="{ml.r+8,0}" do="{aa.l-8,0}" krok="1" enzym="kondenzácia" ko=">CO₂" e="hore"/>
+<mol v="3-hydroxybutyryl-acp" id="hb" x="586" y="262" zv="O3"/>
+<rx od="{aa.b}" do="{hb.t}" krok="2" enzym="redukcia" ko="NADPH>NADP⁺" e="vlavo"/>
+<mol v="krotonyl-acp" id="kr" x="330" y="262" zv="C2-C3"/>
+<rx od="{hb.l-8,0}" do="{kr.r+8,0}" krok="3" enzym="dehydratácia" ko=">H₂O" e="hore"/>
+<mol v="butyryl-acp" id="bu" x="88" y="262"/>
+<rx od="{kr.l-8,0}" do="{bu.r+8,0}" krok="4" enzym="redukcia" ko="NADPH>NADP⁺" e="hore"/>
+<vplyv od="{bu.t+0,-2}" do="{ac.b+0,16}" ciara="plna"/>
+<text class="sub" x="98" y="184">butyryl zaujme miesto acetylu</text>
+<text class="sub" x="98" y="195">+ ďalší malonyl-ACP</text>
+<text class="lblb" x="98" y="210">⟳ spolu 7 kôl</text>
+<mol v="palmitat" id="pal" x="372" y="424" zv="C15,C16,C15-C16"/>
+<rx od="{bu.b+0,2}" do="{pal.tl+40,0}" cez="88,380" enzym="po 7 kolách:|tioesteráza" ko="H₂O>ACP" e="vpravo"/>
+<text class="sub" x="372" y="486" text-anchor="middle">modro vľavo: dva uhlíky zo štartovacieho acetylu; ostatných 14 je z malonyl-CoA</text>
+<legenda x="20" y="510" polozky="rx,enz,ko,zv"/>
+</svg>

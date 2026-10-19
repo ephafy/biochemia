@@ -1,0 +1,13 @@
+nazov: laktát
+skratka: Lac
+sumarny: C3H5O3-
+smiles: C[C@@H](C(=O)[O-])O
+zdroj: PubChem CID 5460161 ((S)-laktát = L-laktát), CID 91435 (laktát) · overené 2026-10-06
+projekcia: skeletálny vzorec (cik-cak), anión – forma prevažujúca pri pH 7; konfigurácia na C2 (L) nie je vyznačená
+---
+a C2 . 0 0
++ C3 C2 210 H_3C <
++ O2 C2 90 OH
++ C1 C2 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-

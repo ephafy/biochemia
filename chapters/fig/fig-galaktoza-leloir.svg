@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 486" role="img" aria-labelledby="t-galaktoza-leloir">
+<title id="t-galaktoza-leloir">Premena galaktózy na glukózu. Galaktokináza fosforyluje alfa-galaktózu na galaktóza-1-fosfát. Uridyltransferáza vymení galaktóza-1-fosfát za glukózu v UDP-glukóze: vznikne glukóza-1-fosfát a UDP-galaktóza. Epimeráza obráti hydroxyl na uhlíku 4 a z UDP-galaktózy urobí späť UDP-glukózu, takže tá sa nespotrebúva. Glukóza-1-fosfát prejde fosfoglukomutázou na glukóza-6-fosfát. Pri nadbytku galaktózy ju aldózareduktáza mení na galaktitol. UDP-galaktóza je zároveň darcom galaktózy pre laktózu, glykolipidy a glykoproteíny. Deficit galaktokinázy je galaktozémia typu II, deficit transferázy klasická galaktozémia typu I, deficit epimerázy typ III. Výrezy: mutarotáza, ktorá mení beta-galaktózu na alfa-formu (jej deficit je typ IV); plný vzorec UDP-glukózy; mechanizmus epimerázy cez 4-ketocukor a NAD+ viazaný v enzýme.</title>
+<text class="cap" x="12" y="14">pečeň · cytosol</text>
+<mol v="galaktoza" id="gal" x="72" y="96" zv="O4" rk="muta" znak="118,52"/>
+<mol v="galaktoza-1-fosfat" id="g1g" x="282" y="96" zv="P1"/>
+<mol v="glukoza-1-fosfat" id="g1p" x="512" y="96" zv="P1"/>
+<rx od="{gal.r+4,0}" do="{g1g.l-4,0}" typ="nevratna" enzym="galaktokináza" ko="ATP>ADP" e="hore" krok="1"/>
+<rx id="galt" od="{g1g.r+4,0}" do="{g1p.l-4,0}" typ="vratna" enzym="galaktóza-1-fosfát-|uridyltransferáza" e="hore" krok="2"/>
+<uzol id="g6p" x="654" y="96" text="glukóza-|6-fosfát" trieda="bx-c"/>
+<rx od="{g1p.r+2,0}" do="{g6p.l}" typ="vratna"/>
+<text class="enz" x="612" y="56" text-anchor="middle">fosfogluko-</text>
+<text class="enz" x="612" y="67" text-anchor="middle">mutáza</text>
+<mol v="udp-glukoza" id="ug" x="282" y="300" rk="udp" znak="340,262"/>
+<mol v="udp-galaktoza" id="ul" x="512" y="300" zv="O4"/>
+<rx od="{ul.l-4,0}" do="{ug.r+4,0}" typ="vratna" enzym="UDP-galaktóza-|4-epimeráza" e="dole" krok="3" rk="epi" znak="397,346"/>
+<path class="rx" d="M{ug.t} Q397,-28 {ul.t}" marker-end="url(#sip)"/>
+<text class="sub" x="397" y="196" text-anchor="middle">UDP si vymení cukor</text>
+<text class="lblb" x="397" y="262" text-anchor="middle">⟳</text>
+<mol v="galaktitol" id="gol" x="72" y="322"/>
+<rx od="{gal.b}" do="{gal.b.x},{gol.t.y}" enzym="aldóza-|reduktáza" ko="NADPH>NADP⁺" e="vpravo"/>
+<uzol id="use" x="512" y="430" text="laktóza · glykolipidy · glykoproteíny · glykozaminoglykány" trieda="bx-m"/>
+<rx od="{ul.b}" do="{use.t}"/>
+<text class="sub" x="178" y="150" text-anchor="middle">deficit: typ II</text>
+<text class="sub" x="397" y="46" text-anchor="middle">deficit: typ I (klasická galaktozémia)</text>
+<text class="sub" x="397" y="392" text-anchor="middle">deficit: typ III</text>
+<legenda x="14" y="462" polozky="nv,vr,enz,ko,zv,rk" w="672"/>
+
+<vyrez id="muta" h="176" nadpis="Krok 0 – mutarotáza: z β-galaktózy α-galaktóza">
+<mol v="galaktoza-beta" id="m-b" x="150" y="92" zv="O1"/>
+<mol v="galaktoza" id="m-a" x="390" y="92" zv="O1" nazov="α-galaktóza" skratka="α-Gal"/>
+<rx od="{m-b.r+8,0}" do="{m-a.l-8,0}" typ="vratna" enzym="mutarotáza|(aldóza-1-epimeráza)" e="hore"/>
+<text class="rk-n" x="470" y="56">V laktóze je galaktóza viazaná</text>
+<text class="rk-n" x="470" y="69">β-väzbou, po rozštiepení je teda</text>
+<text class="rk-n" x="470" y="82">v β-forme. Galaktokináza prijme</text>
+<text class="rk-n" x="470" y="95">len α-formu (hydroxyl na uhlíku 1</text>
+<text class="rk-n" x="470" y="108">dole).</text>
+<text class="rk-n" x="470" y="130"><tspan class="b">Deficit mutarotázy:</tspan></text>
+<text class="rk-n" x="470" y="143">galaktozémia typu IV.</text>
+</vyrez>
+
+<vyrez id="udp" h="212" nadpis="UDP-glukóza celá: čo sa skrýva za skratkou UDP">
+<mol v="udp-glukoza-plna" id="u-full" x="232" y="104" zv="C1-O1,O1,O1-PB" popis="nie"/>
+<path class="stk-n" d="M20,172 H124 M150,172 H242 M262,172 H404"/>
+<text class="rk-n" x="72" y="186" text-anchor="middle"><tspan class="b">glukóza</tspan></text>
+<text class="rk-n" x="196" y="186" text-anchor="middle"><tspan class="b">difosfát</tspan></text>
+<text class="rk-n" x="333" y="186" text-anchor="middle"><tspan class="b">uridín</tspan> = ribóza + uracil</text>
+<text class="rk-n" x="446" y="60"><tspan class="b">UDP = uridíndifosfát.</tspan> Cukor na ňom</text>
+<text class="rk-n" x="446" y="73">visí anomérnym uhlíkom (C1).</text>
+<text class="rk-n" x="446" y="95"><tspan class="b">Modrá väzba</tspan> cukor–fosfát nesie</text>
+<text class="rk-n" x="446" y="108">energiu z UTP, z ktorého UDP-glukóza</text>
+<text class="rk-n" x="446" y="121">vzniká (kapitola 3). Transferázy ju</text>
+<text class="rk-n" x="446" y="134">štiepia a cukor prenesú ďalej.</text>
+<text class="rk-n" x="446" y="156">Nukleotid je „rukoväť“, podľa ktorej</text>
+<text class="rk-n" x="446" y="169">enzým aktivovaný cukor spozná.</text>
+</vyrez>
+
+<vyrez id="epi" h="188" nadpis="Krok 3 – ako epimeráza otočí hydroxyl na uhlíku 4">
+<mol v="udp-galaktoza" id="e-l" x="96" y="92" zv="O4"/>
+<uzol id="e-k" x="350" y="88" text="UDP-4-ketocukor|na C4 je C=O – uhlík je plochý" w="212"/>
+<mol v="udp-glukoza" id="e-g" x="604" y="92" zv="O4"/>
+<rx od="{e-l.r+6,-4}" do="{e-k.l}" typ="vratna" ko="NAD⁺>NADH"/>
+<rx od="{e-k.r}" do="{e-g.l-6,-4}" typ="vratna" ko="NADH>NAD⁺"/>
+<text class="rk-n" x="350" y="158" text-anchor="middle">NAD⁺ je pevne viazaný v enzýme: vodík z C4 si na chvíľu podrží a vráti ho z opačnej strany.</text>
+<text class="rk-n" x="350" y="171" text-anchor="middle">Hydroxyl sa nepresúva – oxiduje sa na ketón a redukuje späť v druhej polohe. Navonok sa NAD⁺ nespotrebuje.</text>
+</vyrez>
+</svg>

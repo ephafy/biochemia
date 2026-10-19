@@ -1,0 +1,14 @@
+nazov: krotonyl-ACP
+sumarny: C4H5O
+smiles: C/C=C/C(=O)S
+zdroj: PubChem CID 5497143 (krotonoyl-CoA) – acylová časť; nosičom je tu ACP · overené 2026-10-07
+projekcia: skeletálny vzorec; dvojitá väzba medzi C2 a C3 v konfigurácii trans
+kontrola: nie
+---
+a C1 . 0 0
++ O1 C1 90 O 2
++ S1 C1 330 S
++ X1 S1 30*1.15 ACP
++ C2 C1 210 .
++ C3 C2 150 . 2
++ C4 C3 210 H_3C <

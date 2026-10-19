@@ -1,0 +1,18 @@
+nazov: acylkarnitín
+sumarny: C23H45NO4
+smiles: CCCCCCCCCCCCCCCC(=O)O[C@H](CC(=O)[O-])C[N+](C)(C)C
+zdroj: PubChem CID 11953816 (palmitoyl-L-karnitín) – vzor; R = reťazec MK · overené 2026-10-07
+projekcia: skeletálny vzorec: acyl viazaný esterovou väzbou na hydroxyl C3 karnitínu; R = uhľovodíkový reťazec
+kontrola: nie
+---
+a C3 . 0 0
++ O3 C3 90 O
++ A O3 30 .
++ Q A 90 O 2
++ R A 330 R
++ C2 C3 330 .
++ C1 C2 30 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-
++ C4 C3 210 .
++ N C4 150 (H_3C)_3N^+ <

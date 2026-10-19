@@ -1,0 +1,44 @@
+nazov: UDP-glukóza
+skratka: UDP-Glc
+sumarny: C15H22N2O17P2-2
+smiles: C1=CN(C(=O)NC1=O)[C@H]2[C@@H]([C@@H]([C@H](O2)COP(=O)(O)OP(=O)(O)O[C@@H]3[C@@H]([C@H]([C@@H]([C@H](O3)CO)O)O)O)O)O
+zdroj: PubChem CID 8629 (UDP-α-D-glukóza), CID 6029 (uridín) · overené 2026-10-08
+projekcia: plný vzorec: α-D-glukóza Haworthovým vzorcom, na anomérnom kyslíku difosfát (vypísaný, anión pri pH 7), ribóza Haworthovým vzorcom a uracil na C1′; väzba glukóza–fosfát je tá, ktorú transferázy štiepia
+---
+kruh pyranoza C1 C2 C3 C4 C5 O5
++ O1 C1 d O
++ O2 C2 d HO <
++ O3 C3 u OH
++ O4 C4 d HO <
++ C6 C5 u CH_2OH
+a PB P 2.9 0.7
+b O1 PB
++ OB1 PB 90 O 2
++ OB2 PB 270 O^-
+a OAB O 3.75 0.7
+b PB OAB
+a PA P 4.6 0.7
+b OAB PA
++ OA1 PA 90 O 2
++ OA2 PA 270 O^-
+kruh furanoza C1r C2r C3r C4r O4r @ 8.2 1.48
++ O2r C2r d OH
++ O3r C3r d HO <
++ C5r C4r u O|CH_2
+b C5r PA
+a uN1 N 9.8 0.7
+a uC2 . 10.666 0.2
+a uN3 NH 10.666 -0.8
+a uC4 . 9.8 -1.3
+a uC5 . 8.934 -0.8
+a uC6 . 8.934 0.2
+b uN1 uC2
+b uC2 uN3
+b uN3 uC4
+b uC4 uC5
+b uC5 uC6 2
+b uC6 uN1
++ O2u uC2 330 O 2
++ O4u uC4 90 O 2
+b C1r uN1
+c C1 1 20

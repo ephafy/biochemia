@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 440" role="img" aria-labelledby="t-obchadzka-pyruvat">
+<title id="t-obchadzka-pyruvat">Prvá obchádzka glukoneogenézy: z pyruvátu na fosfoenolpyruvát cez dva priestory bunky. V mitochondrii pyruvátkarboxyláza s biotínom pripojí oxid uhličitý na pyruvát za spotreby ATP a vznikne oxalacetát; enzým aktivuje acetyl-CoA. Oxalacetát cez vnútornú membránu neprejde, preto sa redukuje na malát, ten prenesie prenášač do cytosolu a tam sa oxiduje späť na oxalacetát, čím sa do cytosolu dostane aj NADH. Fosfoenolpyruvátkarboxykináza potom za spotreby GTP odštiepi oxid uhličitý a vznikne fosfoenolpyruvát.</title>
+<rect class="komp-m" x="14" y="26" width="330" height="372" rx="3"/>
+<text class="cap" x="24" y="42">mitochondria</text>
+<text class="cap" x="686" y="42" text-anchor="end">cytosol</text>
+<mol v="pyruvat" id="pyr" x="110" y="322"/>
+<mol v="oxalacetat" id="oaa" x="110" y="112"/>
+<rx od="{pyr.t}" do="{pyr.t.x},{oaa.b.y}" typ="nevratna" enzym="pyruvátkarboxyláza|(biotín)" akt="acetyl-CoA" ko="CO₂>;ATP>ADP" e="vpravo"/>
+<uzol id="mm" x="276" y="112" text="malát"/>
+<rx od="{oaa.r+4,0}" do="{mm.l}" typ="vratna" ko="NADH>NAD⁺" e="dole"/>
+<uzol id="mc" x="420" y="112" text="malát"/>
+<rx od="{mm.r}" do="{mc.l}"/>
+<text class="sub" x="348" y="98" text-anchor="middle">prenášač</text>
+<mol v="oxalacetat" id="oaa2" x="592" y="112"/>
+<rx od="{mc.r}" do="{oaa2.l-4,0}" typ="vratna" ko="NAD⁺>NADH" e="dole"/>
+<mol v="fosfoenolpyruvat" id="pep" x="592" y="314" zv="P2"/>
+<rx od="{oaa2.b}" do="{oaa2.b.x},{pep.t.y}" typ="nevratna" enzym="fosfoenolpyruvát-|karboxykináza" ko="GTP>GDP;>CO₂" e="vlavo"/>
+<uzol id="src" x="250" y="424" text="pyruvát z cytosolu ← laktát, alanín"/>
+<rx od="{src.l}" do="{pyr.b}" cez="110,424"/>
+<text class="sub" x="592" y="392" text-anchor="middle">ďalej vratnými krokmi glykolýzy</text>
+<text class="sub" x="592" y="404" text-anchor="middle">odzadu → fruktóza-1,6-bisfosfát</text>
+<legenda x="372" y="430" polozky="nv,vr,ko,akt" w="320"/>
+</svg>

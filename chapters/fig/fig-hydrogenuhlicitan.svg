@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 312" role="img" aria-labelledby="t-hydrogenuhlicitan">
+<title id="t-hydrogenuhlicitan">Hydrogénuhličitanový tlmivý systém ako regulačná slučka. Oxid uhličitý s vodou dáva kyselinu uhličitú (karboanhydráza), tá sa štiepi na vodíkový katión a hydrogénuhličitan; obe reakcie sú vratné. Keď pribudne kyselina, rovnováha sa posunie k oxidu uhličitému. Pokles pH a vzostup pCO₂ dráždia dychové centrum, to zvýši ventiláciu a pľúca oxid uhličitý vydýchajú – pomer sa vracia. Obličky vylučujú vodíkové katióny a vracajú hydrogénuhličitan.</title>
+<uzol id="co2" x="140" y="170" text="CO₂ + H₂O" trieda="bx-c"/>
+<uzol id="h2co3" x="350" y="170" text="H₂CO₃|kyselina uhličitá"/>
+<uzol id="hco3" x="565" y="170" text="H⁺ + HCO₃⁻" trieda="bx-c"/>
+<rx od="{co2.r+4,0}" do="{h2co3.l-4,0}" typ="vratna" enzym="karboanhydráza" e="dole"/>
+<rx od="{h2co3.r+4,0}" do="{hco3.l-4,0}" typ="vratna"/>
+
+<uzol id="pluca" x="140" y="46" text="pľúca|vydýchaný CO₂"/>
+<rx od="{co2.t}" do="{pluca.b}"/>
+<uzol id="dc" x="430" y="46" text="dychové centrum|(chemoreceptory)"/>
+<vplyv typ="akt" od="{hco3.t}" do="{dc.r+2,6}" cez="565,70"/>
+<text class="t-akt" x="574" y="104">↓ pH, ↑ pCO₂</text>
+<vplyv typ="akt" od="{dc.l}" do="{pluca.r}"/>
+<text class="t-akt" x="286" y="38" text-anchor="middle">↑ ventilácia</text>
+<text class="lblb" x="350" y="104" text-anchor="middle">⟳ záporná spätná väzba</text>
+<text class="sub" x="350" y="117" text-anchor="middle">riadiaci krok: ventilácia (minúty)</text>
+
+<uzol id="tk" x="140" y="270" text="tkanivá|CO₂ z oxidácie živín"/>
+<rx od="{tk.t}" do="{co2.b}"/>
+<uzol id="kys" x="395" y="270" text="kyseliny z metabolizmu|laktát, ketolátky"/>
+<rx od="{kys.r+2,-8}" do="{hco3.bl+18,2}"/>
+<text class="sub" x="470" y="226" text-anchor="end">H⁺</text>
+<uzol id="obl" x="610" y="270" text="obličky|vylúčia H⁺, vrátia HCO₃⁻"/>
+<vplyv od="{obl.t-10,0}" do="{hco3.b+35,0}" ciara="plna"/>
+<text class="sub" x="692" y="226" text-anchor="end">hodiny až dni</text>
+<legenda x="20" y="304" polozky="rx,vr,enz,akt"/>
+</svg>

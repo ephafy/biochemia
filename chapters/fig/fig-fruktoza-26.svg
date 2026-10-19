@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" role="img" aria-labelledby="t-fruktoza-26">
+<title id="t-fruktoza-26">Fruktóza-2,6-bisfosfát ako prepínač medzi glykolýzou a glukoneogenézou v pečeni. V glykolýze mení fosfofruktokináza-1 fruktóza-6-fosfát na fruktóza-1,6-bisfosfát; aktivujú ju fruktóza-2,6-bisfosfát a AMP, brzdia ATP a citrát. V glukoneogenéze pracuje opačne fruktóza-1,6-bisfosfatáza; brzdia ju fruktóza-2,6-bisfosfát a AMP. Hladinu fruktóza-2,6-bisfosfátu určuje bifunkčný enzým: po jedle ho inzulín drží bez fosfátu a jeho kinázová časť fruktóza-2,6-bisfosfát tvorí; nalačno ho proteínkináza A na pokyn glukagónu fosforyluje a jeho fosfatázová časť fruktóza-2,6-bisfosfát rozkladá.</title>
+<text class="cap" x="12" y="14">glykolýza →</text>
+<mol v="fruktoza-6-fosfat" id="f6p" x="112" y="66"/>
+<mol v="fruktoza-1-6-bisfosfat" id="f16" x="586" y="66" zv="P1"/>
+<rx id="pfk" od="{f6p.r+4,0}" do="{f16.l-4,0}" typ="nevratna" enzym="fosfofruktokináza-1" akt="AMP" inh="ATP · citrát" ko="ATP>ADP" e="dole"/>
+<mol v="fruktoza-2-6-bisfosfat" id="f26" x="350" y="216" zv="P2"/>
+<vplyv typ="akt" od="{f26.t}" do="{pfk.eb}"/>
+<uzol id="ins" x="96" y="216" text="po jedle: inzulín|enzým bez fosfátu|→ kináza (PFK-2) ho tvorí"/>
+<uzol id="glu" x="604" y="216" text="nalačno: glukagón → cAMP|enzým s fosfátom|→ fosfatáza ho rozkladá"/>
+<vplyv typ="akt" od="{ins.r}" do="{f26.l-4,0}"/>
+<vplyv typ="inh" od="{glu.l}" do="{f26.r+4,0}"/>
+<text class="sub" x="350" y="170" text-anchor="middle" dx="96">zapína</text>
+<uzol id="f16b" x="112" y="366" text="fruktóza-1,6-bisfosfát"/>
+<uzol id="f6pb" x="586" y="366" text="fruktóza-6-fosfát"/>
+<rx id="fbp" od="{f16b.r}" do="{f6pb.l}" typ="nevratna" enzym="fruktóza-1,6-bisfosfatáza" inh="AMP" ko="H₂O>Pᵢ" e="hore"/>
+<vplyv typ="inh" od="{f26.b}" do="{fbp.et}"/>
+<text class="sub" x="350" y="296" text-anchor="middle" dx="96">brzdí</text>
+<text class="cap" x="12" y="398">glukoneogenéza →</text>
+<legenda x="20" y="412" polozky="nv,enz,ko,akt,inh"/>
+</svg>

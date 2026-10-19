@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" role="img" aria-labelledby="t-glukuronidacia">
+<title id="t-glukuronidacia">Glukuronidácia na príklade paracetamolu. UDP-glukuronozyltransferáza v endoplazmatickom retikule prenesie glukuronát z UDP-glukuronátu na fenolový kyslík paracetamolu; vznikne paracetamol-glukuronid, ktorý má záporný náboj, je rozpustný vo vode a odíde močom alebo žlčou, a UDP. Menšia časť paracetamolu sa cytochrómom P450 (CYP2E1, indukuje ho etanol) premení na toxický NAPQI, ktorý sa zneškodní konjugáciou s glutatiónom. Výrez: čo sa stane pri veľkej dávke, keď sa glukuronidácia a sulfatácia preťažia a glutatión sa vyčerpá.</title>
+<mol v="paracetamol" id="apap" x="120" y="82" zv="O1"/>
+<mol v="paracetamol-glukuronid" id="gl" x="440" y="82" zv="O1" m="0.9"/>
+<rx od="{apap.r+6,0}" do="{gl.l-6,0}" enzym="UDP-glukuronozyltransferáza (ER)" ko="UDP-GlcUA>UDP" e="hore"/>
+<uzol id="vyl" x="640" y="82" text="vylúčenie:|moč alebo žlč" trieda="bx-m"/>
+<rx od="{gl.r+6,0}" do="{vyl.l}"/>
+<uzol id="nq" x="120" y="214" text="NAPQI|(toxický medziprodukt)" trieda="bx-c" rk="napqi"/>
+<rx od="{apap.b}" do="{nq.t}" enzym="CYP2E1 (P450)" akt="etanol" e="vpravo"/>
+<uzol id="gsh" x="440" y="214" text="konjugát s glutatiónom|→ moč" trieda="bx-m"/>
+<rx od="{nq.r}" do="{gsh.l}" ko="GSH>"/>
+<text class="sub" x="200" y="156" text-anchor="start">pri liečebnej dávke < 10 % lieku</text>
+<legenda x="14" y="284" polozky="rx,enz,ko,akt,zv,rk" w="672"/>
+
+<vyrez id="napqi" h="250" nadpis="Veľká dávka: keď sa konjugácie preťažia">
+<uzol id="v1" x="110" y="64" text="veľká dávka|paracetamolu"/>
+<uzol id="v2" x="330" y="64" text="glukuronidácia a|sulfatácia preťažené" trieda="bx-m"/>
+<uzol id="v3" x="550" y="64" text="viac paracetamolu|ide cez CYP2E1" trieda="bx-m"/>
+<rx od="{v1.r}" do="{v2.l}"/>
+<rx od="{v2.r}" do="{v3.l}"/>
+<uzol id="v4" x="550" y="150" text="↑ NAPQI" trieda="bx-c"/>
+<rx od="{v3.b}" do="{v4.t}"/>
+<uzol id="v5" x="330" y="150" text="glutatiónu je málo|(vyčerpá sa)" trieda="bx-m"/>
+<rx od="{v4.l}" do="{v5.r}" inh="GSH"/>
+<uzol id="v6" x="110" y="150" text="NAPQI viaže bielkoviny|→ zanikne hepatocyt" trieda="bx-c"/>
+<rx od="{v5.l}" do="{v6.r}"/>
+<uzol id="v7" x="330" y="226" text="N-acetylcysteín|dodá cysteín na tvorbu GSH" trieda="bx-k"/>
+<vplyv typ="akt" od="{v7.t}" do="{v5.b}" ciara="plna"/>
+</vyrez>
+</svg>

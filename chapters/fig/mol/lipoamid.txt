@@ -1,0 +1,16 @@
+nazov: lipoamid (oxidovaný)
+sumarny: C8H15NOS2
+smiles: C1CSSC1CCCCC(=O)N
+zdroj: PubChem CID 863 (lipoamid) · overené 2026-10-07
+projekcia: skeletálny vzorec; päťčlenný kruh s disulfidom S–S; reťazec končí amidovou väzbou na lyzín enzýmu E2 (skrátene)
+kontrola: nie
+---
+kruh n5 S1:S S2:S C3 C4 C5 rot 36
++ C6 C5 30 .
++ C7 C6 330 .
++ C8 C7 30 .
++ C9 C8 330 .
++ C10 C9 30 .
++ O10 C10 90 O 2
++ N C10 330 NH
++ X N 30*1.2 Lys–E2

@@ -1,0 +1,16 @@
+nazov: paracetamol
+skratka: APAP
+sumarny: C8H9NO2
+smiles: CC(=O)NC1=CC=C(C=C1)O
+zdroj: PubChem CID 1983 (acetaminophen) · overené 2026-10-13
+projekcia: skeletálny vzorec, neutrálna molekula; fenolový OH je miesto, na ktoré sa pripája glukuronát
+---
+kruh n6 A1 A2 A3 A4 A5 A6 rot 90
+b A1 A2 2r
+b A3 A4 2r
+b A5 A6 2r
++ O1 A1 0 OH
++ N1 A4 180 HN <
++ C7 N1 120 .
++ O7 C7 60 O 2
++ C8 C7 180 H_3C <

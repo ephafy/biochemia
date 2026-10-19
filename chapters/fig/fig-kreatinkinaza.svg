@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 204" role="img" aria-labelledby="t-kreatinkinaza">
+<title id="t-kreatinkinaza">Kreatínkináza. Enzým vratne prenáša fosfát z ATP na dusík guanidínovej skupiny kreatínu; vzniká kreatínfosfát a ADP. V pokoji, keď je ATP dosť, sa zásoba kreatínfosfátu plní; pri práci beží reakcia opačne a kreatínfosfát okamžite dopĺňa ATP. Výrez: kreatínfosfát sa samovoľne uzatvára do kruhu na kreatinín, ktorý odchádza močom.</title>
+<mol v="kreatin" id="cr" x="130" y="80" zv="N1"/>
+<mol v="kreatinfosfat" id="cp" x="566" y="80" zv="P1,N1-P1" rk="kreatinin" znak="640,40"/>
+<rx od="{cr.r+8,0}" do="{cp.l-8,0}" typ="vratna" enzym="kreatínkináza" ko="ATP>ADP" e="hore"/>
+<text class="sub" x="348" y="138" text-anchor="middle">→ v pokoji: zásoba sa plní</text>
+<text class="sub" x="348" y="152" text-anchor="middle">← pri práci: ATP sa dopĺňa v priebehu sekúnd</text>
+<legenda x="14" y="190" polozky="vr,enz,ko,zv,rk" w="672"/>
+
+<vyrez id="kreatinin" h="204" nadpis="Kam zásoba odchádza: z kreatínfosfátu kreatinín">
+<mol v="kreatinfosfat" id="k-cp" x="120" y="92" zv="P1,N1-P1"/>
+<mol v="kreatinin" id="k-kn" x="388" y="88"/>
+<rx od="{k-cp.r+8,-4}" do="{k-kn.l-10,-4}" typ="nevratna" ko=">Pᵢ" enzym="samovoľne, bez enzýmu" e="hore"/>
+<uzol id="k-moc" x="560" y="84" text="krv → oblička → moč" trieda="bx-m"/>
+<rx od="{k-kn.r+8,-4}" do="{k-moc.l}"/>
+<text class="rk-n" x="14" y="176">Karboxyl sa spojí s dusíkom, na ktorom visel fosfát, a molekula sa uzavrie do kruhu. Deje sa to stále a malým, stálym tempom,</text>
+<text class="rk-n" x="14" y="190">takže množstvo kreatinínu vylúčené za deň odráža svalovú hmotu.</text>
+</vyrez>
+</svg>

@@ -1,0 +1,79 @@
+nazov: FAD
+skratka: FAD
+sumarny: C27H33N9O15P2
+smiles: CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)C[C@@H]([C@@H]([C@@H](COP(=O)(O)OP(=O)(O)OC[C@@H]4[C@H]([C@H]([C@@H](O4)N5C=NC6=C(N=CN=C65)N)O)O)O)O)O
+zdroj: PubChem CID 643975 (flavínadeníndinukleotid) · overené 2026-10-08
+projekcia: celý vzorec: izoaloxazínový kruh (pracovná časť), ribitol – otvorený päťuhlíkový alkohol –, difosfát ako dve P v krúžku, adenozín s ribózou Haworthovým vzorcom; flavín s ribitolom je riboflavín (vitamín B₂), s jedným fosfátom FMN; stereochémia ribitolu nie je vyznačená
+kontrola: nie
+---
+a C6 . 0 -1
+a C7 . -0.866 -0.5
+a C8 . -0.866 0.5
+a C9 . -0 1
+a C9a . 0.866 0.5
+a C5a . 0.866 -0.5
+a N5 N 1.732 -1
+a N10 N 1.732 1
+a C10a . 2.598 0.5
+a C4a . 2.598 -0.5
+a C4 . 3.464 -1
+a N1 N 3.464 1
+a C2 . 4.33 0.5
+a N3 NH 4.33 -0.5
+b C6 C7 2
+b C7 C8
+b C8 C9 2
+b C9 C9a
+b C9a C5a 2
+b C5a C6
+b C5a N5
+b N5 C4a 2
+b C4a C10a
+b C10a N10
+b N10 C9a
+b C10a N1 2
+b C4a C4
+b C4 N3
+b N3 C2
+b C2 N1
++ M7 C7 150 H_3C <
++ M8 C8 210 H_3C <
++ R1 N10 270 .
++ R2 R1 300 .
++ OR2 R2 0 OH
++ R3 R2 240 .
++ OR3 R3 180 HO <
++ R4 R3 300 .
++ OR4 R4 0 OH
++ R5 R4 240 .
++ OR5 R5 300 O
++ P1 OR5 0*1.2 (P)
++ P2 P1 0*1.2 (P)
+kruh furanoza C1r C2r C3r C4r O4r @ 7.98 7.11
++ O2r C2r d OH
++ O3r C3r d HO <
++ C5r C4r u O|CH_2
+b P2 C5r
+a N9 N 9.58 6.33
+a aC4 . 10.389 5.742
+a aC5 . 10.08 4.791
+a aN7 N 9.08 4.791
+a aC8 . 8.771 5.742
+a aN3 N 11.367 5.95
+a aC2 . 12.036 5.207
+a aN1 N 11.727 4.256
+a aC6 . 10.749 4.048
+b N9 aC4
+b aC4 aC5 2
+b aC5 aN7
+b aN7 aC8 2
+b aC8 N9
+b aC5 aC6
+b aC6 aN1 2
+b aN1 aC2
+b aC2 aN3 2
+b aN3 aC4
++ aN6 aC6 108 NH_2
+b C1r N9
++ O4 C4 90 O 2
++ O2 C2 330 O 2

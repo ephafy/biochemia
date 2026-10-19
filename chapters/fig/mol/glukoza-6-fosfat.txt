@@ -1,0 +1,15 @@
+nazov: glukóza-6-fosfát
+skratka: Glc-6-P
+sumarny: C6H13O9P
+smiles: C([C@@H]1[C@H]([C@@H]([C@H]([C@H](O1)O)O)O)O)OP(=O)(O)O
+zdroj: PubChem CID 439284 (α-D-glukóza-6-fosfát), CID 5958 (D-glukóza-6-fosfát) · overené 2026-10-06
+projekcia: Haworthov vzorec, α-D-pyranóza (anomérny OH dole); fosfát na C6 ako P v krúžku
+---
+kruh pyranoza C1 C2 C3 C4 C5 O5
++ O1 C1 d OH
++ O2 C2 d OH
++ O3 C3 u OH
++ O4 C4 d HO <
++ C6 C5 u O|CH_2
++ P6 C6 l*1.75 (P)
+c C1 1 20

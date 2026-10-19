@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 600" role="img" aria-labelledby="t-citrat-clnok">
+<title id="t-citrat-clnok">Citrátový člnok: ako sa acetyl-CoA dostane z mitochondrie do cytosolu. V matrix sa acetyl-CoA spojí s oxalacetátom na citrát. Citrát prejde prenášačom cez vnútornú membránu a v cytosole ho ATP-citrátlyáza za spotreby ATP a koenzýmu A rozštiepi na acetyl-CoA a oxalacetát. Acetyl-CoA ide do syntézy mastných kyselín. Oxalacetát sa redukuje pomocou NADH na malát; jablčný enzým malát oxidačne dekarboxyluje na pyruvát a pritom vzniká NADPH. Pyruvát sa vráti do mitochondrie a pyruvátkarboxyláza z neho znova urobí oxalacetát. Citrát sa v mitochondrii hromadí a vychádza von vtedy, keď nadbytok ATP brzdí izocitrátdehydrogenázu.</title>
+<rect class="komp-m" x="318" y="24" width="20" height="566" rx="2"/>
+<text class="cap" x="308" y="16" text-anchor="end">matrix mitochondrie</text>
+<text class="cap" x="348" y="16">cytosol</text>
+<mol v="acetyl-coa" id="acm" x="70" y="186" m="0.82" skratka="nie"/>
+<mol v="citrat" id="cim" x="200" y="74" m="0.82"/>
+<mol v="oxalacetat" id="oam" x="200" y="330" m="0.82" skratka="nie"/>
+<rx od="{oam.t}" do="{cim.b}" enzym="citrát-|syntáza" e="vpravo" id="cs"/>
+<rx od="{acm.r+2,0}" do="198,214" cez="150,214"/>
+<mol v="citrat" id="cic" x="470" y="74" m="0.82"/>
+<rx od="{cim.r+2,-6}" do="{cic.l-2,-6}" id="pren"/>
+<text class="sub" x="404" y="50" text-anchor="middle">prenášač</text>
+<text class="sub" x="404" y="61" text-anchor="middle">citrátu</text>
+<mol v="oxalacetat" id="oac" x="470" y="236" m="0.82" skratka="nie"/>
+<rx od="{cic.b}" do="{oac.t}" typ="nevratna" enzym="ATP-citrát-|lyáza" ko="ATP, CoA>ADP, Pᵢ" e="vlavo" id="acl"/>
+<mol v="acetyl-coa" id="acc" x="626" y="130" m="0.82" skratka="nie"/>
+<rx od="473,196" do="{acc.l-2,6}" cez="560,196"/>
+<uzol id="syn" x="626" y="206" text="→ malonyl-CoA|→ mastná kyselina" trieda="bx-c" w="130"/>
+<rx od="{acc.b}" do="{syn.t}"/>
+<mol v="malat" id="mal" x="470" y="392" m="0.82"/>
+<rx od="{oac.b}" do="{mal.t}" enzym="malát-|dehydrogenáza" ko="NADH>NAD⁺" e="vpravo"/>
+<mol v="pyruvat" id="pyr" x="470" y="540" m="0.82" skratka="nie"/>
+<rx od="{mal.b}" do="{pyr.t}" typ="nevratna" enzym="jablčný enzým" ko="NADP⁺>NADPH, CO₂" e="vpravo" id="me"/>
+<rx od="{pyr.l-4,0}" do="{oam.b}" cez="200,540" typ="nevratna" enzym="pyruvát-|karboxyláza" ko="ATP, CO₂>ADP, Pᵢ" e="vlavo" id="pc"/>
+<text class="lblb" x="268" y="424" text-anchor="middle">⟳</text>
+<text class="lblb" x="16" y="52">veľa ATP brzdí</text>
+<text class="sub" x="16" y="64">izocitrátdehydrogenázu</text>
+<text class="sub" x="16" y="75">→ citrát sa hromadí</text>
+<text class="sub" x="16" y="86">a vychádza von</text>
+<text class="sub" x="600" y="470" text-anchor="middle">NADPH pre</text>
+<text class="sub" x="600" y="481" text-anchor="middle">syntázu MK</text>
+</svg>

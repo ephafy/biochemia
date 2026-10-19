@@ -1,0 +1,13 @@
+nazov: alanín (anión)
+skratka: Ala⁻
+sumarny: C3H6NO2
+smiles: C[C@@H](C(=O)[O-])N
+zdroj: PubChem CID 5950 (L-alanín); deprotonizovaná forma v zásaditom prostredí · overené 2026-10-06
+projekcia: skeletálny vzorec (cik-cak), anión – karboxyl aj aminoskupina deprotonizované; konfigurácia (L) nie je vyznačená
+---
+a CA . 0 0
++ N CA 210 H_2N <
++ CB CA 90 CH_3
++ C1 CA 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-

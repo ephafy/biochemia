@@ -1,0 +1,17 @@
+nazov: UDP-glukuronát
+skratka: UDP-GlcUA
+sumarny: C15H22N2O18P2
+smiles: C1=CN(C(=O)NC1=O)[C@H]2[C@@H]([C@@H]([C@H](O2)COP(=O)(O)OP(=O)(O)O[C@@H]3[C@@H]([C@H]([C@@H]([C@H](O3)C(=O)O)O)O)O)O)O
+zdroj: PubChem CID 17473 (kyselina UDP-α-D-glukurónová) · overené 2026-10-07
+projekcia: Haworthov vzorec glukuronátovej časti, α-D-pyranóza; C6 oxidovaný na karboxylát (forma pri pH 7); uridíndifosfát na anomérnom kyslíku C1 skrátene ako UDP
+kontrola: nie
+---
+kruh pyranoza C1 C2 C3 C4 C5 O5
++ O1 C1 d O
++ X1 O1 0*1.3 UDP
++ O2 C2 d HO <
++ O3 C3 u OH
++ O4 C4 d HO <
++ C6 C5 u COO^-
+c C1 1 20
+c C5 6 150

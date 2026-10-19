@@ -1,0 +1,13 @@
+nazov: alanín (obojaký ión)
+skratka: Ala
+sumarny: C3H7NO2
+smiles: C[C@@H](C(=O)[O-])[NH3+]
+zdroj: PubChem CID 7311724 (L-alanín, zwitterión), CID 5950 (L-alanín) · overené 2026-10-06
+projekcia: skeletálny vzorec (cik-cak), obojaký ión – forma prevažujúca pri pH 7; konfigurácia na α-uhlíku (L) nie je vyznačená
+---
+a CA . 0 0
++ N CA 210 ^+H_3N <
++ CB CA 90 CH_3
++ C1 CA 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-

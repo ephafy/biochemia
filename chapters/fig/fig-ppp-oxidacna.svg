@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 482" role="img" aria-labelledby="t-ppp-oxidacna">
+<title id="t-ppp-oxidacna">Oxidačná časť pentózofosfátovej dráhy. Glukóza-6-fosfátdehydrogenáza nevratne oxiduje beta-anomér glukóza-6-fosfátu na uhlíku 1 na 6-fosfoglukonolaktón a redukuje NADP+ na NADPH; enzým brzdí NADPH. Laktonáza nevratne otvorí kruh vodou na 6-fosfoglukonát. 6-fosfoglukonátdehydrogenáza ho nevratne oxiduje a odštiepi uhlík 1 ako oxid uhličitý; vznikne ribulóza-5-fosfát a druhý NADPH. Ribulóza-5-fosfát sa vratne mení izomerázou na ribóza-5-fosfát a epimerázou na xylulóza-5-fosfát. Výrez: NADP+ je NAD+ s fosfátom na 2′-uhlíku ribózy adenozínu; pracuje nikotínamidový kruh, ktorý prijme hydridový ión na uhlík 4.</title>
+<text class="cap" x="12" y="14">cytosol · oxidačná časť (nevratná): 2 NADPH + CO₂ na jeden glukóza-6-fosfát</text>
+<mol v="glukoza-6-fosfat-beta" id="g6p" x="80" y="104" zv="C1,O1" nazov="glukóza-6-fosfát"/>
+<text class="sub" x="80" y="172" text-anchor="middle">β-anomér; α ⇌ β sa v roztoku</text>
+<text class="sub" x="80" y="184" text-anchor="middle">premieňajú samy</text>
+<mol v="6-fosfoglukonolakton" id="lak" x="290" y="104" zv="C1,O1"/>
+<mol v="6-fosfoglukonat" id="pg" x="486" y="104" zv="C1"/>
+<rx id="g6pd" od="{g6p.r+2,0}" do="{lak.l-6,0}" typ="nevratna" enzym="glukóza-6-fosfát-|dehydrogenáza" krok="1" inh="NADPH" ko="NADP⁺>NADPH" e="hore" rk="nadph" znak="186,139"/>
+<rx od="{lak.r+2,0}" do="{pg.l-6,0}" typ="nevratna" enzym="laktonáza" krok="2" ko="H₂O>" e="hore"/>
+<mol v="ribuloza-5-fosfat" id="ru" x="486" y="356"/>
+<rx od="{pg.b}" do="{pg.b.x},{ru.t.y}" typ="nevratna" enzym="6-fosfoglukonát-|dehydrogenáza" krok="3" ko="NADP⁺>NADPH;>CO₂" e="vlavo"/>
+<mol v="xyluloza-5-fosfat" id="xu" x="270" y="356" zv="O3"/>
+<mol v="riboza-5-fosfat" id="ri" x="650" y="356"/>
+<rx od="{ru.l-4,0}" do="{xu.r+4,0}" typ="vratna" enzym="epimeráza" e="hore"/>
+<rx od="{ru.r+4,0}" do="{ri.l-4,0}" typ="vratna" enzym="izomeráza" e="hore"/>
+<text class="sub" x="584" y="60">uhlík 1 sa oxiduje</text>
+<text class="sub" x="584" y="72">z poloacetálu na ester,</text>
+<text class="sub" x="584" y="84">po otvorení kruhu je to</text>
+<text class="sub" x="584" y="96">karboxyl a ten odíde</text>
+<text class="sub" x="584" y="108">ako CO₂</text>
+<uzol id="neox" x="92" y="346" text="neoxidačná časť|(vratná): pentózy sa|preskupia na C₆ a C₃" trieda="bx-m" href="#fig-ppp-preskupenie" tip="Obr. 5.3: preskupenie uhlíkov"/>
+<rx od="{xu.l-4,0}" do="{neox.r}"/>
+<text class="sub" x="650" y="282" text-anchor="middle">→ nukleotidy,</text>
+<text class="sub" x="650" y="294" text-anchor="middle">nukleové kyseliny</text>
+<legenda x="14" y="454" polozky="nv,vr,enz,ko,inh,zv,rk,odk" w="672"/>
+
+<vyrez id="nadph" h="342" nadpis="NADP⁺ → NADPH: kam idú vodíky z uhlíka 1">
+<mol v="nadp" id="n-full" x="126" y="178" zv="P3,O2b,O2b-P3,N1,C2,C3,C4,C5,C6,N1-C2,C2-C3,C3-C4,C4-C5,C5-C6,C6-N1" popis="nie"/>
+<text class="rk-n" x="126" y="334" text-anchor="middle"><tspan class="b">NADP⁺</tspan> celý: modrý je pracovný kruh a fosfát navyše</text>
+<mol v="nikotinamid-ox" id="n-ox" x="372" y="104" nazov="NADP⁺|(oxidovaný)" zv="C4,N1"/>
+<mol v="nikotinamid-red" id="n-red" x="592" y="104" nazov="NADPH|(redukovaný)" zv="C4,H4a,H4b,C4-H4a,C4-H4b"/>
+<rx od="{n-ox.r+10,-8}" do="{n-red.l-10,-8}" ko="H⁻>" e="hore" enzym="z uhlíka 1 cukru"/>
+<text class="rk-n" x="300" y="214"><tspan class="b">Pracuje nikotínamidový kruh.</tspan> Na uhlík 4 prijme hydridový ión –</text>
+<text class="rk-n" x="300" y="227">vodík aj s oboma elektrónmi väzby – a dusík stratí kladný náboj.</text>
+<text class="rk-n" x="300" y="240">Druhý vodík (z hydroxylu cukru) odíde do roztoku ako H⁺.</text>
+<text class="rk-n" x="300" y="264"><tspan class="b">Fosfát na 2′-uhlíku ribózy adenozínu</tspan> sa reakcie nezúčastňuje.</text>
+<text class="rk-n" x="300" y="277">Je to značka: dehydrogenázy tejto dráhy a enzýmy syntéz prijmú</text>
+<text class="rk-n" x="300" y="290">len NADP(H), enzýmy oxidácie paliva len NAD(H). Bez neho je</text>
+<text class="rk-n" x="300" y="303">molekula NAD⁺ (kapitola 7).</text>
+</vyrez>
+</svg>

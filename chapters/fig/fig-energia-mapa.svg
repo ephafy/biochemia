@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 372" role="img" aria-labelledby="t-energia-mapa">
+<title id="t-energia-mapa">Mapa kapitoly: spád, priehrada, turbína. Dehydrogenázy prenesú vodíky z palív na NAD+ a FAD. Dýchací reťazec vedie elektróny z NADH a FADH2 po spáde na kyslík a energiou spádu pumpuje protóny cez vnútornú membránu mitochondrie. Vzniknutý protónový gradient poháňa ATP-syntázu, ktorá z ADP a fosfátu tvorí ATP. ATP sa spotrebuje pri práci bunky a vracia sa ako ADP; množstvo ADP určuje rýchlosť reťazca. Kreatínfosfát je rýchla zásoba, z ktorej sa ATP dopĺňa. Ak sa gradient vybije mimo syntázy, energia sa uvoľní ako teplo.</title>
+<text class="cap" x="12" y="14">vnútorná membrána mitochondrie · kde sa z elektrónov stáva ATP</text>
+<uzol id="pal" x="74" y="58" text="palivá|cukry · tuky|aminokyseliny"/>
+<uzol id="red" x="290" y="58" text="NADH · FADH₂" trieda="bx-c" href="#fig-prenasace-vodika" tip="Obr. 7.4: prenášače vodíka"/>
+<rx od="{pal.r}" do="{red.l}" enzym="dehydrogenázy" e="hore"/>
+<uzol id="ret" x="500" y="58" text="dýchací reťazec (spád)|elektróny → O₂ → H₂O" trieda="bx-m" href="#fig-dychaci-retazec" tip="Obr. 7.5: dýchací reťazec"/>
+<rx od="{red.r}" do="{ret.l}"/>
+<uzol id="gra" x="500" y="158" text="protónový gradient (priehrada)" trieda="bx-c"/>
+<rx od="{ret.b}" do="{gra.t}" enzym="pumpy: komplexy I, III, IV" e="vpravo"/>
+<uzol id="syn" x="500" y="258" text="ATP-syntáza (turbína)" trieda="bx-m" href="#fig-dychaci-retazec" tip="Obr. 7.5: výrez ATP-syntáza"/>
+<rx od="{gra.b}" do="{syn.t}"/>
+<text class="sub" x="508" y="212">H⁺ späť do matrix</text>
+<uzol id="atp" x="282" y="258" text="ATP" trieda="bx-c" w="80" href="#fig-atp-vzorec" tip="Obr. 7.2: vzorec ATP"/>
+<rx od="{syn.l}" do="{atp.r}" typ="nevratna"/>
+<uzol id="pra" x="84" y="258" text="práca bunky|pumpy · sťah · syntézy"/>
+<rx od="{atp.l}" do="{pra.r}"/>
+<uzol id="adp" x="282" y="158" text="ADP + Pᵢ" w="90"/>
+<rx od="{pra.t}" do="{adp.l}" cez="84,158"/>
+<rx od="{adp.b+26,0}" do="{syn.tl}"/>
+<vplyv typ="akt" od="{adp.tr}" do="{ret.bl}" text="ADP určuje tempo" pri="290,116"/>
+<text class="lblb" x="412" y="198" text-anchor="middle">⟳</text>
+<uzol id="tep" x="648" y="158" text="teplo" w="56" href="#sub-7-8-2" tip="7.8.2 Rozpojovače"/>
+<vplyv od="{gra.r}" do="{tep.l}"/>
+<text class="sub" x="648" y="190" text-anchor="middle">rozpojenie</text>
+<uzol id="crp" x="282" y="326" text="kreatínfosfát – rýchla zásoba" href="#fig-kreatinkinaza" tip="Obr. 7.3: kreatínkináza"/>
+<rx od="{crp.t}" do="{atp.b}" typ="vratna"/>
+<legenda x="14" y="360" polozky="nv,vr,enz,akt,vz,odk" w="672"/>
+</svg>

@@ -1,0 +1,16 @@
+nazov: cis-akonitát
+sumarny: C6H3O6
+smiles: C(/C(=C/C(=O)O)/C(=O)O)C(=O)O
+zdroj: PubChem CID 643757 (kyselina cis-akonitová) · overené 2026-10-08
+projekcia: skeletálny vzorec, trianión; dvojitá väzba medzi C2 a C3 – medzistupeň akonitázy po odštiepení vody z citrátu; karboxyly na C2 a C3 sú na tej istej strane dvojitej väzby (cis)
+---
+a C3 . 0 0
++ C6 C3 270 COO^-
++ C2 C3 30 . 2
++ C1 C2 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-
++ C4 C3 150 .
++ C5 C4 210 .
++ O5a C5 270 O 2
++ O5b C5 150 ^-O <

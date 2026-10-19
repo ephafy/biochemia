@@ -1,0 +1,16 @@
+nazov: oxalacetát
+skratka: OAA
+sumarny: C4H4O5
+smiles: C(C(=O)C(=O)O)C(=O)O
+zdroj: PubChem CID 970 (kyselina oxaloctová) · overené 2026-10-06
+projekcia: skeletálny vzorec (cik-cak), dianión – forma pri pH 7; ketoskupina na C2
+---
+a C2 . 0 0
++ O2 C2 90 O 2
++ C1 C2 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-
++ C3 C2 210 .
++ C4 C3 150 .
++ O4a C4 90 O 2
++ O4b C4 210 ^-O <
