@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 388" role="img" aria-labelledby="t-disacharidy">
+<title id="t-disacharidy">Štiepenie dvoch disacharidov potravy enzýmami kefkového lemu. Laktáza hydrolyzuje väzbu β(1→4) v laktóze a uvoľní galaktózu a glukózu. Sacharáza hydrolyzuje väzbu medzi anomérnymi uhlíkmi glukózy a fruktózy v sacharóze a uvoľní glukózu a fruktózu. Zvýraznený je kyslík štiepenej glykozidovej väzby.</title>
+<mol v="laktoza" id="lak" x="128" y="72" zv="O1"/>
+<mol v="galaktoza" id="gal" x="462" y="80" zv="O1"/>
+<mol v="glukoza" id="g1" x="622" y="80" zv="O4"/>
+<text class="lblb" x="542" y="84" text-anchor="middle">+</text>
+<rx od="{lak.r+8,8}" do="{gal.l-10,0}" typ="nevratna" enzym="laktáza|(β-galaktozidáza)" ko="H₂O>" e="hore"/>
+<path class="stk-n s-d" d="M20,162L680,162"/>
+<mol v="sacharoza" id="sach" x="128" y="252" zv="O1"/>
+<mol v="glukoza" id="g2" x="462" y="262" zv="O1"/>
+<mol v="fruktoza" id="fru" x="614" y="262" zv="O2"/>
+<text class="lblb" x="530" y="266" text-anchor="middle">+</text>
+<rx od="{sach.r+26,10}" do="{g2.l-10,0}" typ="nevratna" enzym="sacharáza|(komplex sacharáza–izomaltáza)" ko="H₂O>" e="hore"/>
+<legenda x="20" y="378" polozky="nv,enz,ko,zv"/>
+</svg>

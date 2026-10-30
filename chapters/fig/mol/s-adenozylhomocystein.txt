@@ -1,0 +1,61 @@
+nazov: S-adenozylhomocysteín
+skratka: SAH
+sumarny: C14H20N6O5S
+smiles: NC1=C2N=CN([C@@H]3O[C@H](CSCC[C@H]([NH3+])C(=O)[O-])[C@@H](O)[C@H]3O)C2=NC=N1
+zdroj: PubChem CID 439155 (Adenosylhomocysteine, C14H20N6O5S) · overené 2026-10-28
+projekcia: skeletálny vzorec, forma pri pH ≈ 7; SAM po odovzdaní metylu · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . 0.029 -4.100
+a N1 N -0.779 -4.689
+a C2 . -1.694 -4.284
+a C3 . -1.800 -3.289
+a C4 . -0.992 -2.700
+a N2 N -0.078 -3.106
+a N3 N -1.302 -1.750
+a C5 . -2.302 -1.752
+a N4 N -2.610 -2.703
+a C6 . -0.716 -0.940
+a C7 . 0.284 -0.938
+a C8 . 0.592 0.013
+a C9 . -0.219 0.600
+a O1 O -1.027 0.011
+a C10 . -0.220 1.600
+a S1 S 0.645 2.101
+a C11 . 0.643 3.101
+a C12 . 1.508 3.602
+a C13 . 1.507 4.602
+a C14 . 2.372 5.104
+a O2 O 3.239 4.605
+a O3 O^- 2.370 6.104
+a N5 ^+H_3N 0.640 5.101 <
+a O4 OH 1.542 0.324
+a O5 OH 0.873 -1.746
+a N6 H_2N -2.502 -4.873 <
+b C1 N1 2l
+b N1 C2
+b C2 C3 2l
+b C3 C4
+b C4 N2 2l
+b C4 N3
+b N3 C5
+b C5 N4 2r
+b C6 N3 w
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 O1
+b C9 C10 w
+b C10 S1
+b S1 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 O2 2
+b C14 O3
+b C13 N5 w
+b C8 O4 h
+b C7 O5 h
+b C2 N6
+b N2 C1
+b N4 C3
+b O1 C6

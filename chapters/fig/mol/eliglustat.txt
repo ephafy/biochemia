@@ -1,0 +1,66 @@
+nazov: eliglustat
+sumarny: C23H36N2O4
+smiles: CCCCCCCC(=O)N[C@H](CN1CCCC1)[C@H](O)C1=CC2=C(C=C1)OCCO2
+zdroj: PubChem CID 23652731 (N-((1R,2R)-2-(2,3-Dihydro-1,4-benzodioxin-6-yl)-2-hydroxy-1-(1-pyrrolidinylmethyl)ethyl)octanamide, C23H36N2O4) · overené 2026-10-29
+projekcia: skeletálny vzorec; analóg ceramidu – brzdí glukozylceramidsyntázu · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 1.466 -5.781
+a C2 . 0.601 -5.281
+a C3 . 0.602 -4.281
+a C4 . -0.264 -3.780
+a C5 . -0.263 -2.780
+a C6 . -1.129 -2.279
+a C7 . -1.128 -1.279
+a C8 . -1.994 -0.779
+a O1 O -2.860 -1.278
+a N1 NH -1.993 0.221
+a C9 . -1.127 0.721
+a C10 . -1.126 1.721
+a N2 N -1.991 2.221
+a C11 . -2.905 1.816
+a C12 . -3.574 2.559
+a C13 . -3.073 3.425
+a C14 . -2.096 3.215
+a C15 . -0.261 0.220
+a C16 . 0.606 0.719
+a C17 . 1.470 0.219
+a C18 . 2.338 0.718
+a C19 . 2.338 1.718
+a C20 . 1.473 2.218
+a C21 . 0.605 1.720
+a O2 O 3.205 2.216
+a C22 . 4.070 1.716
+a C23 . 4.071 0.715
+a O3 O 3.202 0.218
+a O4 OH -0.262 -0.780
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 O1 2
+b C8 N1
+b N1 C9
+b C9 C10 w
+b C10 N2
+b N2 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C9 C15
+b C15 C16
+b C16 C17 2r
+b C17 C18
+b C18 C19 2r
+b C19 C20
+b C20 C21 2r
+b C19 O2
+b O2 C22
+b C22 C23
+b C23 O3
+b C15 O4 h
+b C14 N2
+b C21 C16
+b O3 C18

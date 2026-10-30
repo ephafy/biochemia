@@ -1,0 +1,29 @@
+nazov: suberát (oktándioát)
+sumarny: C8H12O4-2
+smiles: O=C([O-])CCCCCCC(=O)[O-]
+zdroj: PubChem CID 10457 (Suberic acid, C8H14O4) · overené 2026-10-28
+projekcia: skeletálny vzorec: dikarboxylová kyselina s 8 uhlíkmi – produkt ω-oxidácie; oba karboxyly ako anión pri pH 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . -0.434 -0.249
+a C2 . 0.434 0.249
+a C3 . 1.299 -0.253
+a C4 . 2.166 0.246
+a C5 . 3.031 -0.256
+a O1 O 3.029 -1.256
+a O2 O^- 3.898 0.242
+a C6 . -1.299 0.253
+a C7 . -2.166 -0.246
+a C8 . -3.031 0.256
+a O3 O -3.029 1.256
+a O4 ^-O -3.898 -0.242 <
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 O1 2
+b C5 O2
+b C1 C6
+b C6 C7
+b C7 C8
+b C8 O3 2
+b C8 O4

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 330" role="img" aria-labelledby="t-tag-stanovenie">
+<title id="t-tag-stanovenie">Enzýmové stanovenie triacylglycerolov v sére. Lipáza uvoľní z triacylglycerolov glycerol a mastné kyseliny. Glycerolkináza glycerol s ATP fosforyluje na glycerol-3-fosfát, ten glycerol-3-fosfátoxidáza s kyslíkom zmení na dihydroxyacetónfosfát a peroxid vodíka. Peroxidáza s peroxidom vodíka oxiduje bezfarebný chromogén na farebný produkt, ktorého absorbancia sa meria fotometricky a porovná so štandardom. Voľný glycerol, ktorý je vo vzorke už pred reakciou, vstupuje do tej istej cesty a zvyšuje výsledok.</title>
+<text class="cap" x="12" y="14">skúmavka · reakcie za sebou, meria sa farba na konci</text>
+<mol v="triacylglycerol" id="tag" x="96" y="92" m="0.78"/>
+<mol v="glycerol" id="gro" x="356" y="84"/>
+<mol v="glycerol-3-fosfat" id="g3p" x="590" y="84"/>
+<rx od="{tag.r+6,-4}" do="{gro.l-6,0}" enzym="lipáza" ko="3 H₂O>3 MK" e="hore"/>
+<rx od="{gro.r+6,0}" do="{g3p.l-6,0}" enzym="glycerolkináza" ko="ATP>ADP" e="hore"/>
+<mol v="dihydroxyacetonfosfat" id="dhap" x="590" y="234"/>
+<rx od="{g3p.b}" do="{dhap.t}" enzym="glycerol-3-fosfát-|oxidáza (FAD)" ko="O₂>H₂O₂" e="vpravo" id="gpo"/>
+<uzol id="chr" x="300" y="236" text="H₂O₂ + bezfarebný chromogén|→ farebný produkt" trieda="bx-c" w="210" h="40"/>
+<rx od="{gpo.k-22,12}" do="{chr.r}" enzym="peroxidáza" e="dole"/>
+<uzol id="fot" x="80" y="236" text="fotometer:|farba ~ TAG" trieda="bx-m" w="110" h="40"/>
+<rx od="{chr.l}" do="{fot.r}"/>
+<uzol id="vg" x="356" y="166" text="voľný glycerol vo vzorke" w="168"/>
+<vplyv od="{vg.t}" do="{gro.b+0,4}" ciara="plna"/>
+<text class="t-inh" x="356" y="196" text-anchor="middle">vstupuje tou istou cestou</text>
+<legenda x="20" y="322" polozky="rx,enz,ko"/>
+</svg>

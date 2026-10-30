@@ -1,0 +1,8 @@
+nazov: sulfán
+skratka: H₂S
+sumarny: H2S
+smiles: S
+zdroj: PubChem CID 402 (Hydrogen Sulfide, H2S) · overené 2026-10-19
+projekcia: molekula · súradnice vypočítané zo SMILES (RDKit)
+---
+a S1 H_2S 0.000 -0.000

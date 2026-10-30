@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 140" role="img" aria-labelledby="t-lipaza-titracia">
+<title id="t-lipaza-titracia">Princíp titračného stanovenia aktivity lipázy v sére. Lipáza zo séra štiepi počas inkubácie pri 37 stupňoch triacylglyceroly olejovej emulzie a uvoľňuje mastné kyseliny. Tie sa potom neutralizujú roztokom hydroxidu sodného; koniec titrácie ukáže fenolftaleín zmenou na ružovú. Spotreba hydroxidu oproti slepej vzorke zodpovedá množstvu uvoľnených mastných kyselín, a teda aktivite enzýmu.</title>
+<uzol id="em" x="86" y="60" text="olejová emulzia|(TAG)" w="130"/>
+<uzol id="fa" x="330" y="60" text="uvoľnené MK|R–COOH" trieda="bx-c" w="120"/>
+<rx od="{em.r}" do="{fa.l}" enzym="lipáza zo séra" e="hore"/>
+<text class="sub" x="86" y="112" text-anchor="middle">inkubácia pri 37 °C,</text>
+<text class="sub" x="86" y="123" text-anchor="middle">mierne zásadité pH</text>
+<uzol id="ti" x="586" y="60" text="R–COO⁻ Na⁺ + H₂O|fenolftaleín zružovie" w="180"/>
+<rx od="{fa.r}" do="{ti.l}" enzym="titrácia NaOH" e="hore"/>
+<text class="sub" x="330" y="112" text-anchor="middle">čím aktívnejší enzým,</text>
+<text class="sub" x="330" y="123" text-anchor="middle">tým viac kyselín</text>
+<text class="sub" x="586" y="112" text-anchor="middle">spotreba NaOH mínus slepá vzorka</text>
+<text class="sub" x="586" y="123" text-anchor="middle">= množstvo MK → aktivita (µkat/l)</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 850" role="img" aria-labelledby="t-synteza-tag">
+<title id="t-synteza-tag">Syntéza triacylglycerolu na membráne endoplazmatického retikula. Glycerol-3-fosfát vzniká redukciou dihydroxyacetónfosfátu z glykolýzy (pečeň aj tukové tkanivo) alebo fosforyláciou glycerolu glycerolkinázou (pečeň, nie tukové tkanivo). Dve acyltransferázy naň postupne pripoja dva acyly z acyl-CoA – vznikne lyzofosfatidát a potom kyselina fosfatidová. Fosfatidátfosfatáza (lipín) odstráni fosfát a vznikne 1,2-diacylglycerol; diacylglycerolacyltransferáza pripojí tretí acyl – triacylglycerol. Kyselina fosfatidová a diacylglycerol sú miesta, kde odbočuje syntéza fosfolipidov. V čreve vzniká diacylglycerol priamo z 2-monoacylglycerolu.</title>
+<text class="cap" x="12" y="14">endoplazmatické retikulum · pečeň, tukové tkanivo, črevo, mliečna žľaza</text>
+<uzol id="glc" x="48" y="66" text="glukóza" w="76" href="04_metabolizmus_glukozy#fig-glykolyza-investicia"/>
+<mol v="dihydroxyacetonfosfat" id="dhap" x="214" y="66"/>
+<mol v="glycerol-3-fosfat" id="g3p" x="436" y="66" zv="O2"/>
+<mol v="glycerol" id="gro" x="626" y="66"/>
+<rx od="{glc.r}" do="{dhap.l-4,0}" enzym="glykolýza" e="hore"/>
+<rx od="{dhap.r+4,0}" do="{g3p.l-4,0}" typ="vratna" enzym="glycerol-3-fosfát-|dehydrogenáza" ko="NADH>NAD⁺" e="hore"/>
+<rx od="{gro.l-4,0}" do="{g3p.r+4,0}" enzym="glycerolkináza" ko="ATP>ADP" e="hore" id="gk"/>
+<text class="sub" x="626" y="118" text-anchor="middle">pečeň, oblička, črevo</text>
+<text class="t-inh" x="626" y="130" text-anchor="middle">biele tukové tkanivo ju nemá</text>
+
+<mol v="lyzofosfatidat" id="lpa" x="436" y="232" zv="O1,A1,Q1,R1"/>
+<rx od="{g3p.b+0,8}" do="{lpa.t}" enzym="acyltransferáza 1|(GPAT)" ko="acyl-CoA>CoA" akt="inzulín" inh="AMPK" e="vlavo" id="gpat"/>
+<mol v="fosfatidat" id="pa" x="436" y="404" zv="O2,A2,Q2,R2"/>
+<rx od="{lpa.b}" do="{pa.t}" enzym="acyltransferáza 2" ko="acyl-CoA>CoA" e="vlavo"/>
+<mol v="diacylglycerol" id="dag" x="436" y="580" zv="O3"/>
+<rx od="{pa.b}" do="{dag.t}" enzym="fosfatidátfosfatáza|(lipín, Mg²⁺)" ko="H₂O>Pᵢ" e="vlavo"/>
+<mol v="triacylglycerol" id="tag" x="436" y="760" zv="O3,A3,Q3,R3"/>
+<rx od="{dag.b}" do="{tag.t}" enzym="DGAT – jediný krok|len pre triacylglycerol" ko="acyl-CoA>CoA" e="vlavo"/>
+
+<mol v="2-monoacylglycerol" id="mag" x="110" y="580"/>
+<rx od="{mag.r+6,0}" do="{dag.l-6,0}" enzym="monoacylglycerol-|acyltransferáza" ko="acyl-CoA>CoA" e="hore"/>
+<text class="sub" x="110" y="658" text-anchor="middle">črevo: 2-monoacylglycerol z trávenia</text>
+
+<uzol id="cdp" x="626" y="372" text="CDP-diacylglycerol|→ PI, PG, kardiolipín" w="136" href="#fig-fosfolipidy-cdp-dag"/>
+<rx od="{pa.r+6,-14}" do="{cdp.l}"/>
+<uzol id="hl" x="626" y="540" text="+ CDP-cholín alebo|CDP-etanolamín|→ PC, PE" w="136" h="52" href="#fig-fosfolipidy-hlava"/>
+<rx od="{dag.r+6,-14}" do="{hl.l}"/>
+<uzol id="kv" x="626" y="730" text="tukové tkanivo:|tuková kvapka" trieda="bx-m" w="120"/>
+<uzol id="vl" x="626" y="790" text="pečeň: VLDL" trieda="bx-c" w="120"/>
+<rx od="{tag.r+6,-8}" do="{kv.l}"/>
+<rx od="{tag.r+6,12}" do="{vl.l}"/>
+<text class="sub" x="110" y="736" text-anchor="middle">acyl-CoA vzniká z MK a CoA:</text>
+<text class="sub" x="110" y="748" text-anchor="middle">ATP → AMP + PPᵢ (dve makroergické</text>
+<text class="sub" x="110" y="760" text-anchor="middle">väzby na jednu MK)</text>
+<legenda x="20" y="840" polozky="rx,vr,enz,ko,akt,inh,zv,odk"/>
+</svg>

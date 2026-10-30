@@ -1,0 +1,46 @@
+nazov: oleát
+skratka: 18:1 Δ9
+sumarny: C18H33O2-
+smiles: CCCCCCCC/C=C\CCCCCCCC(=O)[O-]
+zdroj: PubChem CID 445639 (Oleic Acid, C18H34O2) · overené 2026-10-28
+projekcia: skeletálny vzorec, anión pri pH ≈ 7; dvojitá väzba cis medzi C9 a C10 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 5.533 4.811
+a C2 . 4.668 4.309
+a C3 . 4.670 3.309
+a C4 . 3.805 2.808
+a C5 . 3.807 1.808
+a C6 . 2.942 1.306
+a C7 . 2.944 0.306
+a C8 . 2.079 -0.196
+a C9 . 2.081 -1.196
+a C10 . 1.216 -1.698
+a C11 . 0.349 -1.199
+a C12 . -0.516 -1.701
+a C13 . -1.383 -1.203
+a C14 . -2.248 -1.704
+a C15 . -3.115 -1.206
+a C16 . -3.980 -1.708
+a C17 . -4.847 -1.210
+a C18 . -5.712 -1.711
+a O1 O -5.710 -2.711
+a O2 ^-O -6.579 -1.213 <
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 C10 2l
+b C10 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 C15
+b C15 C16
+b C16 C17
+b C17 C18
+b C18 O1 2
+b C18 O2

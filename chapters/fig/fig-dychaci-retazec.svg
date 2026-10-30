@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 504" role="img" aria-labelledby="t-dychaci-retazec">
+<title id="t-dychaci-retazec">Dýchací reťazec a ATP-syntáza vo vnútornej membráne mitochondrie. Komplex I prijíma elektróny z NADH, komplex II zo sukcinátu; oba ich odovzdávajú koenzýmu Q. Z koenzýmu Q idú cez komplex III na cytochróm c a cez komplex IV na kyslík, ktorý sa redukuje na vodu. Komplexy I a III prečerpajú na každý pár elektrónov po štyri protóny z matrix do medzimembránového priestoru, komplex IV dva; komplex II nepumpuje. Protóny sa vracajú cez ATP-syntázu, ktorá z ADP a fosfátu tvorí ATP. Inhibítory: rotenón a amobarbital blokujú komplex I, malonát komplex II, antimycín A komplex III, kyanid, oxid uhoľnatý, azid a sulfán komplex IV, oligomycín ATP-syntázu. Rozpojovače, napríklad dinitrofenol a termogenín, vracajú protóny mimo syntázy a energia sa uvoľní ako teplo. Redoxný potenciál stúpa od NADH (mínus 0,32 voltu) po kyslík (plus 0,82 voltu). Výrezy: stavba a chod ATP-syntázy, prenášače vnútri komplexov a spôsob, akým dinitrofenol prenáša protóny cez membránu.</title>
+<text class="cap" x="12" y="14">medzimembránový priestor · protóny sa tu hromadia (kyslejší, kladný)</text>
+<rect class="komp-m" x="14" y="150" width="672" height="64" rx="3"/>
+<text class="cap" x="12" y="378">matrix · zásaditejšia, záporná</text>
+<rect class="bx-c" x="50" y="128" width="84" height="128" rx="3"/><text class="lblb" x="92" y="176" text-anchor="middle">komplex I</text><text class="sub" x="92" y="190" text-anchor="middle">FMN · Fe-S</text>
+<plus rk="vnutri" x="134" y="128" tip="prenášače vnútri komplexov"/>
+<rect class="bx-c" x="178" y="170" width="76" height="86" rx="3"/><text class="lblb" x="216" y="204" text-anchor="middle">komplex II</text><text class="sub" x="216" y="218" text-anchor="middle">FAD · Fe-S</text>
+<uzol id="uq" x="298" y="182" text="Q" w="30" h="28" href="#fig-prenasace-vodika" tip="Obr. 7.4: koenzým Q" znak="313,168"/>
+<rect class="bx-c" x="342" y="128" width="84" height="110" rx="3"/><text class="lblb" x="384" y="176" text-anchor="middle">komplex III</text><text class="sub" x="384" y="190" text-anchor="middle">cyt b, c₁ · Fe-S</text>
+<circle class="bx-k" cx="454" cy="118" r="17"/><text class="lblb" x="454" y="122" text-anchor="middle">cyt c</text>
+<rect class="bx-c" x="482" y="128" width="84" height="110" rx="3"/><text class="lblb" x="524" y="176" text-anchor="middle">komplex IV</text><text class="sub" x="524" y="190" text-anchor="middle">cyt a, a₃ · Cu</text>
+<rect class="bx-m" x="606" y="128" width="72" height="150" rx="3"/><text class="lblb" x="642" y="176" text-anchor="middle">ATP-</text><text class="lblb" x="642" y="189" text-anchor="middle">syntáza</text><text class="sub" x="642" y="204" text-anchor="middle">F₀ · F₁</text>
+<plus rk="syntaza" x="678" y="128" tip="stavba a chod ATP-syntázy"/>
+<path class="rx" d="M92,292 L92,260" marker-end="url(#sip)"/><text class="lblb" x="92" y="306" text-anchor="middle">NADH → NAD⁺</text>
+<path class="rx" d="M216,292 L216,260" marker-end="url(#sip)"/><uzol id="suk" x="216" y="302" text="sukcinát → fumarát" trieda="nic" w="116" href="06_acetyl_coa_citratovy_cyklus#fig-citratovy-cyklus" tip="Kapitola 6: krok 6 citrátového cyklu" znak="282,302"/>
+<path class="rx" d="M134,160 Q216,138 284,174" marker-end="url(#sip)"/>
+<path class="rx" d="M254,196 L282,188" marker-end="url(#sip)"/>
+<path class="rx" d="M314,182 L340,182" marker-end="url(#sip)"/>
+<path class="rx" d="M410,128 Q420,112 436,116" marker-end="url(#sip)"/>
+<path class="rx" d="M472,116 Q490,112 498,126" marker-end="url(#sip)"/>
+<path class="rx" d="M524,240 L524,290" marker-end="url(#sip)"/><text class="lblb" x="524" y="306" text-anchor="middle">½ O₂ + 2 H⁺ → H₂O</text>
+<text class="sub" x="298" y="212" text-anchor="middle">koenzým Q</text>
+<uzol id="uq2" x="232" y="70" text="na Q idú aj elektróny z glycerol-3-fosfátu|a z β-oxidácie mastných kyselín" trieda="nic" w="216" href="#fig-clnky" tip="Obr. 7.6: glycerolfosfátový člnok" znak="352,66"/>
+<path class="vz" d="M298,88 L298,164" marker-end="url(#sip-n)"/>
+<path class="rx nv" d="M66,126 L66,86" marker-end="url(#sip-nv)"/><text class="lblb" x="78" y="96">4 H⁺</text>
+<path class="rx nv" d="M358,126 L358,86" marker-end="url(#sip-nv)"/><text class="lblb" x="370" y="96">4 H⁺</text>
+<path class="rx nv" d="M530,126 L530,86" marker-end="url(#sip-nv)"/><text class="lblb" x="542" y="96">2 H⁺</text>
+<text class="sub" x="216" y="234" text-anchor="middle">nepumpuje</text>
+<path class="rx nv" d="M642,84 L642,120" marker-end="url(#sip-nv)"/><text class="lblb" x="654" y="100">H⁺</text>
+<text class="lblb" x="642" y="296" text-anchor="middle">ADP + Pᵢ → ATP</text>
+<text class="t-inh" x="92" y="328" text-anchor="middle">↓ rotenón</text><text class="t-inh" x="92" y="340" text-anchor="middle">↓ amobarbital</text>
+<text class="t-inh" x="216" y="328" text-anchor="middle">↓ malonát</text>
+<text class="t-inh" x="384" y="256" text-anchor="middle">↓ antimycín A</text>
+<text class="t-inh" x="524" y="328" text-anchor="middle">↓ kyanid · CO</text><text class="t-inh" x="524" y="340" text-anchor="middle">↓ azid · sulfán</text>
+<text class="t-inh" x="642" y="316" text-anchor="middle">↓ oligomycín</text>
+<path class="vz" d="M586,84 L586,290" marker-end="url(#sip-n)"/>
+<text class="sub" x="582" y="356" text-anchor="end">rozpojovače (dinitrofenol, termogenín):</text>
+<text class="sub" x="582" y="368" text-anchor="end">H⁺ späť mimo syntázy → teplo</text>
+<plus rk="rozpoj" x="596" y="362" tip="ako rozpojovač prenáša protóny"/>
+<path class="vz" d="M586,292 L586,350"/>
+<path class="rx" d="M60,416 L640,416" marker-end="url(#sip)"/>
+<text class="sub" x="60" y="406">redoxný potenciál E°′ stúpa – elektróny tečú „dolu kopcom“</text>
+<text class="lblb" x="92" y="434" text-anchor="middle">−0,32 V</text><text class="sub" x="92" y="446" text-anchor="middle">NAD⁺/NADH</text>
+<text class="lblb" x="454" y="434" text-anchor="middle">+0,22 V</text><text class="sub" x="454" y="446" text-anchor="middle">cytochróm c</text>
+<text class="lblb" x="600" y="434" text-anchor="middle">+0,82 V</text><text class="sub" x="600" y="446" text-anchor="middle">½ O₂/H₂O</text>
+<text class="sub" x="12" y="464">na pár elektrónov z NADH: 10 H⁺ · zo sukcinátu (FADH₂): 6 H⁺ · na jedno ATP v cytosole treba približne 4 H⁺</text>
+<legenda x="14" y="490" polozky="rx,nv,inh,vz,rk,odk" w="672"/>
+
+<vyrez id="vnutri" h="214" nadpis="Čo nesie elektróny vnútri komplexov">
+<rect class="komp" x="92" y="38" width="118" height="52" rx="3"/><text class="cap" x="98" y="50">komplex I</text>
+<rect class="komp" x="92" y="112" width="118" height="52" rx="3"/><text class="cap" x="98" y="124">komplex II</text>
+<rect class="komp" x="322" y="38" width="130" height="52" rx="3"/><text class="cap" x="328" y="50">komplex III</text>
+<rect class="komp" x="538" y="38" width="118" height="52" rx="3"/><text class="cap" x="544" y="50">komplex IV</text>
+<uzol id="v-nadh" x="40" y="70" text="NADH" trieda="bx-c" w="52"/>
+<uzol id="v-1" x="151" y="70" text="FMN → Fe–S" w="96"/>
+<uzol id="v-suk" x="40" y="144" text="sukcinát" trieda="bx-c" w="62"/>
+<uzol id="v-2" x="151" y="144" text="FAD → Fe–S" w="96"/>
+<uzol id="v-q" x="266" y="106" text="Q" w="34" h="28"/>
+<uzol id="v-3" x="387" y="70" text="cyt b · Fe–S · cyt c₁" w="118"/>
+<uzol id="v-c" x="495" y="70" text="cyt c" w="46" h="28"/>
+<uzol id="v-4" x="597" y="70" text="Cu · hém a · a₃" w="104"/>
+<uzol id="v-o" x="597" y="144" text="O₂ → H₂O" trieda="bx-m"/>
+<rx od="{v-nadh.r}" do="{v-1.l}"/>
+<rx od="{v-1.r}" do="{v-q.tl+4,2}"/>
+<rx od="{v-suk.r}" do="{v-2.l}"/>
+<rx od="{v-2.r}" do="{v-q.bl+4,-2}"/>
+<rx od="{v-q.tr-4,2}" do="{v-3.l}"/>
+<rx od="{v-3.r}" do="{v-c.l}"/>
+<rx od="{v-c.r}" do="{v-4.l}"/>
+<rx od="{v-4.b}" do="{v-o.t}"/>
+<text class="rk-n" x="14" y="188"><tspan class="b">Po dvoch a po jednom.</tspan> NADH, flavíny (FMN, FAD) a koenzým Q nesú dva elektróny spolu s vodíkmi; železo v centrách Fe–S a v hémoch</text>
+<text class="rk-n" x="14" y="202">cytochrómov a meď len po jednom. Flavín a Q vedia oboje – preto stoja tam, kde sa dvojica elektrónov delí na jednotlivé.</text>
+</vyrez>
+
+<vyrez id="syntaza" h="318" nadpis="ATP-syntáza: rotor v membráne, hlavica v matrix">
+<text class="cap" x="20" y="40">medzimembránový priestor</text>
+<rect class="komp-m" x="20" y="86" width="300" height="58" rx="3"/>
+<text class="cap" x="20" y="162">matrix</text>
+<rect class="bx-m" x="120" y="80" width="100" height="70" rx="3"/>
+<path class="stk-n" d="M132.5,80 V150 M145,80 V150 M157.5,80 V150 M170,80 V150 M182.5,80 V150 M195,80 V150 M207.5,80 V150"/>
+<rect class="bx" x="162" y="150" width="16" height="52" rx="2"/>
+<circle class="bx-c" cx="140" cy="232" r="27"/><circle class="bx-c" cx="200" cy="232" r="27"/><circle class="bx-c" cx="170" cy="272" r="27"/>
+<text class="lblb" x="140" y="236" text-anchor="middle">1</text><text class="lblb" x="200" y="236" text-anchor="middle">2</text><text class="lblb" x="170" y="280" text-anchor="middle">3</text>
+<path class="rx nv" d="M106,52 L106,96 Q106,110 122,112" marker-end="url(#sip-nv)"/><text class="lblb" x="96" y="66" text-anchor="end">H⁺</text>
+<path class="rx nv" d="M218,120 Q236,122 236,138 L236,172" marker-end="url(#sip-nv)"/><text class="lblb" x="246" y="170">H⁺</text>
+<path class="koa" d="M128,72 Q170,54 212,72" marker-end="url(#sip-koe)"/>
+<text class="sub" x="226" y="66">otáča sa</text>
+<text class="lblb" x="286" y="120" text-anchor="middle">F₀</text>
+<text class="sub" x="186" y="182">os</text>
+<text class="lblb" x="256" y="256" text-anchor="middle">F₁</text>
+<text class="rk-n" x="340" y="52"><tspan class="b">F₀ – rotor v membráne.</tspan> Prstenec rovnakých podjednotiek; protóny</text>
+<text class="rk-n" x="340" y="65">ním pretekajú z kyslej strany do matrix a otáčajú ho. Kanál</text>
+<text class="rk-n" x="340" y="78">upcháva oligomycín.</text>
+<text class="rk-n" x="340" y="102"><tspan class="b">Os</tspan> je s prstencom spojená a otáča sa vnútri hlavice.</text>
+<text class="rk-n" x="340" y="126"><tspan class="b">F₁ – hlavica v matrix.</tspan> Tri katalytické miesta (1–3) sú vždy</text>
+<text class="rk-n" x="340" y="139">v troch rôznych stavoch: jedno viaže ADP + Pᵢ, druhé ich pevne</text>
+<text class="rk-n" x="340" y="152">drží spojené ako ATP, tretie hotový ATP púšťa. Pootočenie osi</text>
+<text class="rk-n" x="340" y="165">posunie každé miesto o stav ďalej.</text>
+<text class="rk-n" x="340" y="189"><tspan class="b">Na čo ide energia.</tspan> Samotná väzba vznikne v pevnom zovretí</text>
+<text class="rk-n" x="340" y="202">takmer zadarmo; protóny platia za to, že enzým ATP pustí.</text>
+<text class="rk-n" x="340" y="226"><tspan class="b">Účet.</tspan> Jedna otáčka = 3 ATP. Prstenec stavovcov má 8 podjednotiek,</text>
+<text class="rk-n" x="340" y="239">teda 8 H⁺ na otáčku (≈ 2,7 na ATP). Ďalší ≈ 1 H⁺ stojí dovoz</text>
+<text class="rk-n" x="340" y="252">fosfátu a výmena ADP za ATP – spolu približne 4 H⁺ na ATP,</text>
+<text class="rk-n" x="340" y="265">s ktorými rátajú učebnice.</text>
+<text class="rk-n" x="340" y="289">Výmenu ADP za ATP robí translokáza; brzdí ju atraktylozid.</text>
+</vyrez>
+
+<vyrez id="rozpoj" h="284" nadpis="Rozpojovač: ako dinitrofenol prevezie protón mimo syntázy">
+<rect class="komp-m" x="318" y="34" width="64" height="210" rx="3"/>
+<text class="cap" x="350" y="48" text-anchor="middle">membrána</text>
+<text class="cap" x="20" y="48">medzimembránový priestor · veľa H⁺</text>
+<text class="cap" x="680" y="48" text-anchor="end">matrix · málo H⁺</text>
+<mol v="2-4-dinitrofenol" id="d-a" x="170" y="92" zv="O1" popis="nie"/>
+<mol v="2-4-dinitrofenol" id="d-b" x="530" y="92" zv="O1" popis="nie"/>
+<mol v="2-4-dinitrofenolat" id="d-c" x="530" y="206" zv="O1" popis="nie"/>
+<mol v="2-4-dinitrofenolat" id="d-d" x="170" y="206" zv="O1" popis="nie"/>
+<rx od="{d-a.r+8,0}" do="{d-b.l-8,0}"/>
+<rx od="{d-c.l-8,0}" do="{d-d.r+8,0}"/>
+<rx od="{d-b.b.x+30},{d-b.b.y-2}" do="{d-b.b.x+30},{d-c.t.y+2}" ko=">H⁺" e="vlavo"/>
+<rx od="{d-d.t.x-30},{d-d.t.y+2}" do="{d-d.t.x-30},{d-a.b.y-2}" ko="H⁺>" e="vpravo"/>
+<text class="lblb" x="350" y="154" text-anchor="middle">⟳</text>
+<text class="sub" x="60" y="152" text-anchor="middle">prijme protón</text>
+<text class="sub" x="646" y="152" text-anchor="middle">odovzdá ho</text>
+<text class="rk-n" x="14" y="262">Dinitrofenol je slabá kyselina rozpustná v tukoch: s protónom aj bez neho prejde membránou. Každý obeh prenesie jeden H⁺ dnu bez toho,</text>
+<text class="rk-n" x="14" y="275">aby prešiel syntázou – gradient sa vybíja, reťazec zrýchli a energia sa uvoľní ako teplo. Termogenín robí to isté ako bielkovinový kanál.</text>
+</vyrez>
+</svg>

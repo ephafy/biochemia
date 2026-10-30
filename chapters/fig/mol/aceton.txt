@@ -1,0 +1,13 @@
+nazov: acetón
+sumarny: C3H6O
+smiles: CC(C)=O
+zdroj: PubChem CID 180 (Acetone, C3H6O) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 0.864 0.503
+a C2 . 0.000 0.000
+a O1 O 0.004 -1.000
+a C3 H_3C -0.868 0.497 <
+b C1 C2
+b C2 O1 2
+b C2 C3

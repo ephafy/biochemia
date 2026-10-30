@@ -1,0 +1,50 @@
+nazov: sfingomyelín
+sumarny: C39H79N2O6P
+smiles: CCCCCCCCCCCCCCCC(=O)N[C@@H](COP(=O)([O-])OCC[N+](C)(C)C)[C@@H](/C=C/CCCCCCCCCCCCC)O
+zdroj: PubChem CID 9939941 (N-Palmitoylsphingomyelin, C39H79N2O6P) – vzor; R = reťazce (skrátený zápis) · overené 2026-10-28
+projekcia: skeletálny vzorec; ceramid s fosfocholínom na C1; R = reťazec MK, C₁₃H₂₇ = zvyšok sfingozínu · súradnice vypočítané zo SMILES (RDKit)
+kontrola: nie
+---
+a Br1 C_{13}H_{27} 3.501 -2.811
+a C1 . 2.636 -2.310
+a C2 . 2.637 -1.310
+a C3 . 1.771 -0.809
+a O1 HO 0.904 -1.308 <
+a C4 . 1.772 0.191
+a C5 . 0.906 0.692
+a O2 O 0.040 0.192
+a P1 P -0.826 0.693
+a O3 O -1.327 -0.173
+a O4 O^- -0.325 1.559
+a O5 O -1.692 1.194
+a C6 . -2.558 0.694
+a C7 . -3.424 1.195
+a N1 N^+ -4.290 0.696
+a C8 CH_3 -3.791 -0.171
+a C9 H_3C -4.791 -0.170 <
+a C10 H_3C -5.156 1.197 <
+a N2 NH 2.638 0.690
+a C11 . 3.504 0.190
+a O6 O 3.503 -0.810
+a Xe1 R 4.370 0.689
+b Br1 C1
+b C1 C2 2r
+b C2 C3
+b C3 O1 h
+b C3 C4
+b C4 C5 w
+b C5 O2
+b O2 P1
+b P1 O3 2
+b P1 O4
+b P1 O5
+b O5 C6
+b C6 C7
+b C7 N1
+b N1 C8
+b N1 C9
+b N1 C10
+b C4 N2
+b N2 C11
+b C11 O6 2
+b C11 Xe1

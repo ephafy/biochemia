@@ -1,0 +1,30 @@
+nazov: noradrenalín
+sumarny: C8H12NO3+
+smiles: [NH3+]C[C@H](O)C1=CC(O)=C(O)C=C1
+zdroj: PubChem CID 439260 (Norepinephrine, C8H11NO3) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . -0.364 0.874
+a C2 . 0.500 1.377
+a C3 . 1.368 0.880
+a C4 . 1.372 -0.120
+a C5 . 0.507 -0.623
+a C6 . -0.360 -0.126
+a C7 . -1.225 -0.629
+a C8 . -2.092 -0.132
+a N1 ^+H_3N -2.957 -0.636 <
+a O1 OH -1.221 -1.629
+a O2 OH 2.239 -0.617
+a O3 OH 2.232 1.383
+b C1 C2 2l
+b C2 C3
+b C3 C4 2l
+b C4 C5
+b C5 C6 2l
+b C6 C7
+b C7 C8
+b C8 N1
+b C7 O1 h
+b C4 O2
+b C3 O3
+b C6 C1

@@ -1,0 +1,8 @@
+nazov: amoniak
+skratka: NH₃
+sumarny: H3N
+smiles: N
+zdroj: PubChem CID 222 (Ammonia, H3N) · overené 2026-10-19
+projekcia: molekula (pri pH 7 je väčšina ako amónny ión NH₄⁺) · súradnice vypočítané zo SMILES (RDKit)
+---
+a N1 NH_3 0.000 -0.000

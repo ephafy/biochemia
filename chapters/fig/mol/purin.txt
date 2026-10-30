@@ -1,0 +1,25 @@
+nazov: purín
+sumarny: C5H4N4
+smiles: C1=NC=C2NC=NC2=N1
+zdroj: PubChem CID 1044 (Purine, C5H4N4) · overené 2026-10-19
+projekcia: skeletálny vzorec – materské jadro purínových báz (adenín, guanín) · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . 0.670 -1.001
+a C2 . -0.195 -0.500
+a C3 . -0.195 0.500
+a N1 N 0.672 0.999
+a C4 . 1.537 0.499
+a N2 N 1.537 -0.501
+a N3 N -1.145 0.810
+a C5 . -1.734 0.001
+a N4 NH -1.147 -0.808
+b C1 C2 2l
+b C2 C3
+b C3 N1 2l
+b N1 C4
+b C4 N2 2l
+b C3 N3
+b N3 C5 2r
+b C5 N4
+b N2 C1
+b N4 C2

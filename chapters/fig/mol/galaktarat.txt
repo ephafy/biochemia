@@ -1,0 +1,20 @@
+nazov: galaktarát (kyselina slizová)
+sumarny: C6H8O8-2
+smiles: O=C([O-])[C@H](O)[C@@H](O)[C@H](O)[C@@H](O)C(=O)[O-]
+zdroj: PubChem CID 3037582 (kyselina galaktárová) · overené 2026-10-19
+projekcia: Fischerova projekcia, galaktarát: oba konce karboxylát, OH ako v D-galaktóze (C2 vpravo, C3 a C4 vľavo, C5 vpravo) – molekula je súmerná, preto opticky neaktívna
+---
+a C1 COO^- 0 0
++ C2 C1 270 .
++ O2 C2 0 OH
++ H2 C2 180 H <
++ C3 C2 270 .
++ O3 C3 180 HO <
++ H3 C3 0 H
++ C4 C3 270 .
++ O4 C4 180 HO <
++ H4 C4 0 H
++ C5 C4 270 .
++ O5 C5 0 OH
++ H5 C5 180 H <
++ C6 C5 270 COO^-

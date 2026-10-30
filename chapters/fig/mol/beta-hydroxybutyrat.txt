@@ -1,0 +1,20 @@
+nazov: D-3-hydroxybutyrát
+skratka: β-hydroxybutyrát
+sumarny: C4H7O3-
+smiles: C[C@@H](O)CC(=O)[O-]
+zdroj: PubChem CID 92135 (3-Hydroxybutanoic acid, (R)-, C4H8O3) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -1.733 0.568 <
+a C2 . -0.866 0.070
+a C3 . -0.001 0.571
+a C4 . 0.866 0.073
+a O1 O 0.868 -0.927
+a O2 O^- 1.731 0.575
+a O3 OH -0.864 -0.930
+b C2 C1 w
+b C2 C3
+b C3 C4
+b C4 O1 2
+b C4 O2
+b C2 O3

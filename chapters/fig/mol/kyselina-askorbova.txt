@@ -1,0 +1,31 @@
+nazov: kyselina askorbová
+skratka: vitamín C
+sumarny: C6H8O6
+smiles: O=C1O[C@H]([C@@H](O)CO)C(O)=C1O
+zdroj: PubChem CID 54670067 (L-Ascorbic Acid, C6H8O6) · overené 2026-10-19
+projekcia: skeletálny vzorec, neionizovaná forma (laktón s endiolom) · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . -1.966 0.047
+a C2 . -1.101 0.548
+a C3 . -0.234 0.049
+a C4 . 0.679 0.457
+a C5 . 1.349 -0.286
+a C6 . 0.850 -1.152
+a O1 O 1.258 -2.065
+a O2 O -0.128 -0.946
+a O3 OH 2.343 -0.180
+a O4 OH 0.886 1.435
+a O5 OH -1.102 1.548
+a O6 HO -2.833 0.546 <
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5 2l
+b C5 C6
+b C6 O1 2
+b C6 O2
+b C5 O3
+b C4 O4
+b C2 O5 w
+b C1 O6
+b C3 O2 w

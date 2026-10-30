@@ -1,0 +1,14 @@
+nazov: kyselina arzenitá
+skratka: As(OH)₃
+sumarny: H3AsO3
+smiles: O[As](O)O
+zdroj: PubChem CID 545 (Arsenous acid, AsH3O3) · overené 2026-10-19
+projekcia: neionizovaná forma (pri pH 7 prevažuje) · súradnice vypočítané zo SMILES (RDKit)
+---
+a O1 OH 0.001 -1.000
+a As1 As -0.000 -0.000
+a O2 OH 0.866 0.501
+a O3 HO -0.866 0.499 <
+b O1 As1
+b As1 O2
+b As1 O3

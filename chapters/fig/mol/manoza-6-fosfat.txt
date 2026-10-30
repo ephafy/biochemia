@@ -1,0 +1,15 @@
+nazov: manóza-6-fosfát
+skratka: Man-6-P
+sumarny: C6H11O9P-2
+smiles: C([C@@H]1[C@H]([C@@H]([C@@H]([C@H](O1)O)O)O)O)OP(=O)([O-])[O-]
+zdroj: PubChem CID 447096 (α-D-manóza-6-fosfát) · overené 2026-10-19
+projekcia: Haworthov vzorec, α-D-manopyranóza (OH na C2 hore – epimér glukózy na C2), fosfát na C6 ako P v krúžku – signál, ktorý posiela enzýmy do lyzozómov
+---
+kruh pyranoza C1 C2 C3 C4 C5 O5
++ O1 C1 d OH
++ O2 C2 u OH
++ O3 C3 u OH
++ O4 C4 d HO <
++ C6 C5 u O|CH_2
++ P6 C6 l*1.75 (P)
+c C1 1 20

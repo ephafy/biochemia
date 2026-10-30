@@ -1,0 +1,68 @@
+nazov: cholát
+skratka: kyselina cholová
+sumarny: C24H39O5-
+smiles: C[C@H](CCC(=O)[O-])[C@H]1CC[C@H]2[C@@H]3[C@H](O)C[C@@H]4C[C@H](O)CC[C@]4(C)[C@H]3C[C@H](O)[C@]12C
+zdroj: PubChem CID 221493 (Cholic Acid, C24H40O5) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 2.423 1.017
+a C2 . 2.425 0.017
+a C3 . 3.292 -0.481
+a C4 . 4.157 0.021
+a C5 . 5.024 -0.477
+a O1 O 5.027 -1.477
+a O2 O^- 5.889 0.025
+a C6 . 1.560 -0.485
+a C7 . 1.458 -1.480
+a C8 . 0.480 -1.690
+a C9 . -0.022 -0.825
+a C10 . 0.646 -0.080
+a C11 . 0.335 0.870
+a C12 . -0.644 1.076
+a C13 . -1.312 0.331
+a C14 . -1.000 -0.619
+a C15 . -1.668 -1.364
+a C16 . -2.646 -1.158
+a C17 . -2.958 -0.208
+a C18 . -2.290 0.537
+a C19 . -2.601 1.487
+a C20 . -3.580 1.693
+a C21 . -4.247 0.948
+a C22 . -3.936 -0.002
+a O3 HO -5.226 1.154 <
+a C23 CH_3 -1.623 1.281
+a O4 OH -1.357 -2.314
+a O5 OH 1.002 1.615
+a C24 CH_3 1.387 0.590
+b C2 C1 w
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 O1 2
+b C5 O2
+b C2 C6
+b C6 C7 h
+b C7 C8
+b C9 C8 h
+b C9 C10
+b C10 C11
+b C11 C12
+b C13 C12 h
+b C13 C14
+b C14 C15 w
+b C15 C16
+b C17 C16 w
+b C17 C18
+b C18 C19
+b C19 C20
+b C20 C21
+b C21 C22
+b C21 O3 w
+b C18 C23 h
+b C15 O4 w
+b C11 O5 w
+b C10 C24 h
+b C10 C6
+b C14 C9
+b C18 C13
+b C22 C17

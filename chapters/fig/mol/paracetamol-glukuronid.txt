@@ -1,0 +1,28 @@
+nazov: paracetamol-glukuronid
+skratka: APAP-GlcUA
+sumarny: C14H16NO8-
+smiles: CC(=O)NC1=CC=C(C=C1)O[C@H]2[C@@H]([C@H]([C@@H]([C@H](O2)C(=O)[O-])O)O)O
+zdroj: PubChem CID 83944 (acetaminophen glucuronide, neutrálna kyselina; v kresbe karboxylát pri pH 7) · overené 2026-10-13
+projekcia: Haworthov vzorec glukuronátovej časti, β-D-pyranóza (anomérny kyslík hore, na strane C6; EC 2.4.1.17: β-D-glukuronozid), O-glukuronid fenolového OH paracetamolu; C6 ako karboxylát
+---
+kruh pyranoza C1 C2 C3 C4 C5 O5
++ O2 C2 d HO <
++ O3 C3 u OH
++ O4 C4 d HO <
++ C6 C5 u COO^-
++ O1 C1 u O
++ B1 O1 0 .
++ B2 B1 60 .
++ B3 B2 0 .
++ B4 B3 -60 .
++ B5 B4 -120 .
++ B6 B5 180 .
+b B6 B1
+b B1 B2 2r
+b B3 B4 2r
+b B5 B6 2r
++ N1 B4 0 NH
++ C7 N1 -60 .
++ O7 C7 -120 O 2
++ C8 C7 0 CH_3
+c C1 1 340

@@ -1,0 +1,61 @@
+nazov: sulfatid (galaktocerebrozid-3-sulfát)
+sumarny: C40H77NO11S
+smiles: CCCCCCCCCCCCCCCC(=O)N[C@@H](CO[C@H]1[C@@H]([C@H]([C@H]([C@H](O1)CO)O)OS(=O)(=O)O)O)[C@@H](/C=C/CCCCCCCCCCCCC)O
+zdroj: PubChem CID 9897094 (C16 Sulfatide, C40H77NO11S) – vzor; R = reťazce (skrátený zápis) · overené 2026-10-28
+projekcia: skeletálny vzorec; galaktocerebrozid so sulfátom na C3 galaktózy (anión); R = reťazec MK, C₁₃H₂₇ = zvyšok sfingozínu · súradnice vypočítané zo SMILES (RDKit)
+kontrola: nie
+---
+a Xe1 R -4.842 0.240
+a C1 . -3.976 -0.261
+a O1 O -3.977 -1.261
+a N1 NH -3.109 0.238
+a C2 . -2.243 -0.263
+a C3 . -1.376 0.235
+a O2 O -0.508 -0.266
+a C4 . 0.355 0.238
+a C5 . 1.225 -0.253
+a C6 . 2.086 0.255
+a C7 . 2.076 1.257
+a C8 . 1.208 1.750
+a O3 O 0.349 1.239
+a C9 . 1.201 2.748
+a O4 OH 2.065 3.252
+a O5 OH 2.941 1.777
+a O6 O 2.954 -0.254
+a S1 S 3.820 0.228
+a O7 O 3.334 1.080
+a O8 O 4.310 -0.642
+a O9 O^- 4.688 0.723
+a O10 OH 1.235 -1.254
+a C10 . -2.244 -1.262
+a C11 . -3.110 -1.761
+a C12 . -3.110 -2.761
+a Br1 C_{13}H_{27} -3.976 -3.261
+a O11 OH -1.378 -1.762
+b Xe1 C1
+b C1 O1 2
+b C1 N1
+b N1 C2
+b C2 C3 h
+b C3 O2
+b C4 O2 w
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 O3
+b C8 C9 w
+b C9 O4
+b C7 O5 w
+b C6 O6 w
+b O6 S1
+b S1 O7 2
+b S1 O8 2
+b S1 O9
+b C5 O10 h
+b C2 C10
+b C10 C11
+b C11 C12 2r
+b C12 Br1
+b C10 O11 w
+b O3 C4

@@ -1,0 +1,79 @@
+nazov: taurocholát
+sumarny: C26H44NO7S-
+smiles: C[C@H](CCC(=O)NCCS(=O)(=O)[O-])[C@H]1CC[C@H]2[C@@H]3[C@H](O)C[C@@H]4C[C@H](O)CC[C@]4(C)[C@H]3C[C@H](O)[C@]12C
+zdroj: PubChem CID 6675 (Taurocholic Acid, C26H45NO7S) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 1.017 1.098
+a C2 . 1.019 0.098
+a C3 . 1.887 -0.401
+a C4 . 2.751 0.101
+a C5 . 3.619 -0.397
+a O1 O 3.621 -1.397
+a N1 NH 4.484 0.105
+a C6 . 5.351 -0.393
+a C7 . 6.216 0.109
+a S1 S 7.083 -0.389
+a O2 O 6.585 -1.256
+a O3 O 7.581 0.478
+a O4 O^- 7.950 -0.887
+a C8 . 0.155 -0.404
+a C9 . 0.052 -1.399
+a C10 . -0.925 -1.609
+a C11 . -1.427 -0.744
+a C12 . -0.760 0.000
+a C13 . -1.071 0.951
+a C14 . -2.050 1.156
+a C15 . -2.717 0.412
+a C16 . -2.406 -0.539
+a C17 . -3.073 -1.283
+a C18 . -4.052 -1.078
+a C19 . -4.363 -0.127
+a C20 . -3.696 0.617
+a C21 . -4.007 1.568
+a C22 . -4.985 1.773
+a C23 . -5.653 1.029
+a C24 . -5.342 0.078
+a O5 HO -6.631 1.234 <
+a C25 CH_3 -3.028 1.362
+a O6 OH -2.762 -2.234
+a O7 OH -0.404 1.695
+a C26 CH_3 -0.018 0.671
+b C2 C1 w
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 O1 2
+b C5 N1
+b N1 C6
+b C6 C7
+b C7 S1
+b S1 O2 2
+b S1 O3 2
+b S1 O4
+b C2 C8
+b C8 C9 h
+b C9 C10
+b C11 C10 h
+b C11 C12
+b C12 C13
+b C13 C14
+b C15 C14 h
+b C15 C16
+b C16 C17 w
+b C17 C18
+b C19 C18 w
+b C19 C20
+b C20 C21
+b C21 C22
+b C22 C23
+b C23 C24
+b C23 O5 w
+b C20 C25 h
+b C17 O6 w
+b C13 O7 w
+b C12 C26 h
+b C12 C8
+b C16 C11
+b C20 C15
+b C24 C19

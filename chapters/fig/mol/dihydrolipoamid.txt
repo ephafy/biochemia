@@ -1,0 +1,20 @@
+nazov: dihydrolipoamid (redukovaný)
+sumarny: C8H17NOS2
+smiles: C(CCC(=O)N)CC(CCS)S
+zdroj: PubChem CID 663 (dihydrolipoamid) · overené 2026-10-07
+projekcia: skeletálny vzorec; disulfid redukovaný na dve SH-skupiny – kruh je otvorený; reťazec končí amidovou väzbou na lyzín enzýmu E2 (skrátene)
+kontrola: nie
+---
+a C5 . 0 0
++ S2 C5 270 SH
++ C4 C5 150 .
++ C3 C4 210 .
++ S1 C3 150 HS <
++ C6 C5 30 .
++ C7 C6 330 .
++ C8 C7 30 .
++ C9 C8 330 .
++ C10 C9 30 .
++ O10 C10 90 O 2
++ N C10 330 NH
++ X N 30*1.2 Lys–E2

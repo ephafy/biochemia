@@ -1,0 +1,22 @@
+nazov: treonín
+skratka: Thr
+sumarny: C4H9NO3
+smiles: C[C@@H](O)[C@H]([NH3+])C(=O)[O-]
+zdroj: PubChem CID 6288 (L-Threonine, C4H9NO3) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -1.194 -1.310 <
+a C2 . -0.326 -0.812
+a C3 . -0.324 0.188
+a C4 . 0.543 0.686
+a O1 O 1.408 0.185
+a O2 O^- 0.545 1.686
+a N1 ^+H_3N -1.189 0.690 <
+a O3 OH 0.539 -1.313
+b C2 C1 w
+b C2 C3
+b C3 C4
+b C4 O1 2
+b C4 O2
+b C3 N1 w
+b C2 O3

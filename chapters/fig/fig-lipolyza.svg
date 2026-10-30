@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 640" role="img" aria-labelledby="t-lipolyza">
+<title id="t-lipolyza">Lipolýza v tukovej bunke a jej riadenie. Vľavo signál: adrenalín a noradrenalín (a glukagón) sa naviažu na receptor spojený so stimulačným G-proteínom, adenylátcykláza vytvorí cAMP a ten aktivuje proteínkinázu A. Tá fosforyluje perilipín 1 na povrchu tukovej kvapky – perilipín uvoľní koaktivátor CGI-58, ktorý zapne adipocytovú triacylglycerollipázu (ATGL) – a fosforyluje hormónsenzitívnu lipázu, ktorá sa presunie na kvapku. Vpravo tri lipázy za sebou: ATGL štiepi triacylglycerol na diacylglycerol, HSL diacylglycerol na monoacylglycerol, monoacylglycerollipáza monoacylglycerol na glycerol; každý krok uvoľní jednu mastnú kyselinu. Inzulín pôsobí opačne: fosfodiesteráza 3B rozloží cAMP a fosfatáza odstráni fosfát z lipázy. Časť mastných kyselín sa v bunke znova esterifikuje na triacylglycerol (cyklus lipolýza – reesterifikácia). Glycerol odchádza do pečene, mastné kyseliny na albumíne do svalu a pečene.</title>
+<text class="cap" x="12" y="14">tuková bunka · signál</text>
+<text class="cap" x="400" y="14">tuková kvapka · tri lipázy</text>
+<rect class="komp-m" x="352" y="26" width="200" height="560" rx="4"/>
+<text class="sub" x="544" y="40" text-anchor="end">povrch kvapky</text>
+
+<uzol id="hor" x="112" y="52" text="adrenalín, noradrenalín|(glukagón)" trieda="bx-c" w="168"/>
+<uzol id="rec" x="112" y="118" text="β-receptor · G-proteín Gₛ" w="168"/>
+<uzol id="ac" x="112" y="180" text="adenylátcykláza" w="168"/>
+<uzol id="camp" x="112" y="246" text="cAMP" trieda="bx-m" w="90"/>
+<uzol id="pka" x="112" y="316" text="proteínkináza A" trieda="bx-c" w="140"/>
+<rx od="{hor.b}" do="{rec.t}"/>
+<rx od="{rec.b}" do="{ac.t}"/>
+<rx od="{ac.b}" do="{camp.t}" ko="ATP>PPᵢ" e="vlavo"/>
+<rx od="{camp.b}" do="{pka.t}"/>
+
+<uzol id="per" x="286" y="96" text="perilipín 1|drží CGI-58" w="104" h="40"/>
+<mol v="triacylglycerol" id="tag" x="452" y="112" m="0.8"/>
+<mol v="diacylglycerol" id="dag" x="452" y="268" m="0.8"/>
+<mol v="2-monoacylglycerol" id="mag" x="452" y="408" m="0.8"/>
+<mol v="glycerol" id="gro" x="452" y="540" m="0.85"/>
+<rx id="atgl" od="{tag.b}" do="{dag.t}" enzym="ATGL|+ CGI-58" ko="H₂O>MK" e="vlavo"/>
+<rx id="hsl" od="{dag.b}" do="{mag.t}" enzym="HSL" ko="H₂O>MK" e="vlavo"/>
+<rx id="mgl" od="{mag.b}" do="{gro.t}" enzym="MGL" ko="H₂O>MK" e="vlavo"/>
+
+<vplyv typ="akt" od="{pka.r}" do="{per.bl}" cez="220,250" text="P" pri="226,232"/>
+<vplyv typ="akt" od="{per.r}" do="{atgl.e}" cez="350,150" text="uvoľní CGI-58" pri="300,138"/>
+<vplyv typ="akt" od="{pka.r+0,8}" do="{hsl.e}" cez="300,330" text="P → presun na kvapku" pri="232,356"/>
+
+<uzol id="inz" x="112" y="452" text="inzulín" trieda="bx-c" w="90"/>
+<vplyv typ="inh" od="{inz.t-14,0}" do="{camp.b-30,0}" cez="70,380" text="fosfodiesteráza 3B" pri="18,392" zarovnaj="start"/>
+<vplyv typ="inh" od="{inz.r}" do="{hsl.e+0,10}" cez="290,452" text="fosfatáza" pri="236,470"/>
+
+<uzol id="mk" x="630" y="300" text="voľné MK|→ albumín →|sval, srdce, pečeň" trieda="bx-m" w="130" h="56"/>
+<rx od="{atgl.k+26,8}" do="{mk.tl+4,6}"/>
+<rx od="{hsl.k+26,8}" do="{mk.l+0,10}"/>
+<rx od="{mgl.k+26,0}" do="{mk.bl+4,-4}"/>
+<uzol id="gl" x="630" y="540" text="krv → pečeň|glycerolkináza →|glukoneogenéza" w="130" h="56"/>
+<rx od="{gro.r+8,0}" do="{gl.l}"/>
+<rx od="{mk.t}" do="{tag.r+30,-20}" cez="640,90" enzym="reesterifikácia:|acyl-CoA +|glycerol-3-fosfát" e="vlavo"/>
+<text class="lblb" x="662" y="210" text-anchor="middle">⟳</text>
+<text class="sub" x="630" y="236" text-anchor="middle">cyklus lipolýza –</text>
+<text class="sub" x="630" y="248" text-anchor="middle">reesterifikácia</text>
+<legenda x="20" y="632" polozky="rx,enz,ko,akt,inh"/>
+</svg>

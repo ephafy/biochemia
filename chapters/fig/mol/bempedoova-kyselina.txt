@@ -1,0 +1,53 @@
+nazov: kyselina bempedoová
+sumarny: C19H36O5
+smiles: CC(C)(CCCCCC(O)CCCCCC(C)(C)C(=O)O)C(=O)O
+zdroj: PubChem CID 10472693 (Bempedoic Acid, C19H36O5) · overené 2026-10-19
+projekcia: skeletálny vzorec, neionizovaná forma (liečivo) · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -5.697 0.967 <
+a C2 . -5.196 0.102
+a C3 CH_3 -4.697 0.968
+a C4 . -4.330 -0.398
+a C5 . -3.464 0.103
+a C6 . -2.598 -0.396
+a C7 . -1.732 0.104
+a C8 . -0.866 -0.395
+a C9 . -0.000 0.106
+a C10 . 0.866 -0.394
+a C11 . 1.732 0.107
+a C12 . 2.598 -0.392
+a C13 . 3.464 0.108
+a C14 . 4.330 -0.391
+a C15 . 5.196 0.110
+a C16 H_3C 4.695 0.975 <
+a C17 CH_3 5.695 0.976
+a C18 . 6.062 -0.390
+a O1 O 6.063 -1.390
+a O2 OH 6.928 0.111
+a O3 OH -0.001 1.106
+a C19 . -6.062 -0.399
+a O4 O -6.061 -1.399
+a O5 HO -6.928 0.100 <
+b C1 C2
+b C2 C3
+b C2 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 C10
+b C10 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 C15
+b C15 C16
+b C15 C17
+b C15 C18
+b C18 O1 2
+b C18 O2
+b C9 O3
+b C2 C19
+b C19 O4 2
+b C19 O5

@@ -1,0 +1,25 @@
+nazov: N-acetylcysteín
+sumarny: C5H8NO3S-
+smiles: CC(=O)N[C@@H](CS)C(=O)[O-]
+zdroj: PubChem CID 12035 (N-Acetyl-L-Cysteine, C5H9NO3S) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -2.167 -0.542 <
+a C2 . -1.299 -0.045
+a O1 O -1.296 0.955
+a N1 NH -0.435 -0.548
+a C3 . 0.433 -0.052
+a C4 . 0.436 0.948
+a S1 HS -0.428 1.452 <
+a C5 . 1.297 -0.555
+a O2 O 1.293 -1.555
+a O3 O^- 2.165 -0.058
+b C1 C2
+b C2 O1 2
+b C2 N1
+b N1 C3
+b C3 C4 h
+b C4 S1
+b C3 C5
+b C5 O2 2
+b C5 O3

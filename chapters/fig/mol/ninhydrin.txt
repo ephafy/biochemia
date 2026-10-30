@@ -1,0 +1,33 @@
+nazov: ninhydrín
+sumarny: C9H6O4
+smiles: O=C1C2=CC=CC=C2C(=O)C1(O)O
+zdroj: PubChem CID 10236 (Ninhydrin, C9H6O4) · overené 2026-10-19
+projekcia: skeletálny vzorec · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . -2.142 0.502
+a C2 . -2.142 -0.498
+a C3 . -1.277 -0.999
+a C4 . -0.410 -0.500
+a C5 . -0.410 0.500
+a C6 . -1.275 1.001
+a C7 . 0.542 0.809
+a O1 O 0.851 1.759
+a C8 . 1.129 -0.001
+a C9 . 0.540 -0.809
+a O2 O 0.849 -1.761
+a O3 OH 1.872 -0.671
+a O4 OH 1.873 0.668
+b C1 C2 2r
+b C2 C3
+b C3 C4 2r
+b C4 C5
+b C5 C6 2r
+b C5 C7
+b C7 O1 2
+b C7 C8
+b C8 C9
+b C9 O2 2
+b C8 O3
+b C8 O4
+b C6 C1
+b C9 C4

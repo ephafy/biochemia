@@ -1,0 +1,44 @@
+nazov: tiamín
+skratka: vitamín B₁
+sumarny: C12H17N4OS+
+smiles: CC1=NC(N)=C(C[N+]2=CSC(CCO)=C2C)C=N1
+zdroj: PubChem CID 1130 (Thiamine, C12H17N4OS+) · overené 2026-10-19
+projekcia: skeletálny vzorec – katión (tiazóliový dusík) · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 -0.622 2.309
+a C2 . -0.831 1.329
+a C3 . -1.745 0.924
+a S1 S -1.640 -0.072
+a C4 . -0.662 -0.279
+a N1 N^+ -0.161 0.586
+a C5 . 0.833 0.691
+a C6 . 1.422 -0.118
+a C7 . 2.416 -0.016
+a N2 N 3.005 -0.824
+a C8 . 2.597 -1.740
+a N3 N 1.603 -1.842
+a C9 . 1.013 -1.034
+a N4 H_2N 0.019 -1.138 <
+a C10 CH_3 3.185 -2.548
+a C11 . -2.611 1.423
+a C12 . -3.478 0.923
+a O1 HO -4.344 1.424 <
+b C1 C2
+b C2 C3 2r
+b C3 S1
+b S1 C4
+b C4 N1 2r
+b N1 C5
+b C5 C6
+b C6 C7
+b C7 N2 2l
+b N2 C8
+b C8 N3 2l
+b N3 C9
+b C9 N4
+b C8 C10
+b C3 C11
+b C11 C12
+b C12 O1
+b N1 C2
+b C9 C6 2l

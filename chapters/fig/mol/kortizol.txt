@@ -1,0 +1,61 @@
+nazov: kortizol
+sumarny: C21H30O5
+smiles: C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO
+zdroj: PubChem CID 5754 (Cortisol, C21H30O5) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 -1.636 -0.242
+a C2 . -1.636 0.758
+a C3 . -2.503 0.258
+a C4 . -3.368 0.757
+a C5 . -3.370 1.757
+a O1 O -4.235 2.256
+a C6 . -2.503 2.256
+a C7 . -1.638 1.758
+a C8 . -0.771 2.258
+a C9 . 0.096 1.760
+a C10 . 0.097 0.759
+a C11 . -0.770 0.259
+a C12 . -0.769 -0.741
+a C13 . 0.096 -1.241
+a C14 . 0.961 -0.738
+a C15 . 0.964 0.261
+a C16 . 1.915 0.570
+a C17 . 2.502 -0.240
+a C18 . 1.915 -1.049
+a C19 . 2.786 -1.539
+a O2 O 2.789 -2.541
+a C20 . 3.649 -1.040
+a O3 OH 4.514 -1.543
+a O4 HO 1.405 -2.405 <
+a C21 CH_3 0.987 -1.529
+a O5 HO -1.635 -1.242 <
+b C2 C1 w
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 O1 2
+b C5 C6
+b C6 C7 2l
+b C7 C8
+b C8 C9
+b C10 C9 h
+b C10 C11
+b C11 C12 w
+b C12 C13
+b C13 C14
+b C14 C15
+b C15 C16 w
+b C16 C17
+b C17 C18
+b C18 C19
+b C19 O2 2
+b C19 C20
+b C20 O3
+b C18 O4 h
+b C14 C21 w
+b C12 O5 w
+b C7 C2
+b C11 C2
+b C15 C10
+b C18 C14

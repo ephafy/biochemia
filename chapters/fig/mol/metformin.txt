@@ -1,0 +1,23 @@
+nazov: metformín
+sumarny: C4H11N5
+smiles: CN(C)C(=N)N=C(N)N
+zdroj: PubChem CID 4091 (Metformin, C4H11N5) · overené 2026-10-19
+projekcia: skeletálny vzorec, neutrálna forma (biguanid) · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 2.117 -0.110
+a N1 N 1.251 0.390
+a C2 CH_3 1.250 1.390
+a C3 . 0.385 -0.111
+a N2 NH 0.386 -1.111
+a N3 N -0.481 0.388
+a C4 . -1.347 -0.112
+a N4 NH_2 -1.346 -1.112
+a N5 H_2N -2.213 0.387 <
+b C1 N1
+b N1 C2
+b N1 C3
+b C3 N2 2
+b C3 N3
+b N3 C4 2
+b C4 N4
+b C4 N5

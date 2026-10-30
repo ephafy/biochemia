@@ -1,0 +1,32 @@
+nazov: adrenalín
+sumarny: C9H14NO3+
+smiles: C[NH2+]C[C@H](O)C1=CC(O)=C(O)C=C1
+zdroj: PubChem CID 5816 (Epinephrine, C9H13NO3) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -3.530 -0.128 <
+a N1 NH_2^+ -2.662 -0.625
+a C2 . -1.798 -0.122
+a C3 . -0.930 -0.619
+a C4 . -0.066 -0.116
+a C5 . 0.802 -0.613
+a C6 . 1.666 -0.109
+a C7 . 1.662 0.891
+a C8 . 0.794 1.388
+a C9 . -0.070 0.884
+a O1 OH 2.526 1.394
+a O2 OH 2.534 -0.606
+a O3 OH -0.927 -1.619
+b C1 N1
+b N1 C2
+b C2 C3
+b C3 C4
+b C4 C5 2r
+b C5 C6
+b C6 C7 2r
+b C7 C8
+b C8 C9 2r
+b C7 O1
+b C6 O2
+b C3 O3 h
+b C9 C4

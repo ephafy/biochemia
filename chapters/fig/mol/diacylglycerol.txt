@@ -1,0 +1,23 @@
+nazov: 1,2-diacylglycerol
+skratka: DAG
+sumarny: C35H68O5
+smiles: CCCCCCCCCCCCCCCC(=O)OC[C@H](CO)OC(=O)CCCCCCCCCCCCCCC
+zdroj: PubChem CID 644078 (1,2-Dipalmitoyl-sn-glycerol, C35H68O5) – vzor; R = reťazce (skrátený zápis) · overené 2026-10-28
+projekcia: skeletálny vzorec; R¹ a R² = reťazce MK; na C3 voľný hydroxyl – sem sa pripojí tretia MK alebo fosfohlava · ručný zápis v orientácii triacylglycerolu (C1 vpravo, C3 s hlavou vľavo)
+kontrola: nie
+---
+a C2 . 0 0
++ C1 C2 330 .
++ O1 C1 30 O
++ A1 O1 330 .
++ Q1 A1 270 O 2
++ R1 A1 30 R^1
++ C3 C2 210 .
++ O3 C3 150 HO <
++ O2 C2 90 O
++ A2 O2 30 .
++ Q2 A2 90 O 2
++ R2 A2 330 R^2
+c C1 1 270
+c C2 2 270
+c C3 3 270

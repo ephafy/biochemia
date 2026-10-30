@@ -1,0 +1,44 @@
+nazov: cytidínmonofosfát
+skratka: CMP
+sumarny: C9H12N3O8P-2
+smiles: NC1=NC(=O)N([C@@H]2O[C@H](COP(=O)([O-])[O-])[C@@H](O)[C@H]2O)C=C1
+zdroj: PubChem CID 6131 (5'-Cytidylic acid, C9H14N3O8P) · overené 2026-10-29
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . -3.203 0.844
+a C2 . -2.208 0.945
+a N1 N -1.621 0.136
+a C3 . -2.030 -0.779
+a O1 O -1.444 -1.588
+a N2 N -3.025 -0.880
+a C4 . -3.612 -0.071
+a N3 H_2N -4.607 -0.173 <
+a C5 . -0.627 0.238
+a C6 . -0.125 1.102
+a C7 . 0.853 0.894
+a C8 . 0.956 -0.102
+a O2 O 0.041 -0.506
+a C9 . 1.821 -0.603
+a O3 O 2.688 -0.105
+a P1 (P) 3.553 -0.607
+a O4 OH 1.598 1.560
+a O5 HO -0.530 2.018 <
+b C1 C2 2l
+b C2 N1
+b N1 C3
+b C3 O1 2
+b C3 N2
+b N2 C4 2l
+b C4 N3
+b C5 N1 h
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 O2
+b C8 C9 h
+b C9 O3
+b O3 P1
+b C7 O4 w
+b C6 O5 w
+b C4 C1
+b O2 C5

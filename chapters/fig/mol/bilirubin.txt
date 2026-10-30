@@ -1,0 +1,95 @@
+nazov: bilirubín
+sumarny: C33H34N4O6-2
+smiles: C=CC1=C(C)/C(=C/C2=C(C)C(CCC(=O)[O-])=C(CC3=C(CCC(=O)[O-])C(C)=C(/C=C4\NC(=O)C(C)=C4C=C)N3)N2)NC1=O
+zdroj: PubChem CID 5280352 (Bilirubin, C33H36N4O6) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 2.538 -2.058
+a C2 . 1.794 -1.388
+a C3 . 0.816 -1.597
+a N1 HN 0.317 -0.730 <
+a C4 . 0.986 0.013
+a C5 . 1.900 -0.393
+a C6 . 2.766 0.107
+a C7 . 3.632 -0.393
+a C8 . 4.497 0.108
+a O1 O 4.496 1.109
+a O2 O^- 5.364 -0.390
+a C9 . 0.778 0.991
+a C10 . -0.174 1.300
+a C11 . -0.483 2.250
+a C12 . -1.484 2.250
+a C13 . -1.791 1.298
+a N2 NH -0.982 0.710
+a C14 . -2.742 0.988
+a C15 . -3.487 1.658
+a C16 . -4.463 1.450
+a C17 . -4.965 2.315
+a C18 . -4.296 3.058
+a O3 O -4.505 4.037
+a N3 NH -3.382 2.653
+a C19 H_3C -5.958 2.419 <
+a C20 . -4.871 0.536
+a C21 H_2C -5.865 0.431 <
+a C22 H_3C -2.337 3.420 <
+a C23 . 0.103 3.060
+a C24 . 1.098 2.956
+a C25 . 1.685 3.765
+a O4 O 1.278 4.679
+a O5 O^- 2.680 3.661
+a C26 . 0.410 -2.510
+a C27 . 1.001 -3.318
+a C28 . 0.691 -4.270
+a C29 . 1.502 -4.856
+a C30 . 2.311 -4.269
+a O6 O 3.261 -4.576
+a N4 NH 2.000 -3.318
+a C31 . 1.503 -5.857
+a C32 CH_2 2.369 -6.356
+a C33 H_3C -0.258 -4.580 <
+b C1 C2
+b C2 C3 2l
+b C3 N1
+b N1 C4
+b C4 C5 2l
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 O1 2
+b C8 O2
+b C4 C9
+b C9 C10
+b C10 C11 2r
+b C11 C12
+b C12 C13 2r
+b C13 N2
+b C13 C14
+b C14 C15 2l
+b C15 C16
+b C16 C17 2l
+b C17 C18
+b C18 O3 2
+b C18 N3
+b C17 C19
+b C16 C20
+b C20 C21 2
+b C12 C22
+b C11 C23
+b C23 C24
+b C24 C25
+b C25 O4 2
+b C25 O5
+b C3 C26
+b C26 C27 2r
+b C27 C28
+b C28 C29 2r
+b C29 C30
+b C30 O6 2
+b C30 N4
+b C29 C31
+b C31 C32 2
+b C28 C33
+b C5 C2
+b N2 C10
+b N3 C15
+b N4 C27

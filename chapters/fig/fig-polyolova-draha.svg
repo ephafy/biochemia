@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 262" role="img" aria-labelledby="t-polyolova-draha">
+<title id="t-polyolova-draha">Polyolová dráha. Aldózareduktáza redukuje aldehydovú skupinu glukózy pomocou NADPH na sorbitol. Sorbitoldehydrogenáza oxiduje sorbitol na uhlíku 2 pomocou NAD+ na fruktózu. Prvý enzým má veľa tkanív, druhý len pečeň, vaječník a semenné mechúriky. Šošovka, sietnica, Schwannove bunky nervu a oblička majú druhého enzýmu málo alebo žiadny, takže pri vysokej glykémii hromadia sorbitol, ktorý cez membránu neprejde a osmoticky viaže vodu.</title>
+<mol v="glukoza-fischer" id="glc" x="96" y="92" zv="C1" nazov="glukóza"/>
+<mol v="sorbitol" id="sor" x="350" y="92" zv="C1"/>
+<mol v="fruktoza-fischer" id="fru" x="604" y="92" zv="O2,C2-O2" nazov="fruktóza"/>
+<rx od="{glc.r+6,0}" do="{sor.l-6,0}" enzym="aldózareduktáza" ko="NADPH>NADP⁺" e="hore"/>
+<rx od="{sor.r+6,0}" do="{fru.l-6,0}" enzym="sorbitoldehydrogenáza" ko="NAD⁺>NADH" e="hore"/>
+<text class="sub" x="223" y="150" text-anchor="middle">v mnohých tkanivách</text>
+<text class="sub" x="477" y="150" text-anchor="middle">len pečeň, vaječník,</text>
+<text class="sub" x="477" y="162" text-anchor="middle">semenné mechúriky</text>
+<text class="sub" x="350" y="218" text-anchor="middle">šošovka, sietnica, Schwannove bunky nervu, oblička: majú prvý enzým, druhého málo alebo žiadny</text>
+<text class="sub" x="350" y="231" text-anchor="middle">→ sorbitol sa pri hyperglykémii hromadí, cez membránu neprejde a viaže vodu</text>
+<legenda x="14" y="252" polozky="rx,enz,ko,zv"/>
+</svg>

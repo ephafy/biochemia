@@ -1,0 +1,13 @@
+nazov: acetát
+sumarny: C2H3O2-
+smiles: CC(=O)[O-]
+zdroj: PubChem CID 175 (Acetate, C2H3O2-) · overené 2026-10-29
+projekcia: skeletálny vzorec, anión pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -0.868 0.497 <
+a C2 . 0.000 0.000
+a O1 O 0.004 -1.000
+a O2 O^- 0.864 0.503
+b C1 C2
+b C2 O1 2
+b C2 O2

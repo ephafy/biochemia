@@ -1,0 +1,65 @@
+nazov: cholesterol
+sumarny: C27H46O
+smiles: CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C
+zdroj: PubChem CID 5997 (Cholesterol, C27H46O) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 2.138 0.920
+a C2 . 2.140 -0.081
+a C3 . 3.008 -0.579
+a C4 . 3.872 -0.077
+a C5 . 4.740 -0.575
+a C6 . 5.605 -0.073
+a C7 CH_3 6.472 -0.571
+a C8 CH_3 5.602 0.927
+a C9 . 1.276 -0.582
+a C10 . 1.173 -1.577
+a C11 . 0.196 -1.787
+a C12 . -0.306 -0.922
+a C13 . 0.361 -0.178
+a C14 . 0.050 0.773
+a C15 . -0.929 0.978
+a C16 . -1.596 0.234
+a C17 . -1.285 -0.717
+a C18 . -1.952 -1.461
+a C19 . -2.931 -1.256
+a C20 . -3.242 -0.305
+a C21 . -2.574 0.439
+a C22 . -2.886 1.390
+a C23 . -3.864 1.595
+a C24 . -4.532 0.851
+a C25 . -4.220 -0.100
+a O1 HO -5.510 1.056 <
+a C26 CH_3 -1.907 1.184
+a C27 CH_3 1.103 0.493
+b C2 C1 w
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C6 C8
+b C2 C9
+b C9 C10 h
+b C10 C11
+b C12 C11 h
+b C12 C13
+b C13 C14
+b C14 C15
+b C16 C15 h
+b C16 C17
+b C17 C18 w
+b C18 C19
+b C19 C20 2l
+b C20 C21
+b C21 C22
+b C22 C23
+b C23 C24
+b C24 C25
+b C24 O1 h
+b C21 C26 h
+b C13 C27 h
+b C13 C9
+b C17 C12
+b C21 C16
+b C25 C20

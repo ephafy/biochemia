@@ -1,0 +1,68 @@
+nazov: rotenón
+sumarny: C23H22O6
+smiles: C=C(C)[C@H]1CC2=C(C=CC3=C2O[C@@H]2COC4=C(C=C(OC)C(OC)=C4)[C@@H]2C3=O)O1
+zdroj: PubChem CID 6758 (Rotenone, C23H22O6) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 5.123 -2.453
+a C2 . 4.626 -1.586
+a C3 CH_2 5.129 -0.721
+a C4 . 3.626 -1.582
+a C5 . 3.041 -0.771
+a C6 . 2.089 -1.076
+a C7 . 2.085 -2.076
+a O1 O 3.035 -2.389
+a C8 . 1.217 -2.573
+a C9 . 0.353 -2.070
+a C10 . 0.357 -1.070
+a C11 . 1.225 -0.573
+a O2 O 1.228 0.427
+a C12 . 0.364 0.930
+a C13 . 0.368 1.930
+a O3 O -0.497 2.433
+a C14 . -1.364 1.936
+a C15 . -2.229 2.439
+a C16 . -3.096 1.942
+a C17 . -3.100 0.942
+a C18 . -2.236 0.439
+a C19 . -1.368 0.936
+a C20 . -0.504 0.433
+a C21 . -0.507 -0.567
+a O4 O -1.375 -1.064
+a O5 O -3.968 0.445
+a C22 H_3C -4.832 0.948 <
+a O6 O -3.961 2.445
+a C23 H_3C -4.829 1.948 <
+b C1 C2
+b C2 C3 2
+b C4 C2 w
+b C4 C5
+b C5 C6
+b C6 C7 2r
+b C7 O1
+b C7 C8
+b C8 C9 2l
+b C9 C10
+b C10 C11 2l
+b C11 O2
+b O2 C12
+b C12 C13 h
+b C13 O3
+b O3 C14
+b C14 C15
+b C15 C16 2r
+b C16 C17
+b C17 C18 2r
+b C18 C19
+b C19 C20
+b C20 C21 h
+b C21 O4 2
+b C17 O5
+b O5 C22
+b C16 O6
+b O6 C23
+b O1 C4
+b C11 C6
+b C21 C10
+b C20 C12
+b C19 C14 2r

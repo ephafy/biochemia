@@ -1,0 +1,28 @@
+nazov: CDP-diacylglycerol
+skratka: CDP-DAG
+sumarny: C44H81N3O15P2
+smiles: CCCCCCCCCCCCCCCC(=O)OCC(COP(=O)(O)O)OC(=O)CCCCCCCCCCCCCCC
+zdroj: vypočítané: kyselina fosfatidová s dvoma palmitoylmi (CID 3099) + CMP (CID 6131) − H₂O · reakcia IUBMB EC 2.7.7.41 · overené 2026-10-28
+projekcia: skeletálny vzorec; kyselina fosfatidová (PubChem CID 3099), ktorej fosfát je anhydridovou väzbou spojený s CMP (cytidínmonofosfát, CID 6131) – spolu CDP; vznik podľa IUBMB EC 2.7.7.41 · ručný zápis v orientácii triacylglycerolu (C1 vpravo, C3 s hlavou vľavo)
+kontrola: nie
+---
+a C2 . 0 0
++ C1 C2 330 .
++ O1 C1 30 O
++ A1 O1 330 .
++ Q1 A1 270 O 2
++ R1 A1 30 R^1
++ C3 C2 210 .
++ O3 C3 150 O
++ O2 C2 90 O
++ A2 O2 30 .
++ Q2 A2 90 O 2
++ R2 A2 330 R^2
++ P3 O3 210 P
++ PA P3 270 O 2
++ PB P3 90 ^-O <
++ O4 P3 150 O
++ X O4 210 CMP <
+c C1 1 270
+c C2 2 270
+c C3 3 270

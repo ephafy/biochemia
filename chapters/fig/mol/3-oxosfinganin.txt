@@ -1,0 +1,24 @@
+nazov: 3-oxosfinganín (3-ketodihydrosfingozín)
+sumarny: C18H37NO2
+smiles: CCCCCCCCCCCCCCCC(=O)[C@H](CO)N
+zdroj: PubChem CID 439853 (3-Ketosphinganine, C18H37NO2) – vzor; R = reťazce (skrátený zápis) · overené 2026-10-28
+projekcia: skeletálny vzorec, forma pri pH ≈ 7; zvyšok reťazca (C6–C18) skrátene C₁₃H₂₇; C1–C2 zo serínu, C3–C18 z palmitoylu · súradnice vypočítané zo SMILES (RDKit)
+kontrola: nie
+---
+a Br1 C_{13}H_{27} 1.146 2.448
+a C1 . 1.149 1.449
+a C2 . 0.285 0.945
+a C3 . 0.289 -0.055
+a O1 O 1.157 -0.551
+a C4 . -0.575 -0.558
+a C5 . -0.572 -1.558
+a O2 HO -1.436 -2.061 <
+a N1 ^+H_3N -1.443 -0.061 <
+b Br1 C1
+b C1 C2
+b C2 C3
+b C3 O1 2
+b C3 C4
+b C4 C5
+b C5 O2
+b C4 N1 w

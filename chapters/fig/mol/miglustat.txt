@@ -1,0 +1,36 @@
+nazov: miglustat
+sumarny: C10H21NO4
+smiles: CCCCN1C[C@H](O)[C@@H](O)[C@H](O)[C@H]1CO
+zdroj: PubChem CID 51634 (Miglustat, C10H21NO4) · overené 2026-10-29
+projekcia: skeletálny vzorec; iminocukor – napodobňuje glukózu a brzdí glukozylceramidsyntázu · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -3.695 0.141 <
+a C2 . -2.828 0.639
+a C3 . -1.963 0.137
+a C4 . -1.096 0.636
+a N1 N -0.231 0.134
+a C5 . -0.233 -0.866
+a C6 . 0.632 -1.368
+a C7 . 1.499 -0.870
+a C8 . 1.501 0.130
+a C9 . 0.636 0.632
+a C10 . 0.638 1.632
+a O1 HO -0.227 2.134 <
+a O2 OH 2.368 0.629
+a O3 OH 2.364 -1.371
+a O4 OH 0.630 -2.368
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 N1
+b N1 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 C10 w
+b C10 O1
+b C8 O2 h
+b C7 O3 w
+b C6 O4 h
+b C9 N1

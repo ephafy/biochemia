@@ -1,0 +1,33 @@
+nazov: teofylín
+sumarny: C7H8N4O2
+smiles: CN1C(=O)C2=C(N=CN2)N(C)C1=O
+zdroj: PubChem CID 2153 (Theophylline, C7H8N4O2) · overené 2026-10-29
+projekcia: skeletálny vzorec; metylxantín · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 -0.021 -2.010
+a N1 N 0.088 -1.016
+a C2 . -0.718 -0.424
+a C3 . -0.609 0.570
+a C4 . 0.306 0.973
+a O1 O 0.415 1.967
+a N2 N 1.112 0.381
+a C5 . 1.003 -0.613
+a O2 O 1.810 -1.204
+a C6 CH_3 2.028 0.784
+a N3 NH -1.521 0.981
+a C7 . -2.194 0.241
+a N4 N -1.697 -0.628
+b C1 N1
+b N1 C2
+b C2 C3 2r
+b C3 C4
+b C4 O1 2
+b C4 N2
+b N2 C5
+b C5 O2 2
+b N2 C6
+b C3 N3
+b N3 C7
+b C7 N4 2r
+b C5 N1
+b N4 C2

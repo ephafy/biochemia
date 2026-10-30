@@ -1,0 +1,22 @@
+nazov: valín
+skratka: Val
+sumarny: C5H11NO2
+smiles: CC(C)[C@H]([NH3+])C(=O)[O-]
+zdroj: PubChem CID 6287 (L-Valine, C5H11NO2) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -1.186 -1.317 <
+a C2 . -0.322 -0.814
+a C3 CH_3 0.546 -1.311
+a C4 . -0.325 0.186
+a C5 . 0.539 0.689
+a O1 O 1.407 0.193
+a O2 O^- 0.535 1.689
+a N1 ^+H_3N -1.193 0.683 <
+b C1 C2
+b C2 C3
+b C2 C4
+b C4 C5
+b C5 O1 2
+b C5 O2
+b C4 N1 w

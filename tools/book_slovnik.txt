@@ -1,0 +1,20 @@
+shuttle>clnok shuttles>clnok liver>pecen hepatic>pecen muscle>sval muscles>sval kidney>oblic
+renal>oblic brain>mozog heart>srdce cardiac>srdce blood>krv fatty>mastn acid>kysel acids>kysel
+bile>zlc starch>skrob chain>retaz bond>vazba bonds>vazba fasting>hlado starvation>hlado fed>jedle
+pathway>draha pathways>draha deficiency>defic inhibition>inhib inhibitor>inhib inhibitors>inhib
+activation>aktiv activator>aktiv membrane>membr inner>vnuto outer>vonka matrix>matri cytosol>cytos
+cytoplasm>cytop synthesis>synte degradation>rozkl breakdown>rozkl uptake>prije transport>trans
+transporter>prena carrier>prena oxygen>kysli water>voda energy>energ yield>zisk gain>zisk
+regulation>regul enzyme>enzym enzymes>enzym glucose>gluko glycogen>glyko glycolysis>glyko
+gluconeogenesis>gluko lactate>lakta pyruvate>pyruv oxaloacetate>oxala citrate>citra malate>malat
+aspartate>aspar glutamate>gluta ketoglutarate>oxogl succinate>sukci fumarate>fumar isocitrate>izoci
+phosphate>fosfa phosphorylation>fosfo phosphorylase>fosfo phosphatase>fosfa kinase>kinaz
+dehydrogenase>dehyd carboxylase>karbo synthase>synta synthetase>synte transferase>trans
+isomerase>izome mutase>mutaz aldolase>aldol enolase>enola lipase>lipaz respiratory>dycha
+oxidation>oxida oxidative>oxida reduction>reduk reduced>reduk mitochondria>mitoc mitochondrial>mitoc
+mitochondrion>mitoc coenzyme>koenz cofactor>kofak insulin>inzul glucagon>gluka adrenaline>adren
+epinephrine>adren cortisol>korti erythrocyte>erytr erythrocytes>erytr anemia>anemi anaemia>anemi
+hemolytic>hemol cholesterol>chole triacylglycerol>triac triacylglycerols>triac lipoprotein>lipop
+carnitine>karni ketone>ketol bodies>ketol cycle>cyklu cycles>cyklu complex>kompl acetyl>acety
+electron>elekt electrons>elekt proton>proto protons>proto gradient>gradi uncoupler>rozpo
+uncouplers>rozpo uncoupling>rozpo cyanide>kyani

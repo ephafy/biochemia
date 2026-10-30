@@ -1,0 +1,16 @@
+nazov: arzeničnan
+skratka: AsO₄³⁻
+sumarny: AsO4-3
+smiles: O=[As]([O-])([O-])[O-]
+zdroj: PubChem CID 27401 (Arsenate, AsO4-3) · overené 2026-10-19
+projekcia: anión kyseliny arzeničnej · súradnice vypočítané zo SMILES (RDKit)
+---
+a O1 ^-O -0.498 0.721 <
+a As1 As -0.000 -0.146
+a O2 O -0.868 -0.644
+a O3 O^- 0.502 0.718
+a O4 O^- 0.864 -0.649
+b O1 As1
+b As1 O2 2
+b As1 O3
+b As1 O4

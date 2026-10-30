@@ -1,0 +1,26 @@
+nazov: hypoglycín A
+sumarny: C7H11NO2
+smiles: C=C1CC1C[C@H]([NH3+])C(=O)[O-]
+zdroj: PubChem CID 45039541 (Hypoglycin A, C7H11NO2) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_2 -1.072 -2.646
+a C2 . -1.075 -1.646
+a C3 . -1.577 -0.781
+a C4 . -0.577 -0.778
+a C5 . 0.287 -0.276
+a C6 . 0.285 0.724
+a C7 . 1.149 1.226
+a O1 O 2.017 0.729
+a O2 O^- 1.146 2.226
+a N1 ^+H_3N -0.583 1.222 <
+b C1 C2 2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 O1 2
+b C7 O2
+b C6 N1 w
+b C4 C2

@@ -1,0 +1,17 @@
+nazov: dichlóracetát
+sumarny: C2HCl2O2-
+smiles: O=C([O-])C(Cl)Cl
+zdroj: PubChem CID 6597 (Dichloroacetic Acid, C2H2Cl2O2) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . 0.433 -0.251
+a C2 . -0.433 0.251
+a O1 O -1.300 -0.247
+a O2 O^- -0.430 1.251
+a Cl1 Cl 0.430 -1.251
+a Cl2 Cl 1.300 0.247
+b C1 C2
+b C2 O1 2
+b C2 O2
+b C1 Cl1
+b C1 Cl2

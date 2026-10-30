@@ -1,0 +1,106 @@
+nazov: atraktylozid
+sumarny: C30H43O16S2-3
+smiles: C=C1[C@@H]2CC[C@H]3[C@]4(C)C[C@H](O[C@@H]5O[C@H](CO)[C@@H](OS(=O)(=O)[O-])[C@H](OS(=O)(=O)[O-])[C@H]5OC(=O)CC(C)C)C[C@@H](C(=O)[O-])[C@H]4CC[C@]3(C2)[C@H]1O
+zdroj: PubChem CID 442004 (Atractyloside, C30H44K2O16S2) · overené 2026-10-19
+projekcia: skeletálny vzorec – anión (dva sulfáty a karboxyl), bez protiiónov draslíka · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -5.073 2.028 <
+a C2 . -4.145 1.655
+a C3 CH_3 -3.358 2.274
+a C4 . -4.002 0.662
+a C5 . -3.073 0.289
+a O1 O -2.287 0.910
+a O2 O -2.926 -0.708
+a C6 . -1.991 -1.065
+a C7 . -1.817 -2.050
+a C8 . -0.878 -2.398
+a C9 . -0.112 -1.758
+a O3 O -0.283 -0.773
+a C10 . -1.224 -0.428
+a O4 O -1.455 0.766
+a C11 . -0.632 1.471
+a C12 . -0.640 2.468
+a C13 . 0.226 2.972
+a C14 . 1.094 2.478
+a C15 . 1.966 2.957
+a C16 . 2.811 2.416
+a C17 . 2.756 1.400
+a C18 . 3.095 0.749
+a C19 . 3.770 0.480
+a C20 . 3.454 -0.363
+a C21 . 2.241 -0.212
+a C22 . 1.947 0.980
+a C23 . 1.090 1.487
+a C24 . 0.230 0.981
+a C25 CH_3 1.088 0.488
+a C26 . 4.299 1.326
+a C27 CH_2 5.290 1.463
+a C28 . 3.549 2.010
+a O5 OH 3.591 3.008
+a C29 . 0.162 3.965
+a O6 O -0.753 4.387
+a O7 O^- 0.972 4.536
+a C30 . 0.820 -2.089
+a O8 OH 1.572 -1.432
+a O9 O -0.719 -3.385
+a S1 S 0.211 -3.773
+a O10 O 0.608 -2.861
+a O11 O -0.182 -4.693
+a O12 O^- 1.128 -4.170
+a O13 O -2.606 -2.688
+a S2 S -2.480 -3.690
+a O14 O -1.496 -3.576
+a O15 O -3.474 -3.811
+a O16 O^- -2.363 -4.683
+b C1 C2
+b C2 C3
+b C2 C4
+b C4 C5
+b C5 O1 2
+b C5 O2
+b C6 O2 h
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 O3
+b O3 C10
+b C10 O4 w
+b C11 O4 w
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 C15 h
+b C15 C16
+b C17 C16 h
+b C17 C18
+b C18 C19
+b C19 C20 w
+b C20 C21
+b C22 C21 h
+b C22 C23
+b C23 C24
+b C23 C25 h
+b C19 C26
+b C26 C27 2
+b C26 C28
+b C28 O5 h
+b C13 C29 h
+b C29 O6 2
+b C29 O7
+b C9 C30 w
+b C30 O8
+b C8 O9 h
+b O9 S1
+b S1 O10 2
+b S1 O11 2
+b S1 O12
+b C7 O13 w
+b O13 S2
+b S2 O14 2
+b S2 O15 2
+b S2 O16
+b C10 C6
+b C24 C11
+b C23 C14
+b C22 C17
+b C28 C17

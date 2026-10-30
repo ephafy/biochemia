@@ -1,0 +1,64 @@
+nazov: dapagliflozín
+sumarny: C21H25ClO6
+smiles: CCOC1=CC=C(CC2=C(Cl)C=CC([C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)=C2)C=C1
+zdroj: PubChem CID 9887712 (Dapagliflozin, C21H25ClO6) · overené 2026-10-19
+projekcia: skeletálny vzorec, neutrálna forma (príklad gliflozínu) · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -6.590 1.584 <
+a C2 . -5.723 1.085
+a O1 O -4.857 1.586
+a C3 . -3.991 1.086
+a C4 . -3.125 1.587
+a C5 . -2.259 1.088
+a C6 . -2.258 0.087
+a C7 . -3.124 -0.413
+a C8 . -3.990 0.086
+a C9 . -1.392 -0.412
+a C10 . -0.526 0.089
+a C11 . -0.527 1.089
+a C12 . 0.339 1.590
+a C13 . 1.205 1.090
+a C14 . 1.206 0.090
+a C15 . 0.341 -0.410
+a C16 . 2.073 -0.409
+a C17 . 2.073 -1.409
+a C18 . 2.940 -1.909
+a C19 . 3.806 -1.408
+a C20 . 3.805 -0.408
+a O2 O 2.938 0.092
+a C21 . 4.670 0.093
+a O3 OH 5.537 -0.406
+a O4 OH 4.672 -1.907
+a O5 OH 2.941 -2.909
+a O6 HO 1.208 -1.910 <
+a Cl1 Cl -1.393 1.588
+b C1 C2
+b C2 O1
+b O1 C3
+b C3 C4
+b C4 C5 2l
+b C5 C6
+b C6 C7 2l
+b C7 C8
+b C6 C9
+b C9 C10
+b C10 C11 2l
+b C11 C12
+b C12 C13 2l
+b C13 C14
+b C14 C15 2l
+b C16 C14 w
+b C16 C17
+b C17 C18
+b C18 C19
+b C19 C20
+b C20 O2
+b C20 C21 w
+b C21 O3
+b C19 O4 h
+b C18 O5 w
+b C17 O6 h
+b C11 Cl1
+b C8 C3 2l
+b C15 C10
+b O2 C16

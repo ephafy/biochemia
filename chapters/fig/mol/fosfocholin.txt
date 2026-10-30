@@ -1,0 +1,21 @@
+nazov: fosfocholín
+sumarny: C5H13NO4P-
+smiles: C[N+](C)(C)CCOP(=O)([O-])[O-]
+zdroj: PubChem CID 1014 (N,N,N-trimethyl-2-(phosphonooxy)ethanaminium, C5H15NO4P+) · overené 2026-10-28
+projekcia: skeletálny vzorec, forma pri pH ≈ 7; fosfát ako P v krúžku · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 -1.232 -0.800
+a N1 N^+ -1.732 0.065
+a C2 H_3C -2.232 -0.801 <
+a C3 H_3C -2.599 0.564 <
+a C4 . -0.866 0.566
+a C5 . -0.000 0.067
+a O1 O 0.866 0.567
+a P1 (P) 1.732 0.068
+b C1 N1
+b N1 C2
+b N1 C3
+b N1 C4
+b C4 C5
+b C5 O1
+b O1 P1

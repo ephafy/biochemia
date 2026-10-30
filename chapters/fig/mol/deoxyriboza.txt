@@ -1,0 +1,13 @@
+nazov: 2-deoxyribóza
+skratka: dRib
+sumarny: C5H10O4
+smiles: C1[C@@H]([C@H](O[C@H]1O)CO)O
+zdroj: PubChem CID 439576 (2-deoxy-β-D-ribofuranóza) · overené 2026-10-19
+projekcia: Haworthov vzorec, 2-deoxy-β-D-ribofuranóza – na C2 chýba OH (stavebný cukor DNA)
+---
+kruh furanoza C1 C2 C3 C4 O4
++ O1 C1 u OH
++ O3 C3 d HO <
++ C5 C4 u HOH_2C <
+c C1 1 30
+c C2 2 300

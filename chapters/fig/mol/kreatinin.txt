@@ -1,0 +1,19 @@
+nazov: kreatinín
+sumarny: C4H7N3O
+smiles: CN1CC(=O)N=C1N
+zdroj: PubChem CID 588 (kreatinín) · overené 2026-10-08
+projekcia: skeletálny vzorec; päťčlenný kruh, ktorý vznikne, keď sa karboxyl kreatínu spojí s jeho guanidínovou skupinou (odíde voda alebo fosfát); metyl na dusíku ostáva
+---
+a C2 . 0 -0.851
+a N3 N 0.809 -0.263
+a C4 . 0.5 0.688
+a C5 . -0.5 0.688
+a N1 N -0.809 -0.263
+b N1 C2
+b C2 N3 2
+b N3 C4
+b C4 C5
+b C5 N1
++ N2 C2 90 NH_2
++ O4 C4 306 O 2
++ M1 N1 162 H_3C <

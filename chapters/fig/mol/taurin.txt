@@ -1,0 +1,19 @@
+nazov: taurín
+sumarny: C2H7NO3S
+smiles: [NH3+]CCS(=O)(=O)[O-]
+zdroj: PubChem CID 1123 (Taurine, C2H7NO3S) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . -1.113 -0.072
+a C2 . -0.248 0.428
+a S1 S 0.619 -0.071
+a O1 O 0.119 -0.937
+a O2 O 1.118 0.795
+a O3 O^- 1.485 -0.570
+a N1 ^+H_3N -1.980 0.427 <
+b C1 C2
+b C2 S1
+b S1 O1 2
+b S1 O2 2
+b S1 O3
+b C1 N1

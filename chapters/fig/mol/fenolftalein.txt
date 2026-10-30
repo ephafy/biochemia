@@ -1,0 +1,57 @@
+nazov: fenolftaleín
+sumarny: C20H14O4
+smiles: O=C1OC(C2=CC=C(O)C=C2)(C2=CC=C(O)C=C2)C2=CC=CC=C12
+zdroj: PubChem CID 4764 (Phenolphthalein, C20H14O4) · overené 2026-10-19
+projekcia: skeletálny vzorec – bezfarebná (laktónová) forma v kyslom prostredí · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . -2.574 -1.839
+a C2 . -2.573 -0.839
+a C3 . -1.707 -0.340
+a C4 . -0.841 -0.840
+a C5 . -0.842 -1.840
+a C6 . -1.708 -2.340
+a C7 . 0.109 -2.150
+a O1 O 0.417 -3.101
+a O2 O 0.697 -1.342
+a C8 . 0.110 -0.532
+a C9 . 0.977 -0.033
+a C10 . 0.977 0.967
+a C11 . 1.844 1.467
+a C12 . 2.709 0.966
+a C13 . 2.709 -0.034
+a C14 . 1.842 -0.533
+a O3 OH 3.576 1.465
+a C15 . -0.296 0.382
+a C16 . -1.290 0.487
+a C17 . -1.696 1.401
+a C18 . -1.108 2.209
+a C19 . -0.113 2.104
+a C20 . 0.293 1.190
+a O4 HO -1.514 3.123 <
+b C1 C2 2l
+b C2 C3
+b C3 C4 2l
+b C4 C5
+b C5 C6 2l
+b C5 C7
+b C7 O1 2
+b C7 O2
+b O2 C8
+b C8 C9
+b C9 C10
+b C10 C11 2l
+b C11 C12
+b C12 C13 2l
+b C13 C14
+b C12 O3
+b C8 C15
+b C15 C16
+b C16 C17 2l
+b C17 C18
+b C18 C19 2l
+b C19 C20
+b C18 O4
+b C6 C1
+b C8 C4
+b C14 C9 2l
+b C20 C15 2l

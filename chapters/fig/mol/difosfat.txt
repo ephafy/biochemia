@@ -1,0 +1,24 @@
+nazov: difosfát
+skratka: PPᵢ
+sumarny: O7P2-4
+smiles: O=P([O-])([O-])OP(=O)([O-])[O-]
+zdroj: PubChem CID 644102 (Pyrophosphate, O7P2-4) · overené 2026-10-19
+projekcia: anión (pyrofosfát) · súradnice vypočítané zo SMILES (RDKit)
+---
+a O1 O^- -1.000 -1.000
+a P1 P -1.000 -0.000
+a O2 O -2.000 -0.000
+a O3 O^- -1.000 1.000
+a O4 O 0.000 -0.000
+a P2 P 1.000 -0.000
+a O5 O 2.000 -0.000
+a O6 O^- 1.000 1.000
+a O7 O^- 1.000 -1.000
+b O1 P1
+b P1 O2 2
+b P1 O3
+b P1 O4
+b O4 P2
+b P2 O5 2
+b P2 O6
+b P2 O7

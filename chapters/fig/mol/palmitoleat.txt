@@ -1,0 +1,42 @@
+nazov: palmitoleát
+skratka: 16:1 Δ9
+sumarny: C16H29O2-
+smiles: CCCCCC/C=C\CCCCCCCC(=O)[O-]
+zdroj: PubChem CID 445638 (Palmitoleic Acid, C16H30O2) · overené 2026-10-28
+projekcia: skeletálny vzorec, anión pri pH ≈ 7; dvojitá väzba cis medzi C9 a C10 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 5.236 3.816
+a C2 . 4.371 3.314
+a C3 . 4.373 2.314
+a C4 . 3.508 1.813
+a C5 . 3.510 0.813
+a C6 . 2.645 0.311
+a C7 . 2.647 -0.689
+a C8 . 1.782 -1.191
+a C9 . 0.915 -0.693
+a C10 . 0.051 -1.194
+a C11 . -0.816 -0.696
+a C12 . -1.681 -1.198
+a C13 . -2.548 -0.699
+a C14 . -3.413 -1.201
+a C15 . -4.280 -0.703
+a C16 . -5.145 -1.205
+a O1 O -5.143 -2.205
+a O2 ^-O -6.013 -0.706 <
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8 2l
+b C8 C9
+b C9 C10
+b C10 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 C15
+b C15 C16
+b C16 O1 2
+b C16 O2

@@ -1,0 +1,31 @@
+nazov: kyselina močová
+sumarny: C5H4N4O3
+smiles: O=C1NC(=O)C2=C(N1)NC(=O)N2
+zdroj: PubChem CID 1175 (Uric Acid, C5H4N4O3) · overené 2026-10-19
+projekcia: skeletálny vzorec, neionizovaná (laktámová) forma · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . -0.180 -0.437
+a C2 . -0.281 0.558
+a N1 NH -1.258 0.770
+a C3 . -1.762 -0.094
+a O1 O -2.756 -0.195
+a N2 NH -1.095 -0.840
+a N3 NH 0.530 1.143
+a C4 . 1.442 0.732
+a O2 O 2.253 1.317
+a N4 NH 1.543 -0.263
+a C5 . 0.732 -0.847
+a O3 O 0.832 -1.842
+b C1 C2 2r
+b C2 N1
+b N1 C3
+b C3 O1 2
+b C3 N2
+b C2 N3
+b N3 C4
+b C4 O2 2
+b C4 N4
+b N4 C5
+b C5 O3 2
+b N2 C1
+b C5 C1

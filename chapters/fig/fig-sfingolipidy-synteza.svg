@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 860" role="img" aria-labelledby="t-sfingolipidy-synteza">
+<title id="t-sfingolipidy-synteza">Syntéza sfingolipidov. V endoplazmatickom retikule serínpalmitoyltransferáza (pyridoxalfosfát) spojí serín s palmitoyl-CoA; odíde CO2 a koenzým A a vznikne 3-oxosfinganín – prvý a rýchlosť určujúci krok všetkých sfingolipidov. Reduktáza s NADPH z neho urobí sfinganín, ceramidsyntáza naň amidovou väzbou pripojí mastnú kyselinu z acyl-CoA (dihydroceramid) a desaturáza vloží dvojitú väzbu trans medzi uhlíky 4 a 5 – vznikne ceramid. Ceramid sa ďalej mení hlavne v Golgiho aparáte: s fosfatidylcholínom dá sfingomyelín a diacylglycerol, s UDP-glukózou glukocerebrozid, z ktorého ďalšími cukrami a kyselinou N-acetylneuramínovou vznikajú globozidy a gangliozidy. S UDP-galaktózou dá galaktocerebrozid a ten s PAPS sulfatid.</title>
+<rect class="komp" x="300" y="22" width="394" height="548" rx="4"/>
+<text class="sub" x="686" y="36" text-anchor="end">endoplazmatické retikulum</text>
+<rect class="komp-m" x="6" y="582" width="688" height="270" rx="4"/>
+<text class="sub" x="686" y="596" text-anchor="end">Golgiho aparát</text>
+
+<mol v="serin" id="ser" x="62" y="86"/>
+<text class="lblb" x="120" y="92" text-anchor="middle">+</text>
+<mol v="palmitoyl-coa" id="pal" x="160" y="214" m="0.7" zv="C16,O1"/>
+<mol v="3-oxosfinganin" id="oxo" x="540" y="98" zv="O1,C3-C4"/>
+<rx od="{ser.r+40,22}" do="{oxo.l-6,0}" typ="nevratna" enzym="serínpalmitoyltransferáza|(PLP) – riadiaci krok" ko=">CO₂, CoA" e="hore" id="spt"/>
+<rx od="{pal.tr-20,-2}" do="{spt.m}" cez="260,150"/>
+
+<mol v="sfinganin" id="sfa" x="540" y="250" zv="O2"/>
+<rx od="{oxo.b}" do="{sfa.t}" enzym="3-oxosfinganín-|reduktáza" ko="NADPH>NADP⁺" e="vlavo"/>
+<mol v="dihydroceramid" id="dhc" x="540" y="384" zv="C6,O2,Xe1,N1-C6"/>
+<rx od="{sfa.b}" do="{dhc.t}" enzym="ceramidsyntáza" ko="acyl-CoA>CoA" e="vlavo"/>
+<mol v="ceramid-r" id="cer" x="540" y="512" zv="C1-C2"/>
+<rx od="{dhc.b}" do="{cer.t}" enzym="desaturáza (C4=C5)" e="vlavo"/>
+
+<mol v="sfingomyelin-r" id="sm" x="150" y="646" m="0.9"/>
+<rx od="{cer.bl-2,2}" do="{sm.tr+6,0}" cez="300,580" enzym="sfingomyelínsyntáza" ko="PC>DAG" e="hore"/>
+<mol v="glukocerebrozid" id="glc" x="540" y="680" m="0.86"/>
+<rx od="{cer.b}" do="{glc.t}" enzym="glukozyltransferáza" ko="UDP-Glc>UDP" e="vlavo"/>
+<uzol id="gg" x="540" y="808" text="laktozylceramid → globozidy, gangliozidy|(UDP-Gal, UDP-GalNAc, CMP-NANA)" trieda="bx-m" w="296" h="40" href="#fig-sfingolipidozy"/>
+<rx od="{glc.b}" do="{gg.t}"/>
+<uzol id="gal" x="150" y="752" text="galaktocerebrozid|(galaktozyltransferáza,|UDP-Gal)" w="186" h="52" rk="galcer"/>
+<uzol id="sul" x="150" y="822" text="sulfatid (PAPS)" w="140" rk="sulf"/>
+<rx od="{gal.b}" do="{sul.t}" enzym="sulfotransferáza" e="vpravo"/>
+<rx od="{cer.b-30,4}" do="{gal.tr+4,6}" cez="360,720"/>
+
+<vyrez id="galcer" h="230" nadpis="Galaktocerebrozid – celý vzorec (príklad so stearoylom)">
+<mol v="galaktocerebrozid" id="g2" x="350" y="130" m="0.8"/>
+</vyrez>
+<vyrez id="sulf" h="210" nadpis="Sulfatid: sulfát na C3 galaktózy">
+<mol v="sulfatid" id="s2" x="350" y="120" zv="S1"/>
+</vyrez>
+<legenda x="20" y="852" polozky="rx,nv,enz,ko,zv,rk,odk"/>
+</svg>

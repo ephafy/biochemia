@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 372" role="img" aria-labelledby="t-coriho-cyklus">
+<title id="t-coriho-cyklus">Coriho cyklus a glukózo-alanínový cyklus. Sval a erytrocyt štiepia glukózu glykolýzou na pyruvát a získajú dve ATP. Pyruvát sa redukuje na laktát alebo vo svale transaminuje na alanín; obe látky idú krvou do pečene. Pečeň z nich urobí pyruvát a glukoneogenézou za cenu šiestich ATP glukózu, ktorú vracia do krvi. Alanín navyše prináša do pečene dusík, ktorý sa vylúči ako močovina.</title>
+<rect class="komp" x="8" y="24" width="216" height="318" rx="3"/>
+<rect class="komp" x="476" y="24" width="216" height="318" rx="3"/>
+<text class="cap" x="16" y="40">sval · erytrocyt</text>
+<text class="cap" x="684" y="40" text-anchor="end">pečeň</text>
+<text class="cap" x="350" y="40" text-anchor="middle">krv</text>
+<uzol id="gs" x="116" y="72" text="glukóza" trieda="bx-c"/>
+<uzol id="gp" x="584" y="72" text="glukóza" trieda="bx-c"/>
+<mol v="glukoza" id="g" x="350" y="80" m="0.75" popis="nie"/>
+<rx od="{gp.l}" do="{g.r+4,-8}"/>
+<rx od="{g.l-4,-8}" do="{gs.r}"/>
+<uzol id="ps" x="116" y="196" text="2 × pyruvát"/>
+<uzol id="pp" x="584" y="196" text="2 × pyruvát"/>
+<rx od="{gs.b}" do="{ps.t}" typ="nevratna" enzym="glykolýza" ko="2 ADP>2 ATP" e="vpravo"/>
+<rx od="{pp.t}" do="{gp.b}" typ="nevratna" enzym="glukoneogenéza" ko="6 ATP>6 ADP" e="vlavo"/>
+<mol v="laktat" id="lak" x="350" y="196" m="0.8"/>
+<mol v="alanin" id="ala" x="350" y="306" m="0.8" nazov="alanín"/>
+<rx od="{ps.r}" do="{lak.l-4,0}" typ="vratna"/>
+<text class="enz" x="258" y="188" text-anchor="middle">LD</text>
+<rx od="{lak.r+4,0}" do="{pp.l}" typ="vratna"/>
+<text class="enz" x="444" y="188" text-anchor="middle">LD</text>
+<rx od="{ps.b}" do="{ala.l-4,0}" cez="116,306" typ="vratna"/>
+<text class="enz" x="240" y="324" text-anchor="middle">ALT</text>
+<text class="sub" x="116" y="326" text-anchor="middle">–NH₂ z aminokyselín svalu</text>
+<rx od="{ala.r+4,0}" do="{pp.b}" cez="584,306" typ="vratna"/>
+<text class="enz" x="460" y="324" text-anchor="middle">ALT</text>
+<text class="sub" x="584" y="326" text-anchor="middle">–NH₂ → močovina</text>
+<text class="lblb" x="350" y="136" text-anchor="middle">⟳ Coriho cyklus</text>
+<text class="lblb" x="350" y="264" text-anchor="middle">⟳ glukózo-alanínový cyklus</text>
+<legenda x="20" y="362" polozky="nv,vr,enz,ko"/>
+</svg>

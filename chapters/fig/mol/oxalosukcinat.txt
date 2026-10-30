@@ -1,0 +1,17 @@
+nazov: oxalosukcinát
+sumarny: C6H3O7
+smiles: C(C(C(=O)C(=O)O)C(=O)O)C(=O)O
+zdroj: PubChem CID 972 (kyselina oxalojantárová) · overené 2026-10-08
+projekcia: skeletálny vzorec, trianión; ketoskupina na C2 – medzistupeň izocitrátdehydrogenázy, ktorý ostáva viazaný na enzým; stredný karboxyl (na C3) je voči ketoskupine v polohe β a odštiepi sa ako CO₂
+---
+a C3 . 0 0
++ C6 C3 270 COO^-
++ C2 C3 30 .
++ O2 C2 90 O 2
++ C1 C2 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-
++ C4 C3 150 .
++ C5 C4 210 .
++ O5a C5 270 O 2
++ O5b C5 150 ^-O <

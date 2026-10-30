@@ -1,0 +1,46 @@
+nazov: stearát
+skratka: 18:0
+sumarny: C18H35O2-
+smiles: CCCCCCCCCCCCCCCCCC(=O)[O-]
+zdroj: PubChem CID 5281 (Stearic Acid, C18H36O2) · overené 2026-10-28
+projekcia: skeletálny vzorec, anión pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -8.140 0.316 <
+a C2 . -7.275 -0.185
+a C3 . -6.408 0.313
+a C4 . -5.543 -0.189
+a C5 . -4.676 0.309
+a C6 . -3.811 -0.192
+a C7 . -2.944 0.306
+a C8 . -2.079 -0.196
+a C9 . -1.212 0.302
+a C10 . -0.347 -0.199
+a C11 . 0.520 0.299
+a C12 . 1.385 -0.203
+a C13 . 2.252 0.296
+a C14 . 3.117 -0.206
+a C15 . 3.984 0.292
+a C16 . 4.849 -0.210
+a C17 . 5.716 0.289
+a C18 . 6.581 -0.213
+a O1 O 6.579 -1.213
+a O2 O^- 7.448 0.285
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 C10
+b C10 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 C15
+b C15 C16
+b C16 C17
+b C17 C18
+b C18 O1 2
+b C18 O2

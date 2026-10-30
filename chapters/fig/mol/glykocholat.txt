@@ -1,0 +1,75 @@
+nazov: glykocholát
+sumarny: C26H42NO6-
+smiles: C[C@H](CCC(=O)NCC(=O)[O-])[C@H]1CC[C@H]2[C@@H]3[C@H](O)C[C@@H]4C[C@H](O)CC[C@]4(C)[C@H]3C[C@H](O)[C@]12C
+zdroj: PubChem CID 10140 (Glycocholic Acid, C26H43NO6) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 1.499 1.013
+a C2 . 1.501 0.013
+a C3 . 2.368 -0.485
+a C4 . 3.233 0.017
+a C5 . 4.101 -0.481
+a O1 O 4.103 -1.481
+a N1 NH 4.965 0.021
+a C6 . 5.833 -0.477
+a C7 . 6.698 0.025
+a O2 O 6.695 1.025
+a O3 O^- 7.565 -0.473
+a C8 . 0.637 -0.489
+a C9 . 0.534 -1.483
+a C10 . -0.444 -1.694
+a C11 . -0.945 -0.828
+a C12 . -0.278 -0.084
+a C13 . -0.589 0.866
+a C14 . -1.568 1.072
+a C15 . -2.235 0.327
+a C16 . -1.924 -0.623
+a C17 . -2.592 -1.368
+a C18 . -3.570 -1.162
+a C19 . -3.881 -0.211
+a C20 . -3.214 0.533
+a C21 . -3.525 1.484
+a C22 . -4.504 1.689
+a C23 . -5.171 0.945
+a C24 . -4.860 -0.006
+a O4 HO -6.150 1.150 <
+a C25 CH_3 -2.546 1.278
+a O5 OH -2.280 -2.318
+a O6 OH 0.078 1.611
+a C26 CH_3 0.464 0.587
+b C2 C1 w
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 O1 2
+b C5 N1
+b N1 C6
+b C6 C7
+b C7 O2 2
+b C7 O3
+b C2 C8
+b C8 C9 h
+b C9 C10
+b C11 C10 h
+b C11 C12
+b C12 C13
+b C13 C14
+b C15 C14 h
+b C15 C16
+b C16 C17 w
+b C17 C18
+b C19 C18 w
+b C19 C20
+b C20 C21
+b C21 C22
+b C22 C23
+b C23 C24
+b C23 O4 w
+b C20 C25 h
+b C17 O5 w
+b C13 O6 w
+b C12 C26 h
+b C12 C8
+b C16 C11
+b C20 C15
+b C24 C19

@@ -1,0 +1,43 @@
+nazov: uridíntrifosfát
+skratka: UTP
+sumarny: C9H11N2O15P3-4
+smiles: C1=CN(C(=O)NC1=O)[C@H]2[C@@H]([C@@H]([C@H](O2)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O
+zdroj: PubChem CID 6133 (uridín-5′-trifosfát) · overené 2026-10-19
+projekcia: ribóza Haworthovým vzorcom (β-D-ribofuranóza), uracil na C1′, 3 fosfáty na C5′ vypísané (anión pri pH 7)
+---
+kruh furanoza C1r C2r C3r C4r O4r
++ O2r C2r d OH
++ O3r C3r d HO <
++ C5r C4r u O|CH_2
+a N1 N 1.6 -0.78
+a C2 . 1.6 -1.78
+a N3 NH 2.466 -2.28
+a C4 . 3.332 -1.78
+a C5 . 3.332 -0.78
+a C6 . 2.466 -0.28
+b N1 C2
+b C2 N3
+b N3 C4
+b C4 C5
+b C5 C6 2r
+b C6 N1
++ O2 C2 150 O 2
++ O4 C4 30 O 2
+b C1r N1
+a PA P -3.60 -0.78
++ OA1 PA 90 O 2
++ OA2 PA 270 O^-
+a PB P -5.30 -0.78
++ OB1 PB 90 O 2
++ OB2 PB 270 O^-
+a PG P -7.00 -0.78
++ OG1 PG 90 O 2
++ OG2 PG 270 O^-
+b C5r PA
+a OAB O -4.45 -0.78
+b PA OAB
+b OAB PB
+a OBG O -6.15 -0.78
+b PB OBG
+b OBG PG
++ OG3 PG 180 ^-O <

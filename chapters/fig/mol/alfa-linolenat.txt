@@ -1,0 +1,46 @@
+nazov: α-linolenát
+skratka: 18:3 ω-3
+sumarny: C18H29O2-
+smiles: CC/C=C\C/C=C\C/C=C\CCCCCCCC(=O)[O-]
+zdroj: PubChem CID 5280934 (Linolenic Acid, C18H30O2) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C 0.339 3.451 <
+a C2 . 1.206 2.952
+a C3 . 2.071 3.454
+a C4 . 2.939 2.956
+a C5 . 2.941 1.956
+a C6 . 3.808 1.457
+a C7 . 3.810 0.458
+a C8 . 2.945 -0.044
+a C9 . 2.947 -1.044
+a C10 . 2.082 -1.546
+a C11 . 1.215 -1.047
+a C12 . 0.350 -1.549
+a C13 . -0.517 -1.051
+a C14 . -1.382 -1.553
+a C15 . -2.250 -1.054
+a C16 . -3.115 -1.556
+a C17 . -3.982 -1.058
+a C18 . -4.847 -1.560
+a O1 O -4.845 -2.560
+a O2 ^-O -5.714 -1.061 <
+b C1 C2
+b C2 C3
+b C3 C4 2l
+b C4 C5
+b C5 C6
+b C6 C7 2l
+b C7 C8
+b C8 C9
+b C9 C10 2l
+b C10 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 C15
+b C15 C16
+b C16 C17
+b C17 C18
+b C18 O1 2
+b C18 O2

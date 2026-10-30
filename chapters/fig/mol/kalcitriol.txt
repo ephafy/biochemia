@@ -1,0 +1,69 @@
+nazov: kalcitriol
+skratka: 1,25-(OH)₂D₃
+sumarny: C27H44O3
+smiles: C=C1/C(=C\C=C2/CCC[C@]3(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]23)C[C@@H](O)C[C@@H]1O
+zdroj: PubChem CID 5280453 (Calcitriol, C27H44O3) · overené 2026-10-19
+projekcia: skeletálny vzorec · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 -2.251 2.438
+a C2 . -2.255 0.988
+a C3 . -3.122 0.490
+a C4 . -3.987 0.992
+a C5 . -4.854 0.494
+a C6 . -5.719 0.996
+a C7 H_3C -6.217 1.863 <
+a C8 H_3C -6.586 0.498 <
+a O1 OH -5.217 1.861
+a C9 . -1.390 0.486
+a C10 . -1.287 -0.509
+a C11 . -0.310 -0.719
+a C12 . 0.192 0.146
+a C13 . -0.475 0.891
+a C14 . -0.164 1.841
+a C15 . 0.814 2.047
+a C16 . 1.482 1.302
+a C17 . 1.171 0.352
+a C18 . 1.838 -0.393
+a C19 . 2.817 -0.187
+a C20 . 3.484 -0.932
+a C21 . 4.463 -0.726
+a C22 . 5.130 -1.471
+a C23 . 4.819 -2.421
+a C24 . 3.840 -2.627
+a C25 . 3.173 -1.882
+a C26 H_2C 2.194 -2.088 <
+a O2 HO 3.529 -3.577 <
+a O3 OH 6.108 -1.265
+a C27 H_3C -1.217 1.561 <
+b C2 C1 h
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C6 C8
+b C6 O1
+b C2 C9
+b C9 C10 w
+b C10 C11
+b C12 C11 w
+b C12 C13
+b C13 C14
+b C14 C15
+b C15 C16
+b C16 C17
+b C17 C18 2r
+b C18 C19
+b C19 C20 2l
+b C20 C21
+b C21 C22
+b C22 C23
+b C23 C24
+b C24 C25
+b C25 C26 2
+b C24 O2 w
+b C22 O3 h
+b C13 C27 w
+b C13 C9
+b C17 C12
+b C25 C20

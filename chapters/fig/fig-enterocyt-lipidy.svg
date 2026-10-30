@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 380" role="img" aria-labelledby="t-enterocyt-lipidy">
+<title id="t-enterocyt-lipidy">Cesta produktov trávenia tukov cez enterocyt. Zmiešaná micela donesie mastné kyseliny, 2-monoacylglycerol, cholesterol a vitamíny rozpustné v tukoch ku kefkovému lemu; soli žlčových kyselín ostanú v lúmene. V bunke sa dlhé mastné kyseliny aktivujú na acyl-CoA a spoja sa s 2-monoacylglycerolom znova na triacylglycerol. Ten sa spolu s estermi cholesterolu, fosfolipidmi a apolipoproteínom B-48 zabalí do chylomikrónu, ktorý bunka vylúči do lymfy; hrudníkovým miazgovodom sa dostane do krvi. Mastné kyseliny s krátkym a stredne dlhým reťazcom prejdú bunkou bez úpravy do portálnej krvi a na albumíne putujú do pečene.</title>
+<text class="cap" x="12" y="14">lúmen tenkého čreva</text>
+<rect class="komp" x="20" y="96" width="660" height="176" rx="3"/>
+<text class="cap" x="30" y="112">enterocyt</text>
+<uzol id="mic" x="190" y="50" text="zmiešaná micela|MK · 2-MAG · cholesterol · vitamíny A, D, E, K" trieda="bx-c" w="290"/>
+<text class="sub" x="346" y="46">soli žlčových kyselín</text>
+<text class="sub" x="346" y="57">ostanú v lúmene</text>
+<uzol id="acy" x="150" y="150" text="MK → acyl-CoA" w="124"/>
+<uzol id="tag" x="372" y="150" text="2-MAG + 2 acyl-CoA|→ TAG" w="150"/>
+<rx od="{mic.b-40,0}" do="{acy.t}" id="a1"/>
+<rx od="{mic.b+90,0}" do="{tag.t-40,0}"/>
+<rx od="{acy.r}" do="{tag.l}" enzym="acyltransferázy" e="dole"/>
+<text class="sub" x="150" y="182" text-anchor="middle">acyl-CoA-syntetáza</text>
+<text class="sub" x="150" y="193" text-anchor="middle">ATP → AMP + PPᵢ</text>
+<uzol id="chy" x="372" y="232" text="chylomikrón|TAG · estery cholesterolu · apo B-48" trieda="bx-c" w="250"/>
+<rx od="{tag.b}" do="{chy.t}"/>
+<uzol id="lym" x="372" y="330" text="lymfa → ductus thoracicus → krv" w="230"/>
+<rx od="{chy.b}" do="{lym.t}" enzym="exocytóza" e="vpravo"/>
+<text class="lblb" x="592" y="34" text-anchor="middle">MK s krátkym a stredne</text>
+<text class="lblb" x="592" y="47" text-anchor="middle">dlhým reťazcom</text>
+<rx od="592,54" do="592,316"/>
+<text class="sub" x="584" y="160" text-anchor="end">bez micely,</text>
+<text class="sub" x="584" y="171" text-anchor="end">bez úpravy</text>
+<uzol id="por" x="592" y="336" text="portálna krv|albumín → pečeň" w="150"/>
+<text class="cap" x="12" y="372">lymfatické a krvné kapiláry klku</text>
+</svg>

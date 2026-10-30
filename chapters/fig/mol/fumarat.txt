@@ -1,0 +1,14 @@
+nazov: fumarát
+sumarny: C4H2O4
+smiles: C(=C/C(=O)O)\C(=O)O
+zdroj: PubChem CID 444972 (kyselina fumarová) · overené 2026-10-07
+projekcia: skeletálny vzorec, dianión; dvojitá väzba medzi C2 a C3 v konfigurácii trans
+---
+a C2 . 0 0
++ C1 C2 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-
++ C3 C2 210 . 2
++ C4 C3 150 .
++ O4a C4 90 O 2
++ O4b C4 210 ^-O <

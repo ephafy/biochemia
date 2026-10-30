@@ -1,0 +1,36 @@
+nazov: pantotenát
+skratka: vitamín B₅
+sumarny: C9H16NO5-
+smiles: CC(C)(CO)[C@@H](O)C(=O)NCCC(=O)[O-]
+zdroj: PubChem CID 6613 (Pantothenic Acid, C9H17NO5) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C 1.462 -0.885 <
+a C2 . 1.963 -0.019
+a C3 CH_3 2.462 -0.886
+a C4 . 2.829 0.480
+a O1 OH 3.695 -0.021
+a C5 . 1.097 0.481
+a C6 . 0.231 -0.018
+a O2 O 0.230 -1.018
+a N1 NH -0.635 0.483
+a C7 . -1.501 -0.017
+a C8 . -2.367 0.484
+a C9 . -3.233 -0.015
+a O3 O -3.234 -1.015
+a O4 ^-O -4.099 0.485 <
+a O5 OH 1.098 1.481
+b C1 C2
+b C2 C3
+b C2 C4
+b C4 O1
+b C2 C5
+b C5 C6
+b C6 O2 2
+b C6 N1
+b N1 C7
+b C7 C8
+b C8 C9
+b C9 O3 2
+b C9 O4
+b C5 O5 w

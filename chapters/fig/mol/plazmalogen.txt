@@ -1,0 +1,102 @@
+nazov: plazmalogén (plazmenyletanolamín)
+skratka: PE(P-16:0/18:1)
+sumarny: C39H76NO7P
+smiles: CCCCCCCC/C=C\CCCCCCCC(=O)O[C@H](CO/C=C\CCCCCCCCCCCCCC)COP(=O)([O-])OCC[NH3+]
+zdroj: PubChem CID 52925128 (PE(P-16:0/18:1(9Z)), C39H76NO7P) · overené 2026-10-19
+projekcia: skeletálny vzorec – príklad: na C1 glycerolu vinyléterová väzba (–O–CH=CH–), na C2 oleoyl, na C3 fosfoetanolamín; fosfát ako anión, aminoskupina ako katión · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -13.012 4.583 <
+a C2 . -12.145 4.084
+a C3 . -11.280 4.585
+a C4 . -10.413 4.086
+a C5 . -9.548 4.586
+a C6 . -8.681 4.087
+a C7 . -7.816 4.588
+a C8 . -6.949 4.088
+a C9 . -6.084 4.589
+a C10 . -5.217 4.090
+a C11 . -4.352 4.590
+a C12 . -3.485 4.091
+a C13 . -2.620 4.592
+a C14 . -1.753 4.092
+a C15 . -0.888 4.593
+a C16 . -0.021 4.094
+a O1 O -0.021 3.094
+a C17 . 0.846 2.594
+a C18 . 0.847 1.594
+a C19 . -0.019 1.094
+a O2 O -0.885 1.593
+a P1 P -1.751 1.092
+a O3 O -2.252 1.958
+a O4 O^- -1.250 0.227
+a O5 O -2.617 0.592
+a C20 . -2.616 -0.408
+a C21 . -3.481 -0.909
+a N1 NH_3^+ -3.481 -1.909
+a O6 O 1.713 1.095
+a C22 . 1.714 0.095
+a O7 O 0.848 -0.406
+a C23 . 2.580 -0.404
+a C24 . 2.581 -1.404
+a C25 . 3.447 -1.903
+a C26 . 3.448 -2.903
+a C27 . 4.315 -3.403
+a C28 . 4.315 -4.403
+a C29 . 5.182 -4.902
+a C30 . 5.183 -5.902
+a C31 . 6.049 -6.401
+a C32 . 6.915 -5.901
+a C33 . 7.781 -6.400
+a C34 . 8.647 -5.899
+a C35 . 9.513 -6.399
+a C36 . 10.379 -5.898
+a C37 . 11.245 -6.397
+a C38 . 12.111 -5.897
+a C39 CH_3 12.977 -6.396
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 C10
+b C10 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 C15
+b C15 C16 2l
+b C16 O1
+b O1 C17
+b C18 C17 h
+b C18 C19
+b C19 O2
+b O2 P1
+b P1 O3 2
+b P1 O4
+b P1 O5
+b O5 C20
+b C20 C21
+b C21 N1
+b C18 O6
+b O6 C22
+b C22 O7 2
+b C22 C23
+b C23 C24
+b C24 C25
+b C25 C26
+b C26 C27
+b C27 C28
+b C28 C29
+b C29 C30
+b C30 C31 2r
+b C31 C32
+b C32 C33
+b C33 C34
+b C34 C35
+b C35 C36
+b C36 C37
+b C37 C38
+b C38 C39

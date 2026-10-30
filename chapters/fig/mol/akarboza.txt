@@ -1,0 +1,96 @@
+nazov: akarbóza
+sumarny: C25H43NO18
+smiles: C[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O)[C@@H](O[C@@H]([C@H](O)[C@@H](O)C=O)[C@H](O)CO)O[C@@H]2CO)[C@H](O)[C@@H](O)[C@@H]1N[C@H]1C=C(CO)[C@@H](O)[C@H](O)[C@H]1O
+zdroj: PubChem CID 9811704 (Acarbose, C25H43NO18) · overené 2026-10-19
+projekcia: skeletálny vzorec (pseudotetrasacharid; cukry nie sú v Haworthovej projekcii, aby sa vzorec zmestil) · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 2.065 -0.993
+a C2 . 2.067 0.007
+a C3 . 2.934 0.505
+a C4 . 2.936 1.505
+a C5 . 2.071 2.007
+a C6 . 1.204 1.509
+a O1 O 1.202 0.509
+a O2 O 0.339 2.011
+a C7 . -0.528 1.512
+a C8 . -1.393 2.014
+a O3 O -2.260 1.516
+a C9 . -2.262 0.516
+a C10 . -1.397 0.014
+a C11 . -0.530 0.512
+a O4 OH 0.724 -0.214
+a O5 OH -1.399 -0.986
+a O6 O -3.129 0.018
+a C12 . -3.994 0.519
+a C13 . -3.992 1.519
+a C14 . -4.857 2.021
+a O7 OH -4.855 3.021
+a O8 OH -2.735 2.241
+a C15 . -4.861 0.021
+a C16 . -4.863 -0.979
+a C17 . -5.730 -1.477
+a O9 O -5.732 -2.477
+a O10 OH -3.998 -1.481
+a O11 HO -5.726 0.523 <
+a C18 . -1.391 3.014
+a O12 OH -0.524 3.512
+a O13 OH 2.073 3.007
+a O14 OH 3.803 2.004
+a N1 NH 3.799 0.004
+a C19 . 3.797 -0.996
+a C20 . 2.930 -1.494
+a C21 . 2.928 -2.494
+a C22 . 3.793 -2.996
+a C23 . 4.660 -2.498
+a C24 . 4.662 -1.498
+a O15 OH 5.529 -1.000
+a O16 OH 5.525 -3.000
+a O17 OH 3.791 -3.996
+a C25 . 2.061 -2.993
+a O18 OH 2.059 -3.993
+b C2 C1 h
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 O1
+b C6 O2 w
+b C7 O2 h
+b C7 C8
+b C8 O3
+b O3 C9
+b C9 C10
+b C10 C11
+b C11 O4 w
+b C10 O5 h
+b C9 O6 h
+b C12 O6 h
+b C12 C13
+b C13 C14
+b C14 O7
+b C13 O8 h
+b C12 C15
+b C15 C16
+b C16 C17
+b C17 O9 2
+b C16 O10 h
+b C15 O11 h
+b C8 C18 w
+b C18 O12
+b C5 O13 w
+b C4 O14 h
+b C3 N1 w
+b C19 N1 w
+b C19 C20
+b C20 C21 2r
+b C21 C22
+b C22 C23
+b C23 C24
+b C24 O15 w
+b C23 O16 h
+b C22 O17 w
+b C21 C25
+b C25 O18
+b O1 C2
+b C11 C7
+b C24 C19

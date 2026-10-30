@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 640" role="img" aria-labelledby="t-fosfolipidy-cdp-dag">
+<title id="t-fosfolipidy-cdp-dag">Syntéza fosfolipidov cez aktivovaný diacylglycerol. Kyselina fosfatidová reaguje s CTP a vznikne CDP-diacylglycerol (uvoľní sa difosfát). Ten odovzdá fosfatidyl voľnému myo-inozitolu – vznikne fosfatidylinozitol a uvoľní sa CMP; kinázy z neho fosforyláciou na uhlíkoch 4 a 5 inozitolu vytvoria fosfatidylinozitol-4,5-bisfosfát, zdroj druhých poslov. S glycerol-3-fosfátom dá CDP-diacylglycerol v dvoch krokoch fosfatidylglycerol; ďalší fosfatidyl z CDP-diacylglycerolu ho zmení na kardiolipín, fosfolipid vnútornej membrány mitochondrií.</title>
+<text class="cap" x="12" y="14">cesta cez aktivovaný diacylglycerol (CDP-diacylglycerol)</text>
+<mol v="fosfatidat" id="pa" x="110" y="82"/>
+<mol v="cdp-diacylglycerol" id="cdp" x="470" y="82" zv="X,O4,P3,PA,PB"/>
+<rx od="{pa.r+6,0}" do="{cdp.l-6,0}" enzym="CDP-diacylglycerol-|syntáza" ko="CTP>PPᵢ" e="hore"/>
+
+<mol v="fosfatidylinozitol" id="pi" x="470" y="276"/>
+<rx od="{cdp.b+20,0}" do="{pi.t+20,-2}" enzym="PI-syntáza" ko="myo-inozitol>CMP" e="vlavo"/>
+<mol v="pip2" id="pip2" x="470" y="468" zv="X4,P4,X5,P5"/>
+<rx od="{pi.b+20,0}" do="{pip2.t+20,-2}" enzym="kinázy (C4, C5)" ko="2 ATP>2 ADP" e="vlavo"/>
+<uzol id="plc" x="622" y="562" text="fosfolipáza C|→ IP₃ + DAG" trieda="bx-c" w="120" href="#fig-fosfolipazy"/>
+<rx od="{pip2.br+0,6}" do="{plc.t}"/>
+<text class="sub" x="470" y="376" text-anchor="middle">na C2 často kyselina arachidónová</text>
+
+<mol v="fosfatidylglycerol" id="pg" x="150" y="296"/>
+<rx od="{cdp.bl+10,6}" do="{pg.t+30,-2}" cez="230,190" enzym="+ glycerol-3-fosfát|(dva kroky)" ko=">CMP" e="vlavo"/>
+<mol v="kardiolipin" id="cl" x="230" y="548" m="0.82"/>
+<rx od="{pg.b+0,6}" do="{cl.t-20,0}" ko="CDP-DAG>CMP" e="vlavo"/>
+<text class="sub" x="230" y="610" text-anchor="middle">vnútorná membrána mitochondrií</text>
+<legenda x="20" y="632" polozky="rx,enz,ko,zv,odk"/>
+</svg>

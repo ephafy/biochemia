@@ -1,0 +1,21 @@
+nazov: metylmalonát
+sumarny: C4H4O4-2
+smiles: CC(C(=O)[O-])C(=O)[O-]
+zdroj: PubChem CID 487 (Methylmalonic Acid, C4H6O4) · overené 2026-10-28
+projekcia: skeletálny vzorec: kyselina metylmalónová ako dianión pri pH 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 -0.003 1.375
+a C2 . -0.001 0.375
+a C3 . -0.866 -0.127
+a O1 O -0.864 -1.127
+a O2 ^-O -1.733 0.371 <
+a C4 . 0.866 -0.123
+a O3 O 0.868 -1.123
+a O4 O^- 1.731 0.378
+b C1 C2
+b C2 C3
+b C3 O1 2
+b C3 O2
+b C2 C4
+b C4 O3 2
+b C4 O4

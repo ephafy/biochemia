@@ -1,0 +1,8 @@
+nazov: chlorovodík
+skratka: HCl
+sumarny: HCl
+smiles: Cl
+zdroj: PubChem CID 313 (Hydrochloric Acid, ClH) · overené 2026-10-19
+projekcia: molekula; vo vode úplne disociuje na H⁺ a Cl⁻ · súradnice vypočítané zo SMILES (RDKit)
+---
+a Cl1 HCl 0.000 -0.000

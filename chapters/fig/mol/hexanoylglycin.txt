@@ -1,0 +1,29 @@
+nazov: hexanoylglycín
+sumarny: C8H14NO3-
+smiles: CCCCCC(=O)NCC(=O)[O-]
+zdroj: PubChem CID 99463 (Hexanoylglycine, C8H15NO3) · overené 2026-10-28
+projekcia: skeletálny vzorec: šesťuhlíkový acyl viazaný amidovou väzbou na aminoskupinu glycínu; karboxylát pri pH 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -4.187 -0.235 <
+a C2 . -3.319 0.262
+a C3 . -2.455 -0.241
+a C4 . -1.587 0.256
+a C5 . -0.723 -0.247
+a C6 . 0.145 0.249
+a O1 O 0.149 1.250
+a N1 NH 1.009 -0.254
+a C7 . 1.877 0.243
+a C8 . 2.742 -0.260
+a O2 O 2.738 -1.260
+a O3 O^- 3.609 0.237
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 O1 2
+b C6 N1
+b N1 C7
+b C7 C8
+b C8 O2 2
+b C8 O3

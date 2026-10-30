@@ -1,0 +1,76 @@
+nazov: faktor aktivujúci trombocyty
+skratka: PAF
+sumarny: C26H54NO7P
+smiles: CCCCCCCCCCCCCCCCOC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(C)=O
+zdroj: PubChem CID 108156 (Platelet-activating factor, C26H54NO7P) · overené 2026-10-28
+projekcia: skeletálny vzorec; na C1 nasýtený alkyl (C16) éterovou väzbou, na C2 acetyl, na C3 fosfocholín · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -12.644 -0.098 <
+a C2 . -11.777 0.402
+a C3 . -10.912 -0.099
+a C4 . -10.045 0.400
+a C5 . -9.180 -0.100
+a C6 . -8.313 0.399
+a C7 . -7.448 -0.102
+a C8 . -6.581 0.398
+a C9 . -5.716 -0.103
+a C10 . -4.849 0.396
+a C11 . -3.984 -0.104
+a C12 . -3.117 0.395
+a C13 . -2.252 -0.106
+a C14 . -1.385 0.393
+a C15 . -0.520 -0.107
+a C16 . 0.347 0.392
+a O1 O 1.212 -0.109
+a C17 . 2.079 0.391
+a C18 . 2.944 -0.110
+a C19 . 3.811 0.389
+a O2 O 4.676 -0.111
+a P1 P 5.543 0.388
+a O3 O 6.042 -0.478
+a O4 ^-O 5.044 1.254 <
+a O5 O 6.409 0.887
+a C20 . 7.275 0.387
+a C21 . 8.141 0.886
+a N1 N^+ 9.007 0.385
+a C22 H_3C 8.506 -0.480 <
+a C23 CH_3 9.506 -0.481
+a C24 CH_3 9.873 0.884
+a O6 O 2.944 -1.110
+a C25 . 2.077 -1.609
+a O7 O 1.212 -1.109
+a C26 CH_3 2.076 -2.609
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 C10
+b C10 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 C15
+b C15 C16
+b C16 O1
+b O1 C17
+b C18 C17 w
+b C18 C19
+b C19 O2
+b O2 P1
+b P1 O3 2
+b P1 O4
+b P1 O5
+b O5 C20
+b C20 C21
+b C21 N1
+b N1 C22
+b N1 C23
+b N1 C24
+b C18 O6
+b O6 C25
+b C25 O7 2
+b C25 C26

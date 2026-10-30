@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 560" role="img" aria-labelledby="t-sfingolipidozy">
+<title id="t-sfingolipidozy">Rozklad sfingolipidov v lyzozóme a sfingolipidózy. Hydrolázy odštiepujú cukry od konca reťazca, takže posledný pripojený cukor odchádza prvý, až kým nezostane ceramid; ten ceramidáza rozštiepi na sfingozín a mastnú kyselinu. Gangliozid GM1 stratí galaktózu (β-galaktozidáza; deficit = GM1-gangliozidóza) a stane sa GM2; GM2 stratí N-acetylgalaktozamín (hexozaminidáza A; deficit = Tay-Sachsova choroba, pri deficite hexozaminidázy A aj B Sandhoffova choroba). GM3 stratí kyselinu N-acetylneuramínovú (neuraminidáza) a ostane laktozylceramid. Globozid stratí N-acetylgalaktozamín (hexozaminidáza A a B) a globotriaozylceramid galaktózu (α-galaktozidáza A; deficit = Fabryho choroba). Laktozylceramid stratí galaktózu a glukocerebrozid glukózu (β-glukozidáza; deficit = Gaucherova choroba). Sulfatid stratí sulfát (arylsulfatáza A; deficit = metachromatická leukodystrofia), galaktocerebrozid galaktózu (galaktocerebrozidáza; deficit = Krabbeho choroba). Sfingomyelín stratí fosfocholín (sfingomyelináza; deficit = Niemannova-Pickova choroba). Deficit ceramidázy je Farberova choroba.</title>
+<text class="cap" x="12" y="14">lyzozóm · cukry odchádzajú od konca</text>
+<uzol id="gm1" x="72" y="54" text="GM1" trieda="bx-m" w="84"/>
+<uzol id="gm2" x="262" y="54" text="GM2" trieda="bx-m" w="84"/>
+<uzol id="gm3" x="452" y="54" text="GM3" trieda="bx-m" w="84"/>
+<rx od="{gm1.r}" do="{gm2.l}" enzym="β-galaktozidáza (−Gal)" e="hore"/>
+<rx od="{gm2.r}" do="{gm3.l}" enzym="hexozaminidáza A (−GalNAc)" e="hore"/>
+<text class="t-inh" x="167" y="80" text-anchor="middle">✕ GM1-gangliozidóza</text>
+<text class="t-inh" x="357" y="80" text-anchor="middle">✕ Tay-Sachsova (A) · Sandhoffova (A+B)</text>
+
+<uzol id="gb4" x="56" y="150" text="globozid" w="84"/>
+<uzol id="gb3" x="240" y="150" text="globotriaozyl-|ceramid" w="110" h="38"/>
+<uzol id="lac" x="452" y="150" text="laktozylceramid|Gal–Glc–Cer" w="124" h="38"/>
+<rx od="{gb4.r}" do="{gb3.l}" enzym="hexozaminidáza|A a B" e="hore"/>
+<rx od="{gb3.r}" do="{lac.l}" enzym="α-galakto-|zidáza A" e="hore"/>
+<text class="t-inh" x="350" y="186" text-anchor="middle">✕ Fabryho (X-viazaná)</text>
+<rx od="{gm3.b}" do="{lac.t}" enzym="neuraminidáza (−NANA)" e="vpravo"/>
+
+<uzol id="glc" x="452" y="250" text="glukocerebrozid|Glc–Cer" trieda="bx-c" w="124" h="38"/>
+<rx od="{lac.b}" do="{glc.t}" enzym="β-galaktozidáza" e="vpravo"/>
+
+<mol v="ceramid-r" id="cer" x="596" y="372" m="0.85"/>
+<rx od="{glc.r+2,8}" do="{cer.t-10,-4}" cez="600,262" enzym="β-glukozidáza" e="vpravo"/>
+<text class="t-inh" x="648" y="300" text-anchor="middle">✕ Gaucherova</text>
+
+<uzol id="sm" x="262" y="344" text="sfingomyelín" w="110" href="#fig-sfingolipidy-synteza"/>
+<rx od="{sm.r}" do="{cer.l-6,-14}" enzym="sfingomyelináza (−fosfocholín)" e="hore"/>
+<text class="t-inh" x="404" y="368" text-anchor="middle">✕ Niemannova-Pickova (ASMD)</text>
+
+<uzol id="sul" x="72" y="452" text="sulfatid" w="84"/>
+<uzol id="gal" x="262" y="452" text="galaktocerebrozid|Gal–Cer" w="124" h="38"/>
+<rx od="{sul.r}" do="{gal.l}" enzym="arylsulfatáza A (−SO₄)" e="hore"/>
+<text class="t-inh" x="167" y="478" text-anchor="middle">✕ metachromatická</text>
+<text class="t-inh" x="167" y="490" text-anchor="middle">leukodystrofia</text>
+<rx od="{gal.r}" do="{cer.bl+10,4}" cez="470,452" enzym="galaktocerebrozidáza" e="dole"/>
+<text class="t-inh" x="420" y="492" text-anchor="middle">✕ Krabbeho</text>
+
+<uzol id="sfg" x="596" y="512" text="sfingozín + MK" w="120"/>
+<rx od="{cer.b+0,2}" do="{sfg.t}" enzym="ceramidáza" e="vlavo"/>
+<text class="t-inh" x="660" y="482" text-anchor="middle">✕ Farberova</text>
+<text class="sub" x="12" y="250">Cer = ceramid · Gal galaktóza</text>
+<text class="sub" x="12" y="262">Glc glukóza · GalNAc</text>
+<text class="sub" x="12" y="274">N-acetylgalaktozamín</text>
+<text class="sub" x="12" y="286">NANA kys. N-acetylneuramínová</text>
+<legenda x="20" y="552" polozky="rx,enz,odk"/>
+</svg>

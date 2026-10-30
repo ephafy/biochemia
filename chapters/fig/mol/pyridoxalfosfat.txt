@@ -1,0 +1,33 @@
+nazov: pyridoxalfosfát
+skratka: PLP
+sumarny: C8H8NO6P-2
+smiles: CC1=C(O)C(C=O)=C(COP(=O)([O-])[O-])C=N1
+zdroj: PubChem CID 1051 (Pyridoxal 5'-phosphate, C8H10NO6P) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 2.757 1.662
+a C2 . 1.892 1.160
+a N1 N 1.025 1.658
+a C3 . 0.160 1.156
+a C4 . 0.162 0.156
+a C5 . 1.029 -0.342
+a C6 . 1.894 0.160
+a O1 OH 2.761 -0.338
+a C7 . 1.031 -1.342
+a O2 O 0.166 -1.843
+a C8 . -0.703 -0.345
+a O3 O -1.570 0.153
+a P1 (P) -2.435 -0.349
+b C1 C2
+b C2 N1
+b N1 C3 2r
+b C3 C4
+b C4 C5 2r
+b C5 C6
+b C6 O1
+b C5 C7
+b C7 O2 2
+b C4 C8
+b C8 O3
+b O3 P1
+b C6 C2 2r

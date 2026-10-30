@@ -1,0 +1,37 @@
+nazov: inozitol-1,4,5-trisfosfát
+skratka: IP₃
+sumarny: C6H9O15P3-6
+smiles: O=P([O-])([O-])O[C@@H]1[C@H](O)[C@H](O)[C@@H](OP(=O)([O-])[O-])[C@H](OP(=O)([O-])[O-])[C@H]1O
+zdroj: PubChem CID 439456 (Ins(1,4,5)P3, C6H15O15P3) · overené 2026-10-28
+projekcia: skeletálny vzorec, forma pri pH ≈ 7; fosfáty na C1, C4 a C5 ako P v krúžku · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . 0.995 -0.559
+a C2 . 0.985 0.440
+a C3 . 0.111 0.927
+a C4 . -0.752 0.417
+a C5 . -0.740 -0.582
+a C6 . 0.133 -1.072
+a O1 O 0.129 -2.078
+a P1 (P) 0.982 -2.582
+a O2 HO -1.580 -1.093 <
+a O3 O -1.634 0.918
+a P2 (P) -2.519 0.423
+a O4 O 0.099 1.947
+a P3 (P) 0.968 2.485
+a O5 OH 1.829 0.928
+a O6 OH 1.880 -1.044
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 O1 h
+b O1 P1
+b C5 O2 w
+b C4 O3 h
+b O3 P2
+b C3 O4 w
+b O4 P3
+b C2 O5 h
+b C1 O6 h
+b C6 C1

@@ -1,0 +1,17 @@
+nazov: N-acetylglukózamín
+skratka: GlcNAc
+sumarny: C8H15NO6
+smiles: CC(=O)N[C@@H]1[C@H]([C@@H]([C@H](O[C@H]1O)CO)O)O
+zdroj: PubChem CID 24139 (N-acetyl-β-D-glukózamín) · overené 2026-10-19
+projekcia: Haworthov vzorec, β-D-glukopyranóza s acetamidoskupinou na C2 – stavebná jednotka glykozaminoglykánov a N-glykánov
+---
+kruh pyranoza C1 C2 C3 C4 C5 O5
++ O1 C1 u OH
++ N2 C2 d NH
++ C7 N2 330*1 .
++ O7 C7 30 O 2
++ C8 C7 270 CH_3
++ O3 C3 u OH
++ O4 C4 d HO <
++ C6 C5 u CH_2OH
+c C1 1 20

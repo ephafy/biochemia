@@ -1,0 +1,106 @@
+nazov: fosfatidylcholín (lecitín)
+skratka: PC 16:0/16:0
+sumarny: C40H80NO8P
+smiles: CCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCC
+zdroj: PubChem CID 452110 (Colfosceril Palmitate, C40H80NO8P) · overené 2026-10-19
+projekcia: skeletálny vzorec – príklad s dvoma palmitoylmi; fosfát ako anión, cholín ako katión · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -15.652 0.715 <
+a C2 . -14.786 1.214
+a C3 . -13.920 0.714
+a C4 . -13.054 1.213
+a C5 . -12.188 0.712
+a C6 . -11.322 1.212
+a C7 . -10.456 0.711
+a C8 . -9.590 1.210
+a C9 . -8.724 0.710
+a C10 . -7.858 1.209
+a C11 . -6.992 0.708
+a C12 . -6.126 1.208
+a C13 . -5.260 0.707
+a C14 . -4.394 1.206
+a C15 . -3.528 0.705
+a C16 . -2.662 1.205
+a O1 O -2.661 2.205
+a O2 O -1.796 0.704
+a C17 . -0.930 1.203
+a C18 . -0.064 0.703
+a C19 . -0.065 -0.297
+a O3 O 0.801 -0.798
+a P1 P 0.800 -1.798
+a O4 O 1.800 -1.799
+a O5 ^-O -0.200 -1.797 <
+a O6 O 0.799 -2.798
+a C20 . 1.665 -3.299
+a C21 . 1.664 -4.299
+a N1 N^+ 2.530 -4.799
+a C22 CH_3 3.030 -3.934
+a C23 CH_3 3.530 -4.800
+a C24 CH_3 2.529 -5.799
+a O7 O 0.802 1.202
+a C25 . 1.668 0.701
+a O8 O 1.667 -0.299
+a C26 . 2.534 1.201
+a C27 . 3.400 0.700
+a C28 . 4.266 1.199
+a C29 . 5.132 0.699
+a C30 . 5.998 1.198
+a C31 . 6.864 0.697
+a C32 . 7.730 1.196
+a C33 . 8.596 0.696
+a C34 . 9.462 1.195
+a C35 . 10.328 0.694
+a C36 . 11.194 1.194
+a C37 . 12.060 0.693
+a C38 . 12.926 1.192
+a C39 . 13.792 0.692
+a C40 CH_3 14.658 1.191
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 C10
+b C10 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 C15
+b C15 C16
+b C16 O1 2
+b C16 O2
+b O2 C17
+b C18 C17 h
+b C18 C19
+b C19 O3
+b O3 P1
+b P1 O4 2
+b P1 O5
+b P1 O6
+b O6 C20
+b C20 C21
+b C21 N1
+b N1 C22
+b N1 C23
+b N1 C24
+b C18 O7
+b O7 C25
+b C25 O8 2
+b C25 C26
+b C26 C27
+b C27 C28
+b C28 C29
+b C29 C30
+b C30 C31
+b C31 C32
+b C32 C33
+b C33 C34
+b C34 C35
+b C35 C36
+b C36 C37
+b C37 C38
+b C38 C39
+b C39 C40

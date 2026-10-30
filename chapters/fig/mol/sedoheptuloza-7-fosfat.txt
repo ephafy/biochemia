@@ -1,0 +1,24 @@
+nazov: sedoheptulóza-7-fosfát
+skratka: Sed-7-P
+sumarny: C7H15O10P
+smiles: C([C@H]([C@H]([C@H]([C@@H](C(=O)CO)O)O)O)O)OP(=O)(O)O
+zdroj: PubChem CID 165007 (D-sedoheptulóza-7-fosfát) · overené 2026-10-07
+projekcia: Fischerova projekcia; ketoheptóza – karbonyl na C2; OH na C3 vľavo, na C4, C5 a C6 vpravo; fosfát na C7 ako P v krúžku
+---
+a C1 CH_2OH 0 0
++ C2 C1 270 .
++ O2 C2 0 O 2
++ C3 C2 270 .
++ O3 C3 180 HO <
++ H3 C3 0 H
++ C4 C3 270 .
++ O4 C4 0 OH
++ H4 C4 180 H <
++ C5 C4 270 .
++ O5 C5 0 OH
++ H5 C5 180 H <
++ C6 C5 270 .
++ O6 C6 0 OH
++ H6 C6 180 H <
++ C7 C6 270 CH_2O
++ P7 C7 r*2.35 (P)

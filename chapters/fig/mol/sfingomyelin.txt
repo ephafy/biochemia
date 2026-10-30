@@ -1,0 +1,101 @@
+nazov: sfingomyelín
+sumarny: C39H79N2O6P
+smiles: CCCCCCCCCCCCC/C=C/[C@@H](O)[C@H](COP(=O)([O-])OCC[N+](C)(C)C)NC(=O)CCCCCCCCCCCCCCC
+zdroj: PubChem CID 9939941 (N-Palmitoylsphingomyelin, C39H79N2O6P) · overené 2026-10-19
+projekcia: skeletálny vzorec – príklad s palmitoylom; fosfocholín na C1 sfingozínu · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -14.411 1.231 <
+a C2 . -13.545 0.732
+a C3 . -12.679 1.232
+a C4 . -11.813 0.733
+a C5 . -10.947 1.234
+a C6 . -10.081 0.734
+a C7 . -9.215 1.235
+a C8 . -8.349 0.736
+a C9 . -7.483 1.236
+a C10 . -6.617 0.737
+a C11 . -5.751 1.238
+a C12 . -4.885 0.738
+a C13 . -4.019 1.239
+a C14 . -3.153 0.740
+a C15 . -2.287 1.240
+a C16 . -1.421 0.741
+a O1 O -1.420 -0.259
+a N1 NH -0.555 1.242
+a C17 . 0.311 0.743
+a C18 . 0.312 -0.257
+a O2 O -0.554 -0.758
+a P1 P -0.553 -1.758
+a O3 O 0.447 -1.757
+a O4 ^-O -1.553 -1.759 <
+a O5 O -0.552 -2.758
+a C19 . 0.314 -3.257
+a C20 . 0.315 -4.257
+a N2 N^+ 1.181 -4.757
+a C21 CH_3 1.681 -3.890
+a C22 CH_3 2.181 -4.756
+a C23 CH_3 1.182 -5.757
+a C24 . 1.177 1.243
+a C25 . 2.043 0.744
+a C26 . 2.909 1.245
+a C27 . 3.775 0.745
+a C28 . 4.641 1.246
+a C29 . 5.507 0.747
+a C30 . 6.373 1.247
+a C31 . 7.239 0.748
+a C32 . 8.105 1.249
+a C33 . 8.971 0.749
+a C34 . 9.837 1.250
+a C35 . 10.703 0.751
+a C36 . 11.569 1.252
+a C37 . 12.435 0.752
+a C38 . 13.301 1.253
+a C39 CH_3 14.167 0.754
+a O6 OH 1.176 2.243
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 C10
+b C10 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 C15
+b C15 C16
+b C16 O1 2
+b C16 N1
+b N1 C17
+b C17 C18 w
+b C18 O2
+b O2 P1
+b P1 O3 2
+b P1 O4
+b P1 O5
+b O5 C19
+b C19 C20
+b C20 N2
+b N2 C21
+b N2 C22
+b N2 C23
+b C17 C24
+b C24 C25
+b C25 C26 2l
+b C26 C27
+b C27 C28
+b C28 C29
+b C29 C30
+b C30 C31
+b C31 C32
+b C32 C33
+b C33 C34
+b C34 C35
+b C35 C36
+b C36 C37
+b C37 C38
+b C38 C39
+b C24 O6 w

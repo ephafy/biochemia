@@ -1,0 +1,13 @@
+nazov: etanolamín
+sumarny: C2H8NO+
+smiles: [NH3+]CCO
+zdroj: PubChem CID 700 (Ethanolamine, C2H7NO) · overené 2026-10-28
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . 0.433 0.250
+a C2 . -0.433 -0.250
+a O1 HO -1.299 0.249 <
+a N1 NH_3^+ 1.299 -0.249
+b C1 C2
+b C2 O1
+b C1 N1

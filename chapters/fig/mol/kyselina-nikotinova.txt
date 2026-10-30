@@ -1,0 +1,24 @@
+nazov: kyselina nikotínová (niacín)
+sumarny: C6H4NO2-
+smiles: O=C([O-])C1=CC=CN=C1
+zdroj: PubChem CID 938 (Nicotinic Acid, C6H5NO2) · overené 2026-10-29
+projekcia: skeletálny vzorec, anión pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . 0.869 1.276
+a C2 . 0.867 0.276
+a C3 . -0.000 -0.222
+a C4 . -0.865 0.279
+a N1 N -0.863 1.280
+a C5 . 0.004 1.778
+a C6 . -0.002 -1.222
+a O1 O -0.869 -1.720
+a O2 O^- 0.863 -1.724
+b C1 C2
+b C2 C3 2l
+b C3 C4
+b C4 N1 2l
+b N1 C5
+b C3 C6
+b C6 O1 2
+b C6 O2
+b C5 C1 2l

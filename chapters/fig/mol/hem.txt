@@ -1,0 +1,100 @@
+nazov: hém b
+skratka: Fe-protoporfyrín IX
+sumarny: C34H30FeN4O4-2
+smiles: C=CC1=C(C)C2=[N]3->[Fe]45<-[N]6=C(C=C7C(CCC(=O)[O-])=C(C)C(=C2)[N]74)C(CCC(=O)[O-])=C(C)C6=CC2=C(C=C)C(C)=C(C=C13)[N]25
+zdroj: PubChem CID 4973 (heme b, C34H32FeN4O4) a CID 4971 (protoporfyrín IX) · overené 2026-10-19
+projekcia: skeletálny vzorec; Fe²⁺ v strede porfyrínu viazané na štyri pyrolové dusíky, propionáty ako anióny pri pH 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 1.419 3.617
+a C2 . 0.920 2.753
+a C3 . -0.072 2.653
+a C4 . -0.291 1.677
+a C5 . -1.203 1.267
+a C6 . -1.422 0.291
+a N1 N -0.747 -0.459
+a C7 . -1.258 -1.330
+a C8 . -0.848 -2.242
+a C9 . 0.128 -2.461
+a C10 . 0.538 -3.373
+a C11 . 1.530 -3.273
+a C12 . 1.749 -2.297
+a N2 N 0.878 -1.786
+a C13 . 2.661 -1.887
+a C14 . 2.880 -0.911
+a C15 . 3.792 -0.501
+a C16 . 3.692 0.491
+a C17 . 2.717 0.710
+a N3 N 2.206 -0.161
+a C18 . 2.306 1.622
+a C19 . 1.330 1.841
+a N4 N 0.580 1.166
+a C20 CH_3 4.440 1.154
+a C21 . 4.656 -1.000
+a C22 CH_2 4.656 -2.000
+a C23 CH_3 2.193 -4.021
+a C24 . 0.039 -4.237
+a C25 CH_2 0.539 -5.103
+a C26 . -2.234 -1.111
+a C27 . -2.334 -0.119
+a C28 . -3.198 0.380
+a C29 . -4.064 -0.120
+a C30 . -4.930 0.380
+a O1 O -4.930 1.380
+a O2 ^-O -5.796 -0.120 <
+a C31 H_3C -2.982 -1.774 <
+a C32 . -0.735 3.401
+a C33 . -1.715 3.201
+a C34 . -2.378 3.949
+a O3 O -2.062 4.898
+a O4 ^-O -3.358 3.749 <
+a Fe1 Fe 0.704 -0.300
+b C1 C2
+b C2 C3 2r
+b C3 C4
+b C4 C5 2r
+b C5 C6
+b C6 N1 2l
+b N1 C7
+b C7 C8 2r
+b C8 C9
+b C9 C10 2r
+b C10 C11
+b C11 C12 2r
+b C12 N2
+b C12 C13
+b C13 C14 2r
+b C14 C15
+b C15 C16 2r
+b C16 C17
+b C17 N3 2r
+b C17 C18
+b C18 C19 2r
+b C19 N4
+b C16 C20
+b C15 C21
+b C21 C22 2
+b C11 C23
+b C10 C24
+b C24 C25 2
+b C7 C26
+b C26 C27 2l
+b C27 C28
+b C28 C29
+b C29 C30
+b C30 O1 2
+b C30 O2
+b C26 C31
+b C3 C32
+b C32 C33
+b C33 C34
+b C34 O3 2
+b C34 O4
+b C19 C2
+b N4 C4
+b C27 C6
+b N2 C9
+b N3 C14
+b N1 Fe1
+b N2 Fe1
+b N3 Fe1
+b N4 Fe1

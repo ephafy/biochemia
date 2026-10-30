@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 640" role="img" aria-labelledby="t-tag-fl-mapa">
+<title id="t-tag-fl-mapa">Mapa kapitoly: dve kostry, jedna križovatka. Hore glycerolová kostra: glukóza cez dihydroxyacetónfosfát (alebo glycerol v pečeni) dá glycerol-3-fosfát, ten s dvoma acylmi kyselinu fosfatidovú. Pri nej sa cesty delia: cez CDP-diacylglycerol vznikajú fosfatidylinozitol, fosfatidylglycerol a kardiolipín; po odstránení fosfátu diacylglycerol, z ktorého je buď triacylglycerol (zásoba v tukovom tkanive, vývoz z pečene vo VLDL), alebo s aktivovanou hlavou fosfatidylcholín a fosfatidyletanolamín. Z dihydroxyacetónfosfátu v peroxizóme vznikajú éterové lipidy. Dole sfingozínová kostra: serín a palmitoyl-CoA dajú ceramid, z neho sfingomyelín (fosfocholín dodá fosfatidylcholín) a glykosfingolipidy; tie rozkladá lyzozóm a jeho poruchy sú sfingolipidózy.</title>
+<text class="cap" x="12" y="14">glycerolová kostra</text>
+<uzol id="glc" x="58" y="56" text="glukóza" w="78"/>
+<uzol id="dhap" x="190" y="56" text="DHAP" w="70"/>
+<rx od="{glc.r}" do="{dhap.l}"/>
+<mol v="glycerol-3-fosfat" id="g3p" x="380" y="50"/>
+<rx od="{dhap.r}" do="{g3p.l-4,4}" ko="NADH>NAD⁺" e="hore"/>
+<uzol id="gro" x="610" y="56" text="glycerol (pečeň)" w="120"/>
+<rx od="{gro.l}" do="{g3p.r+4,4}" ko="ATP>ADP" e="hore"/>
+<uzol id="eter" x="104" y="150" text="plazmalogény, PAF|(peroxizóm)" w="140" h="40"/>
+<rx od="{dhap.b}" do="{eter.t+40,0}"/>
+
+<mol v="fosfatidat" id="pa" x="380" y="214" zv="O3,P3" href="#fig-synteza-tag"/>
+<rx od="{g3p.b+0,6}" do="{pa.t}" ko="2 acyl-CoA>2 CoA" e="vlavo"/>
+<text class="lblb" x="282" y="242" text-anchor="end">križovatka</text>
+<uzol id="cdp" x="602" y="206" text="CDP-diacylglycerol|→ PI, PG, kardiolipín" trieda="bx-c" w="150" h="40" href="#fig-fosfolipidy-cdp-dag"/>
+<rx od="{pa.r+6,-8}" do="{cdp.l}" ko="CTP>PPᵢ" e="hore"/>
+<mol v="diacylglycerol" id="dag" x="380" y="386"/>
+<rx od="{pa.b}" do="{dag.t}" ko="H₂O>Pᵢ" e="vlavo"/>
+<uzol id="tag" x="112" y="378" text="triacylglycerol|zásoba: tukové tkanivo|vývoz: VLDL z pečene" trieda="bx-m" w="160" h="52"/>
+<rx od="{dag.l-6,0}" do="{tag.r}" ko="acyl-CoA>CoA" e="hore"/>
+<uzol id="pc" x="602" y="378" text="fosfatidylcholín,|-etanolamín, -serín|membrány · surfaktant" trieda="bx-c" w="150" h="52" href="#fig-fosfolipidy-hlava"/>
+<rx od="{dag.r+6,0}" do="{pc.l}" ko="CDP-cholín>CMP" e="hore"/>
+<uzol id="lip" x="112" y="470" text="lipolýza → MK + glycerol" w="170" href="#fig-lipolyza"/>
+<rx od="{tag.b}" do="{lip.t}"/>
+
+<text class="cap" x="12" y="522">sfingozínová kostra</text>
+<uzol id="sp" x="112" y="566" text="serín + palmitoyl-CoA" w="170"/>
+<uzol id="cer" x="330" y="566" text="ceramid" trieda="bx-c" w="90" href="#fig-sfingolipidy-synteza"/>
+<rx od="{sp.r}" do="{cer.l}"/>
+<uzol id="sm" x="500" y="518" text="sfingomyelín" w="110"/>
+<uzol id="gsl" x="500" y="600" text="glykosfingolipidy" w="130"/>
+<rx od="{cer.r+0,-8}" do="{sm.l}"/>
+<rx od="{cer.r+0,8}" do="{gsl.l}"/>
+<rx od="{pc.b}" do="{sm.tr}" cez="610,480" ko="fosfocholín>" e="vpravo"/>
+<uzol id="lyz" x="646" y="572" text="lyzozóm|→ sfingolipidózy" trieda="bx-m" w="100" h="40" href="#fig-sfingolipidozy"/>
+<rx od="{gsl.r}" do="{lyz.l+0,8}"/>
+<rx od="{sm.r}" do="{lyz.l+0,-8}"/>
+<legenda x="20" y="632" polozky="rx,ko,zv,odk"/>
+</svg>

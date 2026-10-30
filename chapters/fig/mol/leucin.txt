@@ -1,0 +1,24 @@
+nazov: leucín
+skratka: Leu
+sumarny: C6H13NO2
+smiles: CC(C)C[C@H]([NH3+])C(=O)[O-]
+zdroj: PubChem CID 6106 (L-Leucine, C6H13NO2) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 -0.771 -2.111
+a C2 . -0.771 -1.111
+a C3 H_3C -1.636 -0.610 <
+a C4 . 0.096 -0.611
+a C5 . 0.097 0.389
+a C6 . 0.963 0.888
+a O1 O 1.829 0.387
+a O2 O^- 0.964 1.888
+a N1 ^+H_3N -0.769 0.889 <
+b C1 C2
+b C2 C3
+b C2 C4
+b C4 C5
+b C5 C6
+b C6 O1 2
+b C6 O2
+b C5 N1 w

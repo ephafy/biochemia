@@ -1,0 +1,35 @@
+nazov: kofeín
+sumarny: C8H10N4O2
+smiles: CN1C=NC2=C1C(=O)N(C)C(=O)N2C
+zdroj: PubChem CID 2519 (Caffeine, C8H10N4O2) · overené 2026-10-29
+projekcia: skeletálny vzorec; metylxantín · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 -1.617 1.806
+a N1 N -1.405 0.829
+a C2 . -2.071 0.083
+a N2 N -1.568 -0.781
+a C3 . -0.591 -0.569
+a C4 . -0.490 0.426
+a C5 . 0.422 0.836
+a O1 O 0.523 1.831
+a N3 N 1.233 0.251
+a C6 . 1.133 -0.744
+a O2 O 1.944 -1.328
+a N4 N 0.221 -1.154
+a C7 CH_3 0.120 -2.149
+a C8 CH_3 2.146 0.662
+b C1 N1
+b N1 C2
+b C2 N2 2r
+b N2 C3
+b C3 C4 2r
+b C4 C5
+b C5 O1 2
+b C5 N3
+b N3 C6
+b C6 O2 2
+b C6 N4
+b N4 C7
+b N3 C8
+b C4 N1
+b N4 C3

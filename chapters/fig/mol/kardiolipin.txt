@@ -1,0 +1,78 @@
+nazov: kardiolipín (difosfatidylglycerol)
+sumarny: C73H142O17P2
+smiles: CCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)(O)OCC(COP(=O)(O)OC[C@@H](COC(=O)CCCCCCCCCCCCCCC)OC(=O)CCCCCCCCCCCCCCC)O)OC(=O)CCCCCCCCCCCCCCC
+zdroj: PubChem CID 49859692 (CL(1'-(16:0/16:0),3'-(16:0/16:0)), C73H142O17P2) – vzor; R = reťazce (skrátený zápis) · overené 2026-10-28
+projekcia: skeletálny vzorec; dve kyseliny fosfatidové (R¹–R⁴ = reťazce MK) spojené cez fosfáty stredným glycerolom · súradnice vypočítané zo SMILES (RDKit)
+kontrola: nie
+---
+a Xe1 R^1 8.661 0.090
+a C1 . 7.795 -0.410
+a O1 O 7.796 -1.411
+a O2 O 6.928 0.089
+a C2 . 6.063 -0.412
+a C3 . 5.196 0.087
+a O3 O 5.195 1.087
+a C4 . 6.061 1.588
+a O4 O 6.928 1.089
+a I1 R^2 6.060 2.588
+a C5 . 4.331 -0.413
+a O5 O 3.464 0.086
+a P1 P 2.598 -0.415
+a O6 O 2.098 0.451
+a O7 O^- 3.099 -1.280
+a O8 O 1.733 -0.915
+a C6 . 0.866 -0.416
+a C7 . 0.001 -0.917
+a O9 OH 0.002 -1.917
+a C8 . -0.866 -0.417
+a O10 O -1.731 -0.918
+a P2 P -2.598 -0.419
+a O11 O -2.098 0.448
+a O12 ^-O -3.097 -1.285 <
+a O13 O -3.464 0.081
+a C9 . -4.330 -0.420
+a C10 . -5.196 0.079
+a O14 O -5.197 1.079
+a C11 . -6.064 1.579
+a O15 O -6.929 1.078
+a At1 R^3 -6.064 2.579
+a C12 . -6.062 -0.421
+a O16 O -6.929 0.078
+a C13 . -7.794 -0.423
+a O17 O -7.793 -1.423
+a Br1 R^4 -8.661 0.076
+b Xe1 C1
+b C1 O1 2
+b C1 O2
+b O2 C2
+b C2 C3
+b C3 O3
+b O3 C4
+b C4 O4 2
+b C4 I1
+b C3 C5
+b C5 O5
+b O5 P1
+b P1 O6 2
+b P1 O7
+b P1 O8
+b O8 C6
+b C6 C7
+b C7 O9
+b C7 C8
+b C8 O10
+b O10 P2
+b P2 O11 2
+b P2 O12
+b P2 O13
+b O13 C9
+b C9 C10
+b C10 O14
+b O14 C11
+b C11 O15 2
+b C11 At1
+b C10 C12
+b C12 O16
+b O16 C13
+b C13 O17 2
+b C13 Br1

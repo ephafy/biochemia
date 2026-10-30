@@ -1,0 +1,73 @@
+nazov: kyselina listová
+skratka: folát
+sumarny: C19H17N7O6-2
+smiles: NC1=NC2=C(N=C(CNC3=CC=C(C(=O)N[C@@H](CCC(=O)[O-])C(=O)[O-])C=C3)C=N2)C(=O)N1
+zdroj: PubChem CID 135398658 (Folic Acid, C19H19N7O6) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . 2.274 -0.438
+a C2 . 1.408 0.060
+a C3 . 0.541 -0.437
+a C4 . 0.540 -1.439
+a C5 . 1.406 -1.938
+a C6 . 2.273 -1.441
+a C7 . 3.138 -1.940
+a O1 O 3.137 -2.940
+a N1 NH 4.004 -1.441
+a C8 . 4.005 -0.441
+a C9 . 3.139 0.060
+a C10 . 3.140 1.060
+a C11 . 2.274 1.561
+a O2 O 1.408 1.061
+a O3 O^- 2.275 2.561
+a C12 . 4.871 0.059
+a O4 O 5.737 -0.442
+a O5 O^- 4.872 1.059
+a N2 NH -0.325 0.063
+a C13 . -1.191 -0.437
+a C14 . -2.056 0.063
+a C15 . -2.057 1.064
+a N3 N -2.921 1.564
+a C16 . -3.789 1.066
+a C17 . -3.788 0.065
+a N4 N -2.924 -0.435
+a C18 . -4.656 -0.433
+a O6 O -4.656 -1.434
+a N5 NH -5.520 0.067
+a C19 . -5.521 1.068
+a N6 N -4.653 1.566
+a N7 H_2N -6.386 1.568 <
+b C1 C2 2r
+b C2 C3
+b C3 C4 2r
+b C4 C5
+b C5 C6 2r
+b C6 C7
+b C7 O1 2
+b C7 N1
+b N1 C8
+b C8 C9 h
+b C9 C10
+b C10 C11
+b C11 O2 2
+b C11 O3
+b C8 C12
+b C12 O4 2
+b C12 O5
+b C3 N2
+b N2 C13
+b C13 C14
+b C14 C15
+b C15 N3 2r
+b N3 C16
+b C16 C17 2r
+b C17 N4
+b C17 C18
+b C18 O6 2
+b C18 N5
+b N5 C19
+b C19 N6 2l
+b C19 N7
+b C6 C1
+b N4 C14 2r
+b N6 C16

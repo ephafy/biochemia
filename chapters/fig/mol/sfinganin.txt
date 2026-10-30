@@ -1,0 +1,24 @@
+nazov: sfinganín (dihydrosfingozín)
+sumarny: C18H39NO2
+smiles: CCCCCCCCCCCCCCC[C@H]([C@H](CO)N)O
+zdroj: PubChem CID 91486 (Sphinganine, C18H39NO2) – vzor; R = reťazce (skrátený zápis) · overené 2026-10-28
+projekcia: skeletálny vzorec, forma pri pH ≈ 7; zvyšok reťazca skrátene C₁₃H₂₇; oxoskupina na C3 redukovaná na OH · súradnice vypočítané zo SMILES (RDKit)
+kontrola: nie
+---
+a Br1 C_{13}H_{27} -2.694 0.224
+a C1 . -1.828 -0.276
+a C2 . -0.962 0.223
+a C3 . -0.096 -0.278
+a C4 . 0.770 0.222
+a C5 . 1.636 -0.279
+a O1 OH 2.502 0.220
+a N1 NH_3^+ 0.771 1.222
+a O2 OH -0.097 -1.278
+b Br1 C1
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 O1
+b C4 N1 h
+b C3 O2 w

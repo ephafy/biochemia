@@ -1,0 +1,13 @@
+nazov: etylénglykol
+sumarny: C2H6O2
+smiles: OCCO
+zdroj: PubChem CID 174 (Ethylene Glycol, C2H6O2) · overené 2026-10-19
+projekcia: skeletálny vzorec · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . 0.433 0.250
+a C2 . -0.433 -0.250
+a O1 HO -1.299 0.249 <
+a O2 OH 1.299 -0.249
+b C1 C2
+b C2 O1
+b C1 O2

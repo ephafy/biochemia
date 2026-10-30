@@ -1,0 +1,54 @@
+nazov: glukocerebrozid (glukozylceramid)
+skratka: GlcCer
+sumarny: C50H95NO8
+smiles: CCCCCCCCCCCCC/C=C/[C@H]([C@H](CO[C@H]1[C@@H]([C@H]([C@@H]([C@H](O1)CO)O)O)O)NC(=O)CCCCCCCCCCCCCCC/C=C\CCCCCCCC)O
+zdroj: PubChem CID 20057358 (GlcCer(d18:1/26:1(17Z)), C50H95NO8) – vzor; R = reťazce (skrátený zápis) · overené 2026-10-28
+projekcia: skeletálny vzorec; ceramid, na C1 β-glukóza O-glykozidovou väzbou; R = reťazec MK, C₁₃H₂₇ = zvyšok sfingozínu · súradnice vypočítané zo SMILES (RDKit)
+kontrola: nie
+---
+a Br1 C_{13}H_{27} 3.273 -3.198
+a C1 . 2.408 -2.698
+a C2 . 2.408 -1.698
+a C3 . 1.543 -1.197
+a C4 . 1.544 -0.197
+a C5 . 0.678 0.304
+a O1 O -0.188 -0.196
+a C6 . -1.054 0.305
+a C7 . -1.053 1.305
+a C8 . -1.919 1.806
+a C9 . -2.785 1.307
+a C10 . -2.786 0.306
+a O2 O -1.920 -0.194
+a C11 . -3.652 -0.193
+a O3 HO -4.518 0.308 <
+a O4 HO -3.651 1.807 <
+a O5 OH -1.918 2.806
+a O6 OH -0.187 1.804
+a N1 NH 2.410 0.302
+a C12 . 3.276 -0.198
+a O7 O 3.275 -1.198
+a Xe1 R 4.142 0.301
+a O8 HO 0.676 -1.696 <
+b Br1 C1
+b C1 C2 2l
+b C2 C3
+b C3 C4
+b C4 C5 w
+b C5 O1
+b C6 O1 w
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 C10
+b C10 O2
+b C10 C11 w
+b C11 O3
+b C9 O4 h
+b C8 O5 w
+b C7 O6 h
+b C4 N1
+b N1 C12
+b C12 O7 2
+b C12 Xe1
+b C3 O8 h
+b O2 C6

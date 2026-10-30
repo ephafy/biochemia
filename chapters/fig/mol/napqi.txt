@@ -1,0 +1,29 @@
+nazov: N-acetyl-p-benzochinónimín
+skratka: NAPQI
+sumarny: C8H7NO2
+smiles: CC(=O)N=C1C=CC(=O)C=C1
+zdroj: PubChem CID 39763 (Acetimidoquinone, C8H7NO2) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 2.127 -1.862
+a C2 . 1.261 -1.363
+a O1 O 0.395 -1.863
+a N1 N 1.260 -0.363
+a C3 . 0.394 0.137
+a C4 . 0.393 1.137
+a C5 . -0.474 1.636
+a C6 . -1.339 1.135
+a O2 O -2.206 1.635
+a C7 . -1.338 0.135
+a C8 . -0.472 -0.364
+b C1 C2
+b C2 O1 2
+b C2 N1
+b N1 C3 2
+b C3 C4
+b C4 C5 2r
+b C5 C6
+b C6 O2 2
+b C6 C7
+b C7 C8 2r
+b C8 C3

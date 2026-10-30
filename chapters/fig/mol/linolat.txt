@@ -1,0 +1,46 @@
+nazov: linolát
+skratka: 18:2 ω-6
+sumarny: C18H31O2-
+smiles: CCCCC/C=C\C/C=C\CCCCCCCC(=O)[O-]
+zdroj: PubChem CID 5280450 (Linoleic Acid, C18H32O2) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C 1.116 4.802 <
+a C2 . 1.983 4.304
+a C3 . 1.985 3.304
+a C4 . 2.852 2.806
+a C5 . 2.854 1.806
+a C6 . 3.721 1.307
+a C7 . 3.723 0.307
+a C8 . 2.858 -0.194
+a C9 . 2.860 -1.194
+a C10 . 1.995 -1.696
+a C11 . 1.128 -1.198
+a C12 . 0.263 -1.700
+a C13 . -0.604 -1.201
+a C14 . -1.469 -1.703
+a C15 . -2.336 -1.205
+a C16 . -3.201 -1.706
+a C17 . -4.068 -1.208
+a C18 . -4.933 -1.710
+a O1 O -4.931 -2.710
+a O2 ^-O -5.800 -1.212 <
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7 2l
+b C7 C8
+b C8 C9
+b C9 C10 2l
+b C10 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 C15
+b C15 C16
+b C16 C17
+b C17 C18
+b C18 O1 2
+b C18 O2

@@ -1,0 +1,15 @@
+nazov: fosfoetanolamín
+sumarny: C2H7NO4P-
+smiles: [NH3+]CCOP(=O)([O-])[O-]
+zdroj: PubChem CID 1015 (Phosphoethanolamine, C2H8NO4P) · overené 2026-10-28
+projekcia: skeletálny vzorec, forma pri pH ≈ 7; fosfát ako P v krúžku · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . -1.624 0.436
+a C2 . -0.758 -0.063
+a O1 O 0.108 0.438
+a P1 (P) 0.974 -0.062
+a N1 ^+H_3N -2.490 -0.064 <
+b C1 C2
+b C2 O1
+b O1 P1
+b C1 N1

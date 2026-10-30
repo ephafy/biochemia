@@ -1,0 +1,26 @@
+nazov: glutamín
+skratka: Gln
+sumarny: C5H10N2O3
+smiles: NC(=O)CC[C@H]([NH3+])C(=O)[O-]
+zdroj: PubChem CID 5961 (L-Glutamine, C5H10N2O3) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . 0.086 -0.150
+a C2 . -0.780 -0.649
+a C3 . -0.781 -1.650
+a O1 O 0.085 -2.150
+a N1 H_2N -1.647 -2.149 <
+a C4 . 0.087 0.850
+a C5 . 0.954 1.349
+a O2 O 1.819 0.849
+a O3 O^- 0.955 2.349
+a N2 ^+H_3N -0.778 1.351 <
+b C1 C2
+b C2 C3
+b C3 O1 2
+b C3 N1
+b C1 C4
+b C4 C5
+b C5 O2 2
+b C5 O3
+b C4 N2 w

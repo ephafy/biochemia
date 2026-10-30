@@ -1,0 +1,12 @@
+nazov: azid
+skratka: N₃⁻
+sumarny: N3-
+smiles: [N-]=[N+]=[N-]
+zdroj: PubChem CID 33558 (Azide, N3-) · overené 2026-10-19
+projekcia: anión (lineárny) · súradnice vypočítané zo SMILES (RDKit)
+---
+a N1 N^- 1.251 -0.734
+a N2 N^+ -0.000 -0.000
+a N3 ^-N -0.863 0.506 <
+b N1 N2 2
+b N2 N3 2

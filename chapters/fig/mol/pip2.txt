@@ -1,0 +1,47 @@
+nazov: fosfatidylinozitol-4,5-bisfosfát
+skratka: PIP₂
+sumarny: C45H85O19P3
+smiles: CCCCCCCC/C=C\CCCCCCCC(=O)OC[C@H](COP(=O)(O)O[C@@H]1[C@@H]([C@@H]([C@H]([C@@H]([C@H]1O)OP(=O)(O)O)OP(=O)(O)O)O)O)OC(=O)CCCCCCC/C=C\CCCCCCCC
+zdroj: PubChem CID 5311358 (Phosphatidylinositol 4,5-bisphosphate, C45H85O19P3) – vzor; R = reťazce (skrátený zápis) · overené 2026-10-28
+projekcia: skeletálny vzorec; ako fosfatidylinozitol, navyše fosfáty na C4 a C5 inozitolu (P v krúžku); fosfolipáza C štiepi väzbu medzi C3 glycerolu a fosfátom · ručný zápis v orientácii triacylglycerolu; kruh inozitolu vypočítaný
+kontrola: nie
+---
+a C2 . 0 0
++ C1 C2 330 .
++ O1 C1 30 O
++ A1 O1 330 .
++ Q1 A1 270 O 2
++ R1 A1 30 R^1
++ C3 C2 210 .
++ O3 C3 150 O
++ O2 C2 90 O
++ A2 O2 30 .
++ Q2 A2 90 O 2
++ R2 A2 330 R^2
++ P3 O3 210 P
++ PA P3 270 O 2
++ PB P3 90 ^-O <
++ O4 P3 150 O
+a I1 . -4.330 -0.500
+a I2 . -4.330 -1.500
+a I3 . -5.196 -2.000
+a I4 . -6.062 -1.500
+a I5 . -6.062 -0.500
+a I6 . -5.196 0.000
+b O4 I1
+b I1 I2
+b I2 I3
+b I3 I4
+b I4 I5
+b I5 I6
+b I6 I1
++ X2 I2 30 OH
++ X3 I3 90 OH
++ X4 I4 150 O
++ P4 X4 150*1.15 (P)
++ X5 I5 210 O
++ P5 X5 210*1.15 (P)
++ X6 I6 270 OH
+c C1 1 270
+c C2 2 270
+c C3 3 270

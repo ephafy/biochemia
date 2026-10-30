@@ -1,0 +1,33 @@
+nazov: tyrozín
+skratka: Tyr
+sumarny: C9H11NO3
+smiles: [NH3+][C@@H](CC1=CC=C(O)C=C1)C(=O)[O-]
+zdroj: PubChem CID 6057 (L-Tyrosine, C9H11NO3) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . -0.866 0.039
+a C2 . -1.732 -0.460
+a C3 . -1.733 -1.460
+a C4 . -0.868 -1.961
+a C5 . -0.001 -1.462
+a C6 . -0.000 -0.461
+a C7 . 0.866 0.038
+a C8 . 0.867 1.038
+a C9 . 1.733 1.537
+a O1 O 2.599 1.036
+a O2 O^- 1.734 2.537
+a N1 ^+H_3N 0.001 1.539 <
+a O3 HO -2.600 -1.960 <
+b C1 C2 2r
+b C2 C3
+b C3 C4 2r
+b C4 C5
+b C5 C6 2r
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 O1 2
+b C9 O2
+b C8 N1 w
+b C3 O3
+b C6 C1

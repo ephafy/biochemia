@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 458" role="img" aria-labelledby="t-pdh-komplex">
+<title id="t-pdh-komplex">Pyruvátdehydrogenázový komplex. Celková reakcia: pyruvát, koenzým A a NAD+ dávajú acetyl-CoA, oxid uhličitý a NADH; reakcia je nevratná. V komplexe pracujú tri enzýmy za sebou. E1 s tiamíndifosfátom odštiepi oxid uhličitý a dvojuhlíkový zvyšok podrží na tiamíne. E2 má rameno s lipoamidom: zvyšok sa pri prenose na lipoamid oxiduje na acetyl a z ramena prejde na koenzým A. Lipoamid ostane redukovaný na dve SH-skupiny. E3 ho pomocou FAD znovu oxiduje na disulfid a vodíky odovzdá NAD+. Výrezy: vzorec tiamíndifosfátu s pracovným uhlíkom a tri stavy ramena – disulfid, acetyl na síre, dve SH-skupiny.</title>
+<text class="cap" x="12" y="14">matrix mitochondrie · pyruvát + CoA + NAD⁺ → acetyl-CoA + CO₂ + NADH</text>
+<mol v="pyruvat" id="pyr" x="78" y="76" zv="C1,O1a,O1b"/>
+<mol v="acetyl-coa" id="ac" x="612" y="76" zv="S1"/>
+<rx od="{pyr.r+6,0}" do="{ac.l-6,0}" typ="nevratna" enzym="pyruvátdehydrogenázový komplex" ko="CoA–SH>;NAD⁺>NADH;>CO₂" e="hore"/>
+<uzol id="e1" x="120" y="204" text="E1 · dekarboxyluje|tiamíndifosfát (B₁)" w="170" rk="tdp"/>
+<uzol id="e2" x="350" y="204" text="E2 · prenáša acetyl|lipoamid · koenzým A (B₅)" w="210"/>
+<uzol id="e3" x="588" y="204" text="E3 · obnoví lipoamid|FAD (B₂) · NAD⁺ (B₃)" w="180"/>
+<rx od="{e1.r}" do="{e2.l}"/>
+<rx od="{e2.r}" do="{e3.l}"/>
+<text class="sub" x="120" y="238" text-anchor="middle">CO₂ odíde, zvyšok C₂</text>
+<text class="sub" x="120" y="250" text-anchor="middle">ostane na tiamíne</text>
+<text class="sub" x="350" y="238" text-anchor="middle">zvyšok sa oxiduje na acetyl,</text>
+<text class="sub" x="350" y="250" text-anchor="middle">z ramena prejde na CoA</text>
+<text class="sub" x="588" y="238" text-anchor="middle">vodíky: lipoamid → FAD</text>
+<text class="sub" x="588" y="250" text-anchor="middle">→ NAD⁺ → NADH</text>
+<mol v="lipoamid" id="lo" x="120" y="350" zv="S1,S2,S1-S2"/>
+<mol v="dihydrolipoamid" id="lr" x="556" y="350" zv="S1,S2"/>
+<rx od="{lo.r+6,-22}" do="{lr.l-6,-22}" enzym="E1 + E2: rameno prevezme acetyl a odovzdá ho CoA" e="hore" rk="rameno" znak="388,340"/>
+<rx od="{lr.l-6,22}" do="{lo.r+6,22}" enzym="E3" ko="NAD⁺>NADH" e="dole"/>
+<legenda x="14" y="426" polozky="rx,nv,enz,ko,zv,rk" w="672"/>
+
+<vyrez id="tdp" h="226" nadpis="Tiamíndifosfát: koenzým, ktorý ruší väzbu vedľa ketoskupiny">
+<mol v="tiamindifosfat" id="t-tdp" x="176" y="106" zv="C2,H2,C2-H2"/>
+<text class="rk-n" x="{t-tdp.pN3.x}" y="194" text-anchor="middle">pyrimidínový kruh</text>
+<text class="rk-n" x="{t-tdp.S1.x}" y="194" text-anchor="middle">tiazolový kruh</text>
+<text class="rk-n" x="346" y="52"><tspan class="b">Pracovný uhlík</tspan> (modrý) leží medzi dusíkom a sírou.</text>
+<text class="rk-n" x="346" y="74">1. Naviaže sa naň ketouhlík pyruvátu.</text>
+<text class="rk-n" x="346" y="89">2. Väzba ku karboxylu sa tým preruší – karboxyl odíde ako CO₂.</text>
+<text class="rk-n" x="346" y="104">3. Na tiamíne ostane dvojuhlíkový zvyšok (hydroxyetyl,</text>
+<text class="rk-n" x="358" y="117">„aktívny acetaldehyd“); prevezme ho rameno E2.</text>
+<text class="rk-n" x="346" y="143">To isté robí vo 2-oxoglutarátdehydrogenáze a v transketoláze:</text>
+<text class="rk-n" x="346" y="156">vždy rozpojí uhlíky hneď vedľa ketoskupiny a zvyšok podrží.</text>
+<text class="rk-n" x="346" y="182">Tiamín je vitamín B₁; dva fosfáty mu pridá až bunka.</text>
+</vyrez>
+
+<vyrez id="rameno" h="330" nadpis="Tri stavy ramena E2: disulfid → acetyl na síre → dve SH-skupiny">
+<mol v="lipoamid" id="r-ox" x="120" y="86" zv="S1,S2,S1-S2"/>
+<mol v="acetyl-dihydrolipoamid" id="r-ac" x="528" y="86" zv="S1,CA,OA,CM,S1-CA,CA-OA,CA-CM"/>
+<mol v="dihydrolipoamid" id="r-red" x="528" y="216" zv="S1,S2"/>
+<rx od="{r-ox.r+6,-6}" do="{r-ac.l-6,-6}" krok="1" enzym="E1 → E2" ko="hydroxyetyl-TDP>TDP" e="hore"/>
+<rx od="{r-ac.b.x},{r-ac.b.y}" do="{r-ac.b.x},{r-red.t.y}" krok="2" enzym="E2" ko="CoA–SH>acetyl-CoA" e="vlavo"/>
+<rx od="{r-red.l-6,0}" do="{r-ox.b}" cez="120,216" krok="3" enzym="E3" ko="FAD>FADH₂" e="dole"/>
+<text class="rk-n" x="14" y="278">1. Zvyšok z tiamínu prejde na rameno a pri tom sa oxiduje na acetyl; disulfid sa otvorí.</text>
+<text class="rk-n" x="14" y="293">2. Acetyl preskočí na koenzým A – vznikne acetyl-CoA a na ramene ostanú dve SH-skupiny.</text>
+<text class="rk-n" x="14" y="308">3. E3 disulfid znova zatvorí; vodíky vezme FAD a hneď ich odovzdá ďalej: <tspan class="b">FADH₂ + NAD⁺ → FAD + NADH + H⁺</tspan>.</text>
+<text class="rk-n" x="26" y="321">FAD z enzýmu neodchádza, von ide až NADH.</text>
+</vyrez>
+</svg>

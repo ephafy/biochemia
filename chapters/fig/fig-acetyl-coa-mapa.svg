@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 356" role="img" aria-labelledby="t-acetyl-coa-mapa">
+<title id="t-acetyl-coa-mapa">Mapa kapitoly: brána, koleso a križovatka. Pyruvát z glukózy, laktátu a alanínu sa v mitochondrii nevratne mení pyruvátdehydrogenázovým komplexom na acetyl-CoA. Acetyl-CoA vzniká aj z mastných kyselín, ketogénnych aminokyselín, ketolátok a etanolu. V citrátovom cykle sa acetyl spáli na dva oxidy uhličité a energia sa uloží do troch NADH, jedného FADH2 a jedného GTP, ktoré spracuje dýchací reťazec. Pyruvátkarboxyláza z pyruvátu, oxidu uhličitého a ATP dopĺňa oxalacetát cyklu; aktivuje ju acetyl-CoA. Acetyl-CoA je aj východiskom syntézy mastných kyselín, cholesterolu a ketolátok.</title>
+<text class="cap" x="12" y="14">matrix mitochondrie</text>
+<uzol id="src" x="84" y="62" text="glukóza|laktát · alanín"/>
+<uzol id="pyr" x="250" y="62" text="pyruvát" trieda="bx-c" w="110"/>
+<rx od="{src.r}" do="{pyr.l}"/>
+<uzol id="ac" x="250" y="176" text="acetyl-CoA" trieda="bx-c" w="110"/>
+<rx od="{pyr.b}" do="{ac.t}" typ="nevratna" enzym="pyruvátdehydrogenázový|komplex (brána)" ko="NAD⁺>NADH;>CO₂" e="vlavo" href="#fig-pdh-komplex" tip="Obr. 6.3: pyruvátdehydrogenázový komplex" znak="113,116"/>
+<uzol id="mk" x="60" y="176" text="MK" href="08_lipidy_mastne_kyseliny#fig-beta-oxidacia" tip="Kapitola 8: β-oxidácia"/>
+<rx od="{mk.r}" do="{ac.l}"/>
+<text class="sub" x="138" y="168" text-anchor="middle">β-oxidácia</text>
+<uzol id="ost" x="96" y="262" text="ketogénne aminokyseliny|ketolátky · etanol"/>
+<rx od="{ost.r}" do="{ac.bl}" cez="210,262"/>
+<uzol id="cyc" x="540" y="176" text="citrátový cyklus (koleso)|2 CO₂ · 3 NADH · FADH₂ · GTP" trieda="bx-m" href="#fig-citratovy-cyklus" tip="Obr. 6.5: citrátový cyklus zo vzorcov"/>
+<rx od="{ac.r}" do="{cyc.l}" typ="nevratna"/>
+<rx od="{pyr.r}" do="{cyc.t}" cez="540,62" typ="nevratna" enzym="pyruvátkarboxyláza" akt="acetyl-CoA" e="hore"/>
+<text class="sub" x="548" y="108">+ CO₂ + ATP → oxalacetát:</text>
+<text class="sub" x="548" y="120">doplnenie cyklu</text>
+<uzol id="dr" x="540" y="284" text="dýchací reťazec → ATP" href="07_biologicke_oxidacie#fig-dychaci-retazec" tip="Kapitola 7: dýchací reťazec"/>
+<rx od="{cyc.b}" do="{dr.t}"/>
+<uzol id="syn" x="300" y="284" text="syntéza MK a cholesterolu|ketolátky (pečeň)" href="08_lipidy_mastne_kyseliny#fig-citrat-clnok" tip="Kapitola 8: acetyl von z mitochondrie ako citrát"/>
+<rx od="{ac.b}" do="{syn.t-50,0}"/>
+<text class="sub" x="12" y="322">z acetyl-CoA cesta späť k pyruvátu ani ku glukóze nevedie</text>
+<legenda x="14" y="344" polozky="nv,enz,ko,akt,odk" w="672"/>
+</svg>

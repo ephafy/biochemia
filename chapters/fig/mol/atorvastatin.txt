@@ -1,0 +1,91 @@
+nazov: atorvastatín
+sumarny: C33H34FN2O5-
+smiles: CC(C)C1=C(C(=O)NC2=CC=CC=C2)C(C2=CC=CC=C2)=C(C2=CC=C(F)C=C2)N1CC[C@@H](O)C[C@@H](O)CC(=O)[O-]
+zdroj: PubChem CID 60823 (Atorvastatin, C33H35FN2O5) · overené 2026-10-19
+projekcia: skeletálny vzorec, karboxylát pri pH 7 (príklad statínu) · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 1.999 -2.474
+a C2 . 1.048 -2.165
+a C3 H_3C 0.304 -2.833 <
+a C4 . 0.841 -1.185
+a C5 . 1.511 -0.444
+a C6 . 1.011 0.423
+a C7 . 0.033 0.215
+a N1 N -0.073 -0.779
+a C8 . -0.939 -1.278
+a C9 . -1.805 -0.777
+a C10 . -2.671 -1.276
+a C11 . -3.537 -0.776
+a C12 . -4.403 -1.275
+a C13 . -5.269 -0.774
+a C14 . -6.135 -1.274
+a O1 O -6.136 -2.274
+a O2 ^-O -7.001 -0.773 <
+a O3 OH -4.404 -2.275
+a O4 OH -2.672 -2.276
+a C15 . -0.710 0.885
+a C16 . -0.501 1.864
+a C17 . -1.245 2.533
+a C18 . -2.196 2.225
+a C19 . -2.404 1.246
+a C20 . -1.661 0.578
+a F1 F -2.939 2.893
+a C21 . 1.419 1.337
+a C22 . 2.413 1.440
+a C23 . 2.821 2.353
+a C24 . 2.233 3.163
+a C25 . 1.239 3.059
+a C26 . 0.831 2.146
+a C27 . 2.505 -0.548
+a O5 O 2.910 -1.462
+a N2 NH 3.093 0.260
+a C28 . 4.087 0.154
+a C29 . 4.494 -0.759
+a C30 . 5.488 -0.865
+a C31 . 6.077 -0.056
+a C32 . 5.670 0.857
+a C33 . 4.676 0.963
+b C1 C2
+b C2 C3
+b C2 C4
+b C4 C5 2r
+b C5 C6
+b C6 C7 2r
+b C7 N1
+b N1 C8
+b C8 C9
+b C9 C10
+b C10 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 O1 2
+b C14 O2
+b C12 O3 h
+b C10 O4 h
+b C7 C15
+b C15 C16
+b C16 C17 2r
+b C17 C18
+b C18 C19 2r
+b C19 C20
+b C18 F1
+b C6 C21
+b C21 C22 2r
+b C22 C23
+b C23 C24 2r
+b C24 C25
+b C25 C26 2r
+b C5 C27
+b C27 O5 2
+b C27 N2
+b N2 C28
+b C28 C29 2r
+b C29 C30
+b C30 C31 2r
+b C31 C32
+b C32 C33 2r
+b N1 C4
+b C20 C15 2r
+b C26 C21
+b C33 C28

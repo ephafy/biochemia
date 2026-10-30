@@ -1,0 +1,72 @@
+nazov: lyzofosfatidylcholín (lyzolecitín)
+skratka: lyzo-PC 16:0
+sumarny: C24H50NO7P
+smiles: CCCCCCCCCCCCCCCC(=O)OC[C@@H](O)COP(=O)([O-])OCC[N+](C)(C)C
+zdroj: PubChem CID 460602 (1-Palmitoyl-sn-glycero-3-phosphocholine, C24H50NO7P) · overené 2026-10-19
+projekcia: skeletálny vzorec – príklad s palmitoylom na C1; bez MK na C2 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -12.492 -0.301 <
+a C2 . -11.625 0.198
+a C3 . -10.760 -0.303
+a C4 . -9.893 0.197
+a C5 . -9.028 -0.304
+a C6 . -8.161 0.195
+a C7 . -7.296 -0.305
+a C8 . -6.429 0.194
+a C9 . -5.564 -0.307
+a C10 . -4.697 0.193
+a C11 . -3.832 -0.308
+a C12 . -2.965 0.191
+a C13 . -2.100 -0.309
+a C14 . -1.233 0.190
+a C15 . -0.368 -0.311
+a C16 . 0.499 0.188
+a O1 O 0.500 1.188
+a O2 O 1.364 -0.312
+a C17 . 2.231 0.187
+a C18 . 3.096 -0.314
+a C19 . 3.963 0.186
+a O3 O 4.828 -0.315
+a P1 P 5.695 0.184
+a O4 O 6.194 -0.682
+a O5 ^-O 5.195 1.051 <
+a O6 O 6.561 0.684
+a C20 . 7.427 0.183
+a C21 . 8.293 0.682
+a N1 N^+ 9.159 0.182
+a C22 H_3C 8.658 -0.684 <
+a C23 CH_3 9.658 -0.685
+a C24 CH_3 10.025 0.681
+a O7 OH 3.096 -1.314
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 C10
+b C10 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 C15
+b C15 C16
+b C16 O1 2
+b C16 O2
+b O2 C17
+b C17 C18
+b C18 C19
+b C19 O3
+b O3 P1
+b P1 O4 2
+b P1 O5
+b P1 O6
+b O6 C20
+b C20 C21
+b C21 N1
+b N1 C22
+b N1 C23
+b N1 C24
+b C18 O7 w

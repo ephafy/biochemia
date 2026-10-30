@@ -1,0 +1,76 @@
+nazov: orlistat
+sumarny: C29H53NO5
+smiles: CCCCCCCCCCC[C@@H](C[C@@H]1OC(=O)[C@H]1CCCCCC)OC(=O)[C@H](CC(C)C)NC=O
+zdroj: PubChem CID 3034010 (Orlistat, C29H53NO5) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 2.922 -7.958
+a C2 . 2.924 -6.958
+a C3 . 2.059 -6.456
+a C4 . 2.061 -5.456
+a C5 . 1.196 -4.954
+a C6 . 1.198 -3.954
+a C7 . 0.333 -3.453
+a C8 . 0.335 -2.453
+a C9 . -0.530 -1.951
+a C10 . -0.528 -0.951
+a C11 . -1.393 -0.449
+a C12 . -1.391 0.551
+a C13 . -0.524 1.049
+a C14 . 0.341 0.547
+a C15 . 1.308 0.804
+a C16 . 1.565 -0.162
+a O1 O 2.430 -0.664
+a O2 O 0.598 -0.419
+a C17 . 1.809 1.669
+a C18 . 2.809 1.667
+a C19 . 3.311 2.532
+a C20 . 4.311 2.530
+a C21 . 4.813 3.395
+a C22 CH_3 5.813 3.393
+a O3 O -2.256 1.052
+a C23 . -2.254 2.052
+a O4 O -1.387 2.551
+a C24 . -3.119 2.554
+a C25 . -3.117 3.554
+a C26 . -3.982 4.056
+a C27 CH_3 -3.980 5.056
+a C28 H_3C -4.849 3.558 <
+a N1 NH -3.986 2.056
+a C29 . -3.988 1.056
+a O5 O -4.855 0.558
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 C10
+b C10 C11
+b C12 C11 w
+b C12 C13
+b C14 C13 h
+b C14 C15
+b C15 C16
+b C16 O1 2
+b C16 O2
+b C15 C17 w
+b C17 C18
+b C18 C19
+b C19 C20
+b C20 C21
+b C21 C22
+b C12 O3
+b O3 C23
+b C23 O4 2
+b C23 C24
+b C24 C25 h
+b C25 C26
+b C26 C27
+b C26 C28
+b C24 N1
+b N1 C29
+b C29 O5 2
+b O2 C14

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 640" role="img" aria-labelledby="t-fosfolipidy-hlava">
+<title id="t-fosfolipidy-hlava">Syntéza fosfatidylcholínu a fosfatidyletanolamínu cez aktivovanú hlavu a premeny hláv. Cholín sa fosforyluje cholínkinázou (ATP) na fosfocholín; cytidylyltransferáza ho s CTP zmení na CDP-cholín a uvoľní difosfát – tento krok riadi rýchlosť a zapína ho naviazanie enzýmu na membránu chudobnú na fosfatidylcholín. Cholínfosfotransferáza prenesie fosfocholín z CDP-cholínu na 1,2-diacylglycerol; vznikne fosfatidylcholín a uvoľní sa CMP. Etanolamín ide tými istými tromi krokmi k fosfatidyletanolamínu. Fosfatidylserín vzniká výmenou etanolamínu fosfatidyletanolamínu za serín a dekarboxyláciou (pyridoxalfosfát) sa mení späť na fosfatidyletanolamín. V pečeni fosfatidyletanolamín dostane tri metyly zo S-adenozylmetionínu a stane sa fosfatidylcholínom.</title>
+<text class="cap" x="12" y="14">endoplazmatické retikulum · cesta cez aktivovanú hlavu (CDP-alkohol)</text>
+<mol v="cholin" id="ch" x="62" y="78"/>
+<mol v="fosfocholin" id="pch" x="250" y="78"/>
+<mol v="cdp-cholin" id="cdpch" x="552" y="84" m="0.74"/>
+<rx od="{ch.r+4,0}" do="{pch.l-4,0}" enzym="cholínkináza" ko="ATP>ADP" e="hore"/>
+<rx od="{pch.r+4,0}" do="{cdpch.l-2,10}" enzym="cytidylyltransferáza|(CCT) – riadiaci krok" ko="CTP>PPᵢ" akt="membrána bez PC" e="hore" id="cct"/>
+
+<mol v="diacylglycerol" id="dag" x="110" y="258"/>
+<mol v="fosfatidylcholin-r" id="pc" x="520" y="268" zv="PB,P3,PA,O4,H1,H2,N"/>
+<rx od="{cdpch.b+0,4}" do="{pc.t+0,-4}" enzym="cholínfosfo-|transferáza" ko=">CMP" e="vlavo" id="cpt"/>
+<rx od="{dag.r+6,0}" do="{pc.l-6,4}"/>
+
+<mol v="fosfatidyletanolamin" id="pe" x="150" y="480"/>
+<mol v="fosfatidylserin" id="ps" x="530" y="486"/>
+<rx od="{pe.r+8,-26}" do="{ps.l-8,-26}" enzym="výmena báz" ko="serín>etanolamín" e="dole" id="vym"/>
+<rx od="{ps.l-8,30}" do="{pe.r+8,30}" enzym="PS-dekarboxyláza (PLP)" ko=">CO₂" e="hore" id="dek"/>
+<rx od="{pe.t+60,-6}" do="{pc.bl+30,6}" cez="330,360" enzym="metyltransferáza|(pečeň)" ko="3 SAM>3 SAH" e="vlavo" id="met"/>
+<uzol id="eta" x="150" y="602" text="etanolamín → fosfoetanolamín → CDP-etanolamín|(tie isté tri kroky ako pri cholíne) + DAG" w="300" h="40"/>
+<rx od="{eta.t}" do="{pe.b}"/>
+<text class="sub" x="530" y="574" text-anchor="middle">serín: hlava nesie záporný náboj</text>
+<text class="sub" x="520" y="356" text-anchor="middle">modro: fosfocholín, ktorý prišiel z CDP-cholínu</text>
+<legenda x="20" y="632" polozky="rx,enz,ko,akt,zv"/>
+</svg>

@@ -1,0 +1,20 @@
+nazov: furfural
+sumarny: C5H4O2
+smiles: O=CC1=CC=CO1
+zdroj: PubChem CID 7362 (Furfural, C5H4O2) · overené 2026-10-19
+projekcia: skeletálny vzorec · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . 0.929 -0.969
+a C2 . 1.428 -0.102
+a O1 O 0.758 0.640
+a C3 . -0.155 0.232
+a C4 . -0.050 -0.762
+a C5 . -1.022 0.731
+a O2 O -1.887 0.230
+b C1 C2 2r
+b C2 O1
+b O1 C3
+b C3 C4 2r
+b C3 C5
+b C5 O2 2
+b C4 C1

@@ -1,0 +1,12 @@
+nazov: oxid uhličitý
+skratka: CO₂
+sumarny: CO2
+smiles: O=C=O
+zdroj: PubChem CID 280 (Carbon Dioxide, CO2) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · lineárna molekula, zapísaná ručne
+---
+a O1 O -1 0
+a C1 C 0 0
+a O2 O 1 0
+b O1 C1 2
+b C1 O2 2

@@ -1,0 +1,49 @@
+nazov: kyselina N-acetylneuramínová
+skratka: Neu5Ac
+sumarny: C11H18NO9-
+smiles: CC(=O)N[C@H]1[C@H]([C@H](O)[C@H](O)CO)OC(O)(C(=O)[O-])C[C@@H]1O
+zdroj: PubChem CID 439197 (N-Acetyl-Neuraminic Acid, C11H19NO9) · overené 2026-10-19
+projekcia: skeletálny vzorec (kruh s 9 uhlíkmi sa Haworthovým vzorcom kreslí ťažko), karboxylát pri pH 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 1.488 -3.138
+a C2 . 1.490 -2.138
+a O1 O 2.357 -1.640
+a N1 NH 0.625 -1.636
+a C3 . 0.627 -0.636
+a C4 . 1.494 -0.138
+a C5 . 1.496 0.862
+a C6 . 0.631 1.364
+a O2 O -0.236 0.866
+a C7 . -0.238 -0.134
+a C8 . -1.105 -0.633
+a C9 . -1.970 -0.131
+a C10 . -2.837 -0.629
+a O3 HO -3.702 -0.127 <
+a O4 OH -1.968 0.869
+a O5 OH -1.107 -1.633
+a C11 . -0.011 2.131
+a O6 O -0.996 1.960
+a O7 O^- 0.333 3.070
+a O8 OH 1.275 2.129
+a O9 OH 2.359 -0.640
+b C1 C2
+b C2 O1 2
+b C2 N1
+b C3 N1 h
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 O2
+b C7 O2 w
+b C7 C8
+b C8 C9
+b C9 C10
+b C10 O3
+b C9 O4 h
+b C8 O5 w
+b C6 C11
+b C11 O6 2
+b C11 O7
+b C6 O8
+b C4 O9 w
+b C7 C3

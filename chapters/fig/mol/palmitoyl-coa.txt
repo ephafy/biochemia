@@ -1,0 +1,45 @@
+nazov: palmitoyl-CoA
+sumarny: C37H62N7O17P3S-4
+smiles: CCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)[C@@H](C(C)(C)COP(=O)([O-])OP(=O)([O-])OC[C@@H]1[C@H]([C@H]([C@@H](O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)([O-])[O-])O
+zdroj: PubChem CID 644109 (palmitoyl CoA, C37H66N7O17P3S) · overené 2026-10-19
+projekcia: skeletálny vzorec: palmitoyl (16 uhlíkov) viazaný tioesterom na síru koenzýmu A; koenzým A skratkou (celý vzorec: koenzym-a-plny) · súradnice vypočítané zo SMILES (RDKit)
+kontrola: nie
+kontrola: nie
+---
+a C1 H_3C -7.658 0.310 <
+a C2 . -6.792 -0.190
+a C3 . -5.926 0.311
+a C4 . -5.059 -0.188
+a C5 . -4.194 0.313
+a C6 . -3.327 -0.187
+a C7 . -2.462 0.314
+a C8 . -1.595 -0.185
+a C9 . -0.730 0.315
+a C10 . 0.137 -0.184
+a C11 . 1.003 0.317
+a C12 . 1.869 -0.183
+a C13 . 2.735 0.318
+a C14 . 3.601 -0.181
+a C15 . 4.467 0.319
+a C16 . 5.333 -0.180
+a O1 O 5.334 -1.180
+a S1 S 6.199 0.321
+a C17 CoA 7.065 -0.179
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 C10
+b C10 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 C15
+b C15 C16
+b C16 O1 2
+b C16 S1
+b S1 C17

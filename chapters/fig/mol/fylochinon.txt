@@ -1,0 +1,74 @@
+nazov: fylochinón
+skratka: vitamín K₁
+sumarny: C31H46O2
+smiles: CC1=C(C/C=C(\C)CCC[C@H](C)CCC[C@H](C)CCCC(C)C)C(=O)C2=CC=CC=C2C1=O
+zdroj: PubChem CID 5284607 (Phylloquinone, C31H46O2) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 4.903 1.565
+a C2 . 4.905 0.564
+a C3 . 4.040 0.063
+a C4 . 4.043 -0.938
+a O1 O 3.177 -1.439
+a C5 . 4.909 -1.435
+a C6 . 4.911 -2.436
+a C7 . 5.776 -2.936
+a C8 . 6.640 -2.433
+a C9 . 6.641 -1.433
+a C10 . 5.774 -0.935
+a C11 . 5.773 0.067
+a O2 O 6.637 0.568
+a C12 . 3.174 0.562
+a C13 . 2.309 0.061
+a C14 . 1.443 0.561
+a C15 CH_3 1.443 1.561
+a C16 . 0.577 0.061
+a C17 . -0.289 0.561
+a C18 . -1.154 0.060
+a C19 . -2.021 0.559
+a C20 CH_3 -2.022 1.559
+a C21 . -2.886 0.058
+a C22 . -3.753 0.558
+a C23 . -4.618 0.057
+a C24 . -5.485 0.556
+a C25 CH_3 -5.486 1.556
+a C26 . -6.350 0.056
+a C27 . -7.217 0.555
+a C28 . -8.082 0.054
+a C29 . -8.949 0.554
+a C30 H_3C -9.814 0.053 <
+a C31 CH_3 -8.950 1.554
+b C1 C2
+b C2 C3 2r
+b C3 C4
+b C4 O1 2
+b C4 C5
+b C5 C6 2r
+b C6 C7
+b C7 C8 2r
+b C8 C9
+b C9 C10 2r
+b C10 C11
+b C11 O2 2
+b C3 C12
+b C12 C13
+b C13 C14 2l
+b C14 C15
+b C14 C16
+b C16 C17
+b C17 C18
+b C18 C19
+b C19 C20 h
+b C19 C21
+b C21 C22
+b C22 C23
+b C23 C24
+b C24 C25 h
+b C24 C26
+b C26 C27
+b C27 C28
+b C28 C29
+b C29 C30
+b C29 C31
+b C11 C2
+b C10 C5

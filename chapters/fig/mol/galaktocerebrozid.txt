@@ -1,0 +1,110 @@
+nazov: galaktocerebrozid
+sumarny: C43H83NO8
+smiles: CCCCCCCCCCCCCC/C=C/[C@@H](O)[C@H](CO[C@@H]1O[C@H](CO)[C@H](O)[C@H](O)[C@H]1O)NC(=O)CCCCCCCCCCCCCCCCC
+zdroj: PubChem CID 52949283 (Galactosylceramide, C43H83NO8) · overené 2026-10-19
+projekcia: skeletálny vzorec – príklad (stearoyl); galaktóza viazaná β-glykozidovou väzbou na C1 ceramidu · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -15.620 1.205 <
+a C2 . -14.755 0.704
+a C3 . -13.888 1.203
+a C4 . -13.023 0.703
+a C5 . -12.156 1.202
+a C6 . -11.291 0.701
+a C7 . -10.424 1.201
+a C8 . -9.559 0.700
+a C9 . -8.692 1.199
+a C10 . -7.827 0.699
+a C11 . -6.960 1.198
+a C12 . -6.095 0.697
+a C13 . -5.228 1.197
+a C14 . -4.363 0.696
+a C15 . -3.496 1.195
+a C16 . -2.631 0.694
+a C17 . -1.764 1.194
+a C18 . -0.899 0.693
+a O1 O -0.900 -0.307
+a N1 NH -0.032 1.192
+a C19 . 0.833 0.692
+a C20 . 0.832 -0.308
+a O2 O -0.034 -0.808
+a C21 . -0.035 -1.808
+a C22 . 0.831 -2.308
+a C23 . 0.830 -3.308
+a C24 . -0.036 -3.807
+a C25 . -0.902 -3.307
+a O3 O -0.901 -2.307
+a C26 . -1.768 -3.806
+a O4 OH -1.769 -4.806
+a O5 OH -0.037 -4.808
+a O6 OH 1.696 -3.809
+a O7 OH 1.697 -1.809
+a C27 . 1.700 1.191
+a C28 . 2.565 0.690
+a C29 . 3.432 1.190
+a C30 . 4.297 0.689
+a C31 . 5.164 1.188
+a C32 . 6.029 0.688
+a C33 . 6.896 1.187
+a C34 . 7.761 0.686
+a C35 . 8.628 1.186
+a C36 . 9.493 0.685
+a C37 . 10.360 1.184
+a C38 . 11.225 0.683
+a C39 . 12.092 1.183
+a C40 . 12.957 0.682
+a C41 . 13.824 1.181
+a C42 . 14.689 0.681
+a C43 CH_3 15.556 1.180
+a O8 OH 1.700 2.191
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 C10
+b C10 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 C15
+b C15 C16
+b C16 C17
+b C17 C18
+b C18 O1 2
+b C18 N1
+b N1 C19
+b C19 C20 w
+b C20 O2
+b C21 O2 h
+b C21 C22
+b C22 C23
+b C23 C24
+b C24 C25
+b C25 O3
+b C25 C26 h
+b C26 O4
+b C24 O5 h
+b C23 O6 h
+b C22 O7 w
+b C19 C27
+b C27 C28
+b C28 C29 2r
+b C29 C30
+b C30 C31
+b C31 C32
+b C32 C33
+b C33 C34
+b C34 C35
+b C35 C36
+b C36 C37
+b C37 C38
+b C38 C39
+b C39 C40
+b C40 C41
+b C41 C42
+b C42 C43
+b C27 O8 w
+b O3 C21

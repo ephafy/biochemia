@@ -1,0 +1,29 @@
+nazov: histidín
+skratka: His
+sumarny: C6H9N3O2
+smiles: [NH3+][C@@H](CC1=CN=CN1)C(=O)[O-]
+zdroj: PubChem CID 6274 (L-Histidine, C6H9N3O2) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . -1.286 -0.359
+a C2 . -0.371 -0.763
+a N1 NH -0.471 -1.758
+a C3 . -1.449 -1.969
+a N2 N -1.952 -1.105
+a C4 . 0.493 -0.259
+a C5 . 0.489 0.741
+a C6 . 1.353 1.244
+a O1 O 2.222 0.748
+a O2 O^- 1.349 2.244
+a N3 ^+H_3N -0.379 1.237 <
+b C1 C2 2l
+b C2 N1
+b N1 C3
+b C3 N2 2l
+b C2 C4
+b C4 C5
+b C5 C6
+b C6 O1 2
+b C6 O2
+b C5 N3 w
+b N2 C1

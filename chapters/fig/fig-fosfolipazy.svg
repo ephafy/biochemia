@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 600" role="img" aria-labelledby="t-fosfolipazy">
+<title id="t-fosfolipazy">Fosfolipázy a signál z fosfatidylinozitolu. Hore: štyri väzby glycerofosfolipidu, ktoré štiepia fosfolipázy – A1 ester na uhlíku 1, A2 ester na uhlíku 2, C väzbu medzi uhlíkom 3 glycerolu a fosfátom, D väzbu medzi fosfátom a hlavou – a produkty každej z nich. Dole: hormón cez receptor a G-proteín Gq aktivuje fosfolipázu C, ktorá rozštiepi fosfatidylinozitol-4,5-bisfosfát na inozitol-1,4,5-trisfosfát a diacylglycerol. IP3 uvoľní vápnik z endoplazmatického retikula, diacylglycerol spolu s vápnikom aktivuje proteínkinázu C.</title>
+<text class="cap" x="12" y="14">kde štiepia fosfolipázy</text>
+<mol v="fosfatidylcholin-r" id="pc" x="400" y="92" popis="nie"/>
+<vplyv od="{pc.O1+40,-28}" do="{pc.O1+9,3}"/>
+<text class="lblb" x="{pc.O1.x}" y="{pc.O1.y}" dx="42" dy="-30">A₁</text>
+<vplyv od="{pc.O2+40,-16}" do="{pc.O2+9,-6}"/>
+<text class="lblb" x="{pc.O2.x}" y="{pc.O2.y}" dx="42" dy="-16">A₂</text>
+<vplyv od="{pc.O3-8,30}" do="{pc.O3-9,7}"/>
+<text class="lblb" x="{pc.O3.x}" y="{pc.O3.y}" dx="-12" dy="42">C</text>
+<vplyv od="{pc.O4-30,30}" do="{pc.O4+10,7}"/>
+<text class="lblb" x="{pc.O4.x}" y="{pc.O4.y}" dx="-36" dy="42">D</text>
+<text class="sub" x="400" y="174" text-anchor="middle">fosfatidylcholín (lecitín) ako príklad; R¹ = MK na C1, R² = MK na C2</text>
+
+<uzol id="a1" x="88" y="218" text="A₁|MK z C1 + lyzofosfolipid" w="160" h="40"/>
+<uzol id="a2" x="262" y="218" text="A₂|MK z C2 + lyzofosfolipid" trieda="bx-c" w="160" h="40"/>
+<uzol id="c" x="436" y="218" text="C|DAG + fosfohlava" w="160" h="40"/>
+<uzol id="d" x="610" y="218" text="D|kyselina fosfatidová + hlava" w="164" h="40"/>
+<uzol id="aa" x="262" y="290" text="arachidónová kyselina|→ eikozanoidy" trieda="bx-m" w="170" h="40"/>
+<rx od="{a2.b}" do="{aa.t}"/>
+<text class="sub" x="88" y="258" text-anchor="middle">lyzofosfolipid → lyzofosfolipáza</text>
+<text class="sub" x="88" y="270" text-anchor="middle">alebo späť acyl-CoA (oprava)</text>
+
+<text class="cap" x="12" y="340">fosfolipáza C a dvaja druhí poslovia</text>
+<uzol id="hor" x="70" y="380" text="hormón,|neurotransmiter" trieda="bx-c" w="118" h="40"/>
+<uzol id="gq" x="70" y="452" text="receptor|→ G-proteín Gq" w="118" h="40"/>
+<rx od="{hor.b}" do="{gq.t}"/>
+<mol v="pip2" id="pip2" x="300" y="470" m="0.8" zv="O3,P3"/>
+<mol v="ip3" id="ip3" x="560" y="410" m="0.85"/>
+<mol v="diacylglycerol" id="dag" x="560" y="540" m="0.85"/>
+<rx id="plc" od="{pip2.r+6,-30}" do="{ip3.l-6,0}" enzym="fosfolipáza C" e="hore"/>
+<rx od="{pip2.r+6,20}" do="{dag.l-6,0}"/>
+<vplyv typ="akt" od="{gq.r}" do="{plc.e}" cez="160,420"/>
+<text class="sub" x="668" y="414" text-anchor="middle">→ Ca²⁺ z ER</text>
+<text class="sub" x="560" y="590" text-anchor="middle">+ Ca²⁺ → proteínkináza C</text>
+<legenda x="20" y="594" polozky="rx,enz,akt,zv,odk"/>
+</svg>

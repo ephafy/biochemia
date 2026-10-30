@@ -1,0 +1,17 @@
+nazov: glutamát
+skratka: Glu
+sumarny: C5H8NO4
+smiles: C(CC(=O)O)[C@@H](C(=O)O)N
+zdroj: PubChem CID 33032 (kyselina L-glutámová) · overené 2026-10-07
+projekcia: skeletálny vzorec, forma pri pH 7; od 2-oxoglutarátu sa líši aminoskupinou na C2
+---
+a C2 . 0 0
++ N2 C2 90 NH_3^+
++ C1 C2 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-
++ C3 C2 210 .
++ C4 C3 150 .
++ C5 C4 210 .
++ O5a C5 270 O 2
++ O5b C5 150 ^-O <

@@ -1,0 +1,17 @@
+nazov: izocitrát
+sumarny: C6H5O7
+smiles: C(C(C(C(=O)O)O)C(=O)O)C(=O)O
+zdroj: PubChem CID 1198 (kyselina izocitrónová) · overené 2026-10-07
+projekcia: skeletálny vzorec, trianión; hydroxyl na C2 (sekundárny alkohol – dá sa oxidovať), stredný karboxyl na C3; konfigurácia nie je vyznačená
+---
+a C3 . 0 0
++ C6 C3 270 COO^-
++ C2 C3 30 .
++ O2 C2 90 OH
++ C1 C2 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-
++ C4 C3 150 .
++ C5 C4 210 .
++ O5a C5 270 O 2
++ O5b C5 150 ^-O <

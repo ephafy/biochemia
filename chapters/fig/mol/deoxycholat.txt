@@ -1,0 +1,65 @@
+nazov: deoxycholát
+sumarny: C24H39O4-
+smiles: C[C@H](CCC(=O)[O-])[C@H]1CC[C@H]2[C@@H]3CC[C@@H]4C[C@H](O)CC[C@]4(C)[C@H]3C[C@H](O)[C@]12C
+zdroj: PubChem CID 222528 (Deoxycholic Acid, C24H40O4) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 2.374 0.934
+a C2 . 2.377 -0.066
+a C3 . 3.244 -0.564
+a C4 . 4.109 -0.062
+a C5 . 4.976 -0.560
+a O1 O 4.978 -1.560
+a O2 O^- 5.841 -0.058
+a C6 . 1.512 -0.568
+a C7 . 1.409 -1.562
+a C8 . 0.432 -1.773
+a C9 . -0.070 -0.908
+a C10 . 0.597 -0.163
+a C11 . 0.286 0.787
+a C12 . -0.692 0.993
+a C13 . -1.360 0.248
+a C14 . -1.049 -0.702
+a C15 . -1.716 -1.447
+a C16 . -2.695 -1.241
+a C17 . -3.006 -0.291
+a C18 . -2.338 0.454
+a C19 . -2.650 1.404
+a C20 . -3.628 1.610
+a C21 . -4.296 0.866
+a C22 . -3.984 -0.085
+a O3 HO -5.274 1.071 <
+a C23 CH_3 -1.671 1.199
+a O4 OH 0.954 1.532
+a C24 CH_3 1.339 0.508
+b C2 C1 w
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 O1 2
+b C5 O2
+b C2 C6
+b C6 C7 h
+b C7 C8
+b C9 C8 h
+b C9 C10
+b C10 C11
+b C11 C12
+b C13 C12 h
+b C13 C14
+b C14 C15 w
+b C15 C16
+b C17 C16 w
+b C17 C18
+b C18 C19
+b C19 C20
+b C20 C21
+b C21 C22
+b C21 O3 w
+b C18 C23 h
+b C11 O4 w
+b C10 C24 h
+b C10 C6
+b C14 C9
+b C18 C13
+b C22 C17

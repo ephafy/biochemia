@@ -1,0 +1,33 @@
+nazov: fluórcitrát
+sumarny: C6H4FO7-3
+smiles: O=C([O-])CC(O)(C(=O)[O-])C(F)C(=O)[O-]
+zdroj: PubChem CID 107647 (Fluorocitric acid, C6H7FO7) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . -0.658 0.882
+a C2 . -0.156 1.747
+a O1 O 0.844 1.745
+a O2 ^-O -0.654 2.614 <
+a C3 . -0.159 0.015
+a C4 . 0.706 -0.487
+a C5 . 0.704 -1.487
+a O3 O -0.163 -1.985
+a O4 O^- 1.569 -1.988
+a F1 F 1.573 0.012
+a C6 . -1.026 -0.483
+a O5 O -1.891 0.018
+a O6 O^- -1.028 -1.483
+a O7 OH 0.342 0.880
+b C1 C2
+b C2 O1 2
+b C2 O2
+b C1 C3
+b C3 C4
+b C4 C5
+b C5 O3 2
+b C5 O4
+b C4 F1
+b C3 C6
+b C6 O5 2
+b C6 O6
+b C3 O7

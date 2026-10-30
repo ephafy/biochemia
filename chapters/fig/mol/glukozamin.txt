@@ -1,0 +1,14 @@
+nazov: glukózamín
+skratka: GlcN
+sumarny: C6H14NO5+
+smiles: C([C@@H]1[C@H]([C@@H]([C@H]([C@@H](O1)O)[NH3+])O)O)O
+zdroj: PubChem CID 441477 (β-D-glukózamín) · overené 2026-10-19
+projekcia: Haworthov vzorec, β-D-glukopyranóza s aminoskupinou namiesto OH na C2 (pri pH 7 protonovaná)
+---
+kruh pyranoza C1 C2 C3 C4 C5 O5
++ O1 C1 u OH
++ N2 C2 d NH_3^+
++ O3 C3 u OH
++ O4 C4 d HO <
++ C6 C5 u CH_2OH
+c C1 1 20

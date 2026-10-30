@@ -1,0 +1,49 @@
+nazov: retinol
+skratka: vitamín A
+sumarny: C20H30O
+smiles: CC1=C(/C=C/C(C)=C/C=C/C(C)=C/CO)C(C)(C)CCC1
+zdroj: PubChem CID 445354 (Retinol, C20H30O) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C 1.527 -1.667 <
+a C2 . 2.393 -1.166
+a C3 . 2.392 -0.166
+a C4 . 3.258 0.334
+a C5 . 4.124 -0.165
+a C6 . 4.125 -1.165
+a C7 . 3.259 -1.666
+a C8 H_3C 2.615 1.100 <
+a C9 CH_3 3.900 1.101
+a C10 . 1.526 0.333
+a C11 . 0.660 -0.168
+a C12 . -0.206 0.332
+a C13 . -1.072 -0.169
+a C14 . -1.939 0.330
+a C15 . -2.804 -0.170
+a C16 . -3.671 0.329
+a C17 . -4.536 -0.172
+a C18 . -5.403 0.328
+a O1 HO -6.268 -0.173 <
+a C19 CH_3 -3.671 1.329
+a C20 CH_3 -0.207 1.332
+b C1 C2
+b C2 C3 2l
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C4 C8
+b C4 C9
+b C3 C10
+b C10 C11 2l
+b C11 C12
+b C12 C13 2l
+b C13 C14
+b C14 C15 2l
+b C15 C16
+b C16 C17 2l
+b C17 C18
+b C18 O1
+b C16 C19
+b C12 C20
+b C7 C2

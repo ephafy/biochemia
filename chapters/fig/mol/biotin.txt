@@ -1,0 +1,40 @@
+nazov: biotín
+skratka: vitamín B₇
+sumarny: C10H15N2O3S-
+smiles: O=C([O-])CCCC[C@@H]1SC[C@@H]2NC(=O)N[C@@H]21
+zdroj: PubChem CID 171548 (Biotin, C10H16N2O3S) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . 1.667 1.520
+a C2 . 2.168 0.655
+a C3 . 1.501 -0.090
+a C4 . 0.586 0.315
+a S1 S 0.689 1.309
+a C5 . -0.278 -0.187
+a C6 . -1.145 0.311
+a C7 . -2.010 -0.191
+a C8 . -2.877 0.307
+a C9 . -3.742 -0.195
+a O1 O -3.740 -1.195
+a O2 ^-O -4.610 0.303 <
+a N1 NH 2.003 -0.955
+a C10 . 2.980 -0.745
+a O3 O 3.725 -1.412
+a N2 NH 3.083 0.250
+b C2 C1 w
+b C2 C3
+b C3 C4
+b C4 S1
+b C4 C5 w
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 O1 2
+b C9 O2
+b C3 N1 w
+b N1 C10
+b C10 O3 2
+b C10 N2
+b S1 C1
+b N2 C2

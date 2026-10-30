@@ -1,0 +1,14 @@
+nazov: sukcinát
+sumarny: C4H4O4
+smiles: C(CC(=O)O)C(=O)O
+zdroj: PubChem CID 1110 (kyselina jantárová) · overené 2026-10-07
+projekcia: skeletálny vzorec, dianión
+---
+a C2 . 0 0
++ C1 C2 330 .
++ O1a C1 270 O 2
++ O1b C1 30 O^-
++ C3 C2 210 .
++ C4 C3 150 .
++ O4a C4 90 O 2
++ O4b C4 210 ^-O <

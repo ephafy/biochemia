@@ -1,0 +1,46 @@
+nazov: oktanoylkarnitín
+skratka: C8
+sumarny: C15H29NO4
+smiles: CCCCCCCC(=O)O[C@H](CC(=O)[O-])C[N+](C)(C)C
+zdroj: PubChem CID 11953814 (L-Octanoylcarnitine, C15H29NO4) · overené 2026-10-28
+projekcia: skeletálny vzorec: osemuhlíkový acyl viazaný esterovou väzbou na hydroxyl L-karnitínu; obojaký ión pri pH 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -6.151 0.515 <
+a C2 . -5.283 0.018
+a C3 . -4.419 0.521
+a C4 . -3.551 0.024
+a C5 . -2.686 0.527
+a C6 . -1.819 0.030
+a C7 . -0.954 0.533
+a C8 . -0.087 0.036
+a O1 O -0.083 -0.964
+a O2 O 0.777 0.539
+a C9 . 1.645 0.043
+a C10 . 2.509 0.546
+a C11 . 2.506 1.546
+a O3 O 3.370 2.049
+a O4 ^-O 1.638 2.042 <
+a C12 . 1.649 -0.957
+a N1 N^+ 2.517 -1.454
+a C13 H_3C 2.020 -2.322 <
+a C14 CH_3 3.020 -2.319
+a C15 CH_3 3.381 -0.951
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 O1 2
+b C8 O2
+b O2 C9
+b C9 C10 w
+b C10 C11
+b C11 O3 2
+b C11 O4
+b C9 C12
+b C12 N1
+b N1 C13
+b N1 C14
+b N1 C15

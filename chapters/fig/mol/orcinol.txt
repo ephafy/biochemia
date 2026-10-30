@@ -1,0 +1,24 @@
+nazov: orcinol
+sumarny: C7H8O2
+smiles: CC1=CC(O)=CC(O)=C1
+zdroj: PubChem CID 10436 (Orcinol, C7H8O2) · overené 2026-10-19
+projekcia: skeletálny vzorec · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -1.733 0.999 <
+a C2 . -0.866 0.499
+a C3 . -0.866 -0.501
+a C4 . 0.001 -1.000
+a C5 . 0.866 -0.499
+a C6 . 0.866 0.501
+a C7 . -0.001 1.000
+a O1 OH 1.731 1.001
+a O2 OH 0.002 -2.000
+b C1 C2
+b C2 C3
+b C3 C4 2r
+b C4 C5
+b C5 C6 2r
+b C6 C7
+b C6 O1
+b C4 O2
+b C7 C2 2r

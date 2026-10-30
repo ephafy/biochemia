@@ -1,0 +1,30 @@
+nazov: myo-inozitol
+sumarny: C6H12O6
+smiles: OC1C(O)C(O)C(O)C(O)C1O
+zdroj: PubChem CID 892 (An inositol, C6H12O6) · overené 2026-10-28
+projekcia: skeletálny vzorec: cyklohexán so šiestimi hydroxylmi; stereochémia sa neznázorňuje · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . -0.866 0.499
+a C2 . -0.866 -0.501
+a C3 . 0.001 -1.000
+a C4 . 0.866 -0.499
+a C5 . 0.866 0.501
+a C6 . -0.001 1.000
+a O1 OH -0.002 2.000
+a O2 OH 1.731 1.001
+a O3 OH 1.733 -0.999
+a O4 OH 0.002 -2.000
+a O5 HO -1.731 -1.001 <
+a O6 HO -1.733 0.999 <
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 O1
+b C5 O2
+b C4 O3
+b C3 O4
+b C2 O5
+b C1 O6
+b C6 C1

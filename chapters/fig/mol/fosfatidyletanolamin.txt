@@ -1,0 +1,30 @@
+nazov: fosfatidyletanolamín (kefalín)
+skratka: PE
+sumarny: C37H74NO8P
+smiles: CCCCCCCCCCCCCCCC(=O)OC[C@H](COP(=O)(O)OCCN)OC(=O)CCCCCCCCCCCCCCC
+zdroj: PubChem CID 445468 (1,2-Dipalmitoyl-sn-glycero-3-phosphoethanolamine, C37H74NO8P) – vzor; R = reťazce (skrátený zápis) · overené 2026-10-28
+projekcia: skeletálny vzorec; R¹, R² = reťazce MK; hlava etanolamín (aminoskupina ako katión) · ručný zápis v orientácii triacylglycerolu (C1 vpravo, C3 s hlavou vľavo)
+kontrola: nie
+---
+a C2 . 0 0
++ C1 C2 330 .
++ O1 C1 30 O
++ A1 O1 330 .
++ Q1 A1 270 O 2
++ R1 A1 30 R^1
++ C3 C2 210 .
++ O3 C3 150 O
++ O2 C2 90 O
++ A2 O2 30 .
++ Q2 A2 90 O 2
++ R2 A2 330 R^2
++ P3 O3 210 P
++ PA P3 270 O 2
++ PB P3 90 ^-O <
++ O4 P3 150 O
++ H1 O4 210 .
++ H2 H1 150 .
++ N H2 210 H_3N^+ <
+c C1 1 270
+c C2 2 270
+c C3 3 270

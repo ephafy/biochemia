@@ -1,0 +1,19 @@
+nazov: cholín
+sumarny: C5H14NO+
+smiles: C[N+](C)(C)CCO
+zdroj: PubChem CID 305 (Choline, C5H14NO+) · overené 2026-10-28
+projekcia: skeletálny vzorec; kvartérny amóniový katión · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C 0.118 -0.833 <
+a N1 N^+ 0.619 0.033
+a C2 CH_3 1.118 -0.834
+a C3 CH_3 1.485 0.532
+a C4 . -0.247 0.533
+a C5 . -1.113 0.034
+a O1 HO -1.979 0.535 <
+b C1 N1
+b N1 C2
+b N1 C3
+b N1 C4
+b C4 C5
+b C5 O1

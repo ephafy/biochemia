@@ -1,0 +1,38 @@
+nazov: cyklický AMP
+skratka: cAMP
+sumarny: C10H11N5O6P-
+smiles: C1[C@@H]2[C@H]([C@H]([C@@H](O2)N3C=NC4=C(N=CN=C43)N)O)OP(=O)(O1)O
+zdroj: PubChem CID 6076 (adenozín-3′,5′-cyklický monofosfát) · overené 2026-10-19
+projekcia: ribóza Haworthovým vzorcom, adenín na C1′; jeden fosfát premosťuje 3′- a 5′-kyslík (cyklický diester, anión pri pH 7)
+---
+kruh furanoza C1r C2r C3r C4r O4r
++ O2r C2r d OH
++ C5r C4r u CH_2
++ O5r C5r 180*0.9 O
++ O3r C3r d O
+a P P -2.75 0.75
+b O5r P
+b O3r P
++ OP1 P 225 O 2
++ OP2 P 300*0.9 O^-
+a N9 N 1.6 -0.78
+a C4 . 2.409 -1.368
+a C5 . 2.1 -2.319
+a N7 N 1.1 -2.319
+a C8 . 0.791 -1.368
+a N3 N 3.387 -1.16
+a C2 . 4.056 -1.903
+a N1 N 3.747 -2.854
+a C6 . 2.769 -3.062
+b N9 C4
+b C4 C5 2
+b C5 N7
+b N7 C8 2
+b C8 N9
+b C5 C6
+b C6 N1 2
+b N1 C2
+b C2 N3 2
+b N3 C4
++ N6 C6 108 NH_2
+b C1r N9

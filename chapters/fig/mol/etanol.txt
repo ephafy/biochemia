@@ -1,0 +1,11 @@
+nazov: etanol
+sumarny: C2H6O
+smiles: CCO
+zdroj: PubChem CID 702 (Ethanol, C2H6O) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 0.866 0.167
+a C2 . 0.000 -0.333
+a O1 HO -0.866 0.166 <
+b C1 C2
+b C2 O1

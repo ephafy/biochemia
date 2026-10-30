@@ -1,0 +1,33 @@
+nazov: iduronát
+skratka: IdoA
+sumarny: C6H9O7-
+smiles: O=C([O-])[C@@H]1O[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1O
+zdroj: PubChem CID 446102 (alpha-L-idopyranuronic acid, C6H10O7) · overené 2026-10-19
+projekcia: skeletálny vzorec α-L-idopyranuronátu (epimér D-glukuronátu na C5), forma pri pH 7; kruh nie je v Haworthovej projekcii, lebo karboxylát na C5 by v nej prekryl OH na C3 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . 0.334 -1.038
+a C2 . -0.532 -0.539
+a C3 . -0.533 0.461
+a O1 O 0.332 0.962
+a C4 . 1.199 0.462
+a C5 . 1.200 -0.538
+a O2 OH 2.066 -1.037
+a O3 OH 2.064 0.963
+a C6 . -1.400 0.960
+a O4 O -2.265 0.460
+a O5 O^- -1.400 1.960
+a O6 HO -1.398 -1.040 <
+a O7 OH 0.335 -2.038
+b C1 C2
+b C2 C3
+b C3 O1
+b O1 C4
+b C4 C5
+b C5 O2 w
+b C4 O3 h
+b C3 C6 w
+b C6 O4 2
+b C6 O5
+b C2 O6 w
+b C1 O7 h
+b C5 C1

@@ -1,0 +1,47 @@
+nazov: sfingozín
+sumarny: C18H38NO2+
+smiles: CCCCCCCCCCCCC/C=C/[C@@H](O)[C@@H]([NH3+])CO
+zdroj: PubChem CID 5280335 (Sphingosine, C18H37NO2) · overené 2026-10-19
+projekcia: skeletálny vzorec, forma pri pH ≈ 7 · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C -8.330 0.245 <
+a C2 . -7.464 -0.256
+a C3 . -6.598 0.243
+a C4 . -5.732 -0.257
+a C5 . -4.866 0.242
+a C6 . -4.000 -0.259
+a C7 . -3.134 0.241
+a C8 . -2.268 -0.260
+a C9 . -1.402 0.239
+a C10 . -0.536 -0.261
+a C11 . 0.330 0.238
+a C12 . 1.196 -0.263
+a C13 . 2.062 0.237
+a C14 . 2.928 -0.264
+a C15 . 3.794 0.235
+a C16 . 4.660 -0.266
+a C17 . 5.526 0.234
+a C18 . 6.392 -0.267
+a O1 OH 7.258 0.232
+a N1 NH_3^+ 5.527 1.234
+a O2 OH 4.659 -1.266
+b C1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 C6
+b C6 C7
+b C7 C8
+b C8 C9
+b C9 C10
+b C10 C11
+b C11 C12
+b C12 C13
+b C13 C14
+b C14 C15 2r
+b C15 C16
+b C16 C17
+b C17 C18
+b C18 O1
+b C17 N1 h
+b C16 O2 w

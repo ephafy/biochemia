@@ -1,0 +1,43 @@
+nazov: 4′-fosfopanteteín
+sumarny: C11H21N2O7PS-2
+smiles: CC(C)(COP(=O)([O-])[O-])[C@@H](O)C(=O)NCCC(=O)NCCS
+zdroj: PubChem CID 115254 (Phosphopantetheine, C11H23N2O7PS) · overené 2026-10-19
+projekcia: skeletálny vzorec, fosfát ako P v krúžku (anión pri pH 7); koncová SH-skupina nesie acyl v ACP a v koenzýme A · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 H_3C 1.390 -1.013 <
+a C2 . 1.890 -0.147
+a C3 CH_3 2.390 -1.013
+a C4 . 2.755 0.354
+a O1 O 3.622 -0.146
+a P1 (P) 4.487 0.355
+a C5 . 1.023 0.352
+a C6 . 0.158 -0.148
+a O2 O 0.158 -1.148
+a N1 NH -0.709 0.351
+a C7 . -1.574 -0.150
+a C8 . -2.441 0.350
+a C9 . -3.306 -0.151
+a O3 O -3.306 -1.151
+a N2 NH -4.173 0.348
+a C10 . -5.038 -0.153
+a C11 . -5.905 0.347
+a S1 HS -6.770 -0.154 <
+a O4 OH 1.022 1.352
+b C1 C2
+b C2 C3
+b C2 C4
+b C4 O1
+b O1 P1
+b C2 C5
+b C5 C6
+b C6 O2 2
+b C6 N1
+b N1 C7
+b C7 C8
+b C8 C9
+b C9 O3 2
+b C9 N2
+b N2 C10
+b C10 C11
+b C11 S1
+b C5 O4 w

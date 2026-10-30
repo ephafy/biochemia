@@ -1,0 +1,18 @@
+nazov: pyrimidín
+sumarny: C4H4N2
+smiles: C1=CN=CN=C1
+zdroj: PubChem CID 9260 (Pyrimidine, C4H4N2) · overené 2026-10-19
+projekcia: skeletálny vzorec – materské jadro pyrimidínových báz (cytozín, uracil, tymín) · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 . 0.001 -1.000
+a C2 . -0.866 -0.501
+a N1 N -0.866 0.499
+a C3 . -0.001 1.000
+a N2 N 0.866 0.501
+a C4 . 0.866 -0.499
+b C1 C2 2l
+b C2 N1
+b N1 C3 2l
+b C3 N2
+b N2 C4 2l
+b C4 C1

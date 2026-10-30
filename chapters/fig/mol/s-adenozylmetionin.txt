@@ -1,0 +1,63 @@
+nazov: S-adenozylmetionín
+skratka: SAM
+sumarny: C15H23N6O5S+
+smiles: C[S+](CC[C@H]([NH3+])C(=O)[O-])C[C@H]1O[C@@H](N2C=NC3=C(N)N=CN=C32)[C@H](O)[C@@H]1O
+zdroj: PubChem CID 34755 (S-Adenosylmethionine, C15H22N6O5S) · overené 2026-10-28
+projekcia: skeletálny vzorec; sulfóniová síra (kladný náboj) nesie metyl, ktorý sa prenáša · súradnice vypočítané zo SMILES (RDKit)
+---
+a C1 CH_3 1.456 1.543
+a S1 S^+ 0.589 2.042
+a C2 . 0.587 3.042
+a C3 . 1.452 3.543
+a C4 . 1.451 4.543
+a C5 . 2.316 5.044
+a O1 O 3.183 4.546
+a O2 O^- 2.314 6.044
+a N1 ^+H_3N 0.584 5.042 <
+a C6 . -0.276 1.540
+a C7 . -0.275 0.540
+a C8 . 0.536 -0.046
+a C9 . 0.228 -0.997
+a C10 . -0.772 -0.999
+a O3 O -1.083 -0.049
+a N2 N -1.358 -1.809
+a C11 . -2.358 -1.811
+a N3 N -2.666 -2.762
+a C12 . -1.856 -3.349
+a C13 . -1.750 -4.343
+a N4 N -0.835 -4.748
+a C14 . -0.027 -4.159
+a N5 N -0.134 -3.165
+a C15 . -1.048 -2.760
+a N6 H_2N -2.558 -4.932 <
+a O4 OH 0.817 -1.806
+a O5 OH 1.486 0.265
+b C1 S1
+b S1 C2
+b C2 C3
+b C3 C4
+b C4 C5
+b C5 O1 2
+b C5 O2
+b C4 N1 w
+b S1 C6
+b C7 C6 w
+b C7 C8
+b C8 C9
+b C9 C10
+b C10 O3
+b C10 N2 w
+b N2 C11
+b C11 N3 2r
+b N3 C12
+b C12 C13 2r
+b C13 N4
+b N4 C14 2r
+b C14 N5
+b N5 C15 2r
+b C13 N6
+b C9 O4 h
+b C8 O5 h
+b O3 C7
+b C15 N2
+b C15 C12

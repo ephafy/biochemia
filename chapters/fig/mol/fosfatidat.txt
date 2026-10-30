@@ -1,0 +1,24 @@
+nazov: kyselina fosfatidová (fosfatidát)
+skratka: PA
+sumarny: C35H69O8P
+smiles: CCCCCCCCCCCCCCCC(=O)OCC(COP(=O)(O)O)OC(=O)CCCCCCCCCCCCCCC
+zdroj: PubChem CID 3099 (Dipalmitoylphosphatidic acid, C35H69O8P) – vzor; R = reťazce (skrátený zápis) · overené 2026-10-28
+projekcia: skeletálny vzorec; R¹ a R² = reťazce MK na C1 a C2, fosfát na C3 ako P v krúžku; stereochémia C2 sa neznázorňuje · ručný zápis v orientácii triacylglycerolu (C1 vpravo, C3 s hlavou vľavo)
+kontrola: nie
+---
+a C2 . 0 0
++ C1 C2 330 .
++ O1 C1 30 O
++ A1 O1 330 .
++ Q1 A1 270 O 2
++ R1 A1 30 R^1
++ C3 C2 210 .
++ O3 C3 150 O
++ O2 C2 90 O
++ A2 O2 30 .
++ Q2 A2 90 O 2
++ R2 A2 330 R^2
++ P3 O3 210*1.15 (P)
+c C1 1 270
+c C2 2 270
+c C3 3 270

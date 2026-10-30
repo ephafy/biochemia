@@ -1,0 +1,13 @@
+nazov: ribóza
+skratka: Rib
+sumarny: C5H10O5
+smiles: C([C@@H]1[C@H]([C@H]([C@@H](O1)O)O)O)O
+zdroj: PubChem CID 447347 (β-D-ribofuranóza) · overené 2026-10-19
+projekcia: Haworthov vzorec, β-D-ribofuranóza (anomérny OH hore, na tej istej strane ako C5) – forma v nukleotidoch a RNA
+---
+kruh furanoza C1 C2 C3 C4 O4
++ O1 C1 u OH
++ O2 C2 d OH
++ O3 C3 d HO <
++ C5 C4 u HOH_2C <
+c C1 1 30
